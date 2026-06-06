@@ -104,6 +104,11 @@
     "thermal_category": {
       "type": "string",
       "description": "Risk 2 B Planı kategori lookup anahtarı"
+    },
+    "layer_role": {
+      "type": "string",
+      "enum": ["base", "mid", "outer", "bottom", "dress", "footwear", "accessory"],
+      "description": "Katman slotu — base+mid+outer üst üste giyilebilir"
     }
   }
 }

@@ -38,6 +38,10 @@
     "yaz_elbisesi":            { "clo": 0.18, "ret": 4.5,  "label_tr": "Yaz Elbisesi" },
     "midi_elbise":             { "clo": 0.22, "ret": 5.5,  "label_tr": "Midi Elbise" },
     "etek":                    { "clo": 0.14, "ret": 5.0,  "label_tr": "Etek" },
-    "bot":                     { "clo": 0.08, "ret": 8.0,  "label_tr": "Bot" }
+    "bot":                     { "clo": 0.08, "ret": 8.0,  "label_tr": "Bot" },
+    "termal_iclik":            { "clo": 0.10, "ret": 4.5,  "label_tr": "Termal İçlik" },
+    "kilotlu_corap":           { "clo": 0.06, "ret": 4.0,  "label_tr": "Kilotlu Çorap" },
+    "sapka":                   { "clo": 0.04, "ret": 3.5,  "label_tr": "Şapka / Bere" },
+    "atki":                    { "clo": 0.05, "ret": 5.0,  "label_tr": "Atkı" }
   }
 }

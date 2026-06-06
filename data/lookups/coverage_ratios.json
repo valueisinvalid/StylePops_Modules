@@ -25,7 +25,18 @@
     "dress_long":       0.85,
     "boots":            0.15,
     "sneakers":         0.10,
-    "sandals":          0.08
+    "sandals":          0.08,
+    "scarf":            0.05,
+    "hat":              0.08,
+    "tights":           0.35,
+    "thermal_base":     0.85,
+    "skirt_mini":       0.45,
+    "skirt_midi":       0.60,
+    "skirt_maxi":       0.78
+  },
+  "coverage_notes": {
+    "skirt": "Varsayılan midi etek; mini/maxi için skirt_mini / skirt_maxi kullanın",
+    "pants_vs_skirt": "Pantolon (0.88-0.90) etekten (0.45-0.78) daha fazla bacak kaplar"
   },
   "coverage_by_sleeve": {
     "sleeveless": 0.45,

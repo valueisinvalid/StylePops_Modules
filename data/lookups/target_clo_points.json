@@ -1,0 +1,80 @@
+{
+  "version": "1.0",
+  "source": "ASHRAE 55 / ISO 7730 — sedanter aktivite, PMV≈0 referans noktaları",
+  "note": "Parçalı lineer interpolasyon ile T_hissedilen → hedef_Clo dönüşümü",
+  "target_clo_points": [
+    { "T_celsius": -10, "clo": 2.00 },
+    { "T_celsius":  -5, "clo": 1.85 },
+    { "T_celsius":   0, "clo": 1.75 },
+    { "T_celsius":   3, "clo": 1.60 },
+    { "T_celsius":   6, "clo": 1.35 },
+    { "T_celsius":   9, "clo": 1.20 },
+    { "T_celsius":  12, "clo": 1.05 },
+    { "T_celsius":  15, "clo": 0.90 },
+    { "T_celsius":  18, "clo": 0.75 },
+    { "T_celsius":  21, "clo": 0.60 },
+    { "T_celsius":  24, "clo": 0.50 },
+    { "T_celsius":  27, "clo": 0.42 },
+    { "T_celsius":  30, "clo": 0.35 },
+    { "T_celsius":  33, "clo": 0.30 },
+    { "T_celsius":  36, "clo": 0.25 }
+  ],
+  "weather_scenarios": {
+    "kis_soguk_ruzgarli": {
+      "season": "kis",
+      "T_hava": 2,
+      "RH_nem": 65,
+      "V_ruzgar": 25,
+      "label_tr": "Kış — soğuk ve rüzgarlı"
+    },
+    "kis_orta": {
+      "season": "kis",
+      "T_hava": 5,
+      "RH_nem": 70,
+      "V_ruzgar": 10,
+      "label_tr": "Kış — orta soğuk"
+    },
+    "sonbahar_serin": {
+      "season": "sonbahar",
+      "T_hava": 12,
+      "RH_nem": 75,
+      "V_ruzgar": 15,
+      "label_tr": "Sonbahar — serin"
+    },
+    "sonbahar_yagmurlu": {
+      "season": "sonbahar",
+      "T_hava": 10,
+      "RH_nem": 90,
+      "V_ruzgar": 20,
+      "label_tr": "Sonbahar — yağmurlu"
+    },
+    "ilkbahar_ilik": {
+      "season": "ilkbahar",
+      "T_hava": 18,
+      "RH_nem": 60,
+      "V_ruzgar": 8,
+      "label_tr": "İlkbahar — ılık"
+    },
+    "ilkbahar_ruzgarli": {
+      "season": "ilkbahar",
+      "T_hava": 15,
+      "RH_nem": 55,
+      "V_ruzgar": 22,
+      "label_tr": "İlkbahar — rüzgarlı"
+    },
+    "yaz_sicak": {
+      "season": "yaz",
+      "T_hava": 32,
+      "RH_nem": 45,
+      "V_ruzgar": 5,
+      "label_tr": "Yaz — sıcak"
+    },
+    "yaz_nemli": {
+      "season": "yaz",
+      "T_hava": 30,
+      "RH_nem": 80,
+      "V_ruzgar": 3,
+      "label_tr": "Yaz — nemli"
+    }
+  }
+}

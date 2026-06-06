@@ -1,0 +1,82 @@
+{
+  "version": "1.0",
+  "note": "Her mevsim için 50 parça üretim şablonu. Gerçek gardırop dağılımını yansıtır.",
+  "seasons": {
+    "kis": {
+      "label_tr": "Kış",
+      "target_count": 50,
+      "templates": [
+        { "subcategory": "sweater", "name_prefix": "Yün Kazak", "thermal_category": "kalin_yun_kazak", "sleeve": "long", "fabrics": [{"material": "wool", "pct": 80}, {"material": "acrylic", "pct": 20}], "color_palette": [[25, 15, 10], [40, 30, 25], [60, 50, 45], [15, 25, 40]] },
+        { "subcategory": "hoodie", "name_prefix": "Polar Sweatshirt", "thermal_category": "polar_sweatshirt", "sleeve": "long", "fabrics": [{"material": "fleece", "pct": 70}, {"material": "cotton", "pct": 30}], "color_palette": [[30, 35, 40], [50, 55, 60], [20, 20, 25]] },
+        { "subcategory": "padded_coat", "name_prefix": "Şişme Mont", "thermal_category": "kalin_mont", "sleeve": "long", "fabrics": [{"material": "nylon", "pct": 60}, {"material": "down", "pct": 40}], "color_palette": [[10, 15, 25], [35, 35, 40], [55, 50, 45]] },
+        { "subcategory": "coat", "name_prefix": "Yün Kaban", "thermal_category": "kaban", "sleeve": "long", "fabrics": [{"material": "wool", "pct": 70}, {"material": "polyester", "pct": 30}], "color_palette": [[20, 18, 15], [45, 40, 38], [30, 32, 35]] },
+        { "subcategory": "jeans", "name_prefix": "Koyu Jean", "thermal_category": "jean_pantolon", "sleeve": null, "fabrics": [{"material": "denim", "pct": 98}, {"material": "elastane", "pct": 2}], "color_palette": [[15, 20, 35], [20, 25, 40]] },
+        { "subcategory": "trousers", "name_prefix": "Yün Pantolon", "thermal_category": "chino_pantolon", "sleeve": null, "fabrics": [{"material": "wool", "pct": 55}, {"material": "polyester", "pct": 45}], "color_palette": [[25, 25, 30], [40, 38, 35]] },
+        { "subcategory": "boots", "name_prefix": "Kış Botu", "thermal_category": "bot", "sleeve": null, "fabrics": [{"material": "leather", "pct": 80}, {"material": "synthetic", "pct": 20}], "color_palette": [[15, 12, 10], [30, 28, 25]] },
+        { "subcategory": "cardigan", "name_prefix": "Kalın Hırka", "thermal_category": "ince_triko", "sleeve": "long", "fabrics": [{"material": "wool", "pct": 60}, {"material": "acrylic", "pct": 40}], "color_palette": [[35, 30, 28], [50, 45, 42]] },
+        { "subcategory": "leggings", "name_prefix": "Termal Tayt", "thermal_category": "tayt", "sleeve": null, "fabrics": [{"material": "polyester", "pct": 70}, {"material": "elastane", "pct": 30}], "color_palette": [[10, 10, 12], [25, 25, 28]] },
+        { "subcategory": "scarf", "name_prefix": "Atkı", "thermal_category": "kalin_yun_kazak", "sleeve": null, "fabrics": [{"material": "wool", "pct": 100}], "color_palette": [[40, 25, 20], [30, 40, 55]] }
+      ]
+    },
+    "sonbahar": {
+      "label_tr": "Sonbahar",
+      "target_count": 50,
+      "templates": [
+        { "subcategory": "cardigan", "name_prefix": "Hırka", "thermal_category": "ince_triko", "sleeve": "long", "fabrics": [{"material": "cotton", "pct": 50}, {"material": "acrylic", "pct": 50}], "color_palette": [[45, 35, 25], [55, 45, 35], [35, 40, 45]] },
+        { "subcategory": "blazer", "name_prefix": "Blazer Ceket", "thermal_category": "ince_ceket", "sleeve": "long", "fabrics": [{"material": "wool", "pct": 65}, {"material": "polyester", "pct": 35}], "color_palette": [[25, 25, 30], [40, 38, 35], [50, 42, 35]] },
+        { "subcategory": "jacket", "name_prefix": "Deri Ceket", "thermal_category": "ince_ceket", "sleeve": "long", "fabrics": [{"material": "leather", "pct": 90}, {"material": "polyester", "pct": 10}], "color_palette": [[20, 15, 12], [35, 30, 25]] },
+        { "subcategory": "sweater", "name_prefix": "İnce Triko", "thermal_category": "ince_triko", "sleeve": "long", "fabrics": [{"material": "cotton", "pct": 40}, {"material": "viscose", "pct": 60}], "color_palette": [[50, 45, 40], [35, 40, 50], [60, 55, 50]] },
+        { "subcategory": "jeans", "name_prefix": "Jean Pantolon", "thermal_category": "jean_pantolon", "sleeve": null, "fabrics": [{"material": "denim", "pct": 97}, {"material": "elastane", "pct": 3}], "color_palette": [[25, 30, 45], [35, 40, 55]] },
+        { "subcategory": "chinos", "name_prefix": "Chino Pantolon", "thermal_category": "chino_pantolon", "sleeve": null, "fabrics": [{"material": "cotton", "pct": 97}, {"material": "elastane", "pct": 3}], "color_palette": [[45, 42, 35], [35, 38, 40], [50, 48, 42]] },
+        { "subcategory": "raincoat", "name_prefix": "Yağmurluk", "thermal_category": "yagmurluk", "sleeve": "long", "fabrics": [{"material": "nylon", "pct": 100}], "color_palette": [[30, 35, 40], [45, 50, 55], [25, 30, 25]] },
+        { "subcategory": "boots", "name_prefix": "Chelsea Bot", "thermal_category": "bot", "sleeve": null, "fabrics": [{"material": "leather", "pct": 100}], "color_palette": [[20, 18, 15], [35, 32, 28]] },
+        { "subcategory": "shirt", "name_prefix": "Ekose Gömlek", "thermal_category": "pamuklu_gomlek", "sleeve": "long", "fabrics": [{"material": "cotton", "pct": 100}], "color_palette": [[45, 40, 35], [40, 45, 50]] },
+        { "subcategory": "skirt", "name_prefix": "Midi Etek", "thermal_category": "etek", "sleeve": null, "fabrics": [{"material": "wool", "pct": 50}, {"material": "polyester", "pct": 50}], "color_palette": [[30, 28, 32], [45, 42, 48]] }
+      ]
+    },
+    "ilkbahar": {
+      "label_tr": "İlkbahar",
+      "target_count": 50,
+      "templates": [
+        { "subcategory": "shirt", "name_prefix": "Pamuklu Gömlek", "thermal_category": "pamuklu_gomlek", "sleeve": "long", "fabrics": [{"material": "cotton", "pct": 100}], "color_palette": [[75, 78, 80], [60, 65, 70], [55, 60, 75]] },
+        { "subcategory": "blouse", "name_prefix": "Bluz", "thermal_category": "pamuklu_gomlek", "sleeve": "three_quarter", "fabrics": [{"material": "viscose", "pct": 70}, {"material": "polyester", "pct": 30}], "color_palette": [[70, 72, 75], [65, 70, 80], [80, 75, 70]] },
+        { "subcategory": "tshirt", "name_prefix": "İnce Tişört", "thermal_category": "ince_pamuklu_tisort", "sleeve": "short", "fabrics": [{"material": "cotton", "pct": 95}, {"material": "elastane", "pct": 5}], "color_palette": [[80, 82, 85], [70, 75, 80], [65, 70, 75]] },
+        { "subcategory": "jacket", "name_prefix": "Trençkot", "thermal_category": "trench_coat", "sleeve": "long", "fabrics": [{"material": "cotton", "pct": 65}, {"material": "polyester", "pct": 35}], "color_palette": [[55, 52, 48], [45, 48, 50], [60, 58, 55]] },
+        { "subcategory": "chinos", "name_prefix": "Bej Chino", "thermal_category": "chino_pantolon", "sleeve": null, "fabrics": [{"material": "cotton", "pct": 98}, {"material": "elastane", "pct": 2}], "color_palette": [[65, 62, 55], [55, 58, 60]] },
+        { "subcategory": "jeans", "name_prefix": "Açık Jean", "thermal_category": "jean_pantolon", "sleeve": null, "fabrics": [{"material": "denim", "pct": 98}, {"material": "elastane", "pct": 2}], "color_palette": [[50, 55, 65], [45, 50, 58]] },
+        { "subcategory": "dress_midi", "name_prefix": "Midi Elbise", "thermal_category": "midi_elbise", "sleeve": "three_quarter", "fabrics": [{"material": "cotton", "pct": 60}, {"material": "viscose", "pct": 40}], "color_palette": [[70, 68, 72], [60, 65, 75], [75, 72, 68]] },
+        { "subcategory": "cardigan", "name_prefix": "İnce Hırka", "thermal_category": "ince_triko", "sleeve": "long", "fabrics": [{"material": "cotton", "pct": 80}, {"material": "acrylic", "pct": 20}], "color_palette": [[65, 62, 58], [55, 60, 65]] },
+        { "subcategory": "sneakers", "name_prefix": "Sneaker", "thermal_category": "bot", "sleeve": null, "fabrics": [{"material": "synthetic", "pct": 60}, {"material": "cotton", "pct": 40}], "color_palette": [[75, 78, 80], [45, 48, 50]] },
+        { "subcategory": "skirt", "name_prefix": "Pileli Etek", "thermal_category": "etek", "sleeve": null, "fabrics": [{"material": "cotton", "pct": 100}], "color_palette": [[70, 68, 65], [60, 62, 68]] }
+      ]
+    },
+    "yaz": {
+      "label_tr": "Yaz",
+      "target_count": 50,
+      "templates": [
+        { "subcategory": "tshirt", "name_prefix": "Pamuklu Tişört", "thermal_category": "ince_pamuklu_tisort", "sleeve": "short", "fabrics": [{"material": "cotton", "pct": 100}], "color_palette": [[85, 88, 90], [75, 80, 85], [90, 85, 80]] },
+        { "subcategory": "tank_top", "name_prefix": "Atlet", "thermal_category": "ince_pamuklu_tisort", "sleeve": "sleeveless", "fabrics": [{"material": "cotton", "pct": 95}, {"material": "elastane", "pct": 5}], "color_palette": [[88, 90, 92], [80, 82, 85]] },
+        { "subcategory": "shorts", "name_prefix": "Şort", "thermal_category": "sort", "sleeve": null, "fabrics": [{"material": "cotton", "pct": 100}], "color_palette": [[70, 72, 75], [55, 58, 62], [80, 78, 72]] },
+        { "subcategory": "dress_short", "name_prefix": "Yaz Elbisesi", "thermal_category": "yaz_elbisesi", "sleeve": "sleeveless", "fabrics": [{"material": "linen", "pct": 60}, {"material": "cotton", "pct": 40}], "color_palette": [[88, 86, 82], [75, 78, 82], [82, 80, 78]] },
+        { "subcategory": "shirt", "name_prefix": "Keten Gömlek", "thermal_category": "keten_gomlek", "sleeve": "short", "fabrics": [{"material": "linen", "pct": 100}], "color_palette": [[82, 84, 86], [72, 75, 78], [90, 88, 85]] },
+        { "subcategory": "trousers", "name_prefix": "Keten Pantolon", "thermal_category": "keten_pantolon", "sleeve": null, "fabrics": [{"material": "linen", "pct": 100}], "color_palette": [[78, 80, 82], [68, 70, 72]] },
+        { "subcategory": "skirt", "name_prefix": "Yaz Eteği", "thermal_category": "etek", "sleeve": null, "fabrics": [{"material": "cotton", "pct": 100}], "color_palette": [[85, 82, 78], [75, 78, 82]] },
+        { "subcategory": "sandals", "name_prefix": "Sandalet", "thermal_category": "bot", "sleeve": null, "fabrics": [{"material": "leather", "pct": 100}], "color_palette": [[65, 58, 50], [75, 72, 68]] },
+        { "subcategory": "blouse", "name_prefix": "İnce Bluz", "thermal_category": "keten_gomlek", "sleeve": "short", "fabrics": [{"material": "viscose", "pct": 100}], "color_palette": [[88, 86, 84], [78, 80, 85]] },
+        { "subcategory": "sneakers", "name_prefix": "Yaz Sneaker", "thermal_category": "bot", "sleeve": null, "fabrics": [{"material": "cotton", "pct": 50}, {"material": "synthetic", "pct": 50}], "color_palette": [[90, 92, 94], [70, 72, 75]] }
+      ]
+    }
+  },
+  "season_usable_map": {
+    "kis":       ["kis", "sonbahar"],
+    "sonbahar":  ["sonbahar", "kis", "ilkbahar"],
+    "ilkbahar":  ["ilkbahar", "sonbahar", "yaz"],
+    "yaz":       ["yaz", "ilkbahar"]
+  },
+  "combo_rules": {
+    "kis":       { "categories": ["top", "bottom", "outer"], "outer_probability": 0.85, "scenarios": ["kis_soguk_ruzgarli", "kis_orta"] },
+    "sonbahar":  { "categories": ["top", "bottom", "outer"], "outer_probability": 0.55, "scenarios": ["sonbahar_serin", "sonbahar_yagmurlu"] },
+    "ilkbahar":  { "categories": ["top", "bottom", "outer"], "outer_probability": 0.30, "scenarios": ["ilkbahar_ilik", "ilkbahar_ruzgarli"] },
+    "yaz":       { "categories": ["top", "bottom"],           "outer_probability": 0.05, "scenarios": ["yaz_sicak", "yaz_nemli"] }
+  }
+}

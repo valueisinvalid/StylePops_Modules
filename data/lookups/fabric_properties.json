@@ -1,0 +1,43 @@
+{
+  "version": "1.0",
+  "source": "ISO 9920:2007 / Havenith 2002 — bootstrap tahmin değerleri",
+  "note": "Kumaş bazlı ic_Clo ve ret değerleri. Karışımlar ağırlıklı ortalama ile hesaplanır.",
+  "materials": {
+    "cotton":       { "clo": 0.04, "ret": 5.0,  "aliases": ["pamuk", "cotton"] },
+    "polyester":    { "clo": 0.03, "ret": 6.5,  "aliases": ["polyester", "poly"] },
+    "wool":         { "clo": 0.08, "ret": 8.0,  "aliases": ["yün", "wool", "yun"] },
+    "linen":        { "clo": 0.035,"ret": 4.5,  "aliases": ["keten", "linen"] },
+    "viscose":      { "clo": 0.035,"ret": 5.5,  "aliases": ["viskoz", "viscose", "rayon"] },
+    "denim":        { "clo": 0.06, "ret": 9.0,  "aliases": ["denim", "kot", "jean"] },
+    "nylon":        { "clo": 0.025,"ret": 4.0,  "aliases": ["naylon", "nylon"] },
+    "silk":         { "clo": 0.03, "ret": 4.0,  "aliases": ["ipek", "silk"] },
+    "elastane":     { "clo": 0.02, "ret": 3.5,  "aliases": ["elastan", "elastane", "spandex", "lycra"] },
+    "acrylic":      { "clo": 0.05, "ret": 6.0,  "aliases": ["akrilik", "acrylic"] },
+    "fleece":       { "clo": 0.09, "ret": 7.5,  "aliases": ["polar", "fleece"] },
+    "leather":      { "clo": 0.10, "ret": 15.0, "aliases": ["deri", "leather"] },
+    "down":         { "clo": 0.12, "ret": 10.0, "aliases": ["kuş tüyü", "down", "kaz tüyü"] },
+    "synthetic":    { "clo": 0.04, "ret": 5.5,  "aliases": ["sentetik", "synthetic"] }
+  },
+  "thermal_categories": {
+    "ince_pamuklu_tisort":     { "clo": 0.12, "ret": 5.0,  "label_tr": "İnce Pamuklu Tişört" },
+    "pamuklu_gomlek":          { "clo": 0.18, "ret": 5.5,  "label_tr": "Pamuklu Gömlek" },
+    "keten_gomlek":            { "clo": 0.15, "ret": 4.5,  "label_tr": "Keten Gömlek" },
+    "ince_triko":              { "clo": 0.22, "ret": 6.5,  "label_tr": "İnce Triko" },
+    "kalin_yun_kazak":         { "clo": 0.35, "ret": 8.5,  "label_tr": "Kalın Yün Kazak" },
+    "polar_sweatshirt":        { "clo": 0.28, "ret": 7.0,  "label_tr": "Polar Sweatshirt" },
+    "jean_pantolon":           { "clo": 0.25, "ret": 9.0,  "label_tr": "Jean Pantolon" },
+    "chino_pantolon":          { "clo": 0.20, "ret": 7.0,  "label_tr": "Chino Pantolon" },
+    "keten_pantolon":          { "clo": 0.16, "ret": 5.5,  "label_tr": "Keten Pantolon" },
+    "sort":                    { "clo": 0.10, "ret": 4.5,  "label_tr": "Şort" },
+    "tayt":                    { "clo": 0.14, "ret": 5.0,  "label_tr": "Tayt" },
+    "ince_ceket":              { "clo": 0.30, "ret": 8.0,  "label_tr": "İnce Ceket" },
+    "trench_coat":             { "clo": 0.40, "ret": 9.5,  "label_tr": "Trençkot" },
+    "kalin_mont":              { "clo": 0.55, "ret": 11.0, "label_tr": "Kalın Mont" },
+    "kaban":                   { "clo": 0.50, "ret": 10.5, "label_tr": "Kaban" },
+    "yagmurluk":               { "clo": 0.25, "ret": 12.0, "label_tr": "Yağmurluk" },
+    "yaz_elbisesi":            { "clo": 0.18, "ret": 4.5,  "label_tr": "Yaz Elbisesi" },
+    "midi_elbise":             { "clo": 0.22, "ret": 5.5,  "label_tr": "Midi Elbise" },
+    "etek":                    { "clo": 0.14, "ret": 5.0,  "label_tr": "Etek" },
+    "bot":                     { "clo": 0.08, "ret": 8.0,  "label_tr": "Bot" }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "source": "ASHRAE 55 / ISO 9920 — giysi alan faktörü (fcl) türevi bootstrap katsayıları",
+  "coverage_by_subcategory": {
+    "tshirt":           0.55,
+    "tank_top":         0.45,
+    "blouse":           0.60,
+    "shirt":            0.65,
+    "sweater":          0.75,
+    "cardigan":         0.70,
+    "hoodie":           0.72,
+    "blazer":           0.78,
+    "jacket":           0.82,
+    "coat":             0.88,
+    "padded_coat":      0.92,
+    "raincoat":         0.85,
+    "jeans":            0.90,
+    "trousers":         0.88,
+    "chinos":           0.86,
+    "shorts":           0.55,
+    "skirt":            0.60,
+    "leggings":         0.75,
+    "dress_short":      0.70,
+    "dress_midi":       0.78,
+    "dress_long":       0.85,
+    "boots":            0.15,
+    "sneakers":         0.10,
+    "sandals":          0.08
+  },
+  "coverage_by_sleeve": {
+    "sleeveless": 0.45,
+    "short":      0.55,
+    "three_quarter": 0.68,
+    "long":       0.75
+  }
+}

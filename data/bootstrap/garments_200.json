@@ -1,0 +1,6547 @@
+{
+  "version": "1.0",
+  "count": 200,
+  "note": "Bootstrap envanter — curated synthetic, gerçek gardırop dağılımına uygun",
+  "garments": [
+    {
+      "id": "G001",
+      "name": "Yün Kazak 01",
+      "category": "top",
+      "subcategory": "sweater",
+      "description": "Yün Kazak 01: koyu nötr tonlu renkte, %80 wool, %20 acrylic kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 80
+        },
+        {
+          "material": "acrylic",
+          "pct": 20
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 25,
+        "a": 15,
+        "b": 10
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kalin_yun_kazak"
+    },
+    {
+      "id": "G002",
+      "name": "Yün Kazak 02",
+      "category": "top",
+      "subcategory": "sweater",
+      "description": "Yün Kazak 02: koyu nötr tonlu renkte, %80 wool, %20 acrylic kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 80
+        },
+        {
+          "material": "acrylic",
+          "pct": 20
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 25,
+        "a": 15,
+        "b": 10
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kalin_yun_kazak"
+    },
+    {
+      "id": "G003",
+      "name": "Yün Kazak 03",
+      "category": "top",
+      "subcategory": "sweater",
+      "description": "Yün Kazak 03: orta sıcak tonlu renkte, %80 wool, %20 acrylic kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 80
+        },
+        {
+          "material": "acrylic",
+          "pct": 20
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 60,
+        "a": 50,
+        "b": 45
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kalin_yun_kazak"
+    },
+    {
+      "id": "G004",
+      "name": "Yün Kazak 04",
+      "category": "top",
+      "subcategory": "sweater",
+      "description": "Yün Kazak 04: koyu sıcak tonlu renkte, %80 wool, %20 acrylic kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 80
+        },
+        {
+          "material": "acrylic",
+          "pct": 20
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 40,
+        "a": 30,
+        "b": 25
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kalin_yun_kazak"
+    },
+    {
+      "id": "G005",
+      "name": "Yün Kazak 05",
+      "category": "top",
+      "subcategory": "sweater",
+      "description": "Yün Kazak 05: koyu sıcak tonlu renkte, %80 wool, %20 acrylic kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 80
+        },
+        {
+          "material": "acrylic",
+          "pct": 20
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 40,
+        "a": 30,
+        "b": 25
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kalin_yun_kazak"
+    },
+    {
+      "id": "G006",
+      "name": "Polar Sweatshirt 01",
+      "category": "top",
+      "subcategory": "hoodie",
+      "description": "Polar Sweatshirt 01: koyu sıcak tonlu renkte, %70 fleece, %30 cotton kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "fleece",
+          "pct": 70
+        },
+        {
+          "material": "cotton",
+          "pct": 30
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 30,
+        "a": 35,
+        "b": 40
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "polar_sweatshirt"
+    },
+    {
+      "id": "G007",
+      "name": "Polar Sweatshirt 02",
+      "category": "top",
+      "subcategory": "hoodie",
+      "description": "Polar Sweatshirt 02: koyu sıcak tonlu renkte, %70 fleece, %30 cotton kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "fleece",
+          "pct": 70
+        },
+        {
+          "material": "cotton",
+          "pct": 30
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 20,
+        "a": 20,
+        "b": 25
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "polar_sweatshirt"
+    },
+    {
+      "id": "G008",
+      "name": "Polar Sweatshirt 03",
+      "category": "top",
+      "subcategory": "hoodie",
+      "description": "Polar Sweatshirt 03: koyu sıcak tonlu renkte, %70 fleece, %30 cotton kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "fleece",
+          "pct": 70
+        },
+        {
+          "material": "cotton",
+          "pct": 30
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 30,
+        "a": 35,
+        "b": 40
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "polar_sweatshirt"
+    },
+    {
+      "id": "G009",
+      "name": "Polar Sweatshirt 04",
+      "category": "top",
+      "subcategory": "hoodie",
+      "description": "Polar Sweatshirt 04: koyu sıcak tonlu renkte, %70 fleece, %30 cotton kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "fleece",
+          "pct": 70
+        },
+        {
+          "material": "cotton",
+          "pct": 30
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 20,
+        "a": 20,
+        "b": 25
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "polar_sweatshirt"
+    },
+    {
+      "id": "G010",
+      "name": "Polar Sweatshirt 05",
+      "category": "top",
+      "subcategory": "hoodie",
+      "description": "Polar Sweatshirt 05: koyu sıcak tonlu renkte, %70 fleece, %30 cotton kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "fleece",
+          "pct": 70
+        },
+        {
+          "material": "cotton",
+          "pct": 30
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 20,
+        "a": 20,
+        "b": 25
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "polar_sweatshirt"
+    },
+    {
+      "id": "G011",
+      "name": "Şişme Mont 01",
+      "category": "outer",
+      "subcategory": "padded_coat",
+      "description": "Şişme Mont 01: koyu sıcak tonlu renkte, %60 nylon, %40 down kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "nylon",
+          "pct": 60
+        },
+        {
+          "material": "down",
+          "pct": 40
+        }
+      ],
+      "layers": [
+        {
+          "role": "shell",
+          "weight": 0.7,
+          "fabric_composition": [
+            {
+              "material": "nylon",
+              "pct": 60
+            },
+            {
+              "material": "down",
+              "pct": 40
+            }
+          ]
+        },
+        {
+          "role": "fill",
+          "weight": 0.3,
+          "fabric_composition": [
+            {
+              "material": "down",
+              "pct": 100
+            }
+          ]
+        }
+      ],
+      "sleeve": "long",
+      "coverage_ratio": 0.92,
+      "color_lab": {
+        "L": 55,
+        "a": 50,
+        "b": 45
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kalin_mont"
+    },
+    {
+      "id": "G012",
+      "name": "Şişme Mont 02",
+      "category": "outer",
+      "subcategory": "padded_coat",
+      "description": "Şişme Mont 02: koyu sıcak tonlu renkte, %60 nylon, %40 down kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "nylon",
+          "pct": 60
+        },
+        {
+          "material": "down",
+          "pct": 40
+        }
+      ],
+      "layers": [
+        {
+          "role": "shell",
+          "weight": 0.7,
+          "fabric_composition": [
+            {
+              "material": "nylon",
+              "pct": 60
+            },
+            {
+              "material": "down",
+              "pct": 40
+            }
+          ]
+        },
+        {
+          "role": "fill",
+          "weight": 0.3,
+          "fabric_composition": [
+            {
+              "material": "down",
+              "pct": 100
+            }
+          ]
+        }
+      ],
+      "sleeve": "long",
+      "coverage_ratio": 0.92,
+      "color_lab": {
+        "L": 10,
+        "a": 15,
+        "b": 25
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kalin_mont"
+    },
+    {
+      "id": "G013",
+      "name": "Şişme Mont 03",
+      "category": "outer",
+      "subcategory": "padded_coat",
+      "description": "Şişme Mont 03: koyu sıcak tonlu renkte, %60 nylon, %40 down kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "nylon",
+          "pct": 60
+        },
+        {
+          "material": "down",
+          "pct": 40
+        }
+      ],
+      "layers": [
+        {
+          "role": "shell",
+          "weight": 0.7,
+          "fabric_composition": [
+            {
+              "material": "nylon",
+              "pct": 60
+            },
+            {
+              "material": "down",
+              "pct": 40
+            }
+          ]
+        },
+        {
+          "role": "fill",
+          "weight": 0.3,
+          "fabric_composition": [
+            {
+              "material": "down",
+              "pct": 100
+            }
+          ]
+        }
+      ],
+      "sleeve": "long",
+      "coverage_ratio": 0.92,
+      "color_lab": {
+        "L": 55,
+        "a": 50,
+        "b": 45
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kalin_mont"
+    },
+    {
+      "id": "G014",
+      "name": "Şişme Mont 04",
+      "category": "outer",
+      "subcategory": "padded_coat",
+      "description": "Şişme Mont 04: koyu sıcak tonlu renkte, %60 nylon, %40 down kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "nylon",
+          "pct": 60
+        },
+        {
+          "material": "down",
+          "pct": 40
+        }
+      ],
+      "layers": [
+        {
+          "role": "shell",
+          "weight": 0.7,
+          "fabric_composition": [
+            {
+              "material": "nylon",
+              "pct": 60
+            },
+            {
+              "material": "down",
+              "pct": 40
+            }
+          ]
+        },
+        {
+          "role": "fill",
+          "weight": 0.3,
+          "fabric_composition": [
+            {
+              "material": "down",
+              "pct": 100
+            }
+          ]
+        }
+      ],
+      "sleeve": "long",
+      "coverage_ratio": 0.92,
+      "color_lab": {
+        "L": 35,
+        "a": 35,
+        "b": 40
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kalin_mont"
+    },
+    {
+      "id": "G015",
+      "name": "Şişme Mont 05",
+      "category": "outer",
+      "subcategory": "padded_coat",
+      "description": "Şişme Mont 05: koyu sıcak tonlu renkte, %60 nylon, %40 down kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "nylon",
+          "pct": 60
+        },
+        {
+          "material": "down",
+          "pct": 40
+        }
+      ],
+      "layers": [
+        {
+          "role": "shell",
+          "weight": 0.7,
+          "fabric_composition": [
+            {
+              "material": "nylon",
+              "pct": 60
+            },
+            {
+              "material": "down",
+              "pct": 40
+            }
+          ]
+        },
+        {
+          "role": "fill",
+          "weight": 0.3,
+          "fabric_composition": [
+            {
+              "material": "down",
+              "pct": 100
+            }
+          ]
+        }
+      ],
+      "sleeve": "long",
+      "coverage_ratio": 0.92,
+      "color_lab": {
+        "L": 10,
+        "a": 15,
+        "b": 25
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kalin_mont"
+    },
+    {
+      "id": "G016",
+      "name": "Yün Kaban 01",
+      "category": "outer",
+      "subcategory": "coat",
+      "description": "Yün Kaban 01: koyu nötr tonlu renkte, %70 wool, %30 polyester kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 70
+        },
+        {
+          "material": "polyester",
+          "pct": 30
+        }
+      ],
+      "layers": [
+        {
+          "role": "shell",
+          "weight": 0.7,
+          "fabric_composition": [
+            {
+              "material": "wool",
+              "pct": 70
+            },
+            {
+              "material": "polyester",
+              "pct": 30
+            }
+          ]
+        },
+        {
+          "role": "lining",
+          "weight": 0.3,
+          "fabric_composition": [
+            {
+              "material": "polyester",
+              "pct": 100
+            }
+          ]
+        }
+      ],
+      "sleeve": "long",
+      "coverage_ratio": 0.88,
+      "color_lab": {
+        "L": 20,
+        "a": 18,
+        "b": 15
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kaban"
+    },
+    {
+      "id": "G017",
+      "name": "Yün Kaban 02",
+      "category": "outer",
+      "subcategory": "coat",
+      "description": "Yün Kaban 02: koyu nötr tonlu renkte, %70 wool, %30 polyester kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 70
+        },
+        {
+          "material": "polyester",
+          "pct": 30
+        }
+      ],
+      "layers": [
+        {
+          "role": "shell",
+          "weight": 0.7,
+          "fabric_composition": [
+            {
+              "material": "wool",
+              "pct": 70
+            },
+            {
+              "material": "polyester",
+              "pct": 30
+            }
+          ]
+        },
+        {
+          "role": "lining",
+          "weight": 0.3,
+          "fabric_composition": [
+            {
+              "material": "polyester",
+              "pct": 100
+            }
+          ]
+        }
+      ],
+      "sleeve": "long",
+      "coverage_ratio": 0.88,
+      "color_lab": {
+        "L": 20,
+        "a": 18,
+        "b": 15
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kaban"
+    },
+    {
+      "id": "G018",
+      "name": "Yün Kaban 03",
+      "category": "outer",
+      "subcategory": "coat",
+      "description": "Yün Kaban 03: koyu nötr tonlu renkte, %70 wool, %30 polyester kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 70
+        },
+        {
+          "material": "polyester",
+          "pct": 30
+        }
+      ],
+      "layers": [
+        {
+          "role": "shell",
+          "weight": 0.7,
+          "fabric_composition": [
+            {
+              "material": "wool",
+              "pct": 70
+            },
+            {
+              "material": "polyester",
+              "pct": 30
+            }
+          ]
+        },
+        {
+          "role": "lining",
+          "weight": 0.3,
+          "fabric_composition": [
+            {
+              "material": "polyester",
+              "pct": 100
+            }
+          ]
+        }
+      ],
+      "sleeve": "long",
+      "coverage_ratio": 0.88,
+      "color_lab": {
+        "L": 20,
+        "a": 18,
+        "b": 15
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kaban"
+    },
+    {
+      "id": "G019",
+      "name": "Yün Kaban 04",
+      "category": "outer",
+      "subcategory": "coat",
+      "description": "Yün Kaban 04: koyu nötr tonlu renkte, %70 wool, %30 polyester kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 70
+        },
+        {
+          "material": "polyester",
+          "pct": 30
+        }
+      ],
+      "layers": [
+        {
+          "role": "shell",
+          "weight": 0.7,
+          "fabric_composition": [
+            {
+              "material": "wool",
+              "pct": 70
+            },
+            {
+              "material": "polyester",
+              "pct": 30
+            }
+          ]
+        },
+        {
+          "role": "lining",
+          "weight": 0.3,
+          "fabric_composition": [
+            {
+              "material": "polyester",
+              "pct": 100
+            }
+          ]
+        }
+      ],
+      "sleeve": "long",
+      "coverage_ratio": 0.88,
+      "color_lab": {
+        "L": 20,
+        "a": 18,
+        "b": 15
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kaban"
+    },
+    {
+      "id": "G020",
+      "name": "Yün Kaban 05",
+      "category": "outer",
+      "subcategory": "coat",
+      "description": "Yün Kaban 05: koyu sıcak tonlu renkte, %70 wool, %30 polyester kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 70
+        },
+        {
+          "material": "polyester",
+          "pct": 30
+        }
+      ],
+      "layers": [
+        {
+          "role": "shell",
+          "weight": 0.7,
+          "fabric_composition": [
+            {
+              "material": "wool",
+              "pct": 70
+            },
+            {
+              "material": "polyester",
+              "pct": 30
+            }
+          ]
+        },
+        {
+          "role": "lining",
+          "weight": 0.3,
+          "fabric_composition": [
+            {
+              "material": "polyester",
+              "pct": 100
+            }
+          ]
+        }
+      ],
+      "sleeve": "long",
+      "coverage_ratio": 0.88,
+      "color_lab": {
+        "L": 30,
+        "a": 32,
+        "b": 35
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kaban"
+    },
+    {
+      "id": "G021",
+      "name": "Koyu Jean 01",
+      "category": "bottom",
+      "subcategory": "jeans",
+      "description": "Koyu Jean 01: koyu sıcak tonlu renkte, %98 denim, %2 elastane kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "denim",
+          "pct": 98
+        },
+        {
+          "material": "elastane",
+          "pct": 2
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.9,
+      "color_lab": {
+        "L": 15,
+        "a": 20,
+        "b": 35
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "jean_pantolon"
+    },
+    {
+      "id": "G022",
+      "name": "Koyu Jean 02",
+      "category": "bottom",
+      "subcategory": "jeans",
+      "description": "Koyu Jean 02: koyu sıcak tonlu renkte, %98 denim, %2 elastane kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "denim",
+          "pct": 98
+        },
+        {
+          "material": "elastane",
+          "pct": 2
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.9,
+      "color_lab": {
+        "L": 15,
+        "a": 20,
+        "b": 35
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "jean_pantolon"
+    },
+    {
+      "id": "G023",
+      "name": "Koyu Jean 03",
+      "category": "bottom",
+      "subcategory": "jeans",
+      "description": "Koyu Jean 03: koyu sıcak tonlu renkte, %98 denim, %2 elastane kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "denim",
+          "pct": 98
+        },
+        {
+          "material": "elastane",
+          "pct": 2
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.9,
+      "color_lab": {
+        "L": 20,
+        "a": 25,
+        "b": 40
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "jean_pantolon"
+    },
+    {
+      "id": "G024",
+      "name": "Koyu Jean 04",
+      "category": "bottom",
+      "subcategory": "jeans",
+      "description": "Koyu Jean 04: koyu sıcak tonlu renkte, %98 denim, %2 elastane kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "denim",
+          "pct": 98
+        },
+        {
+          "material": "elastane",
+          "pct": 2
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.9,
+      "color_lab": {
+        "L": 15,
+        "a": 20,
+        "b": 35
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "jean_pantolon"
+    },
+    {
+      "id": "G025",
+      "name": "Koyu Jean 05",
+      "category": "bottom",
+      "subcategory": "jeans",
+      "description": "Koyu Jean 05: koyu sıcak tonlu renkte, %98 denim, %2 elastane kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "denim",
+          "pct": 98
+        },
+        {
+          "material": "elastane",
+          "pct": 2
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.9,
+      "color_lab": {
+        "L": 20,
+        "a": 25,
+        "b": 40
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "jean_pantolon"
+    },
+    {
+      "id": "G026",
+      "name": "Yün Pantolon 01",
+      "category": "bottom",
+      "subcategory": "trousers",
+      "description": "Yün Pantolon 01: koyu sıcak tonlu renkte, %55 wool, %45 polyester kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 55
+        },
+        {
+          "material": "polyester",
+          "pct": 45
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.88,
+      "color_lab": {
+        "L": 40,
+        "a": 38,
+        "b": 35
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "chino_pantolon"
+    },
+    {
+      "id": "G027",
+      "name": "Yün Pantolon 02",
+      "category": "bottom",
+      "subcategory": "trousers",
+      "description": "Yün Pantolon 02: koyu sıcak tonlu renkte, %55 wool, %45 polyester kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 55
+        },
+        {
+          "material": "polyester",
+          "pct": 45
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.88,
+      "color_lab": {
+        "L": 25,
+        "a": 25,
+        "b": 30
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "chino_pantolon"
+    },
+    {
+      "id": "G028",
+      "name": "Yün Pantolon 03",
+      "category": "bottom",
+      "subcategory": "trousers",
+      "description": "Yün Pantolon 03: koyu sıcak tonlu renkte, %55 wool, %45 polyester kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 55
+        },
+        {
+          "material": "polyester",
+          "pct": 45
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.88,
+      "color_lab": {
+        "L": 25,
+        "a": 25,
+        "b": 30
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "chino_pantolon"
+    },
+    {
+      "id": "G029",
+      "name": "Yün Pantolon 04",
+      "category": "bottom",
+      "subcategory": "trousers",
+      "description": "Yün Pantolon 04: koyu sıcak tonlu renkte, %55 wool, %45 polyester kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 55
+        },
+        {
+          "material": "polyester",
+          "pct": 45
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.88,
+      "color_lab": {
+        "L": 40,
+        "a": 38,
+        "b": 35
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "chino_pantolon"
+    },
+    {
+      "id": "G030",
+      "name": "Yün Pantolon 05",
+      "category": "bottom",
+      "subcategory": "trousers",
+      "description": "Yün Pantolon 05: koyu sıcak tonlu renkte, %55 wool, %45 polyester kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 55
+        },
+        {
+          "material": "polyester",
+          "pct": 45
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.88,
+      "color_lab": {
+        "L": 40,
+        "a": 38,
+        "b": 35
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "chino_pantolon"
+    },
+    {
+      "id": "G031",
+      "name": "Kış Botu 01",
+      "category": "footwear",
+      "subcategory": "boots",
+      "description": "Kış Botu 01: koyu sıcak tonlu renkte, %80 leather, %20 synthetic kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 80
+        },
+        {
+          "material": "synthetic",
+          "pct": 20
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.15,
+      "color_lab": {
+        "L": 30,
+        "a": 28,
+        "b": 25
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G032",
+      "name": "Kış Botu 02",
+      "category": "footwear",
+      "subcategory": "boots",
+      "description": "Kış Botu 02: koyu nötr tonlu renkte, %80 leather, %20 synthetic kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 80
+        },
+        {
+          "material": "synthetic",
+          "pct": 20
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.15,
+      "color_lab": {
+        "L": 15,
+        "a": 12,
+        "b": 10
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G033",
+      "name": "Kış Botu 03",
+      "category": "footwear",
+      "subcategory": "boots",
+      "description": "Kış Botu 03: koyu nötr tonlu renkte, %80 leather, %20 synthetic kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 80
+        },
+        {
+          "material": "synthetic",
+          "pct": 20
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.15,
+      "color_lab": {
+        "L": 15,
+        "a": 12,
+        "b": 10
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G034",
+      "name": "Kış Botu 04",
+      "category": "footwear",
+      "subcategory": "boots",
+      "description": "Kış Botu 04: koyu sıcak tonlu renkte, %80 leather, %20 synthetic kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 80
+        },
+        {
+          "material": "synthetic",
+          "pct": 20
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.15,
+      "color_lab": {
+        "L": 30,
+        "a": 28,
+        "b": 25
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G035",
+      "name": "Kış Botu 05",
+      "category": "footwear",
+      "subcategory": "boots",
+      "description": "Kış Botu 05: koyu nötr tonlu renkte, %80 leather, %20 synthetic kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 80
+        },
+        {
+          "material": "synthetic",
+          "pct": 20
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.15,
+      "color_lab": {
+        "L": 15,
+        "a": 12,
+        "b": 10
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G036",
+      "name": "Kalın Hırka 01",
+      "category": "top",
+      "subcategory": "cardigan",
+      "description": "Kalın Hırka 01: koyu sıcak tonlu renkte, %60 wool, %40 acrylic kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 60
+        },
+        {
+          "material": "acrylic",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 35,
+        "a": 30,
+        "b": 28
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "ince_triko"
+    },
+    {
+      "id": "G037",
+      "name": "Kalın Hırka 02",
+      "category": "top",
+      "subcategory": "cardigan",
+      "description": "Kalın Hırka 02: koyu sıcak tonlu renkte, %60 wool, %40 acrylic kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 60
+        },
+        {
+          "material": "acrylic",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 50,
+        "a": 45,
+        "b": 42
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "ince_triko"
+    },
+    {
+      "id": "G038",
+      "name": "Kalın Hırka 03",
+      "category": "top",
+      "subcategory": "cardigan",
+      "description": "Kalın Hırka 03: koyu sıcak tonlu renkte, %60 wool, %40 acrylic kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 60
+        },
+        {
+          "material": "acrylic",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 35,
+        "a": 30,
+        "b": 28
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "ince_triko"
+    },
+    {
+      "id": "G039",
+      "name": "Kalın Hırka 04",
+      "category": "top",
+      "subcategory": "cardigan",
+      "description": "Kalın Hırka 04: koyu sıcak tonlu renkte, %60 wool, %40 acrylic kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 60
+        },
+        {
+          "material": "acrylic",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 50,
+        "a": 45,
+        "b": 42
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "ince_triko"
+    },
+    {
+      "id": "G040",
+      "name": "Kalın Hırka 05",
+      "category": "top",
+      "subcategory": "cardigan",
+      "description": "Kalın Hırka 05: koyu sıcak tonlu renkte, %60 wool, %40 acrylic kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 60
+        },
+        {
+          "material": "acrylic",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 50,
+        "a": 45,
+        "b": 42
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "ince_triko"
+    },
+    {
+      "id": "G041",
+      "name": "Termal Tayt 01",
+      "category": "bottom",
+      "subcategory": "leggings",
+      "description": "Termal Tayt 01: koyu sıcak tonlu renkte, %70 polyester, %30 elastane kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "polyester",
+          "pct": 70
+        },
+        {
+          "material": "elastane",
+          "pct": 30
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 25,
+        "a": 25,
+        "b": 28
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "tayt"
+    },
+    {
+      "id": "G042",
+      "name": "Termal Tayt 02",
+      "category": "bottom",
+      "subcategory": "leggings",
+      "description": "Termal Tayt 02: koyu nötr tonlu renkte, %70 polyester, %30 elastane kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "polyester",
+          "pct": 70
+        },
+        {
+          "material": "elastane",
+          "pct": 30
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 10,
+        "a": 10,
+        "b": 12
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "tayt"
+    },
+    {
+      "id": "G043",
+      "name": "Termal Tayt 03",
+      "category": "bottom",
+      "subcategory": "leggings",
+      "description": "Termal Tayt 03: koyu sıcak tonlu renkte, %70 polyester, %30 elastane kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "polyester",
+          "pct": 70
+        },
+        {
+          "material": "elastane",
+          "pct": 30
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 25,
+        "a": 25,
+        "b": 28
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "tayt"
+    },
+    {
+      "id": "G044",
+      "name": "Termal Tayt 04",
+      "category": "bottom",
+      "subcategory": "leggings",
+      "description": "Termal Tayt 04: koyu nötr tonlu renkte, %70 polyester, %30 elastane kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "polyester",
+          "pct": 70
+        },
+        {
+          "material": "elastane",
+          "pct": 30
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 10,
+        "a": 10,
+        "b": 12
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "tayt"
+    },
+    {
+      "id": "G045",
+      "name": "Termal Tayt 05",
+      "category": "bottom",
+      "subcategory": "leggings",
+      "description": "Termal Tayt 05: koyu sıcak tonlu renkte, %70 polyester, %30 elastane kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "polyester",
+          "pct": 70
+        },
+        {
+          "material": "elastane",
+          "pct": 30
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 25,
+        "a": 25,
+        "b": 28
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "tayt"
+    },
+    {
+      "id": "G046",
+      "name": "Atkı 01",
+      "category": "accessory",
+      "subcategory": "scarf",
+      "description": "Atkı 01: koyu sıcak tonlu renkte, %100 wool kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 40,
+        "a": 25,
+        "b": 20
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kalin_yun_kazak"
+    },
+    {
+      "id": "G047",
+      "name": "Atkı 02",
+      "category": "accessory",
+      "subcategory": "scarf",
+      "description": "Atkı 02: koyu sıcak tonlu renkte, %100 wool kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 30,
+        "a": 40,
+        "b": 55
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kalin_yun_kazak"
+    },
+    {
+      "id": "G048",
+      "name": "Atkı 03",
+      "category": "accessory",
+      "subcategory": "scarf",
+      "description": "Atkı 03: koyu sıcak tonlu renkte, %100 wool kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 30,
+        "a": 40,
+        "b": 55
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kalin_yun_kazak"
+    },
+    {
+      "id": "G049",
+      "name": "Atkı 04",
+      "category": "accessory",
+      "subcategory": "scarf",
+      "description": "Atkı 04: koyu sıcak tonlu renkte, %100 wool kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 40,
+        "a": 25,
+        "b": 20
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kalin_yun_kazak"
+    },
+    {
+      "id": "G050",
+      "name": "Atkı 05",
+      "category": "accessory",
+      "subcategory": "scarf",
+      "description": "Atkı 05: koyu sıcak tonlu renkte, %100 wool kumaştan kış parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 40,
+        "a": 25,
+        "b": 20
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kalin_yun_kazak"
+    },
+    {
+      "id": "G051",
+      "name": "Hırka 01",
+      "category": "top",
+      "subcategory": "cardigan",
+      "description": "Hırka 01: koyu sıcak tonlu renkte, %50 cotton, %50 acrylic kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 50
+        },
+        {
+          "material": "acrylic",
+          "pct": 50
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 45,
+        "a": 35,
+        "b": 25
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_triko"
+    },
+    {
+      "id": "G052",
+      "name": "Hırka 02",
+      "category": "top",
+      "subcategory": "cardigan",
+      "description": "Hırka 02: koyu sıcak tonlu renkte, %50 cotton, %50 acrylic kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 50
+        },
+        {
+          "material": "acrylic",
+          "pct": 50
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 35,
+        "a": 40,
+        "b": 45
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_triko"
+    },
+    {
+      "id": "G053",
+      "name": "Hırka 03",
+      "category": "top",
+      "subcategory": "cardigan",
+      "description": "Hırka 03: koyu sıcak tonlu renkte, %50 cotton, %50 acrylic kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 50
+        },
+        {
+          "material": "acrylic",
+          "pct": 50
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 45,
+        "a": 35,
+        "b": 25
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_triko"
+    },
+    {
+      "id": "G054",
+      "name": "Hırka 04",
+      "category": "top",
+      "subcategory": "cardigan",
+      "description": "Hırka 04: koyu sıcak tonlu renkte, %50 cotton, %50 acrylic kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 50
+        },
+        {
+          "material": "acrylic",
+          "pct": 50
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 55,
+        "a": 45,
+        "b": 35
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_triko"
+    },
+    {
+      "id": "G055",
+      "name": "Hırka 05",
+      "category": "top",
+      "subcategory": "cardigan",
+      "description": "Hırka 05: koyu sıcak tonlu renkte, %50 cotton, %50 acrylic kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 50
+        },
+        {
+          "material": "acrylic",
+          "pct": 50
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 45,
+        "a": 35,
+        "b": 25
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_triko"
+    },
+    {
+      "id": "G056",
+      "name": "Blazer Ceket 01",
+      "category": "outer",
+      "subcategory": "blazer",
+      "description": "Blazer Ceket 01: koyu sıcak tonlu renkte, %65 wool, %35 polyester kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 65
+        },
+        {
+          "material": "polyester",
+          "pct": 35
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.78,
+      "color_lab": {
+        "L": 25,
+        "a": 25,
+        "b": 30
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_ceket"
+    },
+    {
+      "id": "G057",
+      "name": "Blazer Ceket 02",
+      "category": "outer",
+      "subcategory": "blazer",
+      "description": "Blazer Ceket 02: koyu sıcak tonlu renkte, %65 wool, %35 polyester kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 65
+        },
+        {
+          "material": "polyester",
+          "pct": 35
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.78,
+      "color_lab": {
+        "L": 25,
+        "a": 25,
+        "b": 30
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_ceket"
+    },
+    {
+      "id": "G058",
+      "name": "Blazer Ceket 03",
+      "category": "outer",
+      "subcategory": "blazer",
+      "description": "Blazer Ceket 03: koyu sıcak tonlu renkte, %65 wool, %35 polyester kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 65
+        },
+        {
+          "material": "polyester",
+          "pct": 35
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.78,
+      "color_lab": {
+        "L": 40,
+        "a": 38,
+        "b": 35
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_ceket"
+    },
+    {
+      "id": "G059",
+      "name": "Blazer Ceket 04",
+      "category": "outer",
+      "subcategory": "blazer",
+      "description": "Blazer Ceket 04: koyu sıcak tonlu renkte, %65 wool, %35 polyester kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 65
+        },
+        {
+          "material": "polyester",
+          "pct": 35
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.78,
+      "color_lab": {
+        "L": 40,
+        "a": 38,
+        "b": 35
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_ceket"
+    },
+    {
+      "id": "G060",
+      "name": "Blazer Ceket 05",
+      "category": "outer",
+      "subcategory": "blazer",
+      "description": "Blazer Ceket 05: koyu sıcak tonlu renkte, %65 wool, %35 polyester kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 65
+        },
+        {
+          "material": "polyester",
+          "pct": 35
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.78,
+      "color_lab": {
+        "L": 40,
+        "a": 38,
+        "b": 35
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_ceket"
+    },
+    {
+      "id": "G061",
+      "name": "Deri Ceket 01",
+      "category": "outer",
+      "subcategory": "jacket",
+      "description": "Deri Ceket 01: koyu sıcak tonlu renkte, %90 leather, %10 polyester kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 90
+        },
+        {
+          "material": "polyester",
+          "pct": 10
+        }
+      ],
+      "layers": [
+        {
+          "role": "shell",
+          "weight": 0.7,
+          "fabric_composition": [
+            {
+              "material": "leather",
+              "pct": 90
+            },
+            {
+              "material": "polyester",
+              "pct": 10
+            }
+          ]
+        },
+        {
+          "role": "lining",
+          "weight": 0.3,
+          "fabric_composition": [
+            {
+              "material": "polyester",
+              "pct": 100
+            }
+          ]
+        }
+      ],
+      "sleeve": "long",
+      "coverage_ratio": 0.82,
+      "color_lab": {
+        "L": 35,
+        "a": 30,
+        "b": 25
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_ceket"
+    },
+    {
+      "id": "G062",
+      "name": "Deri Ceket 02",
+      "category": "outer",
+      "subcategory": "jacket",
+      "description": "Deri Ceket 02: koyu nötr tonlu renkte, %90 leather, %10 polyester kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 90
+        },
+        {
+          "material": "polyester",
+          "pct": 10
+        }
+      ],
+      "layers": [
+        {
+          "role": "shell",
+          "weight": 0.7,
+          "fabric_composition": [
+            {
+              "material": "leather",
+              "pct": 90
+            },
+            {
+              "material": "polyester",
+              "pct": 10
+            }
+          ]
+        },
+        {
+          "role": "lining",
+          "weight": 0.3,
+          "fabric_composition": [
+            {
+              "material": "polyester",
+              "pct": 100
+            }
+          ]
+        }
+      ],
+      "sleeve": "long",
+      "coverage_ratio": 0.82,
+      "color_lab": {
+        "L": 20,
+        "a": 15,
+        "b": 12
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_ceket"
+    },
+    {
+      "id": "G063",
+      "name": "Deri Ceket 03",
+      "category": "outer",
+      "subcategory": "jacket",
+      "description": "Deri Ceket 03: koyu sıcak tonlu renkte, %90 leather, %10 polyester kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 90
+        },
+        {
+          "material": "polyester",
+          "pct": 10
+        }
+      ],
+      "layers": [
+        {
+          "role": "shell",
+          "weight": 0.7,
+          "fabric_composition": [
+            {
+              "material": "leather",
+              "pct": 90
+            },
+            {
+              "material": "polyester",
+              "pct": 10
+            }
+          ]
+        },
+        {
+          "role": "lining",
+          "weight": 0.3,
+          "fabric_composition": [
+            {
+              "material": "polyester",
+              "pct": 100
+            }
+          ]
+        }
+      ],
+      "sleeve": "long",
+      "coverage_ratio": 0.82,
+      "color_lab": {
+        "L": 35,
+        "a": 30,
+        "b": 25
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_ceket"
+    },
+    {
+      "id": "G064",
+      "name": "Deri Ceket 04",
+      "category": "outer",
+      "subcategory": "jacket",
+      "description": "Deri Ceket 04: koyu sıcak tonlu renkte, %90 leather, %10 polyester kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 90
+        },
+        {
+          "material": "polyester",
+          "pct": 10
+        }
+      ],
+      "layers": [
+        {
+          "role": "shell",
+          "weight": 0.7,
+          "fabric_composition": [
+            {
+              "material": "leather",
+              "pct": 90
+            },
+            {
+              "material": "polyester",
+              "pct": 10
+            }
+          ]
+        },
+        {
+          "role": "lining",
+          "weight": 0.3,
+          "fabric_composition": [
+            {
+              "material": "polyester",
+              "pct": 100
+            }
+          ]
+        }
+      ],
+      "sleeve": "long",
+      "coverage_ratio": 0.82,
+      "color_lab": {
+        "L": 35,
+        "a": 30,
+        "b": 25
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_ceket"
+    },
+    {
+      "id": "G065",
+      "name": "Deri Ceket 05",
+      "category": "outer",
+      "subcategory": "jacket",
+      "description": "Deri Ceket 05: koyu nötr tonlu renkte, %90 leather, %10 polyester kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 90
+        },
+        {
+          "material": "polyester",
+          "pct": 10
+        }
+      ],
+      "layers": [
+        {
+          "role": "shell",
+          "weight": 0.7,
+          "fabric_composition": [
+            {
+              "material": "leather",
+              "pct": 90
+            },
+            {
+              "material": "polyester",
+              "pct": 10
+            }
+          ]
+        },
+        {
+          "role": "lining",
+          "weight": 0.3,
+          "fabric_composition": [
+            {
+              "material": "polyester",
+              "pct": 100
+            }
+          ]
+        }
+      ],
+      "sleeve": "long",
+      "coverage_ratio": 0.82,
+      "color_lab": {
+        "L": 20,
+        "a": 15,
+        "b": 12
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_ceket"
+    },
+    {
+      "id": "G066",
+      "name": "İnce Triko 01",
+      "category": "top",
+      "subcategory": "sweater",
+      "description": "İnce Triko 01: orta sıcak tonlu renkte, %40 cotton, %60 viscose kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 40
+        },
+        {
+          "material": "viscose",
+          "pct": 60
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 60,
+        "a": 55,
+        "b": 50
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_triko"
+    },
+    {
+      "id": "G067",
+      "name": "İnce Triko 02",
+      "category": "top",
+      "subcategory": "sweater",
+      "description": "İnce Triko 02: koyu sıcak tonlu renkte, %40 cotton, %60 viscose kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 40
+        },
+        {
+          "material": "viscose",
+          "pct": 60
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 35,
+        "a": 40,
+        "b": 50
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_triko"
+    },
+    {
+      "id": "G068",
+      "name": "İnce Triko 03",
+      "category": "top",
+      "subcategory": "sweater",
+      "description": "İnce Triko 03: orta sıcak tonlu renkte, %40 cotton, %60 viscose kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 40
+        },
+        {
+          "material": "viscose",
+          "pct": 60
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 60,
+        "a": 55,
+        "b": 50
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_triko"
+    },
+    {
+      "id": "G069",
+      "name": "İnce Triko 04",
+      "category": "top",
+      "subcategory": "sweater",
+      "description": "İnce Triko 04: orta sıcak tonlu renkte, %40 cotton, %60 viscose kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 40
+        },
+        {
+          "material": "viscose",
+          "pct": 60
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 60,
+        "a": 55,
+        "b": 50
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_triko"
+    },
+    {
+      "id": "G070",
+      "name": "İnce Triko 05",
+      "category": "top",
+      "subcategory": "sweater",
+      "description": "İnce Triko 05: orta sıcak tonlu renkte, %40 cotton, %60 viscose kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 40
+        },
+        {
+          "material": "viscose",
+          "pct": 60
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 60,
+        "a": 55,
+        "b": 50
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_triko"
+    },
+    {
+      "id": "G071",
+      "name": "Jean Pantolon 01",
+      "category": "bottom",
+      "subcategory": "jeans",
+      "description": "Jean Pantolon 01: koyu sıcak tonlu renkte, %97 denim, %3 elastane kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "denim",
+          "pct": 97
+        },
+        {
+          "material": "elastane",
+          "pct": 3
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.9,
+      "color_lab": {
+        "L": 25,
+        "a": 30,
+        "b": 45
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "jean_pantolon"
+    },
+    {
+      "id": "G072",
+      "name": "Jean Pantolon 02",
+      "category": "bottom",
+      "subcategory": "jeans",
+      "description": "Jean Pantolon 02: koyu sıcak tonlu renkte, %97 denim, %3 elastane kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "denim",
+          "pct": 97
+        },
+        {
+          "material": "elastane",
+          "pct": 3
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.9,
+      "color_lab": {
+        "L": 25,
+        "a": 30,
+        "b": 45
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "jean_pantolon"
+    },
+    {
+      "id": "G073",
+      "name": "Jean Pantolon 03",
+      "category": "bottom",
+      "subcategory": "jeans",
+      "description": "Jean Pantolon 03: koyu sıcak tonlu renkte, %97 denim, %3 elastane kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "denim",
+          "pct": 97
+        },
+        {
+          "material": "elastane",
+          "pct": 3
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.9,
+      "color_lab": {
+        "L": 25,
+        "a": 30,
+        "b": 45
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "jean_pantolon"
+    },
+    {
+      "id": "G074",
+      "name": "Jean Pantolon 04",
+      "category": "bottom",
+      "subcategory": "jeans",
+      "description": "Jean Pantolon 04: koyu sıcak tonlu renkte, %97 denim, %3 elastane kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "denim",
+          "pct": 97
+        },
+        {
+          "material": "elastane",
+          "pct": 3
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.9,
+      "color_lab": {
+        "L": 25,
+        "a": 30,
+        "b": 45
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "jean_pantolon"
+    },
+    {
+      "id": "G075",
+      "name": "Jean Pantolon 05",
+      "category": "bottom",
+      "subcategory": "jeans",
+      "description": "Jean Pantolon 05: koyu sıcak tonlu renkte, %97 denim, %3 elastane kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "denim",
+          "pct": 97
+        },
+        {
+          "material": "elastane",
+          "pct": 3
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.9,
+      "color_lab": {
+        "L": 35,
+        "a": 40,
+        "b": 55
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "jean_pantolon"
+    },
+    {
+      "id": "G076",
+      "name": "Chino Pantolon 01",
+      "category": "bottom",
+      "subcategory": "chinos",
+      "description": "Chino Pantolon 01: koyu sıcak tonlu renkte, %97 cotton, %3 elastane kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 97
+        },
+        {
+          "material": "elastane",
+          "pct": 3
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.86,
+      "color_lab": {
+        "L": 35,
+        "a": 38,
+        "b": 40
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "chino_pantolon"
+    },
+    {
+      "id": "G077",
+      "name": "Chino Pantolon 02",
+      "category": "bottom",
+      "subcategory": "chinos",
+      "description": "Chino Pantolon 02: koyu sıcak tonlu renkte, %97 cotton, %3 elastane kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 97
+        },
+        {
+          "material": "elastane",
+          "pct": 3
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.86,
+      "color_lab": {
+        "L": 35,
+        "a": 38,
+        "b": 40
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "chino_pantolon"
+    },
+    {
+      "id": "G078",
+      "name": "Chino Pantolon 03",
+      "category": "bottom",
+      "subcategory": "chinos",
+      "description": "Chino Pantolon 03: koyu sıcak tonlu renkte, %97 cotton, %3 elastane kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 97
+        },
+        {
+          "material": "elastane",
+          "pct": 3
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.86,
+      "color_lab": {
+        "L": 50,
+        "a": 48,
+        "b": 42
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "chino_pantolon"
+    },
+    {
+      "id": "G079",
+      "name": "Chino Pantolon 04",
+      "category": "bottom",
+      "subcategory": "chinos",
+      "description": "Chino Pantolon 04: koyu sıcak tonlu renkte, %97 cotton, %3 elastane kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 97
+        },
+        {
+          "material": "elastane",
+          "pct": 3
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.86,
+      "color_lab": {
+        "L": 50,
+        "a": 48,
+        "b": 42
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "chino_pantolon"
+    },
+    {
+      "id": "G080",
+      "name": "Chino Pantolon 05",
+      "category": "bottom",
+      "subcategory": "chinos",
+      "description": "Chino Pantolon 05: koyu sıcak tonlu renkte, %97 cotton, %3 elastane kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 97
+        },
+        {
+          "material": "elastane",
+          "pct": 3
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.86,
+      "color_lab": {
+        "L": 50,
+        "a": 48,
+        "b": 42
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "chino_pantolon"
+    },
+    {
+      "id": "G081",
+      "name": "Yağmurluk 01",
+      "category": "outer",
+      "subcategory": "raincoat",
+      "description": "Yağmurluk 01: koyu sıcak tonlu renkte, %100 nylon kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "nylon",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.85,
+      "color_lab": {
+        "L": 30,
+        "a": 35,
+        "b": 40
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "yagmurluk"
+    },
+    {
+      "id": "G082",
+      "name": "Yağmurluk 02",
+      "category": "outer",
+      "subcategory": "raincoat",
+      "description": "Yağmurluk 02: koyu sıcak tonlu renkte, %100 nylon kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "nylon",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.85,
+      "color_lab": {
+        "L": 25,
+        "a": 30,
+        "b": 25
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "yagmurluk"
+    },
+    {
+      "id": "G083",
+      "name": "Yağmurluk 03",
+      "category": "outer",
+      "subcategory": "raincoat",
+      "description": "Yağmurluk 03: koyu sıcak tonlu renkte, %100 nylon kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "nylon",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.85,
+      "color_lab": {
+        "L": 45,
+        "a": 50,
+        "b": 55
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "yagmurluk"
+    },
+    {
+      "id": "G084",
+      "name": "Yağmurluk 04",
+      "category": "outer",
+      "subcategory": "raincoat",
+      "description": "Yağmurluk 04: koyu sıcak tonlu renkte, %100 nylon kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "nylon",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.85,
+      "color_lab": {
+        "L": 30,
+        "a": 35,
+        "b": 40
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "yagmurluk"
+    },
+    {
+      "id": "G085",
+      "name": "Yağmurluk 05",
+      "category": "outer",
+      "subcategory": "raincoat",
+      "description": "Yağmurluk 05: koyu sıcak tonlu renkte, %100 nylon kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "nylon",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.85,
+      "color_lab": {
+        "L": 30,
+        "a": 35,
+        "b": 40
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "yagmurluk"
+    },
+    {
+      "id": "G086",
+      "name": "Chelsea Bot 01",
+      "category": "footwear",
+      "subcategory": "boots",
+      "description": "Chelsea Bot 01: koyu nötr tonlu renkte, %100 leather kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.15,
+      "color_lab": {
+        "L": 20,
+        "a": 18,
+        "b": 15
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G087",
+      "name": "Chelsea Bot 02",
+      "category": "footwear",
+      "subcategory": "boots",
+      "description": "Chelsea Bot 02: koyu sıcak tonlu renkte, %100 leather kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.15,
+      "color_lab": {
+        "L": 35,
+        "a": 32,
+        "b": 28
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G088",
+      "name": "Chelsea Bot 03",
+      "category": "footwear",
+      "subcategory": "boots",
+      "description": "Chelsea Bot 03: koyu sıcak tonlu renkte, %100 leather kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.15,
+      "color_lab": {
+        "L": 35,
+        "a": 32,
+        "b": 28
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G089",
+      "name": "Chelsea Bot 04",
+      "category": "footwear",
+      "subcategory": "boots",
+      "description": "Chelsea Bot 04: koyu sıcak tonlu renkte, %100 leather kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.15,
+      "color_lab": {
+        "L": 35,
+        "a": 32,
+        "b": 28
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G090",
+      "name": "Chelsea Bot 05",
+      "category": "footwear",
+      "subcategory": "boots",
+      "description": "Chelsea Bot 05: koyu nötr tonlu renkte, %100 leather kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.15,
+      "color_lab": {
+        "L": 20,
+        "a": 18,
+        "b": 15
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G091",
+      "name": "Ekose Gömlek 01",
+      "category": "top",
+      "subcategory": "shirt",
+      "description": "Ekose Gömlek 01: koyu sıcak tonlu renkte, %100 cotton kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 45,
+        "a": 40,
+        "b": 35
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "pamuklu_gomlek"
+    },
+    {
+      "id": "G092",
+      "name": "Ekose Gömlek 02",
+      "category": "top",
+      "subcategory": "shirt",
+      "description": "Ekose Gömlek 02: koyu sıcak tonlu renkte, %100 cotton kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 40,
+        "a": 45,
+        "b": 50
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "pamuklu_gomlek"
+    },
+    {
+      "id": "G093",
+      "name": "Ekose Gömlek 03",
+      "category": "top",
+      "subcategory": "shirt",
+      "description": "Ekose Gömlek 03: koyu sıcak tonlu renkte, %100 cotton kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 45,
+        "a": 40,
+        "b": 35
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "pamuklu_gomlek"
+    },
+    {
+      "id": "G094",
+      "name": "Ekose Gömlek 04",
+      "category": "top",
+      "subcategory": "shirt",
+      "description": "Ekose Gömlek 04: koyu sıcak tonlu renkte, %100 cotton kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 40,
+        "a": 45,
+        "b": 50
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "pamuklu_gomlek"
+    },
+    {
+      "id": "G095",
+      "name": "Ekose Gömlek 05",
+      "category": "top",
+      "subcategory": "shirt",
+      "description": "Ekose Gömlek 05: koyu sıcak tonlu renkte, %100 cotton kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 40,
+        "a": 45,
+        "b": 50
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "pamuklu_gomlek"
+    },
+    {
+      "id": "G096",
+      "name": "Midi Etek 01",
+      "category": "bottom",
+      "subcategory": "skirt",
+      "description": "Midi Etek 01: koyu sıcak tonlu renkte, %50 wool, %50 polyester kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 50
+        },
+        {
+          "material": "polyester",
+          "pct": 50
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.6,
+      "color_lab": {
+        "L": 45,
+        "a": 42,
+        "b": 48
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "etek"
+    },
+    {
+      "id": "G097",
+      "name": "Midi Etek 02",
+      "category": "bottom",
+      "subcategory": "skirt",
+      "description": "Midi Etek 02: koyu sıcak tonlu renkte, %50 wool, %50 polyester kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 50
+        },
+        {
+          "material": "polyester",
+          "pct": 50
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.6,
+      "color_lab": {
+        "L": 30,
+        "a": 28,
+        "b": 32
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "etek"
+    },
+    {
+      "id": "G098",
+      "name": "Midi Etek 03",
+      "category": "bottom",
+      "subcategory": "skirt",
+      "description": "Midi Etek 03: koyu sıcak tonlu renkte, %50 wool, %50 polyester kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 50
+        },
+        {
+          "material": "polyester",
+          "pct": 50
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.6,
+      "color_lab": {
+        "L": 45,
+        "a": 42,
+        "b": 48
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "etek"
+    },
+    {
+      "id": "G099",
+      "name": "Midi Etek 04",
+      "category": "bottom",
+      "subcategory": "skirt",
+      "description": "Midi Etek 04: koyu sıcak tonlu renkte, %50 wool, %50 polyester kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 50
+        },
+        {
+          "material": "polyester",
+          "pct": 50
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.6,
+      "color_lab": {
+        "L": 30,
+        "a": 28,
+        "b": 32
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "etek"
+    },
+    {
+      "id": "G100",
+      "name": "Midi Etek 05",
+      "category": "bottom",
+      "subcategory": "skirt",
+      "description": "Midi Etek 05: koyu sıcak tonlu renkte, %50 wool, %50 polyester kumaştan sonbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "wool",
+          "pct": 50
+        },
+        {
+          "material": "polyester",
+          "pct": 50
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.6,
+      "color_lab": {
+        "L": 30,
+        "a": 28,
+        "b": 32
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "etek"
+    },
+    {
+      "id": "G101",
+      "name": "Pamuklu Gömlek 01",
+      "category": "top",
+      "subcategory": "shirt",
+      "description": "Pamuklu Gömlek 01: koyu sıcak tonlu renkte, %100 cotton kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 55,
+        "a": 60,
+        "b": 75
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "pamuklu_gomlek"
+    },
+    {
+      "id": "G102",
+      "name": "Pamuklu Gömlek 02",
+      "category": "top",
+      "subcategory": "shirt",
+      "description": "Pamuklu Gömlek 02: koyu sıcak tonlu renkte, %100 cotton kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 55,
+        "a": 60,
+        "b": 75
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "pamuklu_gomlek"
+    },
+    {
+      "id": "G103",
+      "name": "Pamuklu Gömlek 03",
+      "category": "top",
+      "subcategory": "shirt",
+      "description": "Pamuklu Gömlek 03: koyu sıcak tonlu renkte, %100 cotton kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 55,
+        "a": 60,
+        "b": 75
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "pamuklu_gomlek"
+    },
+    {
+      "id": "G104",
+      "name": "Pamuklu Gömlek 04",
+      "category": "top",
+      "subcategory": "shirt",
+      "description": "Pamuklu Gömlek 04: orta sıcak tonlu renkte, %100 cotton kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 60,
+        "a": 65,
+        "b": 70
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "pamuklu_gomlek"
+    },
+    {
+      "id": "G105",
+      "name": "Pamuklu Gömlek 05",
+      "category": "top",
+      "subcategory": "shirt",
+      "description": "Pamuklu Gömlek 05: koyu sıcak tonlu renkte, %100 cotton kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 55,
+        "a": 60,
+        "b": 75
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "pamuklu_gomlek"
+    },
+    {
+      "id": "G106",
+      "name": "Bluz 01",
+      "category": "top",
+      "subcategory": "blouse",
+      "description": "Bluz 01: orta sıcak tonlu renkte, %70 viscose, %30 polyester kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 70
+        },
+        {
+          "material": "polyester",
+          "pct": 30
+        }
+      ],
+      "layers": null,
+      "sleeve": "three_quarter",
+      "coverage_ratio": 0.68,
+      "color_lab": {
+        "L": 80,
+        "a": 75,
+        "b": 70
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "pamuklu_gomlek"
+    },
+    {
+      "id": "G107",
+      "name": "Bluz 02",
+      "category": "top",
+      "subcategory": "blouse",
+      "description": "Bluz 02: orta sıcak tonlu renkte, %70 viscose, %30 polyester kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 70
+        },
+        {
+          "material": "polyester",
+          "pct": 30
+        }
+      ],
+      "layers": null,
+      "sleeve": "three_quarter",
+      "coverage_ratio": 0.68,
+      "color_lab": {
+        "L": 65,
+        "a": 70,
+        "b": 80
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "pamuklu_gomlek"
+    },
+    {
+      "id": "G108",
+      "name": "Bluz 03",
+      "category": "top",
+      "subcategory": "blouse",
+      "description": "Bluz 03: orta sıcak tonlu renkte, %70 viscose, %30 polyester kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 70
+        },
+        {
+          "material": "polyester",
+          "pct": 30
+        }
+      ],
+      "layers": null,
+      "sleeve": "three_quarter",
+      "coverage_ratio": 0.68,
+      "color_lab": {
+        "L": 80,
+        "a": 75,
+        "b": 70
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "pamuklu_gomlek"
+    },
+    {
+      "id": "G109",
+      "name": "Bluz 04",
+      "category": "top",
+      "subcategory": "blouse",
+      "description": "Bluz 04: orta sıcak tonlu renkte, %70 viscose, %30 polyester kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 70
+        },
+        {
+          "material": "polyester",
+          "pct": 30
+        }
+      ],
+      "layers": null,
+      "sleeve": "three_quarter",
+      "coverage_ratio": 0.68,
+      "color_lab": {
+        "L": 65,
+        "a": 70,
+        "b": 80
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "pamuklu_gomlek"
+    },
+    {
+      "id": "G110",
+      "name": "Bluz 05",
+      "category": "top",
+      "subcategory": "blouse",
+      "description": "Bluz 05: orta sıcak tonlu renkte, %70 viscose, %30 polyester kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 70
+        },
+        {
+          "material": "polyester",
+          "pct": 30
+        }
+      ],
+      "layers": null,
+      "sleeve": "three_quarter",
+      "coverage_ratio": 0.68,
+      "color_lab": {
+        "L": 65,
+        "a": 70,
+        "b": 80
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "pamuklu_gomlek"
+    },
+    {
+      "id": "G111",
+      "name": "İnce Tişört 01",
+      "category": "top",
+      "subcategory": "tshirt",
+      "description": "İnce Tişört 01: orta sıcak tonlu renkte, %95 cotton, %5 elastane kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 95
+        },
+        {
+          "material": "elastane",
+          "pct": 5
+        }
+      ],
+      "layers": null,
+      "sleeve": "short",
+      "coverage_ratio": 0.55,
+      "color_lab": {
+        "L": 80,
+        "a": 82,
+        "b": 85
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "ince_pamuklu_tisort"
+    },
+    {
+      "id": "G112",
+      "name": "İnce Tişört 02",
+      "category": "top",
+      "subcategory": "tshirt",
+      "description": "İnce Tişört 02: orta sıcak tonlu renkte, %95 cotton, %5 elastane kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 95
+        },
+        {
+          "material": "elastane",
+          "pct": 5
+        }
+      ],
+      "layers": null,
+      "sleeve": "short",
+      "coverage_ratio": 0.55,
+      "color_lab": {
+        "L": 80,
+        "a": 82,
+        "b": 85
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "ince_pamuklu_tisort"
+    },
+    {
+      "id": "G113",
+      "name": "İnce Tişört 03",
+      "category": "top",
+      "subcategory": "tshirt",
+      "description": "İnce Tişört 03: orta sıcak tonlu renkte, %95 cotton, %5 elastane kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 95
+        },
+        {
+          "material": "elastane",
+          "pct": 5
+        }
+      ],
+      "layers": null,
+      "sleeve": "short",
+      "coverage_ratio": 0.55,
+      "color_lab": {
+        "L": 65,
+        "a": 70,
+        "b": 75
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "ince_pamuklu_tisort"
+    },
+    {
+      "id": "G114",
+      "name": "İnce Tişört 04",
+      "category": "top",
+      "subcategory": "tshirt",
+      "description": "İnce Tişört 04: orta sıcak tonlu renkte, %95 cotton, %5 elastane kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 95
+        },
+        {
+          "material": "elastane",
+          "pct": 5
+        }
+      ],
+      "layers": null,
+      "sleeve": "short",
+      "coverage_ratio": 0.55,
+      "color_lab": {
+        "L": 70,
+        "a": 75,
+        "b": 80
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "ince_pamuklu_tisort"
+    },
+    {
+      "id": "G115",
+      "name": "İnce Tişört 05",
+      "category": "top",
+      "subcategory": "tshirt",
+      "description": "İnce Tişört 05: orta sıcak tonlu renkte, %95 cotton, %5 elastane kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 95
+        },
+        {
+          "material": "elastane",
+          "pct": 5
+        }
+      ],
+      "layers": null,
+      "sleeve": "short",
+      "coverage_ratio": 0.55,
+      "color_lab": {
+        "L": 80,
+        "a": 82,
+        "b": 85
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "ince_pamuklu_tisort"
+    },
+    {
+      "id": "G116",
+      "name": "Trençkot 01",
+      "category": "outer",
+      "subcategory": "jacket",
+      "description": "Trençkot 01: koyu sıcak tonlu renkte, %65 cotton, %35 polyester kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 65
+        },
+        {
+          "material": "polyester",
+          "pct": 35
+        }
+      ],
+      "layers": [
+        {
+          "role": "shell",
+          "weight": 0.7,
+          "fabric_composition": [
+            {
+              "material": "cotton",
+              "pct": 65
+            },
+            {
+              "material": "polyester",
+              "pct": 35
+            }
+          ]
+        },
+        {
+          "role": "lining",
+          "weight": 0.3,
+          "fabric_composition": [
+            {
+              "material": "polyester",
+              "pct": 100
+            }
+          ]
+        }
+      ],
+      "sleeve": "long",
+      "coverage_ratio": 0.82,
+      "color_lab": {
+        "L": 55,
+        "a": 52,
+        "b": 48
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "trench_coat"
+    },
+    {
+      "id": "G117",
+      "name": "Trençkot 02",
+      "category": "outer",
+      "subcategory": "jacket",
+      "description": "Trençkot 02: koyu sıcak tonlu renkte, %65 cotton, %35 polyester kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 65
+        },
+        {
+          "material": "polyester",
+          "pct": 35
+        }
+      ],
+      "layers": [
+        {
+          "role": "shell",
+          "weight": 0.7,
+          "fabric_composition": [
+            {
+              "material": "cotton",
+              "pct": 65
+            },
+            {
+              "material": "polyester",
+              "pct": 35
+            }
+          ]
+        },
+        {
+          "role": "lining",
+          "weight": 0.3,
+          "fabric_composition": [
+            {
+              "material": "polyester",
+              "pct": 100
+            }
+          ]
+        }
+      ],
+      "sleeve": "long",
+      "coverage_ratio": 0.82,
+      "color_lab": {
+        "L": 55,
+        "a": 52,
+        "b": 48
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "trench_coat"
+    },
+    {
+      "id": "G118",
+      "name": "Trençkot 03",
+      "category": "outer",
+      "subcategory": "jacket",
+      "description": "Trençkot 03: koyu sıcak tonlu renkte, %65 cotton, %35 polyester kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 65
+        },
+        {
+          "material": "polyester",
+          "pct": 35
+        }
+      ],
+      "layers": [
+        {
+          "role": "shell",
+          "weight": 0.7,
+          "fabric_composition": [
+            {
+              "material": "cotton",
+              "pct": 65
+            },
+            {
+              "material": "polyester",
+              "pct": 35
+            }
+          ]
+        },
+        {
+          "role": "lining",
+          "weight": 0.3,
+          "fabric_composition": [
+            {
+              "material": "polyester",
+              "pct": 100
+            }
+          ]
+        }
+      ],
+      "sleeve": "long",
+      "coverage_ratio": 0.82,
+      "color_lab": {
+        "L": 55,
+        "a": 52,
+        "b": 48
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "trench_coat"
+    },
+    {
+      "id": "G119",
+      "name": "Trençkot 04",
+      "category": "outer",
+      "subcategory": "jacket",
+      "description": "Trençkot 04: orta sıcak tonlu renkte, %65 cotton, %35 polyester kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 65
+        },
+        {
+          "material": "polyester",
+          "pct": 35
+        }
+      ],
+      "layers": [
+        {
+          "role": "shell",
+          "weight": 0.7,
+          "fabric_composition": [
+            {
+              "material": "cotton",
+              "pct": 65
+            },
+            {
+              "material": "polyester",
+              "pct": 35
+            }
+          ]
+        },
+        {
+          "role": "lining",
+          "weight": 0.3,
+          "fabric_composition": [
+            {
+              "material": "polyester",
+              "pct": 100
+            }
+          ]
+        }
+      ],
+      "sleeve": "long",
+      "coverage_ratio": 0.82,
+      "color_lab": {
+        "L": 60,
+        "a": 58,
+        "b": 55
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "trench_coat"
+    },
+    {
+      "id": "G120",
+      "name": "Trençkot 05",
+      "category": "outer",
+      "subcategory": "jacket",
+      "description": "Trençkot 05: koyu sıcak tonlu renkte, %65 cotton, %35 polyester kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 65
+        },
+        {
+          "material": "polyester",
+          "pct": 35
+        }
+      ],
+      "layers": [
+        {
+          "role": "shell",
+          "weight": 0.7,
+          "fabric_composition": [
+            {
+              "material": "cotton",
+              "pct": 65
+            },
+            {
+              "material": "polyester",
+              "pct": 35
+            }
+          ]
+        },
+        {
+          "role": "lining",
+          "weight": 0.3,
+          "fabric_composition": [
+            {
+              "material": "polyester",
+              "pct": 100
+            }
+          ]
+        }
+      ],
+      "sleeve": "long",
+      "coverage_ratio": 0.82,
+      "color_lab": {
+        "L": 55,
+        "a": 52,
+        "b": 48
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "trench_coat"
+    },
+    {
+      "id": "G121",
+      "name": "Bej Chino 01",
+      "category": "bottom",
+      "subcategory": "chinos",
+      "description": "Bej Chino 01: koyu sıcak tonlu renkte, %98 cotton, %2 elastane kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 98
+        },
+        {
+          "material": "elastane",
+          "pct": 2
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.86,
+      "color_lab": {
+        "L": 55,
+        "a": 58,
+        "b": 60
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "chino_pantolon"
+    },
+    {
+      "id": "G122",
+      "name": "Bej Chino 02",
+      "category": "bottom",
+      "subcategory": "chinos",
+      "description": "Bej Chino 02: orta sıcak tonlu renkte, %98 cotton, %2 elastane kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 98
+        },
+        {
+          "material": "elastane",
+          "pct": 2
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.86,
+      "color_lab": {
+        "L": 65,
+        "a": 62,
+        "b": 55
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "chino_pantolon"
+    },
+    {
+      "id": "G123",
+      "name": "Bej Chino 03",
+      "category": "bottom",
+      "subcategory": "chinos",
+      "description": "Bej Chino 03: koyu sıcak tonlu renkte, %98 cotton, %2 elastane kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 98
+        },
+        {
+          "material": "elastane",
+          "pct": 2
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.86,
+      "color_lab": {
+        "L": 55,
+        "a": 58,
+        "b": 60
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "chino_pantolon"
+    },
+    {
+      "id": "G124",
+      "name": "Bej Chino 04",
+      "category": "bottom",
+      "subcategory": "chinos",
+      "description": "Bej Chino 04: koyu sıcak tonlu renkte, %98 cotton, %2 elastane kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 98
+        },
+        {
+          "material": "elastane",
+          "pct": 2
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.86,
+      "color_lab": {
+        "L": 55,
+        "a": 58,
+        "b": 60
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "chino_pantolon"
+    },
+    {
+      "id": "G125",
+      "name": "Bej Chino 05",
+      "category": "bottom",
+      "subcategory": "chinos",
+      "description": "Bej Chino 05: koyu sıcak tonlu renkte, %98 cotton, %2 elastane kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 98
+        },
+        {
+          "material": "elastane",
+          "pct": 2
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.86,
+      "color_lab": {
+        "L": 55,
+        "a": 58,
+        "b": 60
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "chino_pantolon"
+    },
+    {
+      "id": "G126",
+      "name": "Açık Jean 01",
+      "category": "bottom",
+      "subcategory": "jeans",
+      "description": "Açık Jean 01: koyu sıcak tonlu renkte, %98 denim, %2 elastane kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "denim",
+          "pct": 98
+        },
+        {
+          "material": "elastane",
+          "pct": 2
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.9,
+      "color_lab": {
+        "L": 45,
+        "a": 50,
+        "b": 58
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "jean_pantolon"
+    },
+    {
+      "id": "G127",
+      "name": "Açık Jean 02",
+      "category": "bottom",
+      "subcategory": "jeans",
+      "description": "Açık Jean 02: koyu sıcak tonlu renkte, %98 denim, %2 elastane kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "denim",
+          "pct": 98
+        },
+        {
+          "material": "elastane",
+          "pct": 2
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.9,
+      "color_lab": {
+        "L": 50,
+        "a": 55,
+        "b": 65
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "jean_pantolon"
+    },
+    {
+      "id": "G128",
+      "name": "Açık Jean 03",
+      "category": "bottom",
+      "subcategory": "jeans",
+      "description": "Açık Jean 03: koyu sıcak tonlu renkte, %98 denim, %2 elastane kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "denim",
+          "pct": 98
+        },
+        {
+          "material": "elastane",
+          "pct": 2
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.9,
+      "color_lab": {
+        "L": 50,
+        "a": 55,
+        "b": 65
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "jean_pantolon"
+    },
+    {
+      "id": "G129",
+      "name": "Açık Jean 04",
+      "category": "bottom",
+      "subcategory": "jeans",
+      "description": "Açık Jean 04: koyu sıcak tonlu renkte, %98 denim, %2 elastane kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "denim",
+          "pct": 98
+        },
+        {
+          "material": "elastane",
+          "pct": 2
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.9,
+      "color_lab": {
+        "L": 45,
+        "a": 50,
+        "b": 58
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "jean_pantolon"
+    },
+    {
+      "id": "G130",
+      "name": "Açık Jean 05",
+      "category": "bottom",
+      "subcategory": "jeans",
+      "description": "Açık Jean 05: koyu sıcak tonlu renkte, %98 denim, %2 elastane kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "denim",
+          "pct": 98
+        },
+        {
+          "material": "elastane",
+          "pct": 2
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.9,
+      "color_lab": {
+        "L": 45,
+        "a": 50,
+        "b": 58
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "jean_pantolon"
+    },
+    {
+      "id": "G131",
+      "name": "Midi Elbise 01",
+      "category": "dress",
+      "subcategory": "dress_midi",
+      "description": "Midi Elbise 01: orta sıcak tonlu renkte, %60 cotton, %40 viscose kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 60
+        },
+        {
+          "material": "viscose",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": "three_quarter",
+      "coverage_ratio": 0.78,
+      "color_lab": {
+        "L": 70,
+        "a": 68,
+        "b": 72
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "midi_elbise"
+    },
+    {
+      "id": "G132",
+      "name": "Midi Elbise 02",
+      "category": "dress",
+      "subcategory": "dress_midi",
+      "description": "Midi Elbise 02: orta sıcak tonlu renkte, %60 cotton, %40 viscose kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 60
+        },
+        {
+          "material": "viscose",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": "three_quarter",
+      "coverage_ratio": 0.78,
+      "color_lab": {
+        "L": 60,
+        "a": 65,
+        "b": 75
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "midi_elbise"
+    },
+    {
+      "id": "G133",
+      "name": "Midi Elbise 03",
+      "category": "dress",
+      "subcategory": "dress_midi",
+      "description": "Midi Elbise 03: orta sıcak tonlu renkte, %60 cotton, %40 viscose kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 60
+        },
+        {
+          "material": "viscose",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": "three_quarter",
+      "coverage_ratio": 0.78,
+      "color_lab": {
+        "L": 60,
+        "a": 65,
+        "b": 75
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "midi_elbise"
+    },
+    {
+      "id": "G134",
+      "name": "Midi Elbise 04",
+      "category": "dress",
+      "subcategory": "dress_midi",
+      "description": "Midi Elbise 04: orta sıcak tonlu renkte, %60 cotton, %40 viscose kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 60
+        },
+        {
+          "material": "viscose",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": "three_quarter",
+      "coverage_ratio": 0.78,
+      "color_lab": {
+        "L": 70,
+        "a": 68,
+        "b": 72
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "midi_elbise"
+    },
+    {
+      "id": "G135",
+      "name": "Midi Elbise 05",
+      "category": "dress",
+      "subcategory": "dress_midi",
+      "description": "Midi Elbise 05: orta sıcak tonlu renkte, %60 cotton, %40 viscose kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 60
+        },
+        {
+          "material": "viscose",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": "three_quarter",
+      "coverage_ratio": 0.78,
+      "color_lab": {
+        "L": 60,
+        "a": 65,
+        "b": 75
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "midi_elbise"
+    },
+    {
+      "id": "G136",
+      "name": "İnce Hırka 01",
+      "category": "top",
+      "subcategory": "cardigan",
+      "description": "İnce Hırka 01: orta sıcak tonlu renkte, %80 cotton, %20 acrylic kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 80
+        },
+        {
+          "material": "acrylic",
+          "pct": 20
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 65,
+        "a": 62,
+        "b": 58
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "ince_triko"
+    },
+    {
+      "id": "G137",
+      "name": "İnce Hırka 02",
+      "category": "top",
+      "subcategory": "cardigan",
+      "description": "İnce Hırka 02: koyu sıcak tonlu renkte, %80 cotton, %20 acrylic kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 80
+        },
+        {
+          "material": "acrylic",
+          "pct": 20
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 55,
+        "a": 60,
+        "b": 65
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "ince_triko"
+    },
+    {
+      "id": "G138",
+      "name": "İnce Hırka 03",
+      "category": "top",
+      "subcategory": "cardigan",
+      "description": "İnce Hırka 03: orta sıcak tonlu renkte, %80 cotton, %20 acrylic kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 80
+        },
+        {
+          "material": "acrylic",
+          "pct": 20
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 65,
+        "a": 62,
+        "b": 58
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "ince_triko"
+    },
+    {
+      "id": "G139",
+      "name": "İnce Hırka 04",
+      "category": "top",
+      "subcategory": "cardigan",
+      "description": "İnce Hırka 04: orta sıcak tonlu renkte, %80 cotton, %20 acrylic kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 80
+        },
+        {
+          "material": "acrylic",
+          "pct": 20
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 65,
+        "a": 62,
+        "b": 58
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "ince_triko"
+    },
+    {
+      "id": "G140",
+      "name": "İnce Hırka 05",
+      "category": "top",
+      "subcategory": "cardigan",
+      "description": "İnce Hırka 05: koyu sıcak tonlu renkte, %80 cotton, %20 acrylic kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 80
+        },
+        {
+          "material": "acrylic",
+          "pct": 20
+        }
+      ],
+      "layers": null,
+      "sleeve": "long",
+      "coverage_ratio": 0.75,
+      "color_lab": {
+        "L": 55,
+        "a": 60,
+        "b": 65
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "ince_triko"
+    },
+    {
+      "id": "G141",
+      "name": "Sneaker 01",
+      "category": "footwear",
+      "subcategory": "sneakers",
+      "description": "Sneaker 01: orta sıcak tonlu renkte, %60 synthetic, %40 cotton kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "synthetic",
+          "pct": 60
+        },
+        {
+          "material": "cotton",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.1,
+      "color_lab": {
+        "L": 75,
+        "a": 78,
+        "b": 80
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G142",
+      "name": "Sneaker 02",
+      "category": "footwear",
+      "subcategory": "sneakers",
+      "description": "Sneaker 02: orta sıcak tonlu renkte, %60 synthetic, %40 cotton kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "synthetic",
+          "pct": 60
+        },
+        {
+          "material": "cotton",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.1,
+      "color_lab": {
+        "L": 75,
+        "a": 78,
+        "b": 80
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G143",
+      "name": "Sneaker 03",
+      "category": "footwear",
+      "subcategory": "sneakers",
+      "description": "Sneaker 03: koyu sıcak tonlu renkte, %60 synthetic, %40 cotton kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "synthetic",
+          "pct": 60
+        },
+        {
+          "material": "cotton",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.1,
+      "color_lab": {
+        "L": 45,
+        "a": 48,
+        "b": 50
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G144",
+      "name": "Sneaker 04",
+      "category": "footwear",
+      "subcategory": "sneakers",
+      "description": "Sneaker 04: orta sıcak tonlu renkte, %60 synthetic, %40 cotton kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "synthetic",
+          "pct": 60
+        },
+        {
+          "material": "cotton",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.1,
+      "color_lab": {
+        "L": 75,
+        "a": 78,
+        "b": 80
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G145",
+      "name": "Sneaker 05",
+      "category": "footwear",
+      "subcategory": "sneakers",
+      "description": "Sneaker 05: orta sıcak tonlu renkte, %60 synthetic, %40 cotton kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "synthetic",
+          "pct": 60
+        },
+        {
+          "material": "cotton",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.1,
+      "color_lab": {
+        "L": 75,
+        "a": 78,
+        "b": 80
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G146",
+      "name": "Pileli Etek 01",
+      "category": "bottom",
+      "subcategory": "skirt",
+      "description": "Pileli Etek 01: orta sıcak tonlu renkte, %100 cotton kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.6,
+      "color_lab": {
+        "L": 60,
+        "a": 62,
+        "b": 68
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "etek"
+    },
+    {
+      "id": "G147",
+      "name": "Pileli Etek 02",
+      "category": "bottom",
+      "subcategory": "skirt",
+      "description": "Pileli Etek 02: orta sıcak tonlu renkte, %100 cotton kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.6,
+      "color_lab": {
+        "L": 60,
+        "a": 62,
+        "b": 68
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "etek"
+    },
+    {
+      "id": "G148",
+      "name": "Pileli Etek 03",
+      "category": "bottom",
+      "subcategory": "skirt",
+      "description": "Pileli Etek 03: orta sıcak tonlu renkte, %100 cotton kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.6,
+      "color_lab": {
+        "L": 70,
+        "a": 68,
+        "b": 65
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "etek"
+    },
+    {
+      "id": "G149",
+      "name": "Pileli Etek 04",
+      "category": "bottom",
+      "subcategory": "skirt",
+      "description": "Pileli Etek 04: orta sıcak tonlu renkte, %100 cotton kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.6,
+      "color_lab": {
+        "L": 70,
+        "a": 68,
+        "b": 65
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "etek"
+    },
+    {
+      "id": "G150",
+      "name": "Pileli Etek 05",
+      "category": "bottom",
+      "subcategory": "skirt",
+      "description": "Pileli Etek 05: orta sıcak tonlu renkte, %100 cotton kumaştan i̇lkbahar parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.6,
+      "color_lab": {
+        "L": 60,
+        "a": 62,
+        "b": 68
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "etek"
+    },
+    {
+      "id": "G151",
+      "name": "Pamuklu Tişört 01",
+      "category": "top",
+      "subcategory": "tshirt",
+      "description": "Pamuklu Tişört 01: orta sıcak tonlu renkte, %100 cotton kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "short",
+      "coverage_ratio": 0.55,
+      "color_lab": {
+        "L": 75,
+        "a": 80,
+        "b": 85
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_pamuklu_tisort"
+    },
+    {
+      "id": "G152",
+      "name": "Pamuklu Tişört 02",
+      "category": "top",
+      "subcategory": "tshirt",
+      "description": "Pamuklu Tişört 02: açık sıcak tonlu renkte, %100 cotton kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "short",
+      "coverage_ratio": 0.55,
+      "color_lab": {
+        "L": 85,
+        "a": 88,
+        "b": 90
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_pamuklu_tisort"
+    },
+    {
+      "id": "G153",
+      "name": "Pamuklu Tişört 03",
+      "category": "top",
+      "subcategory": "tshirt",
+      "description": "Pamuklu Tişört 03: açık sıcak tonlu renkte, %100 cotton kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "short",
+      "coverage_ratio": 0.55,
+      "color_lab": {
+        "L": 85,
+        "a": 88,
+        "b": 90
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_pamuklu_tisort"
+    },
+    {
+      "id": "G154",
+      "name": "Pamuklu Tişört 04",
+      "category": "top",
+      "subcategory": "tshirt",
+      "description": "Pamuklu Tişört 04: açık sıcak tonlu renkte, %100 cotton kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "short",
+      "coverage_ratio": 0.55,
+      "color_lab": {
+        "L": 85,
+        "a": 88,
+        "b": 90
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_pamuklu_tisort"
+    },
+    {
+      "id": "G155",
+      "name": "Pamuklu Tişört 05",
+      "category": "top",
+      "subcategory": "tshirt",
+      "description": "Pamuklu Tişört 05: açık sıcak tonlu renkte, %100 cotton kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "short",
+      "coverage_ratio": 0.55,
+      "color_lab": {
+        "L": 90,
+        "a": 85,
+        "b": 80
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_pamuklu_tisort"
+    },
+    {
+      "id": "G156",
+      "name": "Atlet 01",
+      "category": "top",
+      "subcategory": "tank_top",
+      "description": "Atlet 01: açık sıcak tonlu renkte, %95 cotton, %5 elastane kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 95
+        },
+        {
+          "material": "elastane",
+          "pct": 5
+        }
+      ],
+      "layers": null,
+      "sleeve": "sleeveless",
+      "coverage_ratio": 0.45,
+      "color_lab": {
+        "L": 88,
+        "a": 90,
+        "b": 92
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_pamuklu_tisort"
+    },
+    {
+      "id": "G157",
+      "name": "Atlet 02",
+      "category": "top",
+      "subcategory": "tank_top",
+      "description": "Atlet 02: açık sıcak tonlu renkte, %95 cotton, %5 elastane kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 95
+        },
+        {
+          "material": "elastane",
+          "pct": 5
+        }
+      ],
+      "layers": null,
+      "sleeve": "sleeveless",
+      "coverage_ratio": 0.45,
+      "color_lab": {
+        "L": 88,
+        "a": 90,
+        "b": 92
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_pamuklu_tisort"
+    },
+    {
+      "id": "G158",
+      "name": "Atlet 03",
+      "category": "top",
+      "subcategory": "tank_top",
+      "description": "Atlet 03: orta sıcak tonlu renkte, %95 cotton, %5 elastane kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 95
+        },
+        {
+          "material": "elastane",
+          "pct": 5
+        }
+      ],
+      "layers": null,
+      "sleeve": "sleeveless",
+      "coverage_ratio": 0.45,
+      "color_lab": {
+        "L": 80,
+        "a": 82,
+        "b": 85
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_pamuklu_tisort"
+    },
+    {
+      "id": "G159",
+      "name": "Atlet 04",
+      "category": "top",
+      "subcategory": "tank_top",
+      "description": "Atlet 04: açık sıcak tonlu renkte, %95 cotton, %5 elastane kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 95
+        },
+        {
+          "material": "elastane",
+          "pct": 5
+        }
+      ],
+      "layers": null,
+      "sleeve": "sleeveless",
+      "coverage_ratio": 0.45,
+      "color_lab": {
+        "L": 88,
+        "a": 90,
+        "b": 92
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_pamuklu_tisort"
+    },
+    {
+      "id": "G160",
+      "name": "Atlet 05",
+      "category": "top",
+      "subcategory": "tank_top",
+      "description": "Atlet 05: açık sıcak tonlu renkte, %95 cotton, %5 elastane kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 95
+        },
+        {
+          "material": "elastane",
+          "pct": 5
+        }
+      ],
+      "layers": null,
+      "sleeve": "sleeveless",
+      "coverage_ratio": 0.45,
+      "color_lab": {
+        "L": 88,
+        "a": 90,
+        "b": 92
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_pamuklu_tisort"
+    },
+    {
+      "id": "G161",
+      "name": "Şort 01",
+      "category": "bottom",
+      "subcategory": "shorts",
+      "description": "Şort 01: orta sıcak tonlu renkte, %100 cotton kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.55,
+      "color_lab": {
+        "L": 70,
+        "a": 72,
+        "b": 75
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "sort"
+    },
+    {
+      "id": "G162",
+      "name": "Şort 02",
+      "category": "bottom",
+      "subcategory": "shorts",
+      "description": "Şort 02: orta sıcak tonlu renkte, %100 cotton kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.55,
+      "color_lab": {
+        "L": 80,
+        "a": 78,
+        "b": 72
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "sort"
+    },
+    {
+      "id": "G163",
+      "name": "Şort 03",
+      "category": "bottom",
+      "subcategory": "shorts",
+      "description": "Şort 03: koyu sıcak tonlu renkte, %100 cotton kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.55,
+      "color_lab": {
+        "L": 55,
+        "a": 58,
+        "b": 62
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "sort"
+    },
+    {
+      "id": "G164",
+      "name": "Şort 04",
+      "category": "bottom",
+      "subcategory": "shorts",
+      "description": "Şort 04: orta sıcak tonlu renkte, %100 cotton kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.55,
+      "color_lab": {
+        "L": 80,
+        "a": 78,
+        "b": 72
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "sort"
+    },
+    {
+      "id": "G165",
+      "name": "Şort 05",
+      "category": "bottom",
+      "subcategory": "shorts",
+      "description": "Şort 05: orta sıcak tonlu renkte, %100 cotton kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.55,
+      "color_lab": {
+        "L": 70,
+        "a": 72,
+        "b": 75
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "sort"
+    },
+    {
+      "id": "G166",
+      "name": "Yaz Elbisesi 01",
+      "category": "dress",
+      "subcategory": "dress_short",
+      "description": "Yaz Elbisesi 01: orta sıcak tonlu renkte, %60 linen, %40 cotton kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "linen",
+          "pct": 60
+        },
+        {
+          "material": "cotton",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": "sleeveless",
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 75,
+        "a": 78,
+        "b": 82
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "yaz_elbisesi"
+    },
+    {
+      "id": "G167",
+      "name": "Yaz Elbisesi 02",
+      "category": "dress",
+      "subcategory": "dress_short",
+      "description": "Yaz Elbisesi 02: açık sıcak tonlu renkte, %60 linen, %40 cotton kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "linen",
+          "pct": 60
+        },
+        {
+          "material": "cotton",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": "sleeveless",
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 82,
+        "a": 80,
+        "b": 78
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "yaz_elbisesi"
+    },
+    {
+      "id": "G168",
+      "name": "Yaz Elbisesi 03",
+      "category": "dress",
+      "subcategory": "dress_short",
+      "description": "Yaz Elbisesi 03: açık sıcak tonlu renkte, %60 linen, %40 cotton kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "linen",
+          "pct": 60
+        },
+        {
+          "material": "cotton",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": "sleeveless",
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 82,
+        "a": 80,
+        "b": 78
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "yaz_elbisesi"
+    },
+    {
+      "id": "G169",
+      "name": "Yaz Elbisesi 04",
+      "category": "dress",
+      "subcategory": "dress_short",
+      "description": "Yaz Elbisesi 04: orta sıcak tonlu renkte, %60 linen, %40 cotton kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "linen",
+          "pct": 60
+        },
+        {
+          "material": "cotton",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": "sleeveless",
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 75,
+        "a": 78,
+        "b": 82
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "yaz_elbisesi"
+    },
+    {
+      "id": "G170",
+      "name": "Yaz Elbisesi 05",
+      "category": "dress",
+      "subcategory": "dress_short",
+      "description": "Yaz Elbisesi 05: açık sıcak tonlu renkte, %60 linen, %40 cotton kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "linen",
+          "pct": 60
+        },
+        {
+          "material": "cotton",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": "sleeveless",
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 88,
+        "a": 86,
+        "b": 82
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "yaz_elbisesi"
+    },
+    {
+      "id": "G171",
+      "name": "Keten Gömlek 01",
+      "category": "top",
+      "subcategory": "shirt",
+      "description": "Keten Gömlek 01: açık sıcak tonlu renkte, %100 linen kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "linen",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "short",
+      "coverage_ratio": 0.65,
+      "color_lab": {
+        "L": 90,
+        "a": 88,
+        "b": 85
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "keten_gomlek"
+    },
+    {
+      "id": "G172",
+      "name": "Keten Gömlek 02",
+      "category": "top",
+      "subcategory": "shirt",
+      "description": "Keten Gömlek 02: açık sıcak tonlu renkte, %100 linen kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "linen",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "short",
+      "coverage_ratio": 0.65,
+      "color_lab": {
+        "L": 90,
+        "a": 88,
+        "b": 85
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "keten_gomlek"
+    },
+    {
+      "id": "G173",
+      "name": "Keten Gömlek 03",
+      "category": "top",
+      "subcategory": "shirt",
+      "description": "Keten Gömlek 03: açık sıcak tonlu renkte, %100 linen kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "linen",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "short",
+      "coverage_ratio": 0.65,
+      "color_lab": {
+        "L": 90,
+        "a": 88,
+        "b": 85
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "keten_gomlek"
+    },
+    {
+      "id": "G174",
+      "name": "Keten Gömlek 04",
+      "category": "top",
+      "subcategory": "shirt",
+      "description": "Keten Gömlek 04: açık sıcak tonlu renkte, %100 linen kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "linen",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "short",
+      "coverage_ratio": 0.65,
+      "color_lab": {
+        "L": 82,
+        "a": 84,
+        "b": 86
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "keten_gomlek"
+    },
+    {
+      "id": "G175",
+      "name": "Keten Gömlek 05",
+      "category": "top",
+      "subcategory": "shirt",
+      "description": "Keten Gömlek 05: açık sıcak tonlu renkte, %100 linen kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "linen",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "short",
+      "coverage_ratio": 0.65,
+      "color_lab": {
+        "L": 90,
+        "a": 88,
+        "b": 85
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "keten_gomlek"
+    },
+    {
+      "id": "G176",
+      "name": "Keten Pantolon 01",
+      "category": "bottom",
+      "subcategory": "trousers",
+      "description": "Keten Pantolon 01: orta sıcak tonlu renkte, %100 linen kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "linen",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.88,
+      "color_lab": {
+        "L": 68,
+        "a": 70,
+        "b": 72
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "keten_pantolon"
+    },
+    {
+      "id": "G177",
+      "name": "Keten Pantolon 02",
+      "category": "bottom",
+      "subcategory": "trousers",
+      "description": "Keten Pantolon 02: orta sıcak tonlu renkte, %100 linen kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "linen",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.88,
+      "color_lab": {
+        "L": 68,
+        "a": 70,
+        "b": 72
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "keten_pantolon"
+    },
+    {
+      "id": "G178",
+      "name": "Keten Pantolon 03",
+      "category": "bottom",
+      "subcategory": "trousers",
+      "description": "Keten Pantolon 03: orta sıcak tonlu renkte, %100 linen kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "linen",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.88,
+      "color_lab": {
+        "L": 68,
+        "a": 70,
+        "b": 72
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "keten_pantolon"
+    },
+    {
+      "id": "G179",
+      "name": "Keten Pantolon 04",
+      "category": "bottom",
+      "subcategory": "trousers",
+      "description": "Keten Pantolon 04: orta sıcak tonlu renkte, %100 linen kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "linen",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.88,
+      "color_lab": {
+        "L": 68,
+        "a": 70,
+        "b": 72
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "keten_pantolon"
+    },
+    {
+      "id": "G180",
+      "name": "Keten Pantolon 05",
+      "category": "bottom",
+      "subcategory": "trousers",
+      "description": "Keten Pantolon 05: orta sıcak tonlu renkte, %100 linen kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "linen",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.88,
+      "color_lab": {
+        "L": 68,
+        "a": 70,
+        "b": 72
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "keten_pantolon"
+    },
+    {
+      "id": "G181",
+      "name": "Yaz Eteği 01",
+      "category": "bottom",
+      "subcategory": "skirt",
+      "description": "Yaz Eteği 01: açık sıcak tonlu renkte, %100 cotton kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.6,
+      "color_lab": {
+        "L": 85,
+        "a": 82,
+        "b": 78
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "etek"
+    },
+    {
+      "id": "G182",
+      "name": "Yaz Eteği 02",
+      "category": "bottom",
+      "subcategory": "skirt",
+      "description": "Yaz Eteği 02: açık sıcak tonlu renkte, %100 cotton kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.6,
+      "color_lab": {
+        "L": 85,
+        "a": 82,
+        "b": 78
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "etek"
+    },
+    {
+      "id": "G183",
+      "name": "Yaz Eteği 03",
+      "category": "bottom",
+      "subcategory": "skirt",
+      "description": "Yaz Eteği 03: açık sıcak tonlu renkte, %100 cotton kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.6,
+      "color_lab": {
+        "L": 85,
+        "a": 82,
+        "b": 78
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "etek"
+    },
+    {
+      "id": "G184",
+      "name": "Yaz Eteği 04",
+      "category": "bottom",
+      "subcategory": "skirt",
+      "description": "Yaz Eteği 04: açık sıcak tonlu renkte, %100 cotton kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.6,
+      "color_lab": {
+        "L": 85,
+        "a": 82,
+        "b": 78
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "etek"
+    },
+    {
+      "id": "G185",
+      "name": "Yaz Eteği 05",
+      "category": "bottom",
+      "subcategory": "skirt",
+      "description": "Yaz Eteği 05: orta sıcak tonlu renkte, %100 cotton kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.6,
+      "color_lab": {
+        "L": 75,
+        "a": 78,
+        "b": 82
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "etek"
+    },
+    {
+      "id": "G186",
+      "name": "Sandalet 01",
+      "category": "footwear",
+      "subcategory": "sandals",
+      "description": "Sandalet 01: orta sıcak tonlu renkte, %100 leather kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.08,
+      "color_lab": {
+        "L": 65,
+        "a": 58,
+        "b": 50
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G187",
+      "name": "Sandalet 02",
+      "category": "footwear",
+      "subcategory": "sandals",
+      "description": "Sandalet 02: orta sıcak tonlu renkte, %100 leather kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.08,
+      "color_lab": {
+        "L": 65,
+        "a": 58,
+        "b": 50
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G188",
+      "name": "Sandalet 03",
+      "category": "footwear",
+      "subcategory": "sandals",
+      "description": "Sandalet 03: orta sıcak tonlu renkte, %100 leather kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.08,
+      "color_lab": {
+        "L": 65,
+        "a": 58,
+        "b": 50
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G189",
+      "name": "Sandalet 04",
+      "category": "footwear",
+      "subcategory": "sandals",
+      "description": "Sandalet 04: orta sıcak tonlu renkte, %100 leather kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.08,
+      "color_lab": {
+        "L": 65,
+        "a": 58,
+        "b": 50
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G190",
+      "name": "Sandalet 05",
+      "category": "footwear",
+      "subcategory": "sandals",
+      "description": "Sandalet 05: orta sıcak tonlu renkte, %100 leather kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.08,
+      "color_lab": {
+        "L": 65,
+        "a": 58,
+        "b": 50
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G191",
+      "name": "İnce Bluz 01",
+      "category": "top",
+      "subcategory": "blouse",
+      "description": "İnce Bluz 01: açık sıcak tonlu renkte, %100 viscose kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "short",
+      "coverage_ratio": 0.6,
+      "color_lab": {
+        "L": 88,
+        "a": 86,
+        "b": 84
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "keten_gomlek"
+    },
+    {
+      "id": "G192",
+      "name": "İnce Bluz 02",
+      "category": "top",
+      "subcategory": "blouse",
+      "description": "İnce Bluz 02: açık sıcak tonlu renkte, %100 viscose kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "short",
+      "coverage_ratio": 0.6,
+      "color_lab": {
+        "L": 88,
+        "a": 86,
+        "b": 84
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "keten_gomlek"
+    },
+    {
+      "id": "G193",
+      "name": "İnce Bluz 03",
+      "category": "top",
+      "subcategory": "blouse",
+      "description": "İnce Bluz 03: açık sıcak tonlu renkte, %100 viscose kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "short",
+      "coverage_ratio": 0.6,
+      "color_lab": {
+        "L": 88,
+        "a": 86,
+        "b": 84
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "keten_gomlek"
+    },
+    {
+      "id": "G194",
+      "name": "İnce Bluz 04",
+      "category": "top",
+      "subcategory": "blouse",
+      "description": "İnce Bluz 04: açık sıcak tonlu renkte, %100 viscose kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "short",
+      "coverage_ratio": 0.6,
+      "color_lab": {
+        "L": 88,
+        "a": 86,
+        "b": 84
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "keten_gomlek"
+    },
+    {
+      "id": "G195",
+      "name": "İnce Bluz 05",
+      "category": "top",
+      "subcategory": "blouse",
+      "description": "İnce Bluz 05: orta sıcak tonlu renkte, %100 viscose kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": "short",
+      "coverage_ratio": 0.6,
+      "color_lab": {
+        "L": 78,
+        "a": 80,
+        "b": 85
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "keten_gomlek"
+    },
+    {
+      "id": "G196",
+      "name": "Yaz Sneaker 01",
+      "category": "footwear",
+      "subcategory": "sneakers",
+      "description": "Yaz Sneaker 01: açık sıcak tonlu renkte, %50 cotton, %50 synthetic kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 50
+        },
+        {
+          "material": "synthetic",
+          "pct": 50
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.1,
+      "color_lab": {
+        "L": 90,
+        "a": 92,
+        "b": 94
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G197",
+      "name": "Yaz Sneaker 02",
+      "category": "footwear",
+      "subcategory": "sneakers",
+      "description": "Yaz Sneaker 02: açık sıcak tonlu renkte, %50 cotton, %50 synthetic kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 50
+        },
+        {
+          "material": "synthetic",
+          "pct": 50
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.1,
+      "color_lab": {
+        "L": 90,
+        "a": 92,
+        "b": 94
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G198",
+      "name": "Yaz Sneaker 03",
+      "category": "footwear",
+      "subcategory": "sneakers",
+      "description": "Yaz Sneaker 03: orta sıcak tonlu renkte, %50 cotton, %50 synthetic kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 50
+        },
+        {
+          "material": "synthetic",
+          "pct": 50
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.1,
+      "color_lab": {
+        "L": 70,
+        "a": 72,
+        "b": 75
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G199",
+      "name": "Yaz Sneaker 04",
+      "category": "footwear",
+      "subcategory": "sneakers",
+      "description": "Yaz Sneaker 04: orta sıcak tonlu renkte, %50 cotton, %50 synthetic kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 50
+        },
+        {
+          "material": "synthetic",
+          "pct": 50
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.1,
+      "color_lab": {
+        "L": 70,
+        "a": 72,
+        "b": 75
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "bot"
+    },
+    {
+      "id": "G200",
+      "name": "Yaz Sneaker 05",
+      "category": "footwear",
+      "subcategory": "sneakers",
+      "description": "Yaz Sneaker 05: açık sıcak tonlu renkte, %50 cotton, %50 synthetic kumaştan yaz parçası.",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 50
+        },
+        {
+          "material": "synthetic",
+          "pct": 50
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.1,
+      "color_lab": {
+        "L": 90,
+        "a": 92,
+        "b": 94
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz",
+        "ilkbahar"
+      ],
+      "thermal_category": "bot"
+    }
+  ]
+}

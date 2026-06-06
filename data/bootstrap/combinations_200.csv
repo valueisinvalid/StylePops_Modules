@@ -1,201 +1,201 @@
 combo_id,season,combo_type,layer_count,base_id,mid_id,outer_id,bottom_id,accessory_ids,top_id,piece_ids,weather_scenario,weather_label_tr,T_hava,RH_nem,V_ruzgar,T_hissedilen,hedef_Clo,total_Clo_C,delta_Clo,aesthetic_score,thermal_score,labeler,notes
-C001,kis,layered_6p,6,G003,,G083,G080,G050|G100,G003,G003|G083|G080|G036|G050|G100,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.75,1.0012,,,,
-C002,kis,layered_5p,5,,G053,G083,G077,G042,G053,G053|G083|G077|G040|G042,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.8157,0.6035,,,,
-C003,kis,layered_5p,5,G005,G092,,G033,G047,G005|G092,G005|G092|G033|G085|G047,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.6977,1.0535,,,,
-C004,kis,layered_6p,6,G007,G020,G027,G096,G045,G007|G020,G007|G020|G027|G096|G085|G045,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.1617,0.2575,,,,
-C005,kis,layered_5p,5,G009,,G064,G075,G098,G009,G009|G064|G075|G086|G098,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.79,0.9612,,,,
-C006,kis,layered_4p,4,,G066,G029,G077,,G066,G066|G029|G077|G039,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.0,0.4192,,,,
-C007,kis,layered_6p,6,G010,G018,G056,G031,G042,G010|G018,G010|G018|G056|G031|G085|G042,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.0717,0.6795,,,,
-C008,kis,layered_6p,6,,G018,G029,G080,G047|G041,G018,G018|G029|G080|G086|G047|G041,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.1617,0.2575,,,,
-C009,kis,layered_6p,6,,G016,G060,G031,G098|G049,G016,G016|G060|G031|G038|G098|G049,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.0217,0.7295,,,,
-C010,kis,layered_5p,5,,G013,G027,G076,G043,G013,G013|G027|G076|G085|G043,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.18,0.2392,,,,
-C011,kis,layered_7p,7,G004,G052,G029,G031,G045|G047,G004|G052,G004|G052|G029|G031|G085|G045|G047,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.2757,0.4755,,,,
-C012,kis,layered_6p,6,G001,G053,G026,G079,G050,G001|G053,G001|G053|G026|G079|G036|G050,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.1757,0.2435,,,,
-C013,kis,layered_6p,6,G002,G054,G021,G094,G045|G100,G002|G054,G002|G054|G021|G094|G045|G100,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.1557,0.5955,,,,
-C014,kis,layered_6p,6,G007,G011,G065,G032,G046,G007|G011,G007|G011|G065|G032|G038|G046,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.12,0.2992,,,,
-C015,kis,layered_6p,6,,G017,G060,G032,G046|G097,G017,G017|G060|G032|G040|G046|G097,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.0217,0.7295,,,,
-C016,kis,layered_6p,6,,G015,G060,G093,G041|G050,G015,G015|G060|G093|G087|G041|G050,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.96,0.4592,,,,
-C017,kis,layered_5p,5,G006,G068,G062,G032,,G006|G068,G006|G068|G062|G032|G039,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.95,0.8012,,,,
-C018,kis,layered_5p,5,,G090,,G073,G043|G050,G090,G090|G073|G039|G043|G050,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.6277,0.7915,,,,
-C019,kis,layered_6p,6,G002,G013,G026,G033,G044,G002|G013,G002|G013|G026|G033|G085|G044,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.35,0.4012,,,,
-C020,kis,layered_7p,7,G003,G017,G023,G076,G099|G044,G003|G017,G003|G017|G023|G076|G039|G099|G044,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.3517,0.0675,,,,
-C021,kis,layered_6p,6,G008,G014,G029,G072,G041|G047,G008|G014,G008|G014|G029|G072|G041|G047,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.29,0.4612,,,,
-C022,kis,layered_6p,6,G010,G092,G024,G033,G099,G010|G092,G010|G092|G024|G033|G087|G099,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.2477,0.1715,,,,
-C023,kis,layered_4p,4,,,G060,G034,G041,,G060|G034|G086|G041,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.68,1.0712,,,,
-C024,kis,layered_6p,6,G007,G051,G082,G034,G047,G007|G051,G007|G051|G082|G034|G038|G047,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.9557,0.4635,,,,
-C025,kis,layered_7p,7,G010,G092,G082,G034,G041|G100,G010|G092,G010|G092|G082|G034|G037|G041|G100,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.9977,0.7535,,,,
-C026,kis,layered_5p,5,G003,,G025,G033,G041,G003,G003|G025|G033|G039|G041,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.05,0.3692,,,,
-C027,kis,layered_7p,7,G009,G020,G021,G073,G043|G044,G009|G020,G009|G020|G021|G073|G037|G043|G044,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.3717,0.3795,,,,
-C028,kis,layered_5p,5,G005,G052,G058,G032,,G005|G052,G005|G052|G058|G032|G088,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.9857,0.4335,,,,
-C029,kis,layered_5p,5,G007,G018,G081,G033,G099,G007|G018,G007|G018|G081|G033|G099,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.9517,0.7995,,,,
-C030,kis,layered_5p,5,,G068,G084,G075,G099,G068,G068|G084|G075|G088|G099,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.86,0.5592,,,,
-C031,kis,layered_7p,7,G009,G016,G064,G078,G041|G099,G009|G016,G009|G016|G064|G078|G039|G041|G099,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.0817,0.6695,,,,
-C032,kis,layered_5p,5,G003,G067,G083,G035,G043,G003|G067,G003|G067|G083|G035|G043,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.89,0.5292,,,,
-C033,kis,layered_5p,5,G008,,G027,G075,G050,G008,G008|G027|G075|G038|G050,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.97,0.7812,,,,
-C034,kis,layered_6p,6,,G070,G059,G079,G048|G044,G070,G070|G059|G079|G036|G048|G044,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.89,0.5292,,,,
-C035,kis,layered_6p,6,G002,G067,G058,G094,G043,G002|G067,G002|G067|G058|G094|G087|G043,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.91,0.8412,,,,
-C036,kis,layered_5p,5,G001,G016,,G034,G044,G001|G016,G001|G016|G034|G086|G044,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.7917,0.6275,,,,
-C037,kis,layered_4p,4,,G017,G084,G033,,G017,G017|G084|G033|G036,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.8717,0.8795,,,,
-C038,kis,layered_6p,6,,G068,G059,G034,G047|G098,G068,G068|G059|G034|G040|G047|G098,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.95,0.4692,,,,
-C039,kis,layered_4p,4,,G068,G025,,G049|G098,G068,G068|G025|G049|G098,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.87,0.8812,,,,
-C040,kis,layered_5p,5,G003,G051,G060,G093,G098,G003|G051,G003|G051|G060|G093|G098,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.8557,0.5635,,,,
-C041,kis,layered_5p,5,G004,G054,G024,G073,G050,G004|G054,G004|G054|G024|G073|G050,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.1957,0.5555,,,,
-C042,kis,layered_4p,4,,,G056,G074,G045,,G056|G074|G040|G045,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.68,0.7392,,,,
-C043,kis,layered_4p,4,,G067,,G074,G044,G067,G067|G074|G039|G044,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.6,1.1512,,,,
-C044,kis,layered_7p,7,G007,G018,G026,G095,G100|G048,G007|G018,G007|G018|G026|G095|G086|G100|G048,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.2117,0.2075,,,,
-C045,kis,layered_7p,7,G002,G068,G065,G031,G044|G098,G002|G068,G002|G068|G065|G031|G039|G044|G098,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.08,0.6712,,,,
-C046,kis,layered_5p,5,,G090,G025,G072,G098,G090,G090|G025|G072|G085|G098,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.1477,0.2715,,,,
-C047,kis,layered_6p,6,G004,G012,G056,G079,G097,G004|G012,G004|G012|G056|G079|G040|G097,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.11,0.6412,,,,
-C048,kis,layered_6p,6,G005,G015,G027,G078,G100,G005|G015,G005|G015|G027|G078|G039|G100,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.31,0.1092,,,,
-C049,kis,layered_6p,6,G002,G066,G058,G074,G041,G002|G066,G002|G066|G058|G074|G086|G041,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.02,0.7312,,,,
-C050,kis,layered_5p,5,G004,G017,G056,G078,G047,G004|G017,G004|G017|G056|G078|G047,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.9517,0.4675,,,,
-C051,sonbahar,layered_6p,6,G010,G018,G025,G073,G150,G010|G018,G010|G018|G025|G073|G139|G150,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.3317,0.2817,,,,
-C052,sonbahar,layered_7p,7,G115,G054,G022,G076,G050|G049,G115|G054,G115|G054|G022|G076|G037|G050|G049,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.2657,0.0952,,,,
-C053,sonbahar,layered_5p,5,G112,G092,,G031,G098,G112|G092,G112|G092|G031|G141|G098,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.7177,0.3323,,,,
-C054,sonbahar,layered_5p,5,,G137,G029,G078,G149,G137,G137|G029|G078|G086|G149,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.0757,0.0948,,,,
-C055,sonbahar,layered_7p,7,G001,G109,G084,G130,G149|G042,G001|G109,G001|G109|G084|G130|G037|G149|G042,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.014,0.036,,,,
-C056,sonbahar,layered_4p,4,,G054,G021,G031,G044,G054,G054|G021|G031|G044,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.0857,0.0848,,,,
-C057,sonbahar,layered_6p,6,,G014,G119,G075,G044|G046,G014,G014|G119|G075|G086|G044|G046,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.17,0.12,,,,
-C058,sonbahar,layered_7p,7,G113,G137,G060,G073,G047|G044,G113|G137,G113|G137|G060|G073|G088|G047|G044,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.0757,0.0948,,,,
-C059,sonbahar,layered_5p,5,,G011,G119,G033,G049|G047,G011,G011|G119|G033|G049|G047,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.08,0.03,,,,
-C060,sonbahar,layered_5p,5,,G107,G029,G080,G048,G107,G107|G029|G080|G086|G048,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.024,0.1465,,,,
-C061,sonbahar,layered_6p,6,G008,G137,G119,G031,G147,G008|G137,G008|G137|G119|G031|G036|G147,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.1257,0.0757,,,,
-C062,sonbahar,layered_6p,6,G115,G091,G060,G077,G042,G115|G091,G115|G091|G060|G077|G087|G042,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.9577,0.2128,,,,
-C063,sonbahar,layered_5p,5,,G107,G021,G074,G046,G107,G107|G021|G074|G087|G046,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.124,0.074,,,,
-C064,sonbahar,layered_6p,6,,G067,G116,G034,G042|G043,G067,G067|G116|G034|G141|G042|G043,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.05,0.1205,,,,
-C065,sonbahar,layered_6p,6,,G067,G084,G095,G045|G099,G067,G067|G084|G095|G141|G045|G099,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.8,0.25,,,,
-C066,sonbahar,layered_6p,6,G114,G109,G056,G073,G150,G114|G109,G114|G109|G056|G073|G040|G150,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.014,0.1565,,,,
-C067,sonbahar,layered_3p,3,,,,,G042,,G133|G139|G042,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.35,0.7,,,,
-C068,sonbahar,layered_6p,6,G114,G090,G119,G094,G147,G114|G090,G114|G090|G119|G094|G087|G147,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.0077,0.1628,,,,
-C069,sonbahar,layered_5p,5,,G109,G027,G129,G043,G109,G109|G027|G129|G141|G043,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.084,0.034,,,,
-C070,sonbahar,layered_6p,6,G004,G068,G120,G124,G100,G004|G068,G004|G068|G120|G124|G038|G100,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.08,0.0905,,,,
-C071,sonbahar,layered_7p,7,G009,G089,G028,G095,G148|G050,G009|G089,G009|G089|G028|G095|G088|G148|G050,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.1277,0.0777,,,,
-C072,sonbahar,layered_3p,3,,,G027,,,,G131|G027|G087,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.8,0.3705,,,,
-C073,sonbahar,layered_6p,6,G005,G019,G057,G031,G046,G005|G019,G005|G019|G057|G031|G038|G046,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.0817,0.0317,,,,
-C074,sonbahar,layered_5p,5,G003,G101,G081,G035,,G003|G101,G003|G101|G081|G035|G039,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.9077,0.2628,,,,
-C075,sonbahar,layered_4p,4,,,G027,,G150,,G131|G027|G141|G150,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.86,0.19,,,,
-C076,sonbahar,layered_4p,4,G001,G069,G023,G073,,G001|G069,G001|G069|G023|G073,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.14,0.0305,,,,
-C077,sonbahar,layered_5p,5,,G053,G061,G121,G150,G053,G053|G061|G121|G039|G150,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.8757,0.1743,,,,
-C078,sonbahar,layered_5p,5,,G069,,G146,G147|G150,G069,G069|G146|G139|G147|G150,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.56,0.6105,,,,
-C079,sonbahar,layered_5p,5,,G101,G081,G121,G050,G101,G101|G081|G121|G037|G050,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.7777,0.2723,,,,
-C080,sonbahar,layered_7p,7,G007,G105,G061,G144,G047|G149,G007|G105,G007|G105|G061|G144|G038|G047|G149,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.9277,0.2428,,,,
-C081,sonbahar,layered_3p,3,,,,,G150,,G131|G036|G150,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.36,0.69,,,,
-C082,sonbahar,layered_3p,3,,,,,G097,,G134|G039|G097,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.36,0.8105,,,,
-C083,sonbahar,layered_2p,2,,,,,,,G132|G086,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.3,0.75,,,,
-C084,sonbahar,layered_5p,5,,G052,G064,G122,G049,G052,G052|G064|G122|G086|G049,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.8557,0.3148,,,,
-C085,sonbahar,layered_7p,7,G010,G137,G065,G031,G150|G047,G010|G137,G010|G137|G065|G031|G140|G150|G047,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.0657,0.0157,,,,
-C086,sonbahar,layered_5p,5,G114,G051,G061,,G050,G114|G051,G114|G051|G061|G139|G050,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.7757,0.3948,,,,
-C087,sonbahar,layered_6p,6,G004,G092,G083,G078,G100,G004|G092,G004|G092|G083|G078|G087|G100,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.9177,0.1323,,,,
-C088,sonbahar,layered_6p,6,G111,G014,G029,G144,G099|G046,G111|G014,G111|G014|G029|G144|G099|G046,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.21,0.0395,,,,
-C089,sonbahar,layered_5p,5,,G089,G061,G033,G098,G089,G089|G061|G033|G038|G098,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.8977,0.1523,,,,
-C090,sonbahar,layered_7p,7,G009,G108,G120,G072,G050|G044,G009|G108,G009|G108|G120|G072|G142|G050|G044,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.124,0.0465,,,,
-C091,sonbahar,layered_5p,5,G006,G066,G116,G146,G048,G006|G066,G006|G066|G116|G146|G048,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.9,0.15,,,,
-C092,sonbahar,layered_5p,5,,G017,G027,G146,G149,G017,G017|G027|G146|G038|G149,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.0717,0.0988,,,,
-C093,sonbahar,layered_6p,6,G007,G089,G061,G128,G044,G007|G089,G007|G089|G061|G128|G085|G044,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.9877,0.0623,,,,
-C094,sonbahar,layered_2p,2,,,,,,,G131|G141,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.3,0.8705,,,,
-C095,sonbahar,layered_5p,5,G007,G011,,G073,G044,G007|G011,G007|G011|G073|G141|G044,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.83,0.22,,,,
-C096,sonbahar,layered_4p,4,G005,,,G129,G043,G005,G005|G129|G142|G043,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.5,0.6705,,,,
-C097,sonbahar,layered_4p,4,,,,G128,G147|G149,,G128|G037|G147|G149,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.45,0.6,,,,
-C098,sonbahar,layered_5p,5,,G067,G117,G093,G097,G067,G067|G117|G093|G036|G097,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.9,0.2705,,,,
-C099,sonbahar,layered_5p,5,,G135,G022,G075,G048,G135,G135|G022|G075|G088|G048,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.1557,0.1057,,,,
-C100,sonbahar,layered_5p,5,,G106,G082,G094,G042,G106,G106|G082|G094|G139|G042,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.724,0.4465,,,,
-C101,ilkbahar,layered_4p,4,,G101,G058,G164,,G101,G101|G058|G164|G139,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.6877,0.0623,,,,
-C102,ilkbahar,layered_5p,5,,G103,G064,G076,G149,G103,G103|G064|G076|G141|G149,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.8477,0.0523,,,,
-C103,ilkbahar,layered_2p,2,,,G117,G094,,,G117|G094,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.54,0.21,,,,
-C104,ilkbahar,layered_6p,6,G160,G194,G061,G128,G149,G160|G194,G160|G194|G061|G128|G189|G149,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.96,0.06,,,,
-C105,ilkbahar,layered_4p,4,G160,G109,G062,G080,,G160|G109,G160|G109|G062|G080,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.824,0.074,,,,
-C106,ilkbahar,layered_5p,5,G152,G172,G119,G125,,G152|G172,G152|G172|G119|G125|G085,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.95,0.05,,,,
-C107,ilkbahar,layered_4p,4,G157,,G059,G072,,G157,G157|G059|G072|G187,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.75,0.0,,,,
-C108,ilkbahar,layered_6p,6,G156,G092,G058,G163,G149,G156|G092,G156|G092|G058|G163|G187|G149,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.8677,0.0323,,,,
-C109,ilkbahar,layered_3p,3,,,,,G150,,G170|G088|G150,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.32,0.43,,,,
-C110,ilkbahar,layered_3p,3,,G066,G119,G093,,G066,G066|G119|G093,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.76,0.14,,,,
-C111,ilkbahar,layered_3p,3,G114,G107,,G121,,G114|G107,G114|G107|G121,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.524,0.226,,,,
-C112,ilkbahar,layered_2p,2,,,,,,,G133|G142,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.3,0.6,,,,
-C113,ilkbahar,layered_3p,3,,G101,,G074,,G101,G101|G074|G187,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.5377,0.2123,,,,
-C114,ilkbahar,layered_5p,5,,G102,G063,G079,G148,G102,G102|G063|G079|G086|G148,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.8477,0.0523,,,,
-C115,ilkbahar,layered_2p,2,,,G116,,,,G116|G187,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.48,0.27,,,,
-C116,ilkbahar,layered_6p,6,G157,G067,G083,G122,G147,G157|G067,G157|G067|G083|G122|G141|G147,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.93,0.03,,,,
-C117,ilkbahar,layered_2p,2,,,,,,,G132|G196,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.3,0.45,,,,
-C118,ilkbahar,layered_5p,5,G112,G109,G116,G162,G100,G112|G109,G112|G109|G116|G162|G100,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.884,0.016,,,,
-C119,ilkbahar,layered_3p,3,,G102,G120,G183,,G102,G102|G120|G183,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.7477,0.0023,,,,
-C120,ilkbahar,layered_5p,5,G153,G171,G082,G180,,G153|G171,G153|G171|G082|G180|G186,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.76,0.14,,,,
-C121,ilkbahar,layered_3p,3,G154,,,G163,,G154,G154|G163|G085,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.3,0.45,,,,
-C122,ilkbahar,layered_5p,5,G153,,G057,G074,G149,G153,G153|G057|G074|G199|G149,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.81,0.09,,,,
-C123,ilkbahar,layered_3p,3,,G105,,G177,,G105,G105|G177|G140,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.4477,0.3023,,,,
-C124,ilkbahar,layered_4p,4,,G053,G064,G093,,G053,G053|G064|G093|G190,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.7557,0.1443,,,,
-C125,ilkbahar,layered_3p,3,,G138,G120,G164,,G138,G138|G120|G164,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.7357,0.0143,,,,
-C126,ilkbahar,layered_4p,4,,,G057,G125,G097,,G057|G125|G196|G097,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.64,0.26,,,,
-C127,ilkbahar,layered_2p,2,,,,,,,G168|G142,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.26,0.49,,,,
-C128,ilkbahar,layered_2p,2,,,,,,,G169|G189,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.26,0.64,,,,
-C129,ilkbahar,layered_2p,2,,,,,,,G169|G186,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.26,0.49,,,,
-C130,ilkbahar,layered_4p,4,G159,G054,,G161,G097,G159|G054,G159|G054|G161|G097,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.5157,0.3843,,,,
-C131,ilkbahar,layered_3p,3,,G194,,G080,,G194,G194|G080|G088,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.43,0.32,,,,
-C132,ilkbahar,layered_2p,2,,,,,,,G167|G188,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.26,0.64,,,,
-C133,ilkbahar,layered_5p,5,G157,G053,G082,G143,,G157|G053,G157|G053|G082|G143|G186,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.8257,0.0757,,,,
-C134,ilkbahar,layered_5p,5,G151,G053,G059,G075,G149,G151|G053,G151|G053|G059|G075|G149,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.9657,0.0657,,,,
-C135,ilkbahar,layered_2p,2,,,,,,,G133|G188,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.3,0.45,,,,
-C136,ilkbahar,layered_4p,4,G113,G104,G063,G146,,G113|G104,G113|G104|G063|G146,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.7677,0.1323,,,,
-C137,ilkbahar,layered_4p,4,G111,G069,,G122,,G111|G069,G111|G069|G122|G142,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.62,0.13,,,,
-C138,ilkbahar,layered_6p,6,G152,G091,G064,G078,G100,G152|G091,G152|G091|G064|G078|G188|G100,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.9677,0.0677,,,,
-C139,ilkbahar,layered_3p,3,,,,,G149,,G131|G188|G149,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.36,0.39,,,,
-C140,ilkbahar,layered_2p,2,,,,,,,G132|G088,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.3,0.6,,,,
-C141,ilkbahar,layered_3p,3,,,,,G149,,G170|G190|G149,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.32,0.43,,,,
-C142,ilkbahar,layered_6p,6,G159,G108,G059,G096,G100,G159|G108,G159|G108|G059|G096|G187|G100,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.904,0.004,,,,
-C143,ilkbahar,layered_3p,3,,G091,,G181,,G091,G091|G181|G140,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.4277,0.3223,,,,
-C144,ilkbahar,layered_5p,5,G156,G101,,G073,G148,G156|G101,G156|G101|G073|G142|G148,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.7177,0.1823,,,,
-C145,ilkbahar,layered_3p,3,,,G060,,,,G170|G060|G188,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.56,0.19,,,,
-C146,ilkbahar,layered_5p,5,G153,,G116,G122,G147,G153,G153|G116|G122|G186|G147,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.86,0.04,,,,
-C147,ilkbahar,layered_2p,2,,G108,,G164,,G108,G108|G164,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.304,0.446,,,,
-C148,ilkbahar,layered_3p,3,,,G117,G124,G149,,G117|G124|G149,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.66,0.24,,,,
-C149,ilkbahar,layered_3p,3,G154,,,G079,,G154,G154|G079|G139,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.4,0.35,,,,
-C150,ilkbahar,layered_5p,5,G115,G055,G084,G077,,G115|G055,G115|G055|G084|G077|G088,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.8857,0.0143,,,,
-C151,yaz,layered_2p,2,,,,,,,G133|G198,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.3,0.004,,,,
-C152,yaz,layered_4p,4,,G192,G117,G124,,G192,G192|G117|G124|G196,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.83,0.58,,,,
-C153,yaz,layered_3p,3,G156,G173,,G122,,G156|G173,G156|G173|G122,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.47,0.174,,,,
-C154,yaz,layered_4p,4,,G194,G117,G182,,G194,G194|G117|G182|G200,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.77,0.52,,,,
-C155,yaz,layered_3p,3,,,G118,G182,,,G118|G182|G186,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.62,0.324,,,,
-C156,yaz,layered_3p,3,,G104,,G165,,G104,G104|G165|G196,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.3877,0.1377,,,,
-C157,yaz,layered_3p,3,G158,,,G123,,G158,G158|G123|G188,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.4,0.104,,,,
-C158,yaz,layered_2p,2,,,,,,,G169|G139,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.26,0.01,,,,
-C159,yaz,layered_3p,3,,G136,,G126,,G136,G136|G126|G142,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.5657,0.2697,,,,
-C160,yaz,layered_2p,2,,,,G185,,,G185|G141,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.22,0.03,,,,
-C161,yaz,layered_3p,3,,,G120,G184,,,G120|G184|G198,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.62,0.324,,,,
-C162,yaz,layered_5p,5,G114,G172,G118,G177,,G114|G172,G114|G172|G118|G177|G189,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.91,0.66,,,,
-C163,yaz,layered_2p,2,,,,,,,G134|G196,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.3,0.004,,,,
-C164,yaz,layered_3p,3,,G104,,G124,,G104,G104|G124|G190,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.4877,0.2377,,,,
-C165,yaz,layered_3p,3,,,G120,G184,,,G120|G184|G196,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.62,0.324,,,,
-C166,yaz,layered_3p,3,,,G118,G124,,,G118|G124|G139,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.68,0.43,,,,
-C167,yaz,layered_2p,2,,G103,,G165,,G103,G103|G165,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.3077,0.0117,,,,
-C168,yaz,layered_2p,2,,,,G122,,,G122|G141,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.28,0.03,,,,
-C169,yaz,layered_2p,2,,,,,,,G168|G139,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.26,0.036,,,,
-C170,yaz,layered_4p,4,G113,G108,,G185,,G113|G108,G113|G108|G185|G190,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.544,0.294,,,,
-C171,yaz,layered_2p,2,,,G118,,,,G118|G142,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.48,0.184,,,,
-C172,yaz,layered_2p,2,,,,G123,,,G123|G199,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.28,0.03,,,,
-C173,yaz,layered_2p,2,,,,,G149,,G131|G149,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.28,0.016,,,,
-C174,yaz,layered_2p,2,,,,,,,G168|G140,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.26,0.01,,,,
-C175,yaz,layered_4p,4,G153,G136,,G125,,G153|G136,G153|G136|G125|G199,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.6357,0.3397,,,,
-C176,yaz,layered_2p,2,,G106,,G179,,G106,G106|G179,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.364,0.114,,,,
-C177,yaz,layered_2p,2,,,,G182,,,G182|G189,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.22,0.076,,,,
-C178,yaz,layered_2p,2,,,,G123,,,G123|G199,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.28,0.03,,,,
-C179,yaz,layered_4p,4,,G193,G116,G129,,G193,G193|G116|G129|G189,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.88,0.584,,,,
-C180,yaz,layered_2p,2,,,,G126,,,G126|G142,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.33,0.08,,,,
-C181,yaz,layered_3p,3,,G174,,G124,,G174,G174|G124|G190,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.43,0.134,,,,
-C182,yaz,layered_4p,4,G158,,G120,G130,,G158,G158|G120|G130|G198,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.85,0.6,,,,
-C183,yaz,layered_2p,2,,,,G183,,,G183|G197,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.22,0.076,,,,
-C184,yaz,layered_2p,2,,,,G163,,,G163|G142,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.18,0.07,,,,
-C185,yaz,layered_3p,3,,G193,G117,G181,,G193,G193|G117|G181,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.69,0.394,,,,
-C186,yaz,layered_3p,3,,G110,G120,G183,,G110,G110|G120|G183,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.744,0.494,,,,
-C187,yaz,layered_4p,4,G152,G175,G117,G182,,G152|G175,G152|G175|G117|G182,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.81,0.514,,,,
-C188,yaz,layered_2p,2,,,,G185,,,G185|G189,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.22,0.03,,,,
-C189,yaz,layered_2p,2,,,,,,,G169|G186,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.26,0.036,,,,
-C190,yaz,layered_4p,4,G155,G194,,G178,,G155|G194,G155|G194|G178|G187,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.51,0.26,,,,
-C191,yaz,layered_2p,2,,,G117,G130,,,G117|G130,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.65,0.354,,,,
-C192,yaz,layered_3p,3,,,,,G150,,G134|G196|G150,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.36,0.11,,,,
-C193,yaz,layered_3p,3,,G191,,G179,,G191,G191|G179|G196,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.39,0.094,,,,
-C194,yaz,layered_3p,3,G112,,,G125,,G112,G112|G125|G198,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.4,0.15,,,,
-C195,yaz,layered_3p,3,,,G119,G144,,,G119|G144|G142,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.62,0.324,,,,
-C196,yaz,layered_3p,3,,,G117,G179,,,G117|G179|G189,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.64,0.39,,,,
-C197,yaz,layered_2p,2,,,,G129,,,G129|G186,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.33,0.034,,,,
-C198,yaz,layered_3p,3,,,,,G150,,G167|G198|G150,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.32,0.07,,,,
-C199,yaz,layered_3p,3,,,G118,G181,,,G118|G181|G140,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.62,0.324,,,,
-C200,yaz,layered_2p,2,,,,G165,,,G165|G141,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.18,0.07,,,,
+C001,kis,layered_6p,6,G003,,G083,G080,G050|G100,G003,G003|G083|G080|G036|G050|G100,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.75,1.0012,3.0,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: soğuk hava için yetersiz izolasyon
+C002,kis,layered_5p,5,,G053,G083,G077,G042,G053,G053|G083|G077|G040|G042,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.8157,0.6035,4.0,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: soğuk hava için yetersiz izolasyon
+C003,kis,layered_5p,5,G005,G092,,G033,G047,G005|G092,G005|G092|G033|G085|G047,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.6977,1.0535,2.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: soğuk hava için yetersiz izolasyon; dış katman yok
+C004,kis,layered_6p,6,G007,G020,G027,G096,G045,G007|G020,G007|G020|G027|G096|G085|G045,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.1617,0.2575,4.0,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: katmanlı ama hafif eksik
+C005,kis,layered_5p,5,G009,,G064,G075,G098,G009,G009|G064|G075|G086|G098,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.79,0.9612,4.0,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: soğuk hava için yetersiz izolasyon
+C006,kis,layered_4p,4,,G066,G029,G077,,G066,G066|G029|G077|G039,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.0,0.4192,3.5,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: kabul edilebilir kış kombini
+C007,kis,layered_6p,6,G010,G018,G056,G031,G042,G010|G018,G010|G018|G056|G031|G085|G042,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.0717,0.6795,4.0,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: soğuk hava için yetersiz izolasyon
+C008,kis,layered_6p,6,,G018,G029,G080,G047|G041,G018,G018|G029|G080|G086|G047|G041,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.1617,0.2575,4.0,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: katmanlı ama hafif eksik
+C009,kis,layered_6p,6,,G016,G060,G031,G098|G049,G016,G016|G060|G031|G038|G098|G049,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.0217,0.7295,4.5,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: soğuk hava için yetersiz izolasyon
+C010,kis,layered_5p,5,,G013,G027,G076,G043,G013,G013|G027|G076|G085|G043,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.18,0.2392,4.0,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: katmanlı ama hafif eksik
+C011,kis,layered_7p,7,G004,G052,G029,G031,G045|G047,G004|G052,G004|G052|G029|G031|G085|G045|G047,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.2757,0.4755,3.0,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: kabul edilebilir kış kombini
+C012,kis,layered_6p,6,G001,G053,G026,G079,G050,G001|G053,G001|G053|G026|G079|G036|G050,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.1757,0.2435,3.0,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: katmanlı ama hafif eksik
+C013,kis,layered_6p,6,G002,G054,G021,G094,G045|G100,G002|G054,G002|G054|G021|G094|G045|G100,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.1557,0.5955,3.0,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: soğuk hava için yetersiz izolasyon
+C014,kis,layered_6p,6,G007,G011,G065,G032,G046,G007|G011,G007|G011|G065|G032|G038|G046,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.12,0.2992,4.5,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: katmanlı ama hafif eksik
+C015,kis,layered_6p,6,,G017,G060,G032,G046|G097,G017,G017|G060|G032|G040|G046|G097,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.0217,0.7295,4.5,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: soğuk hava için yetersiz izolasyon
+C016,kis,layered_6p,6,,G015,G060,G093,G041|G050,G015,G015|G060|G093|G087|G041|G050,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.96,0.4592,4.0,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: kabul edilebilir kış kombini
+C017,kis,layered_5p,5,G006,G068,G062,G032,,G006|G068,G006|G068|G062|G032|G039,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.95,0.8012,4.0,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: soğuk hava için yetersiz izolasyon
+C018,kis,layered_5p,5,,G090,,G073,G043|G050,G090,G090|G073|G039|G043|G050,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.6277,0.7915,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: soğuk hava için yetersiz izolasyon; dış katman yok
+C019,kis,layered_6p,6,G002,G013,G026,G033,G044,G002|G013,G002|G013|G026|G033|G085|G044,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.35,0.4012,2.5,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: kabul edilebilir kış kombini
+C020,kis,layered_7p,7,G003,G017,G023,G076,G099|G044,G003|G017,G003|G017|G023|G076|G039|G099|G044,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.3517,0.0675,3.0,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: hedef Clo'ya çok yakın
+C021,kis,layered_6p,6,G008,G014,G029,G072,G041|G047,G008|G014,G008|G014|G029|G072|G041|G047,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.29,0.4612,4.0,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: kabul edilebilir kış kombini
+C022,kis,layered_6p,6,G010,G092,G024,G033,G099,G010|G092,G010|G092|G024|G033|G087|G099,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.2477,0.1715,4.0,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: katmanlı ama hafif eksik
+C023,kis,layered_4p,4,,,G060,G034,G041,,G060|G034|G086|G041,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.68,1.0712,4.5,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: soğuk hava için yetersiz izolasyon
+C024,kis,layered_6p,6,G007,G051,G082,G034,G047,G007|G051,G007|G051|G082|G034|G038|G047,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.9557,0.4635,4.5,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: kabul edilebilir kış kombini
+C025,kis,layered_7p,7,G010,G092,G082,G034,G041|G100,G010|G092,G010|G092|G082|G034|G037|G041|G100,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.9977,0.7535,4.0,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: soğuk hava için yetersiz izolasyon
+C026,kis,layered_5p,5,G003,,G025,G033,G041,G003,G003|G025|G033|G039|G041,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.05,0.3692,2.5,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: katmanlı ama hafif eksik
+C027,kis,layered_7p,7,G009,G020,G021,G073,G043|G044,G009|G020,G009|G020|G021|G073|G037|G043|G044,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.3717,0.3795,3.5,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: katmanlı ama hafif eksik
+C028,kis,layered_5p,5,G005,G052,G058,G032,,G005|G052,G005|G052|G058|G032|G088,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.9857,0.4335,2.5,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: kabul edilebilir kış kombini
+C029,kis,layered_5p,5,G007,G018,G081,G033,G099,G007|G018,G007|G018|G081|G033|G099,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.9517,0.7995,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: soğuk hava için yetersiz izolasyon
+C030,kis,layered_5p,5,,G068,G084,G075,G099,G068,G068|G084|G075|G088|G099,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.86,0.5592,4.0,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: soğuk hava için yetersiz izolasyon
+C031,kis,layered_7p,7,G009,G016,G064,G078,G041|G099,G009|G016,G009|G016|G064|G078|G039|G041|G099,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.0817,0.6695,4.0,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: soğuk hava için yetersiz izolasyon
+C032,kis,layered_5p,5,G003,G067,G083,G035,G043,G003|G067,G003|G067|G083|G035|G043,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.89,0.5292,3.5,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: kabul edilebilir kış kombini
+C033,kis,layered_5p,5,G008,,G027,G075,G050,G008,G008|G027|G075|G038|G050,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.97,0.7812,4.5,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: soğuk hava için yetersiz izolasyon
+C034,kis,layered_6p,6,,G070,G059,G079,G048|G044,G070,G070|G059|G079|G036|G048|G044,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.89,0.5292,4.0,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: kabul edilebilir kış kombini
+C035,kis,layered_6p,6,G002,G067,G058,G094,G043,G002|G067,G002|G067|G058|G094|G087|G043,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.91,0.8412,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: soğuk hava için yetersiz izolasyon
+C036,kis,layered_5p,5,G001,G016,,G034,G044,G001|G016,G001|G016|G034|G086|G044,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.7917,0.6275,2.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: soğuk hava için yetersiz izolasyon; dış katman yok
+C037,kis,layered_4p,4,,G017,G084,G033,,G017,G017|G084|G033|G036,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.8717,0.8795,4.5,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: soğuk hava için yetersiz izolasyon
+C038,kis,layered_6p,6,,G068,G059,G034,G047|G098,G068,G068|G059|G034|G040|G047|G098,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.95,0.4692,4.5,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: kabul edilebilir kış kombini
+C039,kis,layered_4p,4,,G068,G025,,G049|G098,G068,G068|G025|G049|G098,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.87,0.8812,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: soğuk hava için yetersiz izolasyon
+C040,kis,layered_5p,5,G003,G051,G060,G093,G098,G003|G051,G003|G051|G060|G093|G098,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.8557,0.5635,3.0,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: soğuk hava için yetersiz izolasyon
+C041,kis,layered_5p,5,G004,G054,G024,G073,G050,G004|G054,G004|G054|G024|G073|G050,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.1957,0.5555,2.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: soğuk hava için yetersiz izolasyon
+C042,kis,layered_4p,4,,,G056,G074,G045,,G056|G074|G040|G045,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.68,0.7392,4.0,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: soğuk hava için yetersiz izolasyon
+C043,kis,layered_4p,4,,G067,,G074,G044,G067,G067|G074|G039|G044,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,0.6,1.1512,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: soğuk hava için yetersiz izolasyon; dış katman yok
+C044,kis,layered_7p,7,G007,G018,G026,G095,G100|G048,G007|G018,G007|G018|G026|G095|G086|G100|G048,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.2117,0.2075,4.0,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: katmanlı ama hafif eksik
+C045,kis,layered_7p,7,G002,G068,G065,G031,G044|G098,G002|G068,G002|G068|G065|G031|G039|G044|G098,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.08,0.6712,2.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: soğuk hava için yetersiz izolasyon
+C046,kis,layered_5p,5,,G090,G025,G072,G098,G090,G090|G025|G072|G085|G098,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.1477,0.2715,4.5,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: katmanlı ama hafif eksik
+C047,kis,layered_6p,6,G004,G012,G056,G079,G097,G004|G012,G004|G012|G056|G079|G040|G097,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.11,0.6412,2.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: soğuk hava için yetersiz izolasyon
+C048,kis,layered_6p,6,G005,G015,G027,G078,G100,G005|G015,G005|G015|G027|G078|G039|G100,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,1.31,0.1092,2.5,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: hedef Clo'ya çok yakın
+C049,kis,layered_6p,6,G002,G066,G058,G074,G041,G002|G066,G002|G066|G058|G074|G086|G041,kis_soguk_ruzgarli,Kış — soğuk ve rüzgarlı,2,65,25,-0.06,1.7512,1.02,0.7312,3.0,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: soğuk hava için yetersiz izolasyon
+C050,kis,layered_5p,5,G004,G017,G056,G078,G047,G004|G017,G004|G017|G056|G078|G047,kis_orta,Kış — orta soğuk,5,70,10,5.17,1.4192,0.9517,0.4675,2.5,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: kabul edilebilir kış kombini
+C051,sonbahar,layered_6p,6,G010,G018,G025,G073,G150,G010|G018,G010|G018|G025|G073|G139|G150,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.3317,0.2817,3.0,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C052,sonbahar,layered_7p,7,G115,G054,G022,G076,G050|G049,G115|G054,G115|G054|G022|G076|G037|G050|G049,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.2657,0.0952,3.0,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C053,sonbahar,layered_5p,5,G112,G092,,G031,G098,G112|G092,G112|G092|G031|G141|G098,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.7177,0.3323,3.0,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C054,sonbahar,layered_5p,5,,G137,G029,G078,G149,G137,G137|G029|G078|G086|G149,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.0757,0.0948,3.5,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C055,sonbahar,layered_7p,7,G001,G109,G084,G130,G149|G042,G001|G109,G001|G109|G084|G130|G037|G149|G042,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.014,0.036,2.5,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C056,sonbahar,layered_4p,4,,G054,G021,G031,G044,G054,G054|G021|G031|G044,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.0857,0.0848,4.0,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: otomatik termal etiket
+C057,sonbahar,layered_6p,6,,G014,G119,G075,G044|G046,G014,G014|G119|G075|G086|G044|G046,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.17,0.12,4.0,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: otomatik termal etiket
+C058,sonbahar,layered_7p,7,G113,G137,G060,G073,G047|G044,G113|G137,G113|G137|G060|G073|G088|G047|G044,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.0757,0.0948,3.0,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C059,sonbahar,layered_5p,5,,G011,G119,G033,G049|G047,G011,G011|G119|G033|G049|G047,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.08,0.03,3.5,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C060,sonbahar,layered_5p,5,,G107,G029,G080,G048,G107,G107|G029|G080|G086|G048,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.024,0.1465,3.0,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C061,sonbahar,layered_6p,6,G008,G137,G119,G031,G147,G008|G137,G008|G137|G119|G031|G036|G147,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.1257,0.0757,3.5,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C062,sonbahar,layered_6p,6,G115,G091,G060,G077,G042,G115|G091,G115|G091|G060|G077|G087|G042,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.9577,0.2128,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C063,sonbahar,layered_5p,5,,G107,G021,G074,G046,G107,G107|G021|G074|G087|G046,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.124,0.074,2.5,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C064,sonbahar,layered_6p,6,,G067,G116,G034,G042|G043,G067,G067|G116|G034|G141|G042|G043,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.05,0.1205,4.5,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: otomatik termal etiket
+C065,sonbahar,layered_6p,6,,G067,G084,G095,G045|G099,G067,G067|G084|G095|G141|G045|G099,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.8,0.25,4.0,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: otomatik termal etiket
+C066,sonbahar,layered_6p,6,G114,G109,G056,G073,G150,G114|G109,G114|G109|G056|G073|G040|G150,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.014,0.1565,2.5,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C067,sonbahar,layered_3p,3,,,,,G042,,G133|G139|G042,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.35,0.7,2.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C068,sonbahar,layered_6p,6,G114,G090,G119,G094,G147,G114|G090,G114|G090|G119|G094|G087|G147,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.0077,0.1628,3.0,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C069,sonbahar,layered_5p,5,,G109,G027,G129,G043,G109,G109|G027|G129|G141|G043,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.084,0.034,3.0,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C070,sonbahar,layered_6p,6,G004,G068,G120,G124,G100,G004|G068,G004|G068|G120|G124|G038|G100,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.08,0.0905,2.5,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C071,sonbahar,layered_7p,7,G009,G089,G028,G095,G148|G050,G009|G089,G009|G089|G028|G095|G088|G148|G050,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.1277,0.0777,4.0,3,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: otomatik termal etiket
+C072,sonbahar,layered_3p,3,,,G027,,,,G131|G027|G087,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.8,0.3705,1.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C073,sonbahar,layered_6p,6,G005,G019,G057,G031,G046,G005|G019,G005|G019|G057|G031|G038|G046,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.0817,0.0317,3.0,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C074,sonbahar,layered_5p,5,G003,G101,G081,G035,,G003|G101,G003|G101|G081|G035|G039,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.9077,0.2628,2.0,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C075,sonbahar,layered_4p,4,,,G027,,G150,,G131|G027|G141|G150,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.86,0.19,1.5,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C076,sonbahar,layered_4p,4,G001,G069,G023,G073,,G001|G069,G001|G069|G023|G073,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.14,0.0305,2.0,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C077,sonbahar,layered_5p,5,,G053,G061,G121,G150,G053,G053|G061|G121|G039|G150,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.8757,0.1743,3.0,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C078,sonbahar,layered_5p,5,,G069,,G146,G147|G150,G069,G069|G146|G139|G147|G150,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.56,0.6105,2.0,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C079,sonbahar,layered_5p,5,,G101,G081,G121,G050,G101,G101|G081|G121|G037|G050,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.7777,0.2723,2.0,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C080,sonbahar,layered_7p,7,G007,G105,G061,G144,G047|G149,G007|G105,G007|G105|G061|G144|G038|G047|G149,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.9277,0.2428,3.0,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C081,sonbahar,layered_3p,3,,,,,G150,,G131|G036|G150,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.36,0.69,1.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C082,sonbahar,layered_3p,3,,,,,G097,,G134|G039|G097,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.36,0.8105,1.0,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C083,sonbahar,layered_2p,2,,,,,,,G132|G086,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.3,0.75,1.0,1,StylePops Bootstrap v1.1,estetik: eksik katman | termal: az parça
+C084,sonbahar,layered_5p,5,,G052,G064,G122,G049,G052,G052|G064|G122|G086|G049,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.8557,0.3148,3.0,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C085,sonbahar,layered_7p,7,G010,G137,G065,G031,G150|G047,G010|G137,G010|G137|G065|G031|G140|G150|G047,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.0657,0.0157,3.5,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C086,sonbahar,layered_5p,5,G114,G051,G061,,G050,G114|G051,G114|G051|G061|G139|G050,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.7757,0.3948,1.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C087,sonbahar,layered_6p,6,G004,G092,G083,G078,G100,G004|G092,G004|G092|G083|G078|G087|G100,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.9177,0.1323,3.0,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C088,sonbahar,layered_6p,6,G111,G014,G029,G144,G099|G046,G111|G014,G111|G014|G029|G144|G099|G046,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.21,0.0395,2.5,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C089,sonbahar,layered_5p,5,,G089,G061,G033,G098,G089,G089|G061|G033|G038|G098,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.8977,0.1523,4.0,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: otomatik termal etiket
+C090,sonbahar,layered_7p,7,G009,G108,G120,G072,G050|G044,G009|G108,G009|G108|G120|G072|G142|G050|G044,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.124,0.0465,2.5,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C091,sonbahar,layered_5p,5,G006,G066,G116,G146,G048,G006|G066,G006|G066|G116|G146|G048,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.9,0.15,3.0,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: rüzgarlı günde etek altı eksik
+C092,sonbahar,layered_5p,5,,G017,G027,G146,G149,G017,G017|G027|G146|G038|G149,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,1.0717,0.0988,3.0,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C093,sonbahar,layered_6p,6,G007,G089,G061,G128,G044,G007|G089,G007|G089|G061|G128|G085|G044,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.9877,0.0623,4.0,3,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: otomatik termal etiket
+C094,sonbahar,layered_2p,2,,,,,,,G131|G141,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.3,0.8705,2.0,1,StylePops Bootstrap v1.1,estetik: eksik katman | termal: az parça
+C095,sonbahar,layered_5p,5,G007,G011,,G073,G044,G007|G011,G007|G011|G073|G141|G044,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.83,0.22,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C096,sonbahar,layered_4p,4,G005,,,G129,G043,G005,G005|G129|G142|G043,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.5,0.6705,3.0,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C097,sonbahar,layered_4p,4,,,,G128,G147|G149,,G128|G037|G147|G149,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,0.45,0.6,3.0,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C098,sonbahar,layered_5p,5,,G067,G117,G093,G097,G067,G067|G117|G093|G036|G097,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.9,0.2705,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C099,sonbahar,layered_5p,5,,G135,G022,G075,G048,G135,G135|G022|G075|G088|G048,sonbahar_serin,Sonbahar — serin,12,75,15,12,1.05,1.1557,0.1057,3.0,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C100,sonbahar,layered_5p,5,,G106,G082,G094,G042,G106,G106|G082|G094|G139|G042,sonbahar_yagmurlu,Sonbahar — yağmurlu,10,90,20,9.59,1.1705,0.724,0.4465,2.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: rüzgarlı günde etek altı eksik
+C101,ilkbahar,layered_4p,4,,G101,G058,G164,,G101,G101|G058|G164|G139,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.6877,0.0623,3.0,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C102,ilkbahar,layered_5p,5,,G103,G064,G076,G149,G103,G103|G064|G076|G141|G149,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.8477,0.0523,3.0,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C103,ilkbahar,layered_2p,2,,,G117,G094,,,G117|G094,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.54,0.21,3.5,1,StylePops Bootstrap v1.1,estetik: eksik katman | termal: az parça
+C104,ilkbahar,layered_6p,6,G160,G194,G061,G128,G149,G160|G194,G160|G194|G061|G128|G189|G149,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.96,0.06,2.0,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C105,ilkbahar,layered_4p,4,G160,G109,G062,G080,,G160|G109,G160|G109|G062|G080,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.824,0.074,2.0,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C106,ilkbahar,layered_5p,5,G152,G172,G119,G125,,G152|G172,G152|G172|G119|G125|G085,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.95,0.05,3.0,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C107,ilkbahar,layered_4p,4,G157,,G059,G072,,G157,G157|G059|G072|G187,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.75,0.0,3.0,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C108,ilkbahar,layered_6p,6,G156,G092,G058,G163,G149,G156|G092,G156|G092|G058|G163|G187|G149,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.8677,0.0323,2.5,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C109,ilkbahar,layered_3p,3,,,,,G150,,G170|G088|G150,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.32,0.43,1.0,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C110,ilkbahar,layered_3p,3,,G066,G119,G093,,G066,G066|G119|G093,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.76,0.14,4.5,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: rüzgarlı günde etek altı eksik
+C111,ilkbahar,layered_3p,3,G114,G107,,G121,,G114|G107,G114|G107|G121,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.524,0.226,4.0,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: otomatik termal etiket
+C112,ilkbahar,layered_2p,2,,,,,,,G133|G142,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.3,0.6,3.5,1,StylePops Bootstrap v1.1,estetik: eksik katman | termal: az parça
+C113,ilkbahar,layered_3p,3,,G101,,G074,,G101,G101|G074|G187,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.5377,0.2123,2.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C114,ilkbahar,layered_5p,5,,G102,G063,G079,G148,G102,G102|G063|G079|G086|G148,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.8477,0.0523,2.5,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C115,ilkbahar,layered_2p,2,,,G116,,,,G116|G187,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.48,0.27,3.5,1,StylePops Bootstrap v1.1,estetik: eksik katman | termal: az parça
+C116,ilkbahar,layered_6p,6,G157,G067,G083,G122,G147,G157|G067,G157|G067|G083|G122|G141|G147,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.93,0.03,3.0,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C117,ilkbahar,layered_2p,2,,,,,,,G132|G196,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.3,0.45,3.5,1,StylePops Bootstrap v1.1,estetik: eksik katman | termal: az parça
+C118,ilkbahar,layered_5p,5,G112,G109,G116,G162,G100,G112|G109,G112|G109|G116|G162|G100,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.884,0.016,2.0,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C119,ilkbahar,layered_3p,3,,G102,G120,G183,,G102,G102|G120|G183,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.7477,0.0023,3.5,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C120,ilkbahar,layered_5p,5,G153,G171,G082,G180,,G153|G171,G153|G171|G082|G180|G186,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.76,0.14,2.5,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C121,ilkbahar,layered_3p,3,G154,,,G163,,G154,G154|G163|G085,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.3,0.45,2.0,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C122,ilkbahar,layered_5p,5,G153,,G057,G074,G149,G153,G153|G057|G074|G199|G149,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.81,0.09,1.5,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C123,ilkbahar,layered_3p,3,,G105,,G177,,G105,G105|G177|G140,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.4477,0.3023,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C124,ilkbahar,layered_4p,4,,G053,G064,G093,,G053,G053|G064|G093|G190,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.7557,0.1443,3.0,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: rüzgarlı günde etek altı eksik
+C125,ilkbahar,layered_3p,3,,G138,G120,G164,,G138,G138|G120|G164,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.7357,0.0143,4.0,3,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: otomatik termal etiket
+C126,ilkbahar,layered_4p,4,,,G057,G125,G097,,G057|G125|G196|G097,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.64,0.26,2.0,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C127,ilkbahar,layered_2p,2,,,,,,,G168|G142,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.26,0.49,3.5,1,StylePops Bootstrap v1.1,estetik: eksik katman | termal: az parça
+C128,ilkbahar,layered_2p,2,,,,,,,G169|G189,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.26,0.64,3.0,1,StylePops Bootstrap v1.1,estetik: eksik katman | termal: az parça
+C129,ilkbahar,layered_2p,2,,,,,,,G169|G186,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.26,0.49,2.0,1,StylePops Bootstrap v1.1,estetik: eksik katman | termal: az parça
+C130,ilkbahar,layered_4p,4,G159,G054,,G161,G097,G159|G054,G159|G054|G161|G097,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.5157,0.3843,2.0,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C131,ilkbahar,layered_3p,3,,G194,,G080,,G194,G194|G080|G088,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.43,0.32,1.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C132,ilkbahar,layered_2p,2,,,,,,,G167|G188,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.26,0.64,2.5,1,StylePops Bootstrap v1.1,estetik: eksik katman | termal: az parça
+C133,ilkbahar,layered_5p,5,G157,G053,G082,G143,,G157|G053,G157|G053|G082|G143|G186,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.8257,0.0757,2.5,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C134,ilkbahar,layered_5p,5,G151,G053,G059,G075,G149,G151|G053,G151|G053|G059|G075|G149,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.9657,0.0657,2.5,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C135,ilkbahar,layered_2p,2,,,,,,,G133|G188,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.3,0.45,3.0,1,StylePops Bootstrap v1.1,estetik: eksik katman | termal: az parça
+C136,ilkbahar,layered_4p,4,G113,G104,G063,G146,,G113|G104,G113|G104|G063|G146,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.7677,0.1323,2.0,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: rüzgarlı günde etek altı eksik
+C137,ilkbahar,layered_4p,4,G111,G069,,G122,,G111|G069,G111|G069|G122|G142,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.62,0.13,4.0,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: otomatik termal etiket
+C138,ilkbahar,layered_6p,6,G152,G091,G064,G078,G100,G152|G091,G152|G091|G064|G078|G188|G100,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.9677,0.0677,2.5,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C139,ilkbahar,layered_3p,3,,,,,G149,,G131|G188|G149,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.36,0.39,1.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C140,ilkbahar,layered_2p,2,,,,,,,G132|G088,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.3,0.6,1.0,1,StylePops Bootstrap v1.1,estetik: eksik katman | termal: az parça
+C141,ilkbahar,layered_3p,3,,,,,G149,,G170|G190|G149,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.32,0.43,1.0,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C142,ilkbahar,layered_6p,6,G159,G108,G059,G096,G100,G159|G108,G159|G108|G059|G096|G187|G100,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.904,0.004,2.5,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C143,ilkbahar,layered_3p,3,,G091,,G181,,G091,G091|G181|G140,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.4277,0.3223,2.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C144,ilkbahar,layered_5p,5,G156,G101,,G073,G148,G156|G101,G156|G101|G073|G142|G148,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.7177,0.1823,1.5,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C145,ilkbahar,layered_3p,3,,,G060,,,,G170|G060|G188,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.56,0.19,1.5,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C146,ilkbahar,layered_5p,5,G153,,G116,G122,G147,G153,G153|G116|G122|G186|G147,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.86,0.04,2.5,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C147,ilkbahar,layered_2p,2,,G108,,G164,,G108,G108|G164,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.304,0.446,4.0,1,StylePops Bootstrap v1.1,estetik: eksik katman; iyi renk uyumu | termal: az parça
+C148,ilkbahar,layered_3p,3,,,G117,G124,G149,,G117|G124|G149,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.66,0.24,2.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C149,ilkbahar,layered_3p,3,G154,,,G079,,G154,G154|G079|G139,ilkbahar_ilik,İlkbahar — ılık,18,60,8,18,0.75,0.4,0.35,2.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C150,ilkbahar,layered_5p,5,G115,G055,G084,G077,,G115|G055,G115|G055|G084|G077|G088,ilkbahar_ruzgarli,İlkbahar — rüzgarlı,15,55,22,15,0.9,0.8857,0.0143,3.0,3,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C151,yaz,layered_2p,2,,,,,,,G133|G198,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.3,0.004,3.5,3,StylePops Bootstrap v1.1,estetik: eksik katman | termal: yaz için ideal hafiflik
+C152,yaz,layered_4p,4,,G192,G117,G124,,G192,G192|G117|G124|G196,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.83,0.58,4.0,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: yaz için fazla kalın
+C153,yaz,layered_3p,3,G156,G173,,G122,,G156|G173,G156|G173|G122,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.47,0.174,3.0,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C154,yaz,layered_4p,4,,G194,G117,G182,,G194,G194|G117|G182|G200,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.77,0.52,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: yaz için fazla kalın
+C155,yaz,layered_3p,3,,,G118,G182,,,G118|G182|G186,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.62,0.324,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: yaz için fazla kalın
+C156,yaz,layered_3p,3,,G104,,G165,,G104,G104|G165|G196,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.3877,0.1377,5.0,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: otomatik termal etiket
+C157,yaz,layered_3p,3,G158,,,G123,,G158,G158|G123|G188,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.4,0.104,3.0,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C158,yaz,layered_2p,2,,,,,,,G169|G139,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.26,0.01,3.5,3,StylePops Bootstrap v1.1,estetik: eksik katman | termal: yaz için ideal hafiflik
+C159,yaz,layered_3p,3,,G136,,G126,,G136,G136|G126|G142,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.5657,0.2697,4.0,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: yaz için fazla kalın
+C160,yaz,layered_2p,2,,,,G185,,,G185|G141,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.22,0.03,2.0,3,StylePops Bootstrap v1.1,estetik: eksik katman | termal: yaz için ideal hafiflik
+C161,yaz,layered_3p,3,,,G120,G184,,,G120|G184|G198,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.62,0.324,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: yaz için fazla kalın
+C162,yaz,layered_5p,5,G114,G172,G118,G177,,G114|G172,G114|G172|G118|G177|G189,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.91,0.66,4.0,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: yaz için fazla kalın
+C163,yaz,layered_2p,2,,,,,,,G134|G196,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.3,0.004,3.5,3,StylePops Bootstrap v1.1,estetik: eksik katman | termal: yaz için ideal hafiflik
+C164,yaz,layered_3p,3,,G104,,G124,,G104,G104|G124|G190,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.4877,0.2377,4.0,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: yaz için fazla kalın
+C165,yaz,layered_3p,3,,,G120,G184,,,G120|G184|G196,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.62,0.324,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: yaz için fazla kalın
+C166,yaz,layered_3p,3,,,G118,G124,,,G118|G124|G139,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.68,0.43,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: yaz için fazla kalın
+C167,yaz,layered_2p,2,,G103,,G165,,G103,G103|G165,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.3077,0.0117,4.0,3,StylePops Bootstrap v1.1,estetik: eksik katman; iyi renk uyumu | termal: yaz için ideal hafiflik
+C168,yaz,layered_2p,2,,,,G122,,,G122|G141,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.28,0.03,3.5,3,StylePops Bootstrap v1.1,estetik: eksik katman | termal: yaz için ideal hafiflik
+C169,yaz,layered_2p,2,,,,,,,G168|G139,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.26,0.036,3.5,3,StylePops Bootstrap v1.1,estetik: eksik katman | termal: yaz için ideal hafiflik
+C170,yaz,layered_4p,4,G113,G108,,G185,,G113|G108,G113|G108|G185|G190,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.544,0.294,4.0,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: yaz için fazla kalın
+C171,yaz,layered_2p,2,,,G118,,,,G118|G142,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.48,0.184,2.5,1,StylePops Bootstrap v1.1,estetik: eksik katman | termal: yaz için fazla kalın
+C172,yaz,layered_2p,2,,,,G123,,,G123|G199,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.28,0.03,3.5,3,StylePops Bootstrap v1.1,estetik: eksik katman | termal: yaz için ideal hafiflik
+C173,yaz,layered_2p,2,,,,,G149,,G131|G149,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.28,0.016,1.0,3,StylePops Bootstrap v1.1,estetik: eksik katman | termal: yaz için ideal hafiflik
+C174,yaz,layered_2p,2,,,,,,,G168|G140,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.26,0.01,1.5,3,StylePops Bootstrap v1.1,estetik: eksik katman | termal: yaz için ideal hafiflik
+C175,yaz,layered_4p,4,G153,G136,,G125,,G153|G136,G153|G136|G125|G199,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.6357,0.3397,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: yaz için fazla kalın
+C176,yaz,layered_2p,2,,G106,,G179,,G106,G106|G179,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.364,0.114,4.0,2,StylePops Bootstrap v1.1,estetik: eksik katman; iyi renk uyumu | termal: otomatik termal etiket
+C177,yaz,layered_2p,2,,,,G182,,,G182|G189,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.22,0.076,3.5,2,StylePops Bootstrap v1.1,estetik: eksik katman | termal: otomatik termal etiket
+C178,yaz,layered_2p,2,,,,G123,,,G123|G199,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.28,0.03,3.5,3,StylePops Bootstrap v1.1,estetik: eksik katman | termal: yaz için ideal hafiflik
+C179,yaz,layered_4p,4,,G193,G116,G129,,G193,G193|G116|G129|G189,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.88,0.584,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: yaz için fazla kalın
+C180,yaz,layered_2p,2,,,,G126,,,G126|G142,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.33,0.08,3.0,2,StylePops Bootstrap v1.1,estetik: eksik katman | termal: otomatik termal etiket
+C181,yaz,layered_3p,3,,G174,,G124,,G174,G174|G124|G190,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.43,0.134,4.0,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: otomatik termal etiket
+C182,yaz,layered_4p,4,G158,,G120,G130,,G158,G158|G120|G130|G198,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.85,0.6,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: yaz için fazla kalın
+C183,yaz,layered_2p,2,,,,G183,,,G183|G197,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.22,0.076,3.5,2,StylePops Bootstrap v1.1,estetik: eksik katman | termal: otomatik termal etiket
+C184,yaz,layered_2p,2,,,,G163,,,G163|G142,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.18,0.07,4.0,2,StylePops Bootstrap v1.1,estetik: eksik katman; iyi renk uyumu | termal: otomatik termal etiket
+C185,yaz,layered_3p,3,,G193,G117,G181,,G193,G193|G117|G181,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.69,0.394,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: yaz için fazla kalın
+C186,yaz,layered_3p,3,,G110,G120,G183,,G110,G110|G120|G183,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.744,0.494,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: yaz için fazla kalın
+C187,yaz,layered_4p,4,G152,G175,G117,G182,,G152|G175,G152|G175|G117|G182,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.81,0.514,4.0,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: yaz için fazla kalın
+C188,yaz,layered_2p,2,,,,G185,,,G185|G189,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.22,0.03,3.5,3,StylePops Bootstrap v1.1,estetik: eksik katman | termal: yaz için ideal hafiflik
+C189,yaz,layered_2p,2,,,,,,,G169|G186,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.26,0.036,2.0,3,StylePops Bootstrap v1.1,estetik: eksik katman | termal: yaz için ideal hafiflik
+C190,yaz,layered_4p,4,G155,G194,,G178,,G155|G194,G155|G194|G178|G187,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.51,0.26,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: yaz için fazla kalın
+C191,yaz,layered_2p,2,,,G117,G130,,,G117|G130,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.65,0.354,3.5,1,StylePops Bootstrap v1.1,estetik: eksik katman | termal: yaz için fazla kalın
+C192,yaz,layered_3p,3,,,,,G150,,G134|G196|G150,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.36,0.11,1.5,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C193,yaz,layered_3p,3,,G191,,G179,,G191,G191|G179|G196,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.39,0.094,4.0,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: otomatik termal etiket
+C194,yaz,layered_3p,3,G112,,,G125,,G112,G112|G125|G198,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.4,0.15,4.0,2,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: otomatik termal etiket
+C195,yaz,layered_3p,3,,,G119,G144,,,G119|G144|G142,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.62,0.324,3.5,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: yaz için fazla kalın
+C196,yaz,layered_3p,3,,,G117,G179,,,G117|G179|G189,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.64,0.39,4.0,1,StylePops Bootstrap v1.1,estetik: iyi renk uyumu | termal: yaz için fazla kalın
+C197,yaz,layered_2p,2,,,,G129,,,G129|G186,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.33,0.034,3.5,3,StylePops Bootstrap v1.1,estetik: eksik katman | termal: yaz için ideal hafiflik
+C198,yaz,layered_3p,3,,,,,G150,,G167|G198|G150,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.32,0.07,1.0,2,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: otomatik termal etiket
+C199,yaz,layered_3p,3,,,G118,G181,,,G118|G181|G140,yaz_sicak,Yaz — sıcak,32,45,5,33.24,0.296,0.62,0.324,3.0,1,StylePops Bootstrap v1.1,estetik: otomatik etiket | termal: yaz için fazla kalın
+C200,yaz,layered_2p,2,,,,G165,,,G165|G141,yaz_nemli,Yaz — nemli,30,80,3,37.67,0.25,0.18,0.07,2.5,2,StylePops Bootstrap v1.1,estetik: eksik katman | termal: otomatik termal etiket

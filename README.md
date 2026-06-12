@@ -1,18 +1,33 @@
 # StylePops Modules
 
-Çok kriterli giyim kombinasyonu optimizasyon modeli — bootstrap pipeline (İP-1 → İP-3).
+Çok kriterli giyim kombinasyonu optimizasyon modeli — bootstrap + **görsel envanter hattı**.
 
-## Hızlı başlangıç (Google Colab)
+## Görsel envanter (yerel — önerilen)
 
-1. [Colab'da notebook'u aç](https://colab.research.google.com/github/valueisinvalid/StylePops_Modules/blob/main/notebooks/StylePops_Bootstrap_Pipeline.ipynb)
-2. **Runtime → Change runtime type → GPU**
-3. Hücreleri sırayla çalıştırın (repo otomatik clone edilir)
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+pip install -r requirements-visual.txt   # FashionCLIP için
 
-Detaylı rehber: [COLAB_KULLANIM.md](COLAB_KULLANIM.md)
+python scripts/run_visual_pipeline.py --all
+streamlit run app/streamlit_app.py
+```
+
+Takip panosu: `PROJE_DURUMU.md` · Veri lisansları: `DATA_PROVENANCE.md`
+
+## Google Colab (bootstrap İP-1→İP-3)
+
+1. [Colab notebook](https://colab.research.google.com/github/valueisinvalid/StylePops_Modules/blob/main/notebooks/StylePops_Bootstrap_Pipeline.ipynb)
+2. **Runtime → GPU** → hücreleri sırayla çalıştır
+
+Detay: [COLAB_KULLANIM.md](COLAB_KULLANIM.md)
 
 ## İçerik
 
-- `data/bootstrap/` — 200 parça envanter + 200 kombin CSV
-- `data/lookups/` — FABRIC_PROPERTIES, TARGET_CLO_POINTS
-- `notebooks/` — Colab pipeline
-- `scripts/generate_bootstrap_data.py` — veri yeniden üretici
+| Klasör | Açıklama |
+|--------|----------|
+| `data/bootstrap/` | 200 sentetik parça + kombin |
+| `data/visual/` | 300 Livostyle görsel parça + kombin CSV |
+| `data/assets/` | Mirror görseller (lokal, gitignore) |
+| `scripts/` | import, estetik, pipeline |
+| `app/` | Streamlit görsel arayüz |

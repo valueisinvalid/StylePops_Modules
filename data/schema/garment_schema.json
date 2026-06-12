@@ -19,8 +19,8 @@
   "properties": {
     "id": {
       "type": "string",
-      "pattern": "^G[0-9]{3,}$",
-      "description": "Benzersiz parça kimliği, örn. G001"
+      "pattern": "^(G|LV|FP)[0-9]{3,}$",
+      "description": "Benzersiz parça kimliği — G### sentetik bootstrap, LV### Livostyle görsel envanter"
     },
     "name": {
       "type": "string",
@@ -109,6 +109,30 @@
       "type": "string",
       "enum": ["base", "mid", "outer", "bottom", "dress", "footwear", "accessory"],
       "description": "Katman slotu — base+mid+outer üst üste giyilebilir"
+    },
+    "image_path": {
+      "type": "string",
+      "description": "Yerel görsel yolu — data/assets/garments/LV001.jpg"
+    },
+    "image_source_url": {
+      "type": "string",
+      "description": "Orijinal CDN / kaynak URL (referans)"
+    },
+    "source": {
+      "type": "string",
+      "description": "Veri kaynağı: bootstrap_synthetic | livostyle_mit"
+    },
+    "source_id": {
+      "type": "string",
+      "description": "Kaynak sistemdeki ürün kimliği (handle veya shopify id)"
+    },
+    "license": {
+      "type": "string",
+      "description": "Görsel/metadata lisansı — örn. MIT"
+    },
+    "snapshot_date": {
+      "type": "string",
+      "description": "Görsel mirror tarihi ISO-8601"
     }
   }
 }

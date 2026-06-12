@@ -7,3 +7,8 @@ outputs/
 .ipynb_checkpoints/
 .env
 *.zip
+data/assets/garments/*.jpg
+data/assets/combos/*.jpg
+data/assets/fashion_product/*.jpg
+data/visual/embeddings_cache.json
+outputs/fashionclip_lora/

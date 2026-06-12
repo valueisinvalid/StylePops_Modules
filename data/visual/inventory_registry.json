@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "production_wardrobe": "garments_livostyle.json",
+  "training_corpus": "garments_fashion_product.json",
+  "models": {
+    "fashionclip_base": "patrickjohncyh/fashion-clip",
+    "fashionclip_lora": "outputs/fashionclip_lora",
+    "compatibility_head": "outputs/compatibility_head_v1.joblib"
+  },
+  "notes": {
+    "production_wardrobe": "Tüm Livostyle MIT katalog — uygulama gardırobu",
+    "training_corpus": "Fashion Product Images Small 44K MIT — estetik eğitim, uygulamada gösterilmez"
+  }
+}

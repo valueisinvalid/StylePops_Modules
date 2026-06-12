@@ -1,0 +1,53 @@
+{
+  "version": "1.0",
+  "article_type_rules": [
+    { "keywords": ["shirt"], "subcategory": "shirt", "layer_role": "mid", "thermal_category": "pamuklu_gomlek", "category": "top" },
+    { "keywords": ["tshirt", "t shirt", "top"], "subcategory": "tshirt", "layer_role": "base", "thermal_category": "ince_pamuklu_tisort", "category": "top" },
+    { "keywords": ["blouse", "tunic"], "subcategory": "blouse", "layer_role": "mid", "thermal_category": "pamuklu_gomlek", "category": "top" },
+    { "keywords": ["sweater", "sweatshirt", "pullover"], "subcategory": "sweater", "layer_role": "mid", "thermal_category": "kalin_yun_kazak", "category": "top" },
+    { "keywords": ["jacket", "blazer"], "subcategory": "jacket", "layer_role": "outer", "thermal_category": "ince_ceket", "category": "outer" },
+    { "keywords": ["coat"], "subcategory": "coat", "layer_role": "outer", "thermal_category": "kaban", "category": "outer" },
+    { "keywords": ["jean"], "subcategory": "jeans", "layer_role": "bottom", "thermal_category": "jean_pantolon", "category": "bottom" },
+    { "keywords": ["trouser", "pant", "capri"], "subcategory": "chinos", "layer_role": "bottom", "thermal_category": "chino_pantolon", "category": "bottom" },
+    { "keywords": ["short"], "subcategory": "shorts", "layer_role": "bottom", "thermal_category": "sort", "category": "bottom" },
+    { "keywords": ["skirt"], "subcategory": "skirt", "layer_role": "bottom", "thermal_category": "etek", "category": "bottom" },
+    { "keywords": ["dress"], "subcategory": "dress_midi", "layer_role": "dress", "thermal_category": "midi_elbise", "category": "dress" },
+    { "keywords": ["kurta", "kurtas"], "subcategory": "shirt", "layer_role": "mid", "thermal_category": "pamuklu_gomlek", "category": "top" },
+    { "keywords": ["sandal"], "subcategory": "sandals", "layer_role": "footwear", "thermal_category": "bot", "category": "footwear" },
+    { "keywords": ["shoe", "heel", "flat", "flip flop"], "subcategory": "sneakers", "layer_role": "footwear", "thermal_category": "bot", "category": "footwear" },
+    { "keywords": ["boot"], "subcategory": "boots", "layer_role": "footwear", "thermal_category": "bot", "category": "footwear" },
+    { "keywords": ["bag", "wallet", "belt", "scarf", "watch", "cap", "hat"], "subcategory": "scarf", "layer_role": "accessory", "thermal_category": "atki", "category": "accessory" }
+  ],
+  "season_map": {
+    "fall": "sonbahar",
+    "winter": "kis",
+    "spring": "ilkbahar",
+    "summer": "yaz"
+  },
+  "colour_lab": {
+    "black": [12, 0, 0],
+    "white": [92, 0, 2],
+    "blue": [45, 5, -35],
+    "navy blue": [22, 8, -28],
+    "red": [42, 48, 28],
+    "green": [48, -22, 12],
+    "brown": [38, 12, 22],
+    "grey": [55, 0, 0],
+    "gray": [55, 0, 0],
+    "pink": [72, 28, 8],
+    "purple": [38, 32, -18],
+    "yellow": [82, -4, 52],
+    "orange": [62, 32, 48],
+    "silver": [70, 0, -2],
+    "gold": [75, 8, 45],
+    "beige": [78, 4, 18],
+    "cream": [88, 2, 12]
+  },
+  "default": {
+    "subcategory": "blouse",
+    "layer_role": "mid",
+    "thermal_category": "pamuklu_gomlek",
+    "category": "top",
+    "fabric_composition": [{ "material": "cotton", "pct": 100 }]
+  }
+}

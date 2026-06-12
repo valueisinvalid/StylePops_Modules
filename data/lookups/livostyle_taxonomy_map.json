@@ -1,0 +1,65 @@
+{
+  "version": "1.0",
+  "note": "Livostyle product_type / category anahtar kelimeleri → StylePops alanları",
+  "keyword_rules": [
+    { "keywords": ["puffer", "parka", "down jacket", "winter coat", "wool coat"], "subcategory": "padded_coat", "layer_role": "outer", "thermal_category": "kalin_mont", "season_primary": "kis", "sleeve": "long" },
+    { "keywords": ["coat", "overcoat", "peacoat"], "subcategory": "coat", "layer_role": "outer", "thermal_category": "kaban", "season_primary": "kis", "sleeve": "long" },
+    { "keywords": ["blazer"], "subcategory": "blazer", "layer_role": "outer", "thermal_category": "ince_ceket", "season_primary": "sonbahar", "sleeve": "long" },
+    { "keywords": ["leather jacket", "moto jacket", "denim jacket", "shacket", "jacket"], "subcategory": "jacket", "layer_role": "outer", "thermal_category": "ince_ceket", "season_primary": "sonbahar", "sleeve": "long" },
+    { "keywords": ["trench", "raincoat", "windbreaker"], "subcategory": "raincoat", "layer_role": "outer", "thermal_category": "yagmurluk", "season_primary": "ilkbahar", "sleeve": "long" },
+    { "keywords": ["hoodie", "sweatshirt"], "subcategory": "hoodie", "layer_role": "mid", "thermal_category": "polar_sweatshirt", "season_primary": "sonbahar", "sleeve": "long" },
+    { "keywords": ["cardigan"], "subcategory": "cardigan", "layer_role": "mid", "thermal_category": "ince_triko", "season_primary": "ilkbahar", "sleeve": "long" },
+    { "keywords": ["sweater", "pullover", "knit top"], "subcategory": "sweater", "layer_role": "mid", "thermal_category": "kalin_yun_kazak", "season_primary": "kis", "sleeve": "long" },
+    { "keywords": ["bodysuit", "tank", "cami", "crop top"], "subcategory": "tank_top", "layer_role": "base", "thermal_category": "ince_pamuklu_tisort", "season_primary": "yaz", "sleeve": "sleeveless" },
+    { "keywords": ["t-shirt", "tee", "tshirt"], "subcategory": "tshirt", "layer_role": "base", "thermal_category": "ince_pamuklu_tisort", "season_primary": "yaz", "sleeve": "short" },
+    { "keywords": ["blouse"], "subcategory": "blouse", "layer_role": "mid", "thermal_category": "pamuklu_gomlek", "season_primary": "ilkbahar", "sleeve": "three_quarter" },
+    { "keywords": ["shirt", "button"], "subcategory": "shirt", "layer_role": "mid", "thermal_category": "pamuklu_gomlek", "season_primary": "ilkbahar", "sleeve": "long" },
+    { "keywords": ["maxi dress", "long dress"], "subcategory": "dress_long", "layer_role": "dress", "thermal_category": "midi_elbise", "season_primary": "ilkbahar", "sleeve": "three_quarter" },
+    { "keywords": ["midi dress"], "subcategory": "dress_midi", "layer_role": "dress", "thermal_category": "midi_elbise", "season_primary": "ilkbahar", "sleeve": "three_quarter" },
+    { "keywords": ["mini dress", "slip dress"], "subcategory": "dress_short", "layer_role": "dress", "thermal_category": "yaz_elbisesi", "season_primary": "yaz", "sleeve": "sleeveless" },
+    { "keywords": ["dress", "jumpsuit", "romper"], "subcategory": "dress_midi", "layer_role": "dress", "thermal_category": "midi_elbise", "season_primary": "ilkbahar", "sleeve": "three_quarter" },
+    { "keywords": ["jean", "denim pant"], "subcategory": "jeans", "layer_role": "bottom", "thermal_category": "jean_pantolon", "season_primary": "ilkbahar", "sleeve": null },
+    { "keywords": ["legging", "jogger", "sweatpant"], "subcategory": "leggings", "layer_role": "bottom", "thermal_category": "tayt", "season_primary": "kis", "sleeve": null },
+    { "keywords": ["short"], "subcategory": "shorts", "layer_role": "bottom", "thermal_category": "sort", "season_primary": "yaz", "sleeve": null },
+    { "keywords": ["skirt"], "subcategory": "skirt", "layer_role": "bottom", "thermal_category": "etek", "season_primary": "ilkbahar", "sleeve": null, "coverage_key": "skirt_midi" },
+    { "keywords": ["pant", "trouser", "chino"], "subcategory": "chinos", "layer_role": "bottom", "thermal_category": "chino_pantolon", "season_primary": "ilkbahar", "sleeve": null },
+    { "keywords": ["bikini", "swim", "one-piece"], "subcategory": "dress_short", "layer_role": "dress", "thermal_category": "yaz_elbisesi", "season_primary": "yaz", "sleeve": "sleeveless" },
+    { "keywords": ["boot"], "subcategory": "boots", "layer_role": "footwear", "thermal_category": "bot", "season_primary": "kis", "sleeve": null },
+    { "keywords": ["sandal", "heel", "pump", "mule"], "subcategory": "sandals", "layer_role": "footwear", "thermal_category": "bot", "season_primary": "yaz", "sleeve": null },
+    { "keywords": ["sneaker", "loafer", "flat", "shoe"], "subcategory": "sneakers", "layer_role": "footwear", "thermal_category": "bot", "season_primary": "ilkbahar", "sleeve": null },
+    { "keywords": ["scarf"], "subcategory": "scarf", "layer_role": "accessory", "thermal_category": "atki", "season_primary": "kis", "sleeve": null },
+    { "keywords": ["hat", "beanie", "cap"], "subcategory": "hat", "layer_role": "accessory", "thermal_category": "sapka", "season_primary": "kis", "sleeve": null },
+    { "keywords": ["tight", "hosiery"], "subcategory": "tights", "layer_role": "accessory", "thermal_category": "kilotlu_corap", "season_primary": "kis", "sleeve": null },
+    { "keywords": ["bag", "jewelry", "belt", "sunglass"], "subcategory": "scarf", "layer_role": "accessory", "thermal_category": "atki", "season_primary": "ilkbahar", "sleeve": null }
+  ],
+  "category_bucket_targets": {
+    "tops": 80,
+    "outerwear": 40,
+    "bottoms": 70,
+    "dresses": 45,
+    "footwear": 35,
+    "accessories": 30
+  },
+  "category_bucket_keywords": {
+    "tops": ["top", "shirt", "blouse", "tee", "sweater", "hoodie", "cardigan", "tank", "bodysuit"],
+    "outerwear": ["jacket", "coat", "blazer", "outerwear", "trench", "parka", "shacket"],
+    "bottoms": ["pant", "jean", "short", "skirt", "legging", "jogger", "bottom"],
+    "dresses": ["dress", "jumpsuit", "romper", "swim", "set"],
+    "footwear": ["shoe", "boot", "sandal", "sneaker", "heel", "flat"],
+    "accessories": ["bag", "scarf", "hat", "belt", "jewelry", "accessory", "sunglass"]
+  },
+  "season_tag_keywords": {
+    "kis": ["winter", "wool", "thermal", "cozy", "cold"],
+    "sonbahar": ["fall", "autumn", "layer"],
+    "ilkbahar": ["spring", "floral", "light"],
+    "yaz": ["summer", "beach", "vacation", "swim", "linen", "breezy"]
+  },
+  "default_mapping": {
+    "subcategory": "blouse",
+    "layer_role": "mid",
+    "thermal_category": "pamuklu_gomlek",
+    "season_primary": "ilkbahar",
+    "sleeve": "three_quarter",
+    "fabric_composition": [{ "material": "cotton", "pct": 100 }]
+  }
+}

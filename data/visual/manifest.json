@@ -1,0 +1,10 @@
+{
+  "snapshot_date": "2026-06-12",
+  "source_url": "https://raw.githubusercontent.com/arturayupov/womens-fashion-catalog-open-data/main/data/products.json",
+  "license": "MIT",
+  "garment_count": 2580,
+  "images_ok": 2579,
+  "images_failed": 1,
+  "output": "data/visual/garments_livostyle.json",
+  "refresh": false
+}

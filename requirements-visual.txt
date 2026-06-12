@@ -1,0 +1,7 @@
+# FashionCLIP estetik — tam ölçek eğitim
+torch>=2.0
+torchvision>=0.15
+transformers>=4.36
+accelerate>=0.25
+datasets>=2.16
+peft>=0.10

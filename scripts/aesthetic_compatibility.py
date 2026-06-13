@@ -88,7 +88,10 @@ def _try_load_fashion_clip():
         _FASHION_CLIP_AVAILABLE = True
         print(f"FashionCLIP yüklendi ({_clip_mode}, {_get_clip_device()}) — bir kez")
     except Exception as exc:
+        msg = str(exc)
         print(f"FashionCLIP yüklenemedi: {exc}")
+        if "torchao" in msg.lower():
+            print("Çözüm (Colab): !pip install -q -U 'torchao>=0.16.0' → Runtime restart → devam")
         try:
             model_id = "patrickjohncyh/fashion-clip"
             from transformers import CLIPModel, CLIPProcessor

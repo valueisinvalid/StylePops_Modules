@@ -32,16 +32,21 @@ def run(name: str, *args: str) -> int:
     return subprocess.call(cmd, cwd=ROOT)
 
 
-def zip_outputs() -> None:
+def zip_outputs() -> bool:
+    files = []
+    if OUT_LORA.exists():
+        files.extend(p for p in OUT_LORA.rglob("*") if p.is_file())
+    if OUT_COMPAT.exists():
+        files.append(OUT_COMPAT)
+    if not files:
+        print("Zip atlandı — eğitim çıktısı yok (LoRA başarısız olmuş olabilir).")
+        return False
     ZIP_OUT.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(ZIP_OUT, "w", zipfile.ZIP_DEFLATED) as zf:
-        if OUT_LORA.exists():
-            for p in OUT_LORA.rglob("*"):
-                if p.is_file():
-                    zf.write(p, p.relative_to(ROOT))
-        if OUT_COMPAT.exists():
-            zf.write(OUT_COMPAT, OUT_COMPAT.relative_to(ROOT))
-    print(f"Model paketi → {ZIP_OUT}")
+        for p in files:
+            zf.write(p, p.relative_to(ROOT))
+    print(f"Model paketi ({len(files)} dosya) → {ZIP_OUT}")
+    return True
 
 
 def main() -> None:
@@ -99,16 +104,21 @@ def main() -> None:
                 "--embedding-sample", str(args.compat_embedding_sample),
             ) or rc
 
-    if args.zip or (rc == 0 and OUT_LORA.exists()):
-        zip_outputs()
+    if args.zip and rc == 0:
+        if not zip_outputs():
+            rc = 1
 
     if rc == 0:
         print("\n✓ Eğitim tamam.")
-        if OUT_LORA.exists():
+        if OUT_LORA.exists() and any(OUT_LORA.iterdir()):
             print(f"  LoRA: {OUT_LORA}")
             print("  Mac'e kopyala: outputs/fashionclip_lora/")
         if OUT_COMPAT.exists():
             print(f"  Compat: {OUT_COMPAT}")
+    else:
+        print("\n✗ Eğitim başarısız — yukarıdaki hata çıktısını kontrol edin.")
+        print("  Colab: Runtime → GPU T4 + Secrets HF_TOKEN")
+        print("  Hızlı test: --max-samples 3000 --batch-size 16")
     sys.exit(rc)
 
 

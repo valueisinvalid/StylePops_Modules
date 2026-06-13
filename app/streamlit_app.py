@@ -416,29 +416,47 @@ def save_combo_selection(combo_id: str, action: str, scenario: str, gender: str,
         w.writerow(row)
 
 
-def _selected_combo_ids() -> set[str]:
+def _acted_combo_ids() -> dict[str, str]:
+    """combo_id → son aksiyon (like/skip)."""
     if not COMBO_SEL_LOG.exists():
-        return set()
+        return {}
+    out: dict[str, str] = {}
     with COMBO_SEL_LOG.open(encoding="utf-8") as f:
-        return {r["combo_id"] for r in csv.DictReader(f) if r.get("action") == "like"}
+        for r in csv.DictReader(f):
+            if r.get("combo_id"):
+                out[r["combo_id"]] = r.get("action", "")
+    return out
 
 
-COMBO_SELECT_PAGE = 12
+_SLOT_TR = {
+    "base": "ÜST", "mid": "ÜST", "outer": "DIŞ", "bottom": "ALT",
+    "dress": "ELBİSE", "footwear": "AYAKKABI", "accessory": "AKSESUAR",
+}
+
+
+def _piece_slot_label(g: dict) -> str:
+    from stylepops_core import garment_slot, is_dress_piece
+    if is_dress_piece(g):
+        return "ELBİSE"
+    return _SLOT_TR.get(garment_slot(g), "")
 
 
 def render_combo_select(combos: list[dict], garments: dict) -> None:
-    """Kurallar + FashionCLIP'ten geçmiş kombinleri kullanıcıya seçtir."""
+    """Kurallar + FashionCLIP'ten geçmiş kombinleri tek tek kart olarak seçtir."""
     if not combos:
         st.warning("Önce kombin üretin: `python scripts/generate_visual_combinations.py`")
         return
 
     st.subheader("Kombin Seç")
-    st.caption("Nesnel kurallar + FashionCLIP'ten geçen kombinler. Beğendiklerini işaretle.")
+    st.caption("Nesnel kurallar + FashionCLIP'ten geçen kombinler tek tek gelir. Beğen ya da geç.")
 
-    gsel = st.radio("Cinsiyet", ["Kadın", "Erkek"], horizontal=True, key="sel_gender")
+    c1, c2 = st.columns([1, 2])
+    with c1:
+        gsel = st.radio("Cinsiyet", ["Kadın", "Erkek"], horizontal=True, key="sel_gender")
     gkey = {"Kadın": "women", "Erkek": "men"}[gsel]
     scenarios = sorted({c["scenario_id"] for c in combos})
-    scenario = st.selectbox("Senaryo", scenarios, key="sel_scenario")
+    with c2:
+        scenario = st.selectbox("Senaryo", scenarios, key="sel_scenario")
     rater = st.text_input("Değerlendirici ID (isteğe bağlı)", key="sel_rater")
 
     pool = [
@@ -453,45 +471,65 @@ def render_combo_select(combos: list[dict], garments: dict) -> None:
         st.info("Bu cinsiyet/senaryo için geçerli kombin yok.")
         return
 
-    page_key = f"sel_page_{gkey}_{scenario}"
-    page = st.session_state.get(page_key, 0)
-    start = page * COMBO_SELECT_PAGE
-    batch = pool[start:start + COMBO_SELECT_PAGE]
-    liked = _selected_combo_ids()
+    acted = _acted_combo_ids()
+    liked_n = sum(1 for c in pool if acted.get(c["combo_id"]) == "like")
+    queue = [c for c in pool if c["combo_id"] not in acted]
 
-    st.caption(f"{len(pool)} kombin · sayfa {page + 1}/{(len(pool) - 1) // COMBO_SELECT_PAGE + 1} · beğenilen: {len(liked & {c['combo_id'] for c in pool})}")
+    st.progress(
+        (len(pool) - len(queue)) / len(pool),
+        text=f"{len(pool) - len(queue)}/{len(pool)} değerlendirildi · ❤ {liked_n} beğeni",
+    )
 
-    cols = st.columns(3)
-    for i, c in enumerate(batch):
-        with cols[i % 3]:
-            collage = ROOT / c["collage_path"]
-            if collage.exists():
-                st_image(str(collage))
-            else:
-                names = ", ".join(
-                    garments[p]["name"][:20]
-                    for p in c["piece_ids"].split("|") if p in garments
-                )
-                st.caption(names)
-            cid = c["combo_id"]
-            already = cid in liked
-            st.caption(f"{cid} · Rank={c['rank']} · FC={c.get('fashionclip_score')}")
-            bc1, bc2 = st.columns(2)
-            if bc1.button("❤ Beğen" if not already else "✓ Beğenildi",
-                          key=f"like_{cid}", use_container_width=True, disabled=already):
-                save_combo_selection(cid, "like", scenario, gkey, rater)
-                st.rerun()
-            if bc2.button("Geç", key=f"skip_{cid}", use_container_width=True):
-                save_combo_selection(cid, "skip", scenario, gkey, rater)
-                st.rerun()
+    if not queue:
+        st.success("Bu cinsiyet/senaryo için tüm kombinler değerlendirildi.")
+        if st.button("Bu seçimleri sıfırla (yeniden değerlendir)"):
+            _reset_combo_selections(pool, scenario, gkey)
+            st.rerun()
+        return
 
-    nav1, nav2 = st.columns(2)
-    if page > 0 and nav1.button("← Önceki", use_container_width=True):
-        st.session_state[page_key] = page - 1
+    combo = queue[0]
+    cid = combo["combo_id"]
+    piece_ids = [p for p in combo["piece_ids"].split("|") if p in garments]
+
+    st.markdown(f"### {cid}")
+    cols = st.columns(len(piece_ids))
+    for col, pid in zip(cols, piece_ids):
+        g = garments[pid]
+        with col:
+            p = ROOT / g.get("image_path", "")
+            if p.exists():
+                st_image(str(p))
+            st.caption(f"**{_piece_slot_label(g)}**")
+            st.caption(g["name"][:32])
+
+    st.caption(
+        f"Rank={combo['rank']} · FashionCLIP={combo.get('fashionclip_score')} · "
+        f"{combo['layer_count']} parça"
+    )
+
+    bc1, bc2 = st.columns(2)
+    if bc1.button("❤ Beğen", type="primary", use_container_width=True, key=f"like_{cid}"):
+        save_combo_selection(cid, "like", scenario, gkey, rater)
         st.rerun()
-    if start + COMBO_SELECT_PAGE < len(pool) and nav2.button("Sonraki →", use_container_width=True):
-        st.session_state[page_key] = page + 1
+    if bc2.button("Geç →", use_container_width=True, key=f"skip_{cid}"):
+        save_combo_selection(cid, "skip", scenario, gkey, rater)
         st.rerun()
+
+
+def _reset_combo_selections(pool: list[dict], scenario: str, gkey: str) -> None:
+    """Belirli cinsiyet/senaryodaki seçim kayıtlarını siler (yeniden değerlendirme)."""
+    if not COMBO_SEL_LOG.exists():
+        return
+    pool_ids = {c["combo_id"] for c in pool}
+    with COMBO_SEL_LOG.open(encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+        fields = rows[0].keys() if rows else None
+    kept = [r for r in rows if r.get("combo_id") not in pool_ids]
+    if fields:
+        with COMBO_SEL_LOG.open("w", encoding="utf-8", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=list(fields))
+            w.writeheader()
+            w.writerows(kept)
 
 
 def render_saved_combos(combos: list[dict], garments: dict) -> None:

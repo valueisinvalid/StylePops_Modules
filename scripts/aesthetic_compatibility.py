@@ -59,6 +59,9 @@ def _try_load_fashion_clip():
     if _clip_model is not None:
         return _FASHION_CLIP_AVAILABLE
     try:
+        import os
+        os.environ.setdefault("TRANSFORMERS_VERBOSITY", "error")
+        os.environ.setdefault("HF_HUB_DISABLE_PROGRESS_BARS", "1")
         from hf_env import ensure_hf_token
         ensure_hf_token()
         import torch
@@ -83,6 +86,7 @@ def _try_load_fashion_clip():
         _clip_model.eval()
         _clip_model.to(_get_clip_device())
         _FASHION_CLIP_AVAILABLE = True
+        print(f"FashionCLIP yüklendi ({_clip_mode}, { _get_clip_device()}) — bir kez")
     except Exception:
         _FASHION_CLIP_AVAILABLE = False
     return _FASHION_CLIP_AVAILABLE

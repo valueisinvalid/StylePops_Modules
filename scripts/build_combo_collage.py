@@ -6,7 +6,7 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -14,9 +14,11 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from stylepops_core import garment_slot
 
 CELL = 200
-CELL_AB = 168
-LABEL_H = 22
+CELL_AB_W = 168
+CELL_AB_H = 210
+LABEL_H = 20
 PADDING = 10
+GAP = 6
 BG = (248, 248, 250)
 
 SLOT_LABEL_TR = {
@@ -29,46 +31,69 @@ SLOT_LABEL_TR = {
     "accessory": "AKS",
 }
 
+_FONT: ImageFont.FreeTypeFont | ImageFont.ImageFont | None = None
+_FONT_TR = False
+
+
+def _load_font(size: int = 13) -> tuple[ImageFont.FreeTypeFont | ImageFont.ImageFont, bool]:
+    global _FONT, _FONT_TR
+    if _FONT is not None:
+        return _FONT, _FONT_TR
+    candidates = [
+        "/System/Library/Fonts/Supplemental/Arial.ttf",
+        "/Library/Fonts/Arial.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "/usr/share/fonts/TTF/DejaVuSans.ttf",
+    ]
+    for path in candidates:
+        if Path(path).exists():
+            try:
+                _FONT = ImageFont.truetype(path, size)
+                _FONT_TR = True
+                return _FONT, _FONT_TR
+            except OSError:
+                continue
+    _FONT = ImageFont.load_default()
+    _FONT_TR = False
+    return _FONT, _FONT_TR
+
 
 def _slot_label(garment: dict) -> str:
-    return SLOT_LABEL_TR.get(garment_slot(garment), garment_slot(garment).upper()[:4])
+    slot = garment_slot(garment)
+    label = SLOT_LABEL_TR.get(slot, slot.upper()[:4])
+    _, tr_ok = _load_font()
+    if not tr_ok:
+        ascii_map = {
+            "İÇ": "IC",
+            "ÜST": "UST",
+            "DIŞ": "DIS",
+            "ALT": "ALT",
+            "ELBİSE": "ELBISE",
+            "AYAKKABI": "AYAK",
+            "AKS": "AKS",
+        }
+        label = ascii_map.get(label, label)
+    return label
 
 
-def _gentle_crop(img: Image.Image, slot: str) -> Image.Image:
-    """Yalnızca aşırı uzun model fotoğraflarında hafif odak (AB'de kullanılmaz)."""
-    w, h = img.size
-    if h < 60 or w < 60 or h / max(w, 1) < 1.35:
-        return img
-    if slot == "footwear":
-        top = int(h * 0.45)
-    elif slot == "bottom":
-        top = int(h * 0.30)
-    elif slot == "dress":
-        top = int(h * 0.05)
-        return img.crop((0, top, w, int(h * 0.95)))
-    elif slot in ("base", "mid", "outer"):
-        top = 0
-        return img.crop((0, top, w, int(h * 0.78)))
-    return img
-
-
-def _load_thumb(garment: dict, size: int, *, fit: bool = True) -> Image.Image | None:
+def _load_thumb(
+    garment: dict,
+    width: int,
+    height: int | None = None,
+) -> Image.Image | None:
     rel = garment.get("image_path")
     if not rel:
         return None
     path = ROOT / rel
     if not path.exists():
         return None
+    h = height if height is not None else width
     try:
         img = Image.open(path).convert("RGB")
-        if not fit:
-            img = _gentle_crop(img, garment_slot(garment))
-            img.thumbnail((size, size), Image.Resampling.LANCZOS)
-            return img
-        canvas = Image.new("RGB", (size, size), BG)
-        img.thumbnail((size, size), Image.Resampling.LANCZOS)
-        ox = (size - img.width) // 2
-        oy = (size - img.height) // 2
+        canvas = Image.new("RGB", (width, h), BG)
+        img.thumbnail((width, h), Image.Resampling.LANCZOS)
+        ox = (width - img.width) // 2
+        oy = (h - img.height) // 2
         canvas.paste(img, (ox, oy))
         return canvas
     except OSError:
@@ -76,8 +101,12 @@ def _load_thumb(garment: dict, size: int, *, fit: bool = True) -> Image.Image | 
 
 
 def _draw_label(draw: ImageDraw.ImageDraw, x: int, y: int, text: str) -> None:
-    draw.rectangle((x, y, x + 56, y + LABEL_H - 2), fill=(40, 40, 48))
-    draw.text((x + 4, y + 2), text[:8], fill=(240, 240, 245))
+    font, _ = _load_font()
+    bbox = draw.textbbox((0, 0), text, font=font)
+    tw = bbox[2] - bbox[0]
+    box_w = min(max(tw + 12, 52), 120)
+    draw.rectangle((x, y, x + box_w, y + LABEL_H), fill=(40, 40, 48))
+    draw.text((x + 6, y + 3), text, font=font, fill=(240, 240, 245))
 
 
 def build_combo_collage(
@@ -91,7 +120,7 @@ def build_combo_collage(
         g = garments.get(pid)
         if not g:
             continue
-        t = _load_thumb(g, CELL, fit=True)
+        t = _load_thumb(g, CELL, CELL)
         if t:
             items.append((t, _slot_label(g)))
     if not items:
@@ -100,21 +129,22 @@ def build_combo_collage(
     n = len(items)
     cols = min(4, n)
     rows = (n + cols - 1) // cols
-    cell_h = CELL + LABEL_H
+    slot_h = CELL + LABEL_H + GAP
     w = cols * CELL + (cols + 1) * PADDING
-    h = rows * cell_h + (rows + 1) * PADDING + (24 if title else 0)
+    h = rows * slot_h + (rows + 1) * PADDING + (24 if title else 0)
     canvas = Image.new("RGB", (w, h), BG)
     draw = ImageDraw.Draw(canvas)
     if title:
-        draw.text((PADDING, 4), title[:80], fill=(40, 40, 45))
+        font, _ = _load_font()
+        draw.text((PADDING, 4), title[:80], fill=(40, 40, 45), font=font)
 
     y0 = 28 if title else PADDING
     for i, (thumb, label) in enumerate(items):
         row, col = divmod(i, cols)
         x = PADDING + col * (CELL + PADDING)
-        y = y0 + row * (cell_h + PADDING)
+        y = y0 + row * (slot_h + PADDING)
         canvas.paste(thumb, (x, y))
-        _draw_label(draw, x, y + CELL - LABEL_H, label)
+        _draw_label(draw, x, y + CELL + 2, label)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     canvas.save(out_path, format="JPEG", quality=92)
@@ -129,30 +159,32 @@ def build_ab_collage(
     label_a: str = "A",
     label_b: str = "B",
 ) -> bool:
-    """A/B: her yan 2×2 ızgara, tam görsel (kırpma yok)."""
+    """A/B: her yan 2×2 ızgara; etiket görselin altında, kırpma yok."""
     cols, rows = 2, 2
-    cell = CELL_AB
-    cell_block = cell + LABEL_H
-    half_w = cols * cell_block + (cols + 1) * PADDING
-    half_h = rows * cell_block + (rows + 1) * PADDING + 20
+    cw, ch = CELL_AB_W, CELL_AB_H
+    slot_w = cw
+    slot_h = ch + LABEL_H + GAP
+    half_w = cols * slot_w + (cols + 1) * PADDING
+    half_h = rows * slot_h + (rows + 1) * PADDING + 22
     canvas = Image.new("RGB", (half_w * 2 + PADDING, half_h), BG)
     draw = ImageDraw.Draw(canvas)
+    font, _ = _load_font(15)
 
     for side, piece_ids, side_label in ((0, combo_a, label_a), (1, combo_b, label_b)):
         x_off = side * (half_w + PADDING)
-        draw.text((x_off + PADDING, 4), side_label, fill=(30, 30, 35))
+        draw.text((x_off + PADDING, 4), side_label, fill=(30, 30, 35), font=font)
         for i, pid in enumerate(piece_ids[:4]):
             g = garments.get(pid)
             if not g:
                 continue
-            t = _load_thumb(g, cell, fit=True)
+            t = _load_thumb(g, cw, ch)
             if not t:
                 continue
             row, col = divmod(i, cols)
-            x = x_off + PADDING + col * (cell_block + PADDING)
-            y = 22 + row * (cell_block + PADDING)
+            x = x_off + PADDING + col * (slot_w + PADDING)
+            y = 24 + row * (slot_h + PADDING)
             canvas.paste(t, (x, y))
-            _draw_label(draw, x, y + cell - 2, _slot_label(g))
+            _draw_label(draw, x, y + ch + 2, _slot_label(g))
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     canvas.save(out_path, format="JPEG", quality=92)

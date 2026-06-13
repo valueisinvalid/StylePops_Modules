@@ -76,8 +76,11 @@ def supplement_layer_role(g: dict) -> str:
 
 
 def is_valid_fp_supplement(g: dict) -> bool:
+    from garment_eligibility import non_garment_reason
     from stylepops_core import is_beach_swim_garment, is_valid_bottom_piece
 
+    if non_garment_reason(g):
+        return False
     layer = supplement_layer_role(g)
     if layer not in {"outer", "footwear", "bottom", "mid", "base", "dress"}:
         return False

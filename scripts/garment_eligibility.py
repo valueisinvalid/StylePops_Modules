@@ -3,8 +3,10 @@
 
 from __future__ import annotations
 
+import re
+
 NON_STREET_WEAR_KEYWORDS = (
-    "pajama", "pyjama", "nightgown", "sleepwear", "nightwear", "shapewear",
+    "pajama", "pyjama", "nightgown", "nightdress", "night dress", "sleepwear", "nightwear", "shapewear",
     "loungewear", "lounge set", "lounge nightgown", "blanket hoodie",
     "corset", "waist trainer", "lingerie", "bralette", "underwire",
     "panty", "panties", "thong", "briefs", "underwear", "undergarment",
@@ -25,9 +27,71 @@ NON_WEARABLE_ACCESSORY_KEYWORDS = (
     " satchel", "backpack", " wig", "purse", "wallet", "belt buckle",
 )
 
+NON_GARMENT_KEYWORDS = (
+    "deodorant", "body mist", "body spray", "cologne", "fragrance gift",
+    "perfume", "parfum", "parfüm", "eau de toilette", "eau de parfum",
+    "nail polish", "nail lacquer", "lipstick", "lip gloss", "lip liner",
+    "makeup", "foundation", "concealer", "compact", "eyeshadow", "kajal",
+    "eyeliner", "highlighter", "blush", "moisturiser", "moisturizer",
+    "shampoo", "conditioner", "beauty accessory", "body shimmer",
+    "cosmetic bag", "free gift", "laptop bag", "mobile pouch", "duffel bag",
+    "messenger bag", "trolley bag", "suitcase", "stationery",
+    "watch", "wristwatch", "earring", "necklace", "pendant", "bracelet",
+    "bangle", "cufflink", "jewellery set", "jewelry set", "accessory gift set",
+)
+
+_FP_TYPE_RE = re.compile(r":\s*([^,]+?),", re.I)
+_FP_TYPE_NORM_RE = re.compile(
+    r"\s+(casual|formal|sports|ethnic|smart|party|wedding)\s+.*$",
+    re.I,
+)
+
+NON_WEARABLE_FP_ARTICLE_TYPES = frozenset({
+    "watches", "handbags", "sunglasses", "wallets", "backpacks",
+    "perfume and body mist", "deodorant", "earrings", "clutches",
+    "nail polish", "lipstick", "pendant", "necklace and chains",
+    "trunk", "ring", "lip gloss", "cufflinks", "accessory gift set",
+    "kajal and eyeliner", "free gifts", "duffel bag", "bangle",
+    "laptop bag", "foundation and primer", "jewellery set",
+    "fragrance gift set", "face moisturisers", "mobile pouch",
+    "lip liner", "messenger bag", "compact", "eyeshadow",
+    "highlighter and blush", "beauty accessory", "nail lacquer",
+    "makeup", "nightdress", "bra", "briefs", "boxers", "panties",
+    "ties and cufflinks", "trolley bag", "suitcase", "travel accessory",
+    "stationery", "key chain", "keychain", "gift set", "body mist",
+    "perfumes", "perfume", "deos", "deo set",
+})
+
 
 def text_blob(garment: dict) -> str:
     return f"{garment.get('name', '')} {garment.get('description', '')}".lower()
+
+
+def fp_article_type_core(garment: dict) -> str | None:
+    """MIT 44K açıklamasından ürün türünü çıkar: '…: Deodorant Casual Women, …'."""
+    m = _FP_TYPE_RE.search(garment.get("description", ""))
+    if not m:
+        return None
+    core = _FP_TYPE_NORM_RE.sub("", m.group(1).strip().lower()).strip()
+    return core or None
+
+
+def non_garment_reason(garment: dict) -> str | None:
+    blob = text_blob(garment)
+    if re.search(r"\bdeo\b", blob):
+        return "non_garment:deo"
+    for kw in NON_GARMENT_KEYWORDS:
+        if kw in blob:
+            return f"non_garment:{kw}"
+    article = fp_article_type_core(garment)
+    if article and article in NON_WEARABLE_FP_ARTICLE_TYPES:
+        return f"non_garment_type:{article}"
+    if article and any(
+        article.startswith(p)
+        for p in ("perfume", "deodorant", "lipstick", "nail ", "makeup", "beauty")
+    ):
+        return f"non_garment_type:{article}"
+    return None
 
 
 def exclusion_reason(garment: dict) -> str | None:
@@ -44,6 +108,9 @@ def exclusion_reason(garment: dict) -> str | None:
     for kw in NON_WEARABLE_ACCESSORY_KEYWORDS:
         if kw in blob:
             return f"accessory_junk:{kw}"
+    junk = non_garment_reason(garment)
+    if junk:
+        return junk
     if garment.get("layer_role") == "accessory" and garment.get("subcategory") == "scarf":
         if any(k in blob for k in ("sunglass", "keychain", "wallet", "bag", "glasses")):
             return "mislabeled_accessory"

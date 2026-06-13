@@ -289,12 +289,21 @@ def precompute_garment_embeddings(garments: dict[str, dict]) -> dict[str, list[f
     if not _try_load_fashion_clip():
         print("FashionCLIP yüklenemedi — requirements-visual.txt kurun.")
         return {}
+    import gc
+    try:
+        import torch
+    except ImportError:
+        torch = None
     result = {}
+    total = len(garments)
     for i, (gid, g) in enumerate(garments.items(), 1):
         emb = garment_image_embedding(g)
         result[gid] = emb.tolist() if emb is not None else None
-        if i % 500 == 0:
-            print(f"  … {i}/{len(garments)} embedding")
+        if i % 250 == 0:
+            print(f"  … {i}/{total} embedding")
+            if torch is not None and torch.cuda.is_available():
+                torch.cuda.empty_cache()
+            gc.collect()
     ok = sum(1 for v in result.values() if v is not None)
-    print(f"Embedding önbellek ({_clip_mode}): {ok}/{len(garments)} parça")
+    print(f"Embedding önbellek ({_clip_mode}): {ok}/{total} parça")
     return result

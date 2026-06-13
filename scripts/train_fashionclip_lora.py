@@ -134,10 +134,24 @@ def main() -> None:
     model.to(device)
     opt = torch.optim.AdamW(model.parameters(), lr=args.lr)
 
+    def collate_pil_batch(batch):
+        images, texts = zip(*batch)
+        return list(images), list(texts)
+
+    def collate_local_batch(batch):
+        paths, texts = zip(*batch)
+        return list(paths), list(texts)
+
     if args.source == "hf":
-        dl = DataLoader(HFPairDS(hf_ds), batch_size=args.batch_size, shuffle=True, num_workers=0)
+        dl = DataLoader(
+            HFPairDS(hf_ds), batch_size=args.batch_size, shuffle=True,
+            num_workers=0, collate_fn=collate_pil_batch,
+        )
     else:
-        dl = DataLoader(LocalPairDS(local_pairs), batch_size=args.batch_size, shuffle=True, num_workers=0)
+        dl = DataLoader(
+            LocalPairDS(local_pairs), batch_size=args.batch_size, shuffle=True,
+            num_workers=0, collate_fn=collate_local_batch,
+        )
 
     for epoch in range(args.epochs):
         total_loss = 0.0

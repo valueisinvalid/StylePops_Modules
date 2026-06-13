@@ -43,6 +43,8 @@ def load_garments_list(path: Path) -> list[dict]:
 
 
 def clean_livostyle(garments: list[dict]) -> tuple[list[dict], Counter]:
+    from garment_gender import infer_gender
+
     kept, reasons = [], Counter()
     for g in garments:
         reason = exclusion_reason(g)
@@ -52,7 +54,9 @@ def clean_livostyle(garments: list[dict]) -> tuple[list[dict], Counter]:
         if not is_catalog_eligible(g):
             reasons["missing_image"] += 1
             continue
-        kept.append(dict(g))
+        item = dict(g)
+        item["gender"] = infer_gender(item)
+        kept.append(item)
     return kept, reasons
 
 
@@ -227,6 +231,8 @@ def pick_fp_supplements(
             picked.append(g)
 
     rng.shuffle(picked)
+    from garment_gender import infer_gender
+
     out = []
     for i, g in enumerate(picked[:n], 1):
         item = dict(g)
@@ -236,6 +242,7 @@ def pick_fp_supplements(
         item["training_only"] = False
         item["supplement_from_fp"] = g["id"]
         item["active"] = True
+        item["gender"] = infer_gender(item)
         out.append(item)
     return out
 
@@ -300,6 +307,11 @@ def main() -> None:
     )
     REGISTRY.write_text(json.dumps(reg, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Registry güncellendi → {REGISTRY}")
+
+    from validate_production_wardrobe import main as validate_main
+    if validate_main() != 0:
+        print("Uyarı: gardırop doğrulaması başarısız — kombin üretmeyin.", file=sys.stderr)
+        sys.exit(1)
 
 
 if __name__ == "__main__":

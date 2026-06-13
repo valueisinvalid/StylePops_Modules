@@ -122,28 +122,55 @@ def season_map(scenario_id: str) -> str:
     }.get(scenario_id, "ilkbahar")
 
 
+GENDER_LABELS = {"women": "Kadın", "men": "Erkek", "unisex": "Unisex"}
+
+
+def _gender_counts(garments: dict) -> dict:
+    counts = {"women": 0, "men": 0, "unisex": 0}
+    for g in garments.values():
+        counts[g.get("gender", "women")] = counts.get(g.get("gender", "women"), 0) + 1
+    return counts
+
+
 def render_inventory(garments: dict) -> None:
+    counts = _gender_counts(garments)
     st.subheader(f"Gardırop ({len(garments)} parça)")
-    categories = sorted({g["category"] for g in garments.values()})
+    st.caption(
+        f"Kadın: {counts.get('women', 0)} · Erkek: {counts.get('men', 0)} · "
+        f"Unisex: {counts.get('unisex', 0)}"
+    )
+
+    gender_opts = ["Kadın", "Erkek", "Unisex"]
+    gender_sel = st.radio("Cinsiyet", gender_opts, horizontal=True, index=0)
+    gender_key = {"Kadın": "women", "Erkek": "men", "Unisex": "unisex"}[gender_sel]
+
+    in_gender = [
+        g for g in garments.values()
+        if g.get("gender", "women") == gender_key
+        or (gender_key in ("women", "men") and g.get("gender") == "unisex")
+    ]
+    categories = sorted({g["category"] for g in in_gender})
     cat_filter = st.multiselect("Kategori", categories, default=categories)
     season_filter = st.selectbox("Mevsim", ["tümü", "kis", "sonbahar", "ilkbahar", "yaz"])
 
+    shown = 0
     cols = st.columns(4)
-    i = 0
-    for g in sorted(garments.values(), key=lambda x: x["id"]):
+    for g in sorted(in_gender, key=lambda x: x["id"]):
         if g["category"] not in cat_filter:
             continue
         if season_filter != "tümü" and season_filter not in g.get("season_usable", []):
             continue
         img_path = ROOT / g.get("image_path", "")
-        with cols[i % 4]:
+        with cols[shown % 4]:
             if img_path.exists():
                 st_image(str(img_path))
             else:
                 st.caption("(görsel yok)")
             st.caption(f"**{g['name'][:40]}**")
-            st.caption(f"{g['id']} · {g['subcategory']}")
-        i += 1
+            tag = GENDER_LABELS.get(g.get("gender", "women"), "")
+            st.caption(f"{g['id']} · {g['subcategory']} · {tag}")
+        shown += 1
+    st.caption(f"Gösterilen: {shown} parça")
 
 
 def render_recommendations(garments: dict) -> None:
@@ -268,12 +295,24 @@ def _refresh_ab_queue(pairs: list[dict], combos: list[dict], garments: dict) -> 
 def render_ab_test(pairs: list[dict], garments: dict) -> None:
     combos = load_combos()
     pairs = _filter_valid_ab_pairs(pairs, combos, garments)
+
+    gkey = "women"
+    if any(p.get("gender") for p in pairs):
+        gsel = st.radio("Cinsiyet", ["Kadın", "Erkek"], horizontal=True, key="ab_gender")
+        gkey = {"Kadın": "women", "Erkek": "men"}[gsel]
+        pairs = [p for p in pairs if p.get("gender", "women") == gkey]
+
     if not pairs:
-        st.warning("Geçerli A/B çifti yok. Eski kombinler filtrelendi — yeniden üretin:")
-        st.code("OMP_NUM_THREADS=1 python scripts/generate_visual_combinations.py --ab-pairs 200")
+        st.warning("Bu cinsiyet için geçerli A/B çifti yok.")
         return
 
     _init_ab_session(pairs)
+
+    if st.session_state.get("ab_active_gender") != gkey:
+        st.session_state.ab_active_gender = gkey
+        st.session_state.ab_batch = 0
+        _refresh_ab_queue(pairs, combos, garments)
+
     rater_id = st.text_input("Değerlendirici ID (isteğe bağlı)", key="ab_rater_id")
 
     if st.button("A/B turunu sıfırla"):

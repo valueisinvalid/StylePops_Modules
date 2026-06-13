@@ -11,6 +11,7 @@ from typing import Callable
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
+CLIP_CACHE_PATH = ROOT / "data" / "visual" / "clip_embeddings.npz"
 
 _FASHION_CLIP_AVAILABLE = False
 _clip_model = None
@@ -18,6 +19,31 @@ _clip_processor = None
 _clip_mode = "base"
 _compat_bundle = None
 _clip_device = None
+_emb_cache: dict[str, np.ndarray] | None = None
+
+
+def _load_emb_cache() -> dict[str, np.ndarray]:
+    """Diskteki önceden hesaplanmış FashionCLIP embedding önbelleği.
+
+    Bu önbellek sayesinde kombin üretimi modeli hiç yüklemeden çalışır
+    (Colab/torchao bağımlılığı ortadan kalkar)."""
+    global _emb_cache
+    if _emb_cache is not None:
+        return _emb_cache
+    _emb_cache = {}
+    if CLIP_CACHE_PATH.exists():
+        try:
+            data = np.load(CLIP_CACHE_PATH)
+            _emb_cache = {k: data[k].astype(np.float32) for k in data.files}
+            print(f"CLIP embedding önbellek yüklendi: {len(_emb_cache)} parça")
+        except Exception as exc:
+            print(f"CLIP önbellek okunamadı: {exc}")
+            _emb_cache = {}
+    return _emb_cache
+
+
+def has_emb_cache() -> bool:
+    return CLIP_CACHE_PATH.exists() and len(_load_emb_cache()) > 0
 
 
 def _get_clip_device():
@@ -175,7 +201,9 @@ def _image_embedding_cached(garment_id: str, image_path: str, mtime: float, mode
             out = _clip_model.get_image_features(**inputs)
             if isinstance(out, torch.Tensor):
                 feats = out
-            elif hasattr(out, "pooler_output") and out.pooler_output is not None:
+            elif getattr(out, "image_embeds", None) is not None:
+                feats = out.image_embeds
+            elif getattr(out, "pooler_output", None) is not None:
                 feats = out.pooler_output
             else:
                 return None
@@ -186,12 +214,16 @@ def _image_embedding_cached(garment_id: str, image_path: str, mtime: float, mode
 
 
 def garment_image_embedding(garment: dict) -> np.ndarray | None:
+    gid = garment.get("id")
+    cache = _load_emb_cache()
+    if gid in cache:
+        return cache[gid]
     image_path = garment.get("image_path")
     if not image_path:
         return None
     path = ROOT / image_path
     mtime = path.stat().st_mtime if path.exists() else 0.0
-    cached = _image_embedding_cached(garment["id"], image_path, mtime, _clip_mode)
+    cached = _image_embedding_cached(gid, image_path, mtime, _clip_mode)
     if cached is None:
         return None
     return np.array(cached, dtype=np.float32)

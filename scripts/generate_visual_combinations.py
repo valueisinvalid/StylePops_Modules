@@ -60,6 +60,15 @@ def season_for_scenario(scenario_id: str) -> str:
     }.get(scenario_id, "ilkbahar")
 
 
+GENDER_SHARE = {"women": 0.62, "men": 0.38}
+
+
+def _combo_gender_label(piece_ids: list[str], garments: dict) -> str:
+    from garment_gender import combo_gender
+    g = combo_gender([garments[p].get("gender", "women") for p in piece_ids if p in garments])
+    return g or "women"
+
+
 def generate_combinations(
     per_scenario: int = 40,
     seed: int = 42,
@@ -69,13 +78,29 @@ def generate_combinations(
 ) -> list[dict]:
     garments = load_garments()
     thermal_cats, coverage, clo_points, scenarios = load_lookups()
+
+    from aesthetic_compatibility import has_emb_cache
+
+    use_clip = not fast and has_emb_cache()
     if fast:
         print("Hızlı mod: FashionCLIP atlanıyor (renk + termal sıralama)")
-        aesthetic_fn = lambda piece_ids: float(color_harmony_score(piece_ids, garments))
+    elif use_clip:
+        print("FashionCLIP embedding önbelleği kullanılıyor (model yüklenmez)")
     else:
-        print("FashionCLIP embedding önbelleği (tek seferlik)…")
+        print("Önbellek yok — FashionCLIP modeli yükleniyor (yavaş olabilir)…")
         precompute_garment_embeddings(garments)
-        aesthetic_fn = make_aesthetic_fn(garments)
+
+    def score_aes(piece_ids: list[str]) -> dict:
+        if fast:
+            color = color_harmony_score(piece_ids, garments)
+            return {
+                "aesthetic_score": round(color, 3),
+                "fashionclip_score": None,
+                "color_score": round(color, 3),
+                "scorer": "color_fast",
+            }
+        return aesthetic_compatibility_score(piece_ids, garments)
+
     rows: list[dict] = []
     combo_idx = 1
 
@@ -84,68 +109,64 @@ def generate_combinations(
         T_app = apparent_temperature(scenario["T_hava"], scenario["RH_nem"], scenario["V_ruzgar"])
         hedef = interpolate_hedef_clo(T_app, clo_points)
         V = scenario["V_ruzgar"]
-        print(f"[{i}/{len(scenarios)}] {scenario_id} ({season}) — aday üretiliyor…")
+        print(f"[{i}/{len(scenarios)}] {scenario_id} ({season})")
 
-        candidates = generate_layered_candidates(
-            garments, n_candidates=n_candidates, season=season,
-            hedef_clo=hedef, V_ruzgar=V, seed=seed,
-        )
-        print(f"  {len(candidates)} aday skorlanıyor…")
-        seen: set[tuple[str, ...]] = set()
-        scored_list = []
-        for piece_ids in candidates:
-            key = tuple(sorted(piece_ids))
-            if key in seen:
-                continue
-            seen.add(key)
-            if fast:
-                color = color_harmony_score(piece_ids, garments)
-                aes = {
-                    "aesthetic_score": round(color, 3),
-                    "fashionclip_score": None,
-                    "color_score": round(color, 3),
-                    "scorer": "color_fast",
-                }
-            else:
-                aes = aesthetic_compatibility_score(piece_ids, garments)
-            result = score_combination(
-                piece_ids, garments, hedef, V, thermal_cats, coverage,
-                lambda _ids: float(aes["aesthetic_score"]),
-                season=season,
+        for gender, share in GENDER_SHARE.items():
+            quota = max(1, round(per_scenario * share))
+            candidates = generate_layered_candidates(
+                garments, n_candidates=n_candidates, season=season,
+                hedef_clo=hedef, V_ruzgar=V, seed=seed + hash(gender) % 1000,
+                gender=gender,
             )
-            result.update(aes)
-            result["scenario_id"] = scenario_id
-            result["season"] = season
-            result["T_hissedilen"] = T_app
-            result["hedef_Clo"] = hedef
-            result["V_ruzgar"] = V
-            scored_list.append(result)
+            print(f"  [{gender}] {len(candidates)} aday skorlanıyor…")
+            seen: set[tuple[str, ...]] = set()
+            scored_list = []
+            for piece_ids in candidates:
+                key = tuple(sorted(piece_ids))
+                if key in seen:
+                    continue
+                seen.add(key)
+                aes = score_aes(piece_ids)
+                result = score_combination(
+                    piece_ids, garments, hedef, V, thermal_cats, coverage,
+                    lambda _ids, _a=aes: float(_a["aesthetic_score"]),
+                    season=season,
+                )
+                result.update(aes)
+                result["scenario_id"] = scenario_id
+                result["season"] = season
+                result["T_hissedilen"] = T_app
+                result["hedef_Clo"] = hedef
+                result["V_ruzgar"] = V
+                result["gender"] = _combo_gender_label(piece_ids, garments)
+                scored_list.append(result)
 
-        scored_list.sort(key=lambda r: r["rank"], reverse=True)
-        print(f"  top {per_scenario} seçildi")
-        for r in scored_list[:per_scenario]:
-            cid = f"VC{combo_idx:04d}"
-            combo_idx += 1
-            rows.append({
-                "combo_id": cid,
-                "scenario_id": scenario_id,
-                "season": season,
-                "T_hissedilen": r["T_hissedilen"],
-                "hedef_Clo": r["hedef_Clo"],
-                "V_ruzgar": r["V_ruzgar"],
-                "piece_ids": "|".join(r["piece_ids"]),
-                "layer_count": len(r["piece_ids"]),
-                "total_Clo_C": r["total_Clo_C"],
-                "delta_Clo": r["delta_Clo"],
-                "rank": r["rank"],
-                "aesthetic_score": r["aesthetic_score"],
-                "fashionclip_score": r.get("fashionclip_score", ""),
-                "color_score": r.get("color_score", ""),
-                "scorer": r.get("scorer", ""),
-                "collage_path": f"data/assets/combos/{cid}.jpg",
-                "preference_score": "",
-                "labeler": "",
-            })
+            scored_list.sort(key=lambda r: r["rank"], reverse=True)
+            print(f"    top {quota} [{gender}] seçildi")
+            for r in scored_list[:quota]:
+                cid = f"VC{combo_idx:04d}"
+                combo_idx += 1
+                rows.append({
+                    "combo_id": cid,
+                    "scenario_id": scenario_id,
+                    "season": season,
+                    "gender": r["gender"],
+                    "T_hissedilen": r["T_hissedilen"],
+                    "hedef_Clo": r["hedef_Clo"],
+                    "V_ruzgar": r["V_ruzgar"],
+                    "piece_ids": "|".join(r["piece_ids"]),
+                    "layer_count": len(r["piece_ids"]),
+                    "total_Clo_C": r["total_Clo_C"],
+                    "delta_Clo": r["delta_Clo"],
+                    "rank": r["rank"],
+                    "aesthetic_score": r["aesthetic_score"],
+                    "fashionclip_score": r.get("fashionclip_score", ""),
+                    "color_score": r.get("color_score", ""),
+                    "scorer": r.get("scorer", ""),
+                    "collage_path": f"data/assets/combos/{cid}.jpg",
+                    "preference_score": "",
+                    "labeler": "",
+                })
     return rows
 
 
@@ -177,13 +198,14 @@ def build_ab_pairs(rows: list[dict], n_pairs: int = 30, seed: int = 42) -> list[
         )
     ]
     pairs = []
-    by_scenario: dict[str, list[dict]] = {}
+    by_scenario: dict[tuple[str, str], list[dict]] = {}
     for r in rows:
-        by_scenario.setdefault(r["scenario_id"], []).append(r)
+        key = (r["scenario_id"], r.get("gender", "women"))
+        by_scenario.setdefault(key, []).append(r)
 
     pair_idx = 1
     local_limit = max(3, n_pairs // max(len(by_scenario), 1))
-    for scenario_id, scenario_rows in by_scenario.items():
+    for (scenario_id, _gender), scenario_rows in by_scenario.items():
         pool = scenario_rows[:]
         rng.shuffle(pool)
         count = 0
@@ -199,6 +221,7 @@ def build_ab_pairs(rows: list[dict], n_pairs: int = 30, seed: int = 42) -> list[
             pairs.append({
                 "pair_id": pid,
                 "scenario_id": scenario_id,
+                "gender": _gender,
                 "combo_a_id": a["combo_id"],
                 "combo_b_id": b["combo_id"],
                 "collage_path": collage,
@@ -231,6 +254,10 @@ def main() -> None:
     )
     args = parser.parse_args()
     n_candidates = args.n_candidates or (200 if args.fast else 250)
+
+    from validate_production_wardrobe import main as validate_main
+    if validate_main() != 0:
+        raise SystemExit(1)
 
     VISUAL.mkdir(parents=True, exist_ok=True)
     rows = generate_combinations(

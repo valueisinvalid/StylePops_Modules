@@ -474,6 +474,9 @@ def is_valid_outfit_combo(
     pieces = [garments[pid] for pid in piece_ids if pid in garments]
     if len(pieces) < 2:
         return False
+    from garment_gender import combo_gender
+    if combo_gender([p.get("gender", "women") for p in pieces]) is None:
+        return False
     if any(not is_outfit_eligible(p, season, hedef_clo) for p in pieces):
         return False
     if outfit_coherence_penalty(pieces) >= 2.5:
@@ -708,7 +711,10 @@ def build_layered_combo(
 
     # Ayrı parçalar
     if is_warm_context(season, hedef_clo):
-        add(pick_from(base_pool), "base")
+        if base_pool:
+            add(pick_from(base_pool), "base")
+        elif mid_pool:
+            add(pick_from(mid_pool), "mid")
         add(pick_from(bottom_pool), "bottom")
         add(_pick_footwear(footwear_pool, garments, rng, season, hedef_clo), "footwear")
         return combo
@@ -733,6 +739,19 @@ def build_layered_combo(
     return combo
 
 
+def filter_garments_by_gender(
+    garments: dict[str, dict], gender: str | None
+) -> dict[str, dict]:
+    """Belirli cinsiyet + unisex parçaları döndür (gender None ise hepsi)."""
+    if not gender or gender == "all":
+        return garments
+    return {
+        gid: g
+        for gid, g in garments.items()
+        if g.get("gender", "women") in (gender, "unisex")
+    }
+
+
 def generate_layered_candidates(
     garments: dict[str, dict],
     n_candidates: int = 500,
@@ -740,8 +759,10 @@ def generate_layered_candidates(
     hedef_clo: float = 0.6,
     V_ruzgar: float = 10,
     seed: int = 42,
+    gender: str | None = None,
 ) -> list[list[str]]:
     rng = random.Random(seed)
+    garments = filter_garments_by_gender(garments, gender)
     slots = inventory_by_slot(garments, season, hedef_clo)
     pools = _build_combo_pools(slots, garments, season, hedef_clo)
     candidates = []

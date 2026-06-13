@@ -111,6 +111,9 @@ def exclusion_reason(garment: dict) -> str | None:
     junk = non_garment_reason(garment)
     if junk:
         return junk
+    from garment_gender import is_kids_item
+    if is_kids_item(garment):
+        return "kids"
     if garment.get("layer_role") == "accessory" and garment.get("subcategory") == "scarf":
         if any(k in blob for k in ("sunglass", "keychain", "wallet", "bag", "glasses")):
             return "mislabeled_accessory"

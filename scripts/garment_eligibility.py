@@ -116,6 +116,22 @@ def non_garment_reason(garment: dict) -> str | None:
         return f"non_garment_master:{master}"
     if is_ethnic_wear(garment):
         return "ethnic_wear"
+    name = (garment.get("name") or "").strip().lower()
+    article = fp_article_type_core(garment)
+    # Kemer (kıyafet değil aksesuar) — "belted ..." gibi sıfatları yakalamaz
+    if re.search(r"\bbelts?$", name) or article in ("belts", "belt"):
+        return "accessory_belt"
+    # Ayakkabı bakım/aksesuar (fırça, bağcık, taban, çekecek)
+    blob_lc = text_blob(garment)
+    if (
+        article in ("shoe accessories", "shoe laces", "shoe care")
+        or re.search(
+            r"shoe (accessor|lace|brush|care|horn|tree|polish|whitener)|"
+            r"shoelace|\binsole|shoe bag",
+            blob_lc,
+        )
+    ):
+        return "non_garment:shoe_accessory"
     blob = text_blob(garment)
     if re.search(r"\b(hair colou?r|hair dye|hair cream|skin cream|body lotion|"
                  r"face wash|cleanser|moistur|scrub|serum|sunscreen|shampoo|"

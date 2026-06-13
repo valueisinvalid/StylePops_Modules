@@ -12,13 +12,19 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from aesthetic_compatibility import aesthetic_compatibility_score, make_aesthetic_fn
+from aesthetic_compatibility import (
+    aesthetic_compatibility_score,
+    color_harmony_score,
+    make_aesthetic_fn,
+    precompute_garment_embeddings,
+)
 from inventory_loader import load_production_garments as load_garments
 from build_combo_collage import build_ab_collage, build_combo_collage
 from stylepops_core import (
     apparent_temperature,
     generate_layered_candidates,
     interpolate_hedef_clo,
+    is_valid_outfit_combo,
     score_combination,
 )
 
@@ -50,23 +56,37 @@ def season_for_scenario(scenario_id: str) -> str:
     }.get(scenario_id, "ilkbahar")
 
 
-def generate_combinations(per_scenario: int = 40, seed: int = 42) -> list[dict]:
+def generate_combinations(
+    per_scenario: int = 40,
+    seed: int = 42,
+    *,
+    fast: bool = False,
+    n_candidates: int = 800,
+) -> list[dict]:
     garments = load_garments()
     thermal_cats, coverage, clo_points, scenarios = load_lookups()
-    aesthetic_fn = make_aesthetic_fn(garments)
+    if fast:
+        print("Hızlı mod: FashionCLIP atlanıyor (renk + termal sıralama)")
+        aesthetic_fn = lambda piece_ids: float(color_harmony_score(piece_ids, garments))
+    else:
+        print("FashionCLIP embedding önbelleği (tek seferlik)…")
+        precompute_garment_embeddings(garments)
+        aesthetic_fn = make_aesthetic_fn(garments)
     rows: list[dict] = []
     combo_idx = 1
 
-    for scenario_id, scenario in scenarios.items():
+    for i, (scenario_id, scenario) in enumerate(scenarios.items(), 1):
         season = season_for_scenario(scenario_id)
         T_app = apparent_temperature(scenario["T_hava"], scenario["RH_nem"], scenario["V_ruzgar"])
         hedef = interpolate_hedef_clo(T_app, clo_points)
         V = scenario["V_ruzgar"]
+        print(f"[{i}/{len(scenarios)}] {scenario_id} ({season}) — aday üretiliyor…")
 
         candidates = generate_layered_candidates(
-            garments, n_candidates=800, season=season,
+            garments, n_candidates=n_candidates, season=season,
             hedef_clo=hedef, V_ruzgar=V, seed=seed,
         )
+        print(f"  {len(candidates)} aday skorlanıyor…")
         seen: set[tuple[str, ...]] = set()
         scored_list = []
         for piece_ids in candidates:
@@ -76,9 +96,19 @@ def generate_combinations(per_scenario: int = 40, seed: int = 42) -> list[dict]:
             seen.add(key)
             result = score_combination(
                 piece_ids, garments, hedef, V, thermal_cats, coverage, aesthetic_fn,
+                season=season,
             )
-            aes = aesthetic_compatibility_score(piece_ids, garments)
-            result.update(aes)
+            if fast:
+                color = color_harmony_score(piece_ids, garments)
+                result.update({
+                    "aesthetic_score": round(color, 3),
+                    "fashionclip_score": None,
+                    "color_score": round(color, 3),
+                    "scorer": "color_fast",
+                })
+            else:
+                aes = aesthetic_compatibility_score(piece_ids, garments)
+                result.update(aes)
             result["scenario_id"] = scenario_id
             result["season"] = season
             result["T_hissedilen"] = T_app
@@ -87,6 +117,7 @@ def generate_combinations(per_scenario: int = 40, seed: int = 42) -> list[dict]:
             scored_list.append(result)
 
         scored_list.sort(key=lambda r: r["rank"], reverse=True)
+        print(f"  top {per_scenario} seçildi")
         for r in scored_list[:per_scenario]:
             cid = f"VC{combo_idx:04d}"
             combo_idx += 1
@@ -131,6 +162,15 @@ def build_collages(rows: list[dict], top_per_scenario: int = 5) -> int:
 def build_ab_pairs(rows: list[dict], n_pairs: int = 30, seed: int = 42) -> list[dict]:
     rng = random.Random(seed)
     garments = load_garments()
+    rows = [
+        r for r in rows
+        if is_valid_outfit_combo(
+            [p for p in r["piece_ids"].split("|") if p],
+            garments,
+            r.get("season"),
+            float(r.get("hedef_Clo", 0.9)),
+        )
+    ]
     pairs = []
     by_scenario: dict[str, list[dict]] = {}
     for r in rows:
@@ -171,12 +211,28 @@ def main() -> None:
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--per-scenario", type=int, default=40)
-    parser.add_argument("--ab-pairs", type=int, default=30)
+    parser.add_argument("--ab-pairs", type=int, default=200)
     parser.add_argument("--collages", type=int, default=5)
+    parser.add_argument(
+        "--fast",
+        action="store_true",
+        help="FashionCLIP atla (~2 dk Mac). A/B pilot için yeterli.",
+    )
+    parser.add_argument(
+        "--n-candidates",
+        type=int,
+        default=None,
+        help="Senaryo başına aday sayısı (varsayılan: fast=300, tam=800)",
+    )
     args = parser.parse_args()
+    n_candidates = args.n_candidates or (300 if args.fast else 800)
 
     VISUAL.mkdir(parents=True, exist_ok=True)
-    rows = generate_combinations(per_scenario=args.per_scenario)
+    rows = generate_combinations(
+        per_scenario=args.per_scenario,
+        fast=args.fast,
+        n_candidates=n_candidates,
+    )
     out_csv = VISUAL / "combinations_visual.csv"
     if rows:
         with out_csv.open("w", encoding="utf-8", newline="") as f:

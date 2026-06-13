@@ -10,14 +10,14 @@
     { "keywords": ["hoodie", "sweatshirt"], "subcategory": "hoodie", "layer_role": "mid", "thermal_category": "polar_sweatshirt", "season_primary": "sonbahar", "sleeve": "long" },
     { "keywords": ["cardigan"], "subcategory": "cardigan", "layer_role": "mid", "thermal_category": "ince_triko", "season_primary": "ilkbahar", "sleeve": "long" },
     { "keywords": ["sweater", "pullover", "knit top"], "subcategory": "sweater", "layer_role": "mid", "thermal_category": "kalin_yun_kazak", "season_primary": "kis", "sleeve": "long" },
-    { "keywords": ["bodysuit", "tank", "cami", "crop top"], "subcategory": "tank_top", "layer_role": "base", "thermal_category": "ince_pamuklu_tisort", "season_primary": "yaz", "sleeve": "sleeveless" },
-    { "keywords": ["t-shirt", "tee", "tshirt"], "subcategory": "tshirt", "layer_role": "base", "thermal_category": "ince_pamuklu_tisort", "season_primary": "yaz", "sleeve": "short" },
-    { "keywords": ["blouse"], "subcategory": "blouse", "layer_role": "mid", "thermal_category": "pamuklu_gomlek", "season_primary": "ilkbahar", "sleeve": "three_quarter" },
-    { "keywords": ["shirt", "button"], "subcategory": "shirt", "layer_role": "mid", "thermal_category": "pamuklu_gomlek", "season_primary": "ilkbahar", "sleeve": "long" },
     { "keywords": ["maxi dress", "long dress"], "subcategory": "dress_long", "layer_role": "dress", "thermal_category": "midi_elbise", "season_primary": "ilkbahar", "sleeve": "three_quarter" },
     { "keywords": ["midi dress"], "subcategory": "dress_midi", "layer_role": "dress", "thermal_category": "midi_elbise", "season_primary": "ilkbahar", "sleeve": "three_quarter" },
     { "keywords": ["mini dress", "slip dress"], "subcategory": "dress_short", "layer_role": "dress", "thermal_category": "yaz_elbisesi", "season_primary": "yaz", "sleeve": "sleeveless" },
     { "keywords": ["dress", "jumpsuit", "romper"], "subcategory": "dress_midi", "layer_role": "dress", "thermal_category": "midi_elbise", "season_primary": "ilkbahar", "sleeve": "three_quarter" },
+    { "keywords": ["bodysuit", "tank", "cami", "crop top"], "subcategory": "tank_top", "layer_role": "base", "thermal_category": "ince_pamuklu_tisort", "season_primary": "yaz", "sleeve": "sleeveless" },
+    { "keywords": ["t-shirt", "tee", "tshirt"], "subcategory": "tshirt", "layer_role": "base", "thermal_category": "ince_pamuklu_tisort", "season_primary": "yaz", "sleeve": "short" },
+    { "keywords": ["blouse"], "subcategory": "blouse", "layer_role": "mid", "thermal_category": "pamuklu_gomlek", "season_primary": "ilkbahar", "sleeve": "three_quarter" },
+    { "keywords": ["shirt", "button"], "subcategory": "shirt", "layer_role": "mid", "thermal_category": "pamuklu_gomlek", "season_primary": "ilkbahar", "sleeve": "long" },
     { "keywords": ["jean", "denim pant"], "subcategory": "jeans", "layer_role": "bottom", "thermal_category": "jean_pantolon", "season_primary": "ilkbahar", "sleeve": null },
     { "keywords": ["legging", "jogger", "sweatpant"], "subcategory": "leggings", "layer_role": "bottom", "thermal_category": "tayt", "season_primary": "kis", "sleeve": null },
     { "keywords": ["short"], "subcategory": "shorts", "layer_role": "bottom", "thermal_category": "sort", "season_primary": "yaz", "sleeve": null },
@@ -30,7 +30,8 @@
     { "keywords": ["scarf"], "subcategory": "scarf", "layer_role": "accessory", "thermal_category": "atki", "season_primary": "kis", "sleeve": null },
     { "keywords": ["hat", "beanie", "cap"], "subcategory": "hat", "layer_role": "accessory", "thermal_category": "sapka", "season_primary": "kis", "sleeve": null },
     { "keywords": ["tight", "hosiery"], "subcategory": "tights", "layer_role": "accessory", "thermal_category": "kilotlu_corap", "season_primary": "kis", "sleeve": null },
-    { "keywords": ["bag", "jewelry", "belt", "sunglass"], "subcategory": "scarf", "layer_role": "accessory", "thermal_category": "atki", "season_primary": "ilkbahar", "sleeve": null }
+    { "keywords": ["bag", "jewelry", "belt", "sunglass"], "subcategory": "scarf", "layer_role": "accessory", "thermal_category": "atki", "season_primary": "ilkbahar", "sleeve": null },
+    { "keywords": ["ring", "earring", "necklace", "bracelet", "moissanite"], "subcategory": "jewelry", "layer_role": "accessory", "thermal_category": "atki", "season_primary": "ilkbahar", "sleeve": null, "exclude_from_outfits": true }
   ],
   "category_bucket_targets": {
     "tops": 80,

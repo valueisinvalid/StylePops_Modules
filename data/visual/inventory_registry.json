@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "production_wardrobe": "garments_livostyle.json",
+  "production_wardrobe": "garments_production.json",
   "training_corpus": "garments_fashion_product.json",
   "models": {
     "fashionclip_base": "patrickjohncyh/fashion-clip",
@@ -8,7 +8,7 @@
     "compatibility_head": "outputs/compatibility_head_v1.joblib"
   },
   "notes": {
-    "production_wardrobe": "Tüm Livostyle MIT katalog — uygulama gardırobu",
+    "production_wardrobe": "Temizlenmiş Livostyle + 44K kış/sonbahar takviye (SP*)",
     "training_corpus": "Fashion Product Images Small 44K MIT — estetik eğitim, uygulamada gösterilmez"
   }
 }

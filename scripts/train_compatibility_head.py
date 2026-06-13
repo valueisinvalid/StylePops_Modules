@@ -141,7 +141,9 @@ def main() -> None:
     print(f"Eğitim çiftleri: {len(y)} (pozitif={int(y.sum())}, negatif={int((1-y).sum())})")
 
     X_tr, X_te, y_tr, y_te = train_test_split(X, y, test_size=0.2, random_state=42)
-    model = lgb.LGBMClassifier(n_estimators=300, learning_rate=0.05, random_state=42)
+    model = lgb.LGBMClassifier(
+        n_estimators=300, learning_rate=0.05, random_state=42, n_jobs=1,
+    )
     model.fit(X_tr, y_tr)
     prob = model.predict_proba(X_te)[:, 1]
     auc = roc_auc_score(y_te, prob)

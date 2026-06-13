@@ -17,6 +17,25 @@ _clip_model = None
 _clip_processor = None
 _clip_mode = "base"
 _compat_bundle = None
+_clip_device = None
+
+
+def _get_clip_device():
+    global _clip_device
+    if _clip_device is not None:
+        return _clip_device
+    try:
+        import torch
+        if torch.cuda.is_available():
+            _clip_device = torch.device("cuda")
+        elif getattr(torch.backends, "mps", None) and torch.backends.mps.is_available():
+            _clip_device = torch.device("mps")
+        else:
+            _clip_device = torch.device("cpu")
+    except Exception:
+        import torch
+        _clip_device = torch.device("cpu")
+    return _clip_device
 
 
 def _lora_path() -> Path:
@@ -62,6 +81,7 @@ def _try_load_fashion_clip():
             _clip_model = CLIPModel.from_pretrained(model_id)
             _clip_mode = "base"
         _clip_model.eval()
+        _clip_model.to(_get_clip_device())
         _FASHION_CLIP_AVAILABLE = True
     except Exception:
         _FASHION_CLIP_AVAILABLE = False
@@ -77,7 +97,16 @@ def _load_compat_head():
         return None
     try:
         import joblib
-        _compat_bundle = joblib.load(path)
+        bundle = joblib.load(path)
+        model = bundle.get("model")
+        if model is not None and hasattr(model, "set_params"):
+            # Mac + PyTorch: LightGBM multiprocessing segfault önleme
+            model.set_params(n_jobs=1)
+        auc = float(bundle.get("auc", 0.0))
+        if auc < 0.52:
+            _compat_bundle = None
+            return None
+        _compat_bundle = bundle
     except Exception:
         _compat_bundle = None
     return _compat_bundle
@@ -119,7 +148,9 @@ def _image_embedding_cached(garment_id: str, image_path: str, mtime: float, mode
         from PIL import Image
 
         img = Image.open(path).convert("RGB")
+        device = _get_clip_device()
         inputs = _clip_processor(images=img, return_tensors="pt")
+        inputs = {k: v.to(device) for k, v in inputs.items()}
         with torch.no_grad():
             out = _clip_model.get_image_features(**inputs)
             if isinstance(out, torch.Tensor):
@@ -188,7 +219,7 @@ def fashionclip_compatibility_score(piece_ids: list[str], garments: dict[str, di
         return None
     sims = [float(np.dot(embs[i], embs[j])) for i in range(len(embs)) for j in range(i + 1, len(embs))]
     mean_sim = float(np.mean(sims))
-    score = 1.0 + 4.0 * max(0.0, min(1.0, (mean_sim - 0.45) / 0.40))
+    score = 1.0 + 4.0 * max(0.0, min(1.0, (mean_sim - 0.58) / 0.22))
     return round(score, 3)
 
 

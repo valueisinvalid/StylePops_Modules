@@ -19,6 +19,7 @@ VISUAL = ROOT / "data" / "visual"
 REGISTRY = VISUAL / "inventory_registry.json"
 LIVO_PATH = VISUAL / "garments_livostyle.json"
 FP_PATH = VISUAL / "garments_fashion_product.json"
+FNAUMAN_PATH = VISUAL / "garments_fnauman.json"
 OUT_PATH = VISUAL / "garments_production.json"
 
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -366,20 +367,39 @@ def main() -> None:
             print("  katman:", dict(by_layer))
             print("  mevsim:", dict(by_season))
 
-    merged = cleaned + supplements
+    # fnauman (CC-BY 4.0) — kaban/kışlık dış giyim takviyesi
+    fnauman_kept: list[dict] = []
+    fn_raw = load_garments_list(FNAUMAN_PATH)
+    if fn_raw:
+        from garment_eligibility import non_garment_reason
+        for g in fn_raw:
+            if non_garment_reason(g):
+                continue
+            item = dict(g)
+            correct_labels(item)
+            fnauman_kept.append(item)
+        print(f"fnauman takviye: {len(fnauman_kept)} parça (kaynak {len(fn_raw)})")
+        fn_layer = Counter(g["layer_role"] for g in fnauman_kept)
+        print("  katman:", dict(fn_layer))
+
+    merged = cleaned + supplements + fnauman_kept
     snapshot = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     payload = {
         "version": "1.0",
         "source": "livostyle_mit_curated",
-        "license": "MIT",
+        "license": "MIT + CC-BY-4.0 (fnauman)",
         "count": len(merged),
         "snapshot_date": snapshot,
-        "note": f"Livostyle temizlenmiş + Fashion Product 44K filtreli takviye ({len(supplements)} SP*)",
+        "note": (
+            f"Livostyle (MIT) temizlenmiş + 44K (MIT) filtreli takviye ({len(supplements)} SP*) "
+            f"+ fnauman (CC-BY-4.0) kışlık dış giyim ({len(fnauman_kept)} FN*)"
+        ),
         "curation": {
             "livostyle_in": len(livo),
             "livostyle_kept": len(cleaned),
             "excluded_reasons": dict(reasons),
             "fp_supplement": len(supplements),
+            "fnauman_supplement": len(fnauman_kept),
         },
         "garments": merged,
     }

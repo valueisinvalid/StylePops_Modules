@@ -205,18 +205,19 @@ def outer_warmth_tier(garment: dict) -> str:
     LV verisinde blazer/kot/bomber çoğu zaman subcategory='coat' olarak gelir;
     bu yüzden subcategory'e değil metindeki anahtar kelimelere güveniyoruz."""
     sub = garment.get("subcategory", "")
+    tc = garment.get("thermal_category", "")
     blob = _text_blob(garment)
     if any(k in blob for k in HEAVY_OUTER_KEYWORDS):
         return "heavy"
     if "trench" in blob and "coat" in blob:
         return "heavy"
-    if sub == "padded_coat":
+    if sub == "padded_coat" or tc in ("kalin_mont", "kaban", "trench_coat"):
         return "heavy"
     if any(k in blob for k in LIGHT_OUTER_KEYWORDS):
         return "light"
     if any(k in blob for k in MID_OUTER_KEYWORDS):
         return "mid"
-    if sub == "raincoat":
+    if sub == "raincoat" or tc == "yagmurluk":
         return "mid"
     # 'coat' sözcüğü güçlü kış sinyali olmadan → orta
     if sub == "coat" or "coat" in blob:

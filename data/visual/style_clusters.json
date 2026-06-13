@@ -1,69 +1,77 @@
 {
-  "k": 16,
+  "k": 18,
   "clusters": {
     "0": {
-      "label": "günlük-mid-sweater",
-      "count": 359
+      "label": "günlük-accessory-hat",
+      "count": 175
     },
     "1": {
-      "label": "günlük-bottom-jeans",
-      "count": 159
+      "label": "günlük-outer-jacket",
+      "count": 402
     },
     "2": {
-      "label": "spor-bottom-chinos",
-      "count": 284
+      "label": "günlük-mid-shirt",
+      "count": 318
     },
     "3": {
+      "label": "günlük-mid-blouse",
+      "count": 423
+    },
+    "4": {
+      "label": "günlük-footwear-loafers",
+      "count": 338
+    },
+    "5": {
+      "label": "günlük-bottom-jeans",
+      "count": 164
+    },
+    "6": {
+      "label": "günlük-outer-tshirt",
+      "count": 216
+    },
+    "7": {
+      "label": "günlük-mid-sweater",
+      "count": 553
+    },
+    "8": {
       "label": "günlük-bottom-chinos",
       "count": 234
     },
-    "4": {
-      "label": "günlük-mid-hoodie",
-      "count": 456
-    },
-    "5": {
-      "label": "günlük-mid-shirt",
-      "count": 323
-    },
-    "6": {
-      "label": "günlük-footwear-loafers",
-      "count": 206
-    },
-    "7": {
-      "label": "günlük-mid-shirt",
-      "count": 245
-    },
-    "8": {
-      "label": "günlük-mid-shirt",
-      "count": 153
-    },
     "9": {
-      "label": "günlük-footwear-heels",
-      "count": 145
+      "label": "günlük-dress-dress_midi",
+      "count": 399
     },
     "10": {
-      "label": "günlük-bottom-shorts",
-      "count": 273
+      "label": "günlük-mid-tshirt",
+      "count": 340
     },
     "11": {
-      "label": "günlük-outer-tshirt",
-      "count": 232
+      "label": "formal-outer-blazer",
+      "count": 303
     },
     "12": {
-      "label": "günlük-accessory-hat",
-      "count": 170
+      "label": "spor-bottom-chinos",
+      "count": 298
     },
     "13": {
-      "label": "günlük-mid-tshirt",
-      "count": 205
+      "label": "günlük-bottom-shorts",
+      "count": 323
     },
     "14": {
-      "label": "günlük-dress-dress_midi",
-      "count": 414
+      "label": "günlük-mid-sweater",
+      "count": 365
     },
     "15": {
+      "label": "günlük-mid-shirt",
+      "count": 265
+    },
+    "16": {
       "label": "günlük-bottom-jeans",
-      "count": 195
+      "count": 199
+    },
+    "17": {
+      "label": "günlük-outer-jacket",
+      "count": 347
     }
   }
 }

@@ -7,7 +7,11 @@ StylePops görsel envanter ve estetik uyumluluk hattı için kullanılan tüm ve
 | Kaynak | Lisans | Kullanım | Görsel saklama |
 |--------|--------|----------|----------------|
 | [Livostyle Open Data](https://github.com/arturayupov/womens-fashion-catalog-open-data) | **MIT** | Ticari + akademik | `data/assets/garments/` lokal mirror |
+| [Fashion Product Images Small (44K)](https://huggingface.co/datasets/ashraq/fashion-product-images-small) | **MIT** | Filtreli takviye (SP*) | `data/assets/fashion_product/` |
+| [fnauman — Clothing Dataset for Second-Hand Fashion](https://huggingface.co/datasets/fnauman/fashion-second-hand-front-only-rgb) | **CC-BY 4.0** | Kışlık dış giyim takviyesi (FN*) | `data/assets/garments/fnauman/` |
 | Kullanıcı gardırobu (gelecek) | Kullanıcı mülkiyeti | Üretim | `data/assets/user/` |
+
+**CC-BY 4.0 atıf (fnauman):** Nauman, F. (2024). *Clothing Dataset for Second-Hand Fashion* (Version 3) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.13788681 — Data: Wargön Innovation AB, Myrorna AB; curation: RISE Research Institutes of Sweden AB.
 
 **Kural:** Runtime'da dış URL'ye (hotlink) bağlanılmaz. `import_livostyle.py` her importta görselleri indirir ve `snapshot_date` yazar.
 

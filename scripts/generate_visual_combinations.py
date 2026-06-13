@@ -50,9 +50,13 @@ def load_lookups() -> tuple[dict, dict, list, dict]:
 def season_for_scenario(scenario_id: str) -> str:
     return {
         "kis_soguk_ruzgarli": "kis",
+        "kis_orta": "kis",
         "sonbahar_serin": "sonbahar",
+        "sonbahar_yagmurlu": "sonbahar",
         "ilkbahar_ilik": "ilkbahar",
+        "ilkbahar_ruzgarli": "ilkbahar",
         "yaz_sicak": "yaz",
+        "yaz_nemli": "yaz",
     }.get(scenario_id, "ilkbahar")
 
 
@@ -94,21 +98,22 @@ def generate_combinations(
             if key in seen:
                 continue
             seen.add(key)
-            result = score_combination(
-                piece_ids, garments, hedef, V, thermal_cats, coverage, aesthetic_fn,
-                season=season,
-            )
             if fast:
                 color = color_harmony_score(piece_ids, garments)
-                result.update({
+                aes = {
                     "aesthetic_score": round(color, 3),
                     "fashionclip_score": None,
                     "color_score": round(color, 3),
                     "scorer": "color_fast",
-                })
+                }
             else:
                 aes = aesthetic_compatibility_score(piece_ids, garments)
-                result.update(aes)
+            result = score_combination(
+                piece_ids, garments, hedef, V, thermal_cats, coverage,
+                lambda _ids: float(aes["aesthetic_score"]),
+                season=season,
+            )
+            result.update(aes)
             result["scenario_id"] = scenario_id
             result["season"] = season
             result["T_hissedilen"] = T_app
@@ -225,7 +230,7 @@ def main() -> None:
         help="Senaryo başına aday sayısı (varsayılan: fast=300, tam=800)",
     )
     args = parser.parse_args()
-    n_candidates = args.n_candidates or (300 if args.fast else 800)
+    n_candidates = args.n_candidates or (200 if args.fast else 250)
 
     VISUAL.mkdir(parents=True, exist_ok=True)
     rows = generate_combinations(

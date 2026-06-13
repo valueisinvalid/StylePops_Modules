@@ -560,6 +560,43 @@ def _pick_footwear(
     return rng.choice(pool)
 
 
+def _build_combo_pools(
+    slots: dict[str, list[str]],
+    garments: dict[str, dict],
+    season: str | None,
+    hedef_clo: float,
+) -> dict[str, list[str]]:
+    """Kombin üretimi için filtrelenmiş slot havuzları — bir kez hesaplanır."""
+    dress_pool = _slot_candidates(
+        slots, garments, "dress", everyday_dress_only=True, season=season, hedef_clo=hedef_clo,
+    )
+    dress_pool += _slot_candidates(
+        slots, garments, "mid", everyday_dress_only=True, season=season, hedef_clo=hedef_clo,
+    )
+    set_pool = (
+        _slot_candidates(slots, garments, "base", set_only=True, season=season, hedef_clo=hedef_clo)
+        + _slot_candidates(slots, garments, "dress", set_only=True, season=season, hedef_clo=hedef_clo)
+    )
+    set_pool = [gid for gid in set_pool if not is_beach_swim_garment(garments[gid])]
+    return {
+        "dress": dress_pool,
+        "set": set_pool,
+        "outer": _slot_candidates(slots, garments, "outer", exclude_dress=True, season=season, hedef_clo=hedef_clo),
+        "base": [
+            gid for gid in _slot_candidates(
+                slots, garments, "base", exclude_dress=True, set_only=False, season=season, hedef_clo=hedef_clo,
+            )
+            if not is_coordinated_set(garments[gid])
+        ],
+        "mid": _slot_candidates(slots, garments, "mid", exclude_dress=True, season=season, hedef_clo=hedef_clo),
+        "bottom": _slot_candidates(slots, garments, "bottom", exclude_dress=True, season=season, hedef_clo=hedef_clo),
+        "footwear": _slot_candidates(slots, garments, "footwear", season=season, hedef_clo=hedef_clo),
+        "accessory": _slot_candidates(
+            slots, garments, "accessory", thermal_accessory_only=True, season=season, hedef_clo=hedef_clo,
+        ),
+    }
+
+
 def build_layered_combo(
     slots: dict[str, list[str]],
     hedef_clo: float,
@@ -567,6 +604,7 @@ def build_layered_combo(
     rng: random.Random,
     garments: dict[str, dict] | None = None,
     season: str | None = None,
+    pools: dict[str, list[str]] | None = None,
 ) -> list[str]:
     """
     Anlamlı kombin şablonları: elbise / set / ayrı parçalar.
@@ -594,26 +632,17 @@ def build_layered_combo(
         for s in mark:
             used_slots.add(s)
 
-    dress_pool = _slot_candidates(
-        slots, garments, "dress", everyday_dress_only=True, season=season, hedef_clo=hedef_clo,
-    )
-    dress_pool += _slot_candidates(
-        slots, garments, "mid", everyday_dress_only=True, season=season, hedef_clo=hedef_clo,
-    )
-    set_pool = (
-        _slot_candidates(slots, garments, "base", set_only=True, season=season, hedef_clo=hedef_clo)
-        + _slot_candidates(slots, garments, "dress", set_only=True, season=season, hedef_clo=hedef_clo)
-    )
-    set_pool = [g for g in set_pool if not is_beach_swim_garment(garments[g])]
-    outer_pool = _slot_candidates(slots, garments, "outer", exclude_dress=True, season=season, hedef_clo=hedef_clo)
-    base_pool = _slot_candidates(slots, garments, "base", exclude_dress=True, set_only=False, season=season, hedef_clo=hedef_clo)
-    base_pool = [g for g in base_pool if not is_coordinated_set(garments[g])]
-    mid_pool = _slot_candidates(slots, garments, "mid", exclude_dress=True, season=season, hedef_clo=hedef_clo)
-    bottom_pool = _slot_candidates(slots, garments, "bottom", exclude_dress=True, season=season, hedef_clo=hedef_clo)
-    footwear_pool = _slot_candidates(slots, garments, "footwear", season=season, hedef_clo=hedef_clo)
-    acc_pool = _slot_candidates(
-        slots, garments, "accessory", thermal_accessory_only=True, season=season, hedef_clo=hedef_clo,
-    )
+    if pools is None:
+        pools = _build_combo_pools(slots, garments, season, hedef_clo)
+
+    dress_pool = pools["dress"]
+    set_pool = pools["set"]
+    outer_pool = pools["outer"]
+    base_pool = pools["base"]
+    mid_pool = pools["mid"]
+    bottom_pool = pools["bottom"]
+    footwear_pool = pools["footwear"]
+    acc_pool = pools["accessory"]
 
     if is_warm_context(season, hedef_clo):
         route_choices = (["separates"] * 7) + (["set"] * 2) + (["dress"] * 1)
@@ -684,12 +713,15 @@ def generate_layered_candidates(
 ) -> list[list[str]]:
     rng = random.Random(seed)
     slots = inventory_by_slot(garments, season, hedef_clo)
+    pools = _build_combo_pools(slots, garments, season, hedef_clo)
     candidates = []
     attempts = 0
-    max_attempts = n_candidates * 8
+    max_attempts = max(n_candidates * 4, 400)
     while len(candidates) < n_candidates and attempts < max_attempts:
         attempts += 1
-        c = build_layered_combo(slots, hedef_clo, V_ruzgar, rng, garments, season)
+        c = build_layered_combo(
+            slots, hedef_clo, V_ruzgar, rng, garments, season, pools=pools,
+        )
         if len(c) >= 2 and is_valid_outfit_combo(c, garments, season, hedef_clo):
             candidates.append(c)
     return candidates

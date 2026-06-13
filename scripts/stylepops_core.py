@@ -225,6 +225,32 @@ def outer_warmth_tier(garment: dict) -> str:
     return "light"
 
 
+_SPORT_RE = None
+_FORMAL_RE = None
+
+
+def garment_style(garment: dict) -> str:
+    """Parça stili: 'sport' | 'formal' | 'casual' (kombin tutarlılığı için)."""
+    import re
+    global _SPORT_RE, _FORMAL_RE
+    if _SPORT_RE is None:
+        _SPORT_RE = re.compile(
+            r"\b(active(wear)?|sport|gym|workout|yoga|athletic|athleisure|jogger|"
+            r"track pant|track suit|legging|running|tennis|football|basketball|"
+            r"sports bra|sweatpant)\b", re.I)
+        _FORMAL_RE = re.compile(
+            r"\b(blazer|formal|suit|tailored|dress pant|dress trouser|oxford shirt|"
+            r"tuxedo|sport coat|pleated dress pant)\b", re.I)
+    meta = garment.get("fp_meta") or {}
+    usage = (meta.get("usage") or "").strip().lower()
+    blob = _text_blob(garment)
+    if usage == "sports" or _SPORT_RE.search(blob):
+        return "sport"
+    if usage == "formal" or _FORMAL_RE.search(blob):
+        return "formal"
+    return "casual"
+
+
 def is_outfit_eligible(garment: dict, season: str | None, hedef_clo: float) -> bool:
     if not is_wearable_in_combos(garment):
         return False
@@ -421,6 +447,11 @@ def outfit_coherence_penalty(pieces: list[dict]) -> float:
     if len(pieces) > 5:
         penalty += 0.8 * (len(pieces) - 5)
     if any(is_jewelry_or_bag(p) for p in pieces):
+        penalty += 4.0
+
+    # Stil uyumu: spor ve formal aynı kombinde olmamalı
+    styles = {garment_style(p) for p in pieces}
+    if "sport" in styles and "formal" in styles:
         penalty += 4.0
 
     return penalty

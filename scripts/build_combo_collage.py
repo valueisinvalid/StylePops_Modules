@@ -14,8 +14,8 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from stylepops_core import garment_slot
 
 CELL = 200
-CELL_AB = 150
-LABEL_H = 18
+CELL_AB = 200
+LABEL_H = 20
 PADDING = 8
 BG = (248, 248, 250)
 
@@ -34,6 +34,24 @@ def _slot_label(garment: dict) -> str:
     return SLOT_LABEL_TR.get(garment_slot(garment), garment_slot(garment).upper()[:4])
 
 
+def _smart_crop(img: Image.Image, slot: str) -> Image.Image:
+    """Model fotoğraflarında slot'a göre ilgili bölgeyi göster (alt üst karışmasın)."""
+    w, h = img.size
+    if h < 40 or w < 40:
+        return img
+    if slot == "bottom":
+        box = (0, int(h * 0.38), w, h)
+    elif slot == "footwear":
+        box = (0, int(h * 0.52), w, h)
+    elif slot in ("base", "mid", "outer"):
+        box = (0, 0, w, int(h * 0.62))
+    elif slot == "dress":
+        box = (0, int(h * 0.08), w, int(h * 0.92))
+    else:
+        box = (int(w * 0.1), int(h * 0.15), int(w * 0.9), int(h * 0.85))
+    return img.crop(box)
+
+
 def _load_thumb(garment: dict, size: int) -> Image.Image | None:
     rel = garment.get("image_path")
     if not rel:
@@ -43,6 +61,8 @@ def _load_thumb(garment: dict, size: int) -> Image.Image | None:
         return None
     try:
         img = Image.open(path).convert("RGB")
+        slot = garment_slot(garment)
+        img = _smart_crop(img, slot)
         img.thumbnail((size, size), Image.Resampling.LANCZOS)
         return img
     except OSError:
@@ -128,7 +148,7 @@ def build_ab_collage(
             ox = x + (thumb_size - t.width) // 2
             oy = y + (thumb_size - t.height) // 2
             canvas.paste(t, (ox, oy))
-            _draw_label(draw, x, y + thumb_size - 2, _slot_label(g))
+            _draw_label(draw, x, y + thumb_size - LABEL_H, _slot_label(g))
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     canvas.save(out_path, format="JPEG", quality=88)

@@ -7,6 +7,9 @@ NON_STREET_WEAR_KEYWORDS = (
     "pajama", "pyjama", "nightgown", "sleepwear", "nightwear", "shapewear",
     "loungewear", "lounge set", "lounge nightgown", "blanket hoodie",
     "corset", "waist trainer", "lingerie", "bralette", "underwire",
+    "panty", "panties", "thong", "briefs", "underwear", "undergarment",
+    "shaping panty", "shaping short", "control brief", "intimates",
+    "sports bra", "bra top", "nursing bra",
     "keychain", "coin purse", "phone case", "hair clip", "hairpin",
     "sunglass", "eyewear", "glasses", "wallet chain",
 )

@@ -160,6 +160,13 @@ NON_OUTFIT_KEYWORDS = (
     "keychain", "coin purse", "sunglass", "eyewear", "glasses", "phone case",
     "hair clip", "hairpin", "wallet chain",
     "pajama", "pyjama", "nightgown", "shapewear", "loungewear", "sleepwear",
+    "panty", "panties", "thong", "briefs", "underwear", "undergarment",
+    "shaping panty", "shaping short", "control brief", "intimates",
+    "sports bra", "bra top", "corset", "lingerie",
+)
+UNDERWEAR_BOTTOM_KEYWORDS = (
+    "panty", "panties", "thong", "brief", "underwear", "shaping", "intimates",
+    "control top", "girdle",
 )
 
 
@@ -179,6 +186,11 @@ def is_everyday_dress(garment: dict) -> bool:
 def outer_warmth_tier(garment: dict) -> str:
     sub = garment.get("subcategory", "")
     blob = _text_blob(garment)
+    if any(
+        k in blob
+        for k in ("shacket", "fleece shacket", "fleece jacket", "overshirt", "shirt jacket", "flannel shirt")
+    ):
+        return "light"
     if sub in ("padded_coat", "coat") or any(
         k in blob for k in ("parka", "puffer", "down jacket", "wool coat", "overcoat", "shearling")
     ):
@@ -299,6 +311,8 @@ def is_valid_bottom_piece(garment: dict) -> bool:
     blob = _text_blob(garment)
     if any(k in blob for k in ("top and", "tee and", "shirt and", " set", "lounge")):
         return False
+    if any(k in blob for k in UNDERWEAR_BOTTOM_KEYWORDS):
+        return False
     return garment.get("subcategory") in {
         "jeans", "trousers", "chinos", "shorts", "skirt", "leggings",
     }
@@ -347,7 +361,13 @@ def is_thermal_accessory(garment: dict) -> bool:
     if sub == "scarf":
         return any(k in blob for k in ("scarf", "shawl", "wrap", "muffler"))
     if sub == "hat":
-        return any(k in blob for k in ("hat", "cap", "beanie", "beret", "visor")) and "keychain" not in blob
+        if "keychain" in blob:
+            return False
+        if is_cold_context(season, hedef_clo) and hedef_clo >= 1.2:
+            if any(k in blob for k in SUMMER_ACCESSORY_KEYWORDS):
+                return False
+            return any(k in blob for k in WINTER_ACCESSORY_KEYWORDS + ("beanie", "beret", "knit", "pompom", "wool"))
+        return any(k in blob for k in ("hat", "cap", "beanie", "beret", "visor"))
     if sub == "tights":
         return "tight" in blob or "hosiery" in blob or "stocking" in blob
     return False
@@ -397,6 +417,14 @@ def min_outfit_requirements_met(
         return False
     if is_cold_context(season, hedef_clo) and "outer" not in slots:
         return False
+    if is_cold_context(season, hedef_clo):
+        outers = [p for p in pieces if garment_slot(p) == "outer"]
+        if hedef_clo >= 1.4:
+            if not outers or not all(outer_warmth_tier(p) == "heavy" for p in outers):
+                return False
+        elif hedef_clo >= 1.1:
+            if not outers or any(outer_warmth_tier(p) == "light" for p in outers):
+                return False
     if any(is_coordinated_set(p) for p in pieces):
         if "footwear" in slots and len(pieces) >= 3:
             return True

@@ -17,6 +17,7 @@ SUBCATEGORY_TO_SLOT = {
     "shorts": "bottom", "skirt": "bottom", "leggings": "bottom",
     "dress_short": "dress", "dress_midi": "dress", "dress_long": "dress",
     "boots": "footwear", "sneakers": "footwear", "sandals": "footwear",
+    "loafers": "footwear", "derby": "footwear", "heels": "footwear", "flats": "footwear",
     "scarf": "accessory", "hat": "accessory", "tights": "accessory",
 }
 
@@ -630,10 +631,15 @@ def _pick_footwear(
     if not pool:
         return None
     if is_cold_context(season, hedef_clo):
-        winter = [g for g in pool if footwear_season_tier(garments[g]) == "winter"]
-        if winter:
-            return rng.choice(winter)
-        neutral = [g for g in pool if footwear_season_tier(garments[g]) == "neutral"]
+        # Bot az olduğundan bot + kapalı ayakkabıları birlikte seç (çeşitlilik)
+        cold_ok = [
+            g for g in pool
+            if garments[g].get("subcategory") in ("boots", "sneakers", "loafers", "derby")
+            or footwear_season_tier(garments[g]) == "winter"
+        ]
+        if cold_ok:
+            return rng.choice(cold_ok)
+        neutral = [g for g in pool if footwear_season_tier(garments[g]) != "summer"]
         if neutral:
             return rng.choice(neutral)
         return None
@@ -726,14 +732,15 @@ def build_layered_combo(
     mid_pool = pools["mid"]
     bottom_pool = pools["bottom"]
     footwear_pool = pools["footwear"]
-    acc_pool = pools["accessory"]
+    # Aksesuarlar (atkı/şapka) kombin parçası olarak gösterilmiyor — kafa karıştırıyordu
+    acc_pool: list[str] = []
 
     if is_warm_context(season, hedef_clo):
         route_choices = (["separates"] * 7) + (["set"] * 2) + (["dress"] * 1)
     elif is_cold_context(season, hedef_clo):
-        route_choices = (["separates"] * 6) + (["dress"] * 2) + (["set"] * 2)
+        route_choices = (["separates"] * 8) + (["dress"] * 1) + (["set"] * 1)
     else:
-        route_choices = ["dress", "set", "separates"]
+        route_choices = (["separates"] * 5) + (["dress"] * 2) + (["set"] * 2)
     route_weights = [r for r in route_choices if r != "dress" or dress_pool]
     route_weights = [r for r in route_weights if r != "set" or set_pool]
     route = rng.choice(route_weights or ["separates"])
@@ -773,19 +780,16 @@ def build_layered_combo(
     if is_cold_context(season, hedef_clo) and outer_pool:
         add(_pick_outer(outer_pool, garments, rng, season, hedef_clo), "outer")
 
+    # Soğukta kazak/hırka üstüne, içine tişört katmanlama (örn. tişört + kazak + mont)
     if mid_pool:
         add(pick_from(mid_pool), "mid")
+        if is_cold_context(season, hedef_clo) and base_pool and rng.random() < 0.55:
+            add(pick_from(base_pool), "base")
     elif base_pool:
         add(pick_from(base_pool), "base")
 
     add(pick_from(bottom_pool), "bottom")
     add(_pick_footwear(footwear_pool, garments, rng, season, hedef_clo), "footwear")
-
-    if is_cold_context(season, hedef_clo) and acc_pool and rng.random() < 0.45:
-        add(pick_from(acc_pool), "accessory")
-    elif V_ruzgar >= 15 and acc_pool and rng.random() < 0.3:
-        tights = [g for g in acc_pool if garments.get(g, {}).get("subcategory") == "tights"]
-        add(pick_from(tights or acc_pool), "accessory")
 
     return combo
 

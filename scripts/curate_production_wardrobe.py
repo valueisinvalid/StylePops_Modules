@@ -57,9 +57,38 @@ _REAL_DRESS_RE = _re.compile(
 )
 
 
+# 44K ayakkabı tipleri hepsi 'sneakers'a çökmüştü; gerçek tipe geri ayır
+_FOOTWEAR_ARTICLE_MAP = {
+    "Casual Shoes": "loafers",
+    "Formal Shoes": "derby",
+    "Flats": "flats",
+    "Heels": "heels",
+    "Sports Shoes": "sneakers",
+    "Sandals": "sandals",
+    "Sandal": "sandals",
+    "Boots": "boots",
+}
+
+
 def correct_labels(item: dict) -> dict:
     """Açıkça yanlış etiketlenmiş katmanları düzelt (ör. 'Dress Pants' → bottom)."""
     name = (item.get("name") or "")
+    if item.get("layer_role") == "footwear":
+        art = (item.get("fp_meta") or {}).get("articleType")
+        if art in _FOOTWEAR_ARTICLE_MAP:
+            item["subcategory"] = _FOOTWEAR_ARTICLE_MAP[art]
+        else:
+            blob = name.lower()
+            if "boot" in blob:
+                item["subcategory"] = "boots"
+            elif "heel" in blob or "pump" in blob or "stiletto" in blob:
+                item["subcategory"] = "heels"
+            elif "loafer" in blob or "moccasin" in blob:
+                item["subcategory"] = "loafers"
+            elif "oxford" in blob or "derby" in blob or "brogue" in blob:
+                item["subcategory"] = "derby"
+            elif "flat" in blob or "ballerina" in blob or "ballet" in blob:
+                item["subcategory"] = "flats"
     if item.get("layer_role") == "dress":
         if _BOTTOM_NAME_RE.search(name) and not _REAL_DRESS_RE.search(name):
             item["layer_role"] = "bottom"

@@ -183,26 +183,45 @@ def is_everyday_dress(garment: dict) -> bool:
     return is_dress_piece(garment) and not is_beach_swim_garment(garment)
 
 
+HEAVY_OUTER_KEYWORDS = (
+    "parka", "puffer", "down jacket", "down coat", "wool coat", "woolen coat",
+    "overcoat", "shearling", "teddy coat", "teddy bear coat", "quilted",
+    "padded coat", "padded jacket", "fur coat", "peacoat", "pea coat",
+    "longline coat", "long wool", "winter coat", "duffle coat", "sherpa",
+    "puffer coat", "puffer jacket",
+)
+MID_OUTER_KEYWORDS = ("fleece coat", "wool blend", "wool-blend", "trench")
+LIGHT_OUTER_KEYWORDS = (
+    "shacket", "fleece shacket", "overshirt", "shirt jacket", "flannel shirt",
+    "denim jacket", "jean jacket", "cropped denim", "blazer", "moto", "rider",
+    "leather jacket", "bomber", "windbreaker", "utility jacket", "vest",
+)
+
+
 def outer_warmth_tier(garment: dict) -> str:
+    """Dış katman sıcaklık sınıfı.
+
+    LV verisinde blazer/kot/bomber çoğu zaman subcategory='coat' olarak gelir;
+    bu yüzden subcategory'e değil metindeki anahtar kelimelere güveniyoruz."""
     sub = garment.get("subcategory", "")
     blob = _text_blob(garment)
-    if any(
-        k in blob
-        for k in ("shacket", "fleece shacket", "fleece jacket", "overshirt", "shirt jacket", "flannel shirt")
-    ):
+    if any(k in blob for k in HEAVY_OUTER_KEYWORDS):
+        return "heavy"
+    if "trench" in blob and "coat" in blob:
+        return "heavy"
+    if sub == "padded_coat":
+        return "heavy"
+    if any(k in blob for k in LIGHT_OUTER_KEYWORDS):
         return "light"
-    if sub in ("padded_coat", "coat") or any(
-        k in blob for k in ("parka", "puffer", "down jacket", "wool coat", "overcoat", "shearling")
-    ):
-        return "heavy"
-    if "fleece coat" in blob or ("trench" in blob and "coat" in blob):
-        return "heavy"
-    if sub == "raincoat" or "trench" in blob or "windbreaker" in blob:
+    if any(k in blob for k in MID_OUTER_KEYWORDS):
         return "mid"
-    if "denim" in blob or "shacket" in blob or "jean jacket" in blob:
-        return "light"
+    if sub == "raincoat":
+        return "mid"
+    # 'coat' sözcüğü güçlü kış sinyali olmadan → orta
+    if sub == "coat" or "coat" in blob:
+        return "mid"
     if sub in ("blazer", "jacket"):
-        return "mid"
+        return "light"
     return "light"
 
 
@@ -561,7 +580,8 @@ def _pick_outer(
     if not pool:
         return None
     if is_cold_context(season, hedef_clo):
-        for tier in ("heavy", "mid", "light"):
+        tiers = ("heavy",) if hedef_clo >= 1.4 else ("heavy", "mid")
+        for tier in tiers:
             tiered = [g for g in pool if outer_warmth_tier(garments[g]) == tier]
             if tiered:
                 return rng.choice(tiered)

@@ -94,10 +94,28 @@ def _fp_master_category(garment: dict) -> str | None:
     return meta.get("masterCategory")
 
 
+ETHNIC_KEYWORDS = (
+    "saree", "sari ", " sari", "lehenga", "lehanga", "kurta", "kurti", "salwar",
+    "churidar", "dupatta", "sherwani", "dhoti", "lungi", "anarkali", "ghagra",
+    "choli", "patiala", "kaftan", "kalidar", "angrakha", "jodhpuri", "mundu",
+    "ethnic", "jaipur print", "bhagalpur", "nehru jacket",
+)
+
+
+def is_ethnic_wear(garment: dict) -> bool:
+    meta = garment.get("fp_meta") or garment.get("source_metadata") or {}
+    if (meta.get("usage") or "").strip().lower() == "ethnic":
+        return True
+    blob = text_blob(garment)
+    return any(kw in blob for kw in ETHNIC_KEYWORDS)
+
+
 def non_garment_reason(garment: dict) -> str | None:
     master = _fp_master_category(garment)
     if master in NON_GARMENT_MASTER_CATEGORIES:
         return f"non_garment_master:{master}"
+    if is_ethnic_wear(garment):
+        return "ethnic_wear"
     blob = text_blob(garment)
     if re.search(r"\b(hair colou?r|hair dye|hair cream|skin cream|body lotion|"
                  r"face wash|cleanser|moistur|scrub|serum|sunscreen|shampoo|"

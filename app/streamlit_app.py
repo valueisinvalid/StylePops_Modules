@@ -160,12 +160,21 @@ def render_inventory(garments: dict) -> None:
     cat_filter = st.multiselect("Kategori", categories, default=categories)
     season_filter = st.selectbox("Mevsim", ["tümü", "kis", "sonbahar", "ilkbahar", "yaz"])
 
+    cluster_labels = sorted({
+        g.get("style_cluster_label") for g in in_gender if g.get("style_cluster_label")
+    })
+    style_filter = "tümü"
+    if cluster_labels:
+        style_filter = st.selectbox("Stil kümesi", ["tümü", *cluster_labels])
+
     shown = 0
     cols = st.columns(4)
     for g in sorted(in_gender, key=lambda x: x["id"]):
         if g["category"] not in cat_filter:
             continue
         if season_filter != "tümü" and season_filter not in g.get("season_usable", []):
+            continue
+        if style_filter != "tümü" and g.get("style_cluster_label") != style_filter:
             continue
         img_path = ROOT / g.get("image_path", "")
         with cols[shown % 4]:

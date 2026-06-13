@@ -877,6 +877,21 @@ def thermal_bonuses_penalties(
     return bonus, penalty, total_clo
 
 
+def style_cohesion_bonus(pieces: list[dict]) -> float:
+    """Ana parçalar (üst/alt/dış/elbise) aynı görsel stil kümesindeyse küçük bonus."""
+    main = [
+        p for p in pieces
+        if garment_slot(p) in ("base", "mid", "outer", "bottom", "dress")
+        and p.get("style_cluster", -1) >= 0
+    ]
+    if len(main) < 2:
+        return 0.0
+    clusters = [p["style_cluster"] for p in main]
+    modal = max(set(clusters), key=clusters.count)
+    frac = clusters.count(modal) / len(clusters)
+    return round(0.5 * frac, 3)
+
+
 def score_combination(
     piece_ids: list[str],
     garments: dict[str, dict],
@@ -892,6 +907,7 @@ def score_combination(
     bonus, penalty, total_clo = thermal_bonuses_penalties(
         pieces, hedef_clo, V_ruzgar, thermal_cats, coverage_defaults
     )
+    bonus += style_cohesion_bonus(pieces)
     penalty += outfit_coherence_penalty(pieces)
     penalty += season_coherence_penalty(pieces, season, hedef_clo)
     final_skor = skor_estetik + bonus - penalty

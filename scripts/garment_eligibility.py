@@ -84,8 +84,25 @@ def fp_article_type_core(garment: dict) -> str | None:
     return core or None
 
 
+NON_GARMENT_MASTER_CATEGORIES = frozenset({
+    "Personal Care", "Free Items", "Home", "Sporting Goods",
+})
+
+
+def _fp_master_category(garment: dict) -> str | None:
+    meta = garment.get("fp_meta") or garment.get("source_metadata") or {}
+    return meta.get("masterCategory")
+
+
 def non_garment_reason(garment: dict) -> str | None:
+    master = _fp_master_category(garment)
+    if master in NON_GARMENT_MASTER_CATEGORIES:
+        return f"non_garment_master:{master}"
     blob = text_blob(garment)
+    if re.search(r"\b(hair colou?r|hair dye|hair cream|skin cream|body lotion|"
+                 r"face wash|cleanser|moistur|scrub|serum|sunscreen|shampoo|"
+                 r"conditioner|talc|peel off|face pack)\b", blob):
+        return "non_garment:personal_care"
     if re.search(r"\bdeo\b", blob):
         return "non_garment:deo"
     for kw in NON_GARMENT_KEYWORDS:

@@ -42,6 +42,41 @@ def load_garments_list(path: Path) -> list[dict]:
     return data.get("garments", data if isinstance(data, list) else [])
 
 
+import re as _re
+
+# "Dress Pants/Shirt" gibi adlarda "dress" sıfattır; gerçek elbise değil
+_BOTTOM_NAME_RE = _re.compile(
+    r"\b(pants?|trousers?|jeans|leggings?|joggers?|culottes?|chinos?|"
+    r"slacks|sweatpants|track\s*pants|palazzo|cargo)\b",
+    _re.I,
+)
+_REAL_DRESS_RE = _re.compile(
+    r"\b(midi|maxi|mini|slip|shirt|bodycon|wrap|gown|sundress|tunic)\s*dress\b|"
+    r"\bdress\s*(midi|maxi|mini)\b|\bjumpsuit\b|\bromper\b|\bsundress\b|\bgown\b",
+    _re.I,
+)
+
+
+def correct_labels(item: dict) -> dict:
+    """Açıkça yanlış etiketlenmiş katmanları düzelt (ör. 'Dress Pants' → bottom)."""
+    name = (item.get("name") or "")
+    if item.get("layer_role") == "dress":
+        if _BOTTOM_NAME_RE.search(name) and not _REAL_DRESS_RE.search(name):
+            item["layer_role"] = "bottom"
+            blob = name.lower()
+            if "jean" in blob:
+                item["subcategory"] = "jeans"
+            elif "legging" in blob:
+                item["subcategory"] = "leggings"
+            elif "jogger" in blob or "sweatpant" in blob or "track" in blob:
+                item["subcategory"] = "joggers"
+            elif "short" in blob:
+                item["subcategory"] = "shorts"
+            else:
+                item["subcategory"] = "trousers"
+    return item
+
+
 def clean_livostyle(garments: list[dict]) -> tuple[list[dict], Counter]:
     from garment_gender import infer_gender
 
@@ -56,6 +91,7 @@ def clean_livostyle(garments: list[dict]) -> tuple[list[dict], Counter]:
             continue
         item = dict(g)
         item["gender"] = infer_gender(item)
+        correct_labels(item)
         kept.append(item)
     return kept, reasons
 
@@ -183,37 +219,61 @@ def pick_fp_supplements(
 
     target_per_season = max(80, n // len(SEASONS))
 
+    from garment_gender import infer_gender as _infer_gender
+
+    def gender_of(g: dict) -> str:
+        gd = _infer_gender(g)
+        return gd if gd in ("men", "women") else "unisex"
+
     for layer, quota in quotas.items():
         pool = by_layer.get(layer, [])
         if not pool:
             continue
-        layer_picked = 0
-        by_season_pool: dict[str, list[tuple[int, dict]]] = defaultdict(list)
+        # (cinsiyet, mevsim) havuzları — unisex ikisine de uygun
+        pools: dict[str, dict[str, list]] = {
+            gd: defaultdict(list) for gd in ("men", "women")
+        }
         for score, g in pool:
-            by_season_pool[season_of(g)].append((score, g))
-        for items in by_season_pool.values():
-            items.sort(key=lambda x: (-x[0], x[1]["id"]))
+            gd = gender_of(g)
+            s = season_of(g)
+            if gd == "unisex":
+                pools["men"][s].append((score, g))
+                pools["women"][s].append((score, g))
+            else:
+                pools[gd][s].append((score, g))
+        for gd in pools:
+            for items in pools[gd].values():
+                items.sort(key=lambda x: (-x[0], x[1]["id"]))
 
-        season_order = list(SEASONS)
-        rng.shuffle(season_order)
-        idx = {s: 0 for s in SEASONS}
-        guard = 0
-        while layer_picked < quota and guard < quota * 20:
-            guard += 1
-            for s in season_order:
-                if layer_picked >= quota:
-                    break
-                items = by_season_pool.get(s, [])
-                while idx[s] < len(items) and items[idx[s]][1]["id"] in used_ids:
+        # Katman kotasını cinsiyetler arasında eşit böl
+        gender_quota = {"men": quota // 2, "women": quota - quota // 2}
+        for gd in ("men", "women"):
+            gq = gender_quota[gd]
+            picked_g = 0
+            season_order = list(SEASONS)
+            rng.shuffle(season_order)
+            idx = {s: 0 for s in SEASONS}
+            guard = 0
+            while picked_g < gq and guard < gq * 20 + 20:
+                guard += 1
+                progressed = False
+                for s in season_order:
+                    if picked_g >= gq:
+                        break
+                    items = pools[gd].get(s, [])
+                    while idx[s] < len(items) and items[idx[s]][1]["id"] in used_ids:
+                        idx[s] += 1
+                    if idx[s] >= len(items):
+                        continue
+                    score, g = items[idx[s]]
                     idx[s] += 1
-                if idx[s] >= len(items):
-                    continue
-                score, g = items[idx[s]]
-                idx[s] += 1
-                used_ids.add(g["id"])
-                picked.append(g)
-                season_counts[s] += 1
-                layer_picked += 1
+                    used_ids.add(g["id"])
+                    picked.append(g)
+                    season_counts[s] += 1
+                    picked_g += 1
+                    progressed = True
+                if not progressed:
+                    break
 
     if len(picked) < n:
         rest = []
@@ -243,6 +303,7 @@ def pick_fp_supplements(
         item["supplement_from_fp"] = g["id"]
         item["active"] = True
         item["gender"] = infer_gender(item)
+        correct_labels(item)
         out.append(item)
     return out
 

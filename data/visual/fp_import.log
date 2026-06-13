@@ -1,0 +1,27 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+HF token yüklendi (.env)
+Resume: 22000 parça mevcut
+HF dataset yükleniyor: benitomartin/fashion-product-images-small-384x512
+  … 23000 görsel
+  … 24000 görsel
+  … 25000 görsel
+  … 26000 görsel
+  … 27000 görsel
+  … 28000 görsel
+  … 29000 görsel
+  … 30000 görsel
+  … 31000 görsel
+  … 32000 görsel
+  … 33000 görsel
+  … 34000 görsel
+  … 35000 görsel
+  … 36000 görsel
+  … 37000 görsel
+  … 38000 görsel
+  … 39000 görsel
+  … 40000 görsel
+  … 41000 görsel
+  … 42000 görsel
+  … 43000 görsel
+  … 44000 görsel
+Tamamlandı: 44072 parça, 0 atlandı → /Users/o_7/StylePops_Modules/data/visual/garments_fashion_product.json

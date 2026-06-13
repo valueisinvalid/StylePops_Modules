@@ -1,0 +1,26 @@
+{
+  "updated_at": "2026-06-12T23:42:44.151240+00:00",
+  "production": {
+    "exists": true,
+    "path": "data/visual/garments_livostyle.json",
+    "count": 2580,
+    "source": "livostyle_mit",
+    "license": "MIT",
+    "snapshot_date": "2026-06-12"
+  },
+  "training_44k": {
+    "exists": true,
+    "path": "data/visual/garments_fashion_product.json",
+    "count": 44072,
+    "source": "fashion_product_images_mit",
+    "license": "MIT",
+    "snapshot_date": "2026-06-12"
+  },
+  "combinations": 320,
+  "ab_pairs": 24,
+  "preferences_logged": 0,
+  "fashionclip_lora": false,
+  "compatibility_head": false,
+  "images_livostyle": 2879,
+  "images_fashion_product": 44072
+}

@@ -68,6 +68,9 @@ NON_WEARABLE_FP_ARTICLE_TYPES = frozenset({
     "ties and cufflinks", "trolley bag", "suitcase", "travel accessory",
     "stationery", "key chain", "keychain", "gift set", "body mist",
     "perfumes", "perfume", "deos", "deo set",
+    "innerwear vests", "camisoles", "socks", "stockings", "booties",
+    "flip flops", "lounge pants", "lounge shorts", "lounge tshirts",
+    "night suits", "baby dolls", "shrug",
 })
 
 

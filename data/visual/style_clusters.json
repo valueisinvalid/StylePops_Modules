@@ -2,68 +2,68 @@
   "k": 16,
   "clusters": {
     "0": {
-      "label": "günlük-bottom-chinos",
-      "count": 188
+      "label": "günlük-mid-sweater",
+      "count": 359
     },
     "1": {
-      "label": "günlük-mid-hoodie",
-      "count": 235
+      "label": "günlük-bottom-jeans",
+      "count": 159
     },
     "2": {
-      "label": "günlük-mid-shirt",
-      "count": 156
+      "label": "spor-bottom-chinos",
+      "count": 284
     },
     "3": {
-      "label": "günlük-mid-shirt",
-      "count": 213
+      "label": "günlük-bottom-chinos",
+      "count": 234
     },
     "4": {
-      "label": "günlük-mid-sweater",
-      "count": 314
+      "label": "günlük-mid-hoodie",
+      "count": 456
     },
     "5": {
-      "label": "günlük-outer-tshirt",
-      "count": 226
+      "label": "günlük-mid-shirt",
+      "count": 323
     },
     "6": {
-      "label": "günlük-bottom-shorts",
-      "count": 222
+      "label": "günlük-footwear-sneakers",
+      "count": 206
     },
     "7": {
-      "label": "günlük-accessory-hat",
-      "count": 131
+      "label": "günlük-mid-shirt",
+      "count": 245
     },
     "8": {
-      "label": "günlük-base-tshirt",
-      "count": 315
+      "label": "günlük-mid-shirt",
+      "count": 153
     },
     "9": {
       "label": "günlük-footwear-sneakers",
-      "count": 126
+      "count": 145
     },
     "10": {
-      "label": "günlük-dress-dress_midi",
-      "count": 204
+      "label": "günlük-bottom-shorts",
+      "count": 273
     },
     "11": {
-      "label": "günlük-bottom-jeans",
-      "count": 134
+      "label": "günlük-outer-tshirt",
+      "count": 232
     },
     "12": {
-      "label": "formal-bottom-chinos",
-      "count": 87
+      "label": "günlük-accessory-hat",
+      "count": 170
     },
     "13": {
-      "label": "spor-footwear-sneakers",
-      "count": 88
+      "label": "günlük-mid-tshirt",
+      "count": 205
     },
     "14": {
       "label": "günlük-dress-dress_midi",
-      "count": 249
+      "count": 414
     },
     "15": {
-      "label": "günlük-mid-tank_top",
-      "count": 270
+      "label": "günlük-bottom-jeans",
+      "count": 195
     }
   }
 }

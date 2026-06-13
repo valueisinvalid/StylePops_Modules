@@ -105,10 +105,17 @@ def _image_width() -> str:
     return "stretch"
 
 
-def st_image(path: str) -> None:
-    width = _image_width()
+def st_image(path: str, width: int | None = None) -> None:
+    if width is not None:
+        try:
+            st.image(path, width=width)
+            return
+        except TypeError:
+            st.image(path)
+            return
+    w = _image_width()
     try:
-        st.image(path, width=width)
+        st.image(path, width=w)
     except TypeError:
         st.image(path, use_container_width=True)
 
@@ -350,7 +357,7 @@ def render_ab_test(pairs: list[dict], garments: dict) -> None:
 
     collage = ROOT / pair["collage_path"]
     if collage.exists():
-        st_image(str(collage))
+        st_image(str(collage), width=760)
     else:
         col1, col2 = st.columns(2)
         combos_by_id = {c["combo_id"]: c for c in load_combos()}

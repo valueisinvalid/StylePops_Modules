@@ -11,7 +11,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from stylepops_core import garment_slot
+from stylepops_core import garment_slot, is_dress_piece, is_everyday_dress
 
 CELL = 200
 CELL_AB_W = 168
@@ -60,6 +60,8 @@ def _load_font(size: int = 13) -> tuple[ImageFont.FreeTypeFont | ImageFont.Image
 
 def _slot_label(garment: dict) -> str:
     slot = garment_slot(garment)
+    if slot in ("base", "mid") and (is_dress_piece(garment) or is_everyday_dress(garment)):
+        slot = "dress"
     label = SLOT_LABEL_TR.get(slot, slot.upper()[:4])
     _, tr_ok = _load_font()
     if not tr_ok:

@@ -40,6 +40,14 @@ NON_GARMENT_KEYWORDS = (
     "bangle", "cufflink", "jewellery set", "jewelry set", "accessory gift set",
 )
 
+CHARACTER_KEYWORDS = (
+    "dora", "barbie", "disney", "frozen", "spiderman", "spider-man", "spider man",
+    "minnie", "mickey", "hello kitty", "peppa", "paw patrol", "pokemon", "pokémon",
+    "looney tunes", "winnie the pooh", "elsa", "avengers", "batman", "superman",
+    "captain america", "ironman", "iron man", "cartoon", "ninja turtles",
+    "my little pony", "hot wheels", "cocomelon", "bluey",
+)
+
 _FP_TYPE_RE = re.compile(r":\s*([^,]+?),", re.I)
 _FP_TYPE_NORM_RE = re.compile(
     r"\s+(casual|formal|sports|ethnic|smart|party|wedding)\s+.*$",
@@ -111,6 +119,9 @@ def exclusion_reason(garment: dict) -> str | None:
     junk = non_garment_reason(garment)
     if junk:
         return junk
+    for kw in CHARACTER_KEYWORDS:
+        if kw in blob:
+            return f"character_print:{kw}"
     from garment_gender import is_kids_item
     if is_kids_item(garment):
         return "kids"

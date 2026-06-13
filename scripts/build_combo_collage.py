@@ -14,9 +14,9 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from stylepops_core import garment_slot
 
 CELL = 200
-CELL_AB = 200
-LABEL_H = 20
-PADDING = 8
+CELL_AB = 168
+LABEL_H = 22
+PADDING = 10
 BG = (248, 248, 250)
 
 SLOT_LABEL_TR = {
@@ -34,25 +34,25 @@ def _slot_label(garment: dict) -> str:
     return SLOT_LABEL_TR.get(garment_slot(garment), garment_slot(garment).upper()[:4])
 
 
-def _smart_crop(img: Image.Image, slot: str) -> Image.Image:
-    """Model fotoğraflarında slot'a göre ilgili bölgeyi göster (alt üst karışmasın)."""
+def _gentle_crop(img: Image.Image, slot: str) -> Image.Image:
+    """Yalnızca aşırı uzun model fotoğraflarında hafif odak (AB'de kullanılmaz)."""
     w, h = img.size
-    if h < 40 or w < 40:
+    if h < 60 or w < 60 or h / max(w, 1) < 1.35:
         return img
-    if slot == "bottom":
-        box = (0, int(h * 0.38), w, h)
-    elif slot == "footwear":
-        box = (0, int(h * 0.52), w, h)
-    elif slot in ("base", "mid", "outer"):
-        box = (0, 0, w, int(h * 0.62))
+    if slot == "footwear":
+        top = int(h * 0.45)
+    elif slot == "bottom":
+        top = int(h * 0.30)
     elif slot == "dress":
-        box = (0, int(h * 0.08), w, int(h * 0.92))
-    else:
-        box = (int(w * 0.1), int(h * 0.15), int(w * 0.9), int(h * 0.85))
-    return img.crop(box)
+        top = int(h * 0.05)
+        return img.crop((0, top, w, int(h * 0.95)))
+    elif slot in ("base", "mid", "outer"):
+        top = 0
+        return img.crop((0, top, w, int(h * 0.78)))
+    return img
 
 
-def _load_thumb(garment: dict, size: int) -> Image.Image | None:
+def _load_thumb(garment: dict, size: int, *, fit: bool = True) -> Image.Image | None:
     rel = garment.get("image_path")
     if not rel:
         return None
@@ -61,17 +61,23 @@ def _load_thumb(garment: dict, size: int) -> Image.Image | None:
         return None
     try:
         img = Image.open(path).convert("RGB")
-        slot = garment_slot(garment)
-        img = _smart_crop(img, slot)
+        if not fit:
+            img = _gentle_crop(img, garment_slot(garment))
+            img.thumbnail((size, size), Image.Resampling.LANCZOS)
+            return img
+        canvas = Image.new("RGB", (size, size), BG)
         img.thumbnail((size, size), Image.Resampling.LANCZOS)
-        return img
+        ox = (size - img.width) // 2
+        oy = (size - img.height) // 2
+        canvas.paste(img, (ox, oy))
+        return canvas
     except OSError:
         return None
 
 
 def _draw_label(draw: ImageDraw.ImageDraw, x: int, y: int, text: str) -> None:
-    draw.rectangle((x, y, x + 52, y + LABEL_H - 2), fill=(40, 40, 48))
-    draw.text((x + 3, y + 1), text[:8], fill=(240, 240, 245))
+    draw.rectangle((x, y, x + 56, y + LABEL_H - 2), fill=(40, 40, 48))
+    draw.text((x + 4, y + 2), text[:8], fill=(240, 240, 245))
 
 
 def build_combo_collage(
@@ -85,7 +91,7 @@ def build_combo_collage(
         g = garments.get(pid)
         if not g:
             continue
-        t = _load_thumb(g, CELL)
+        t = _load_thumb(g, CELL, fit=True)
         if t:
             items.append((t, _slot_label(g)))
     if not items:
@@ -107,13 +113,11 @@ def build_combo_collage(
         row, col = divmod(i, cols)
         x = PADDING + col * (CELL + PADDING)
         y = y0 + row * (cell_h + PADDING)
-        ox = x + (CELL - thumb.width) // 2
-        oy = y + (CELL - thumb.height) // 2
-        canvas.paste(thumb, (ox, oy))
+        canvas.paste(thumb, (x, y))
         _draw_label(draw, x, y + CELL - LABEL_H, label)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    canvas.save(out_path, format="JPEG", quality=88)
+    canvas.save(out_path, format="JPEG", quality=92)
     return True
 
 
@@ -125,33 +129,33 @@ def build_ab_collage(
     label_a: str = "A",
     label_b: str = "B",
 ) -> bool:
-    max_pieces = 4
-    thumb_size = CELL_AB
-    cell_w = thumb_size + 6
-    half_w = max_pieces * cell_w + 2 * PADDING
-    row_h = thumb_size + LABEL_H + 24
-    canvas = Image.new("RGB", (half_w * 2 + PADDING, row_h), BG)
+    """A/B: her yan 2×2 ızgara, tam görsel (kırpma yok)."""
+    cols, rows = 2, 2
+    cell = CELL_AB
+    cell_block = cell + LABEL_H
+    half_w = cols * cell_block + (cols + 1) * PADDING
+    half_h = rows * cell_block + (rows + 1) * PADDING + 20
+    canvas = Image.new("RGB", (half_w * 2 + PADDING, half_h), BG)
     draw = ImageDraw.Draw(canvas)
 
     for side, piece_ids, side_label in ((0, combo_a, label_a), (1, combo_b, label_b)):
         x_off = side * (half_w + PADDING)
         draw.text((x_off + PADDING, 4), side_label, fill=(30, 30, 35))
-        for i, pid in enumerate(piece_ids[:max_pieces]):
+        for i, pid in enumerate(piece_ids[:4]):
             g = garments.get(pid)
             if not g:
                 continue
-            t = _load_thumb(g, thumb_size)
+            t = _load_thumb(g, cell, fit=True)
             if not t:
                 continue
-            x = x_off + PADDING + i * cell_w
-            y = 22
-            ox = x + (thumb_size - t.width) // 2
-            oy = y + (thumb_size - t.height) // 2
-            canvas.paste(t, (ox, oy))
-            _draw_label(draw, x, y + thumb_size - LABEL_H, _slot_label(g))
+            row, col = divmod(i, cols)
+            x = x_off + PADDING + col * (cell_block + PADDING)
+            y = 22 + row * (cell_block + PADDING)
+            canvas.paste(t, (x, y))
+            _draw_label(draw, x, y + cell - 2, _slot_label(g))
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    canvas.save(out_path, format="JPEG", quality=88)
+    canvas.save(out_path, format="JPEG", quality=92)
     return True
 
 

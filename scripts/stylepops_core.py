@@ -258,6 +258,12 @@ def is_season_appropriate_accessory(
     if is_cold_context(season, hedef_clo):
         if any(k in blob for k in SUMMER_ACCESSORY_KEYWORDS):
             return False
+        if hedef_clo >= 1.2 and garment.get("subcategory") == "hat":
+            if not any(
+                k in blob
+                for k in WINTER_ACCESSORY_KEYWORDS + ("beanie", "beret", "knit", "pompom", "wool")
+            ):
+                return False
         return True
     if is_warm_context(season, hedef_clo):
         if garment.get("subcategory") == "scarf" and hedef_clo < 0.5:
@@ -363,11 +369,7 @@ def is_thermal_accessory(garment: dict) -> bool:
     if sub == "hat":
         if "keychain" in blob:
             return False
-        if is_cold_context(season, hedef_clo) and hedef_clo >= 1.2:
-            if any(k in blob for k in SUMMER_ACCESSORY_KEYWORDS):
-                return False
-            return any(k in blob for k in WINTER_ACCESSORY_KEYWORDS + ("beanie", "beret", "knit", "pompom", "wool"))
-        return any(k in blob for k in ("hat", "cap", "beanie", "beret", "visor"))
+        return any(k in blob for k in ("hat", "cap", "beanie", "beret", "visor", "knit", "pompom"))
     if sub == "tights":
         return "tight" in blob or "hosiery" in blob or "stocking" in blob
     return False

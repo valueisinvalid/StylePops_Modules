@@ -86,9 +86,22 @@ def _try_load_fashion_clip():
         _clip_model.eval()
         _clip_model.to(_get_clip_device())
         _FASHION_CLIP_AVAILABLE = True
-        print(f"FashionCLIP yüklendi ({_clip_mode}, { _get_clip_device()}) — bir kez")
-    except Exception:
-        _FASHION_CLIP_AVAILABLE = False
+        print(f"FashionCLIP yüklendi ({_clip_mode}, {_get_clip_device()}) — bir kez")
+    except Exception as exc:
+        print(f"FashionCLIP yüklenemedi: {exc}")
+        try:
+            model_id = "patrickjohncyh/fashion-clip"
+            from transformers import CLIPModel, CLIPProcessor
+            _clip_processor = CLIPProcessor.from_pretrained(model_id)
+            _clip_model = CLIPModel.from_pretrained(model_id)
+            _clip_mode = "base"
+            _clip_model.eval()
+            _clip_model.to(_get_clip_device())
+            _FASHION_CLIP_AVAILABLE = True
+            print(f"FashionCLIP base model yüklendi ({_get_clip_device()})")
+        except Exception as exc2:
+            print(f"FashionCLIP base de yüklenemedi: {exc2}")
+            _FASHION_CLIP_AVAILABLE = False
     return _FASHION_CLIP_AVAILABLE
 
 

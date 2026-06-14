@@ -69,10 +69,16 @@ def main() -> int:
     missing = 0
     t1 = time.time()
     items = list(garments.items())
+    orig_dir = ROOT / "data" / "assets" / "garments" / "originals"
     for i, (gid, g) in enumerate(items, 1):
         rel = g.get("image_path", "")
         path = ROOT / rel
-        if not rel or not path.exists():
+        # Orijinal (kırpılmamış) varsa onu tercih et — LV görselleri yerelde
+        # 200×200 merkez-kırpık; sınıflandırma/embedding tam görselden gelsin.
+        orig = orig_dir / f"{gid}.jpg"
+        if orig.exists():
+            path = orig
+        elif not rel or not path.exists():
             missing += 1
             continue
         try:

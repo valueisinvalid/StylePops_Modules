@@ -7,6 +7,7 @@ import csv
 import json
 import random
 import sys
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -63,6 +64,33 @@ def season_for_scenario(scenario_id: str) -> str:
 GENDER_SHARE = {"women": 0.62, "men": 0.38}
 
 
+def select_diverse(
+    scored_list: list[dict],
+    quota: int,
+    usage: "Counter",
+    *,
+    reuse_penalty: float = 0.45,
+) -> list[dict]:
+    """Sadece en yüksek rank'ı seçmek aynı 'en iyi' parçaları tekrar tekrar
+    kullanır → 'hep aynı ürünleri görüyoruz'. Açgözlü çeşitlilik seçimi: her
+    adımda rank'tan, halihazırda kullanılan parçaların tekrar cezasını düşerek
+    en iyiyi seç; böylece kombinler farklı parçalara yayılır."""
+    chosen: list[dict] = []
+    pool = scored_list[:]
+    while pool and len(chosen) < quota:
+        best_i, best_adj = 0, None
+        for i, r in enumerate(pool):
+            pen = reuse_penalty * sum(usage[p] for p in r["piece_ids"])
+            adj = float(r["rank"]) - pen
+            if best_adj is None or adj > best_adj:
+                best_adj, best_i = adj, i
+        r = pool.pop(best_i)
+        chosen.append(r)
+        for p in r["piece_ids"]:
+            usage[p] += 1
+    return chosen
+
+
 def _combo_gender_label(piece_ids: list[str], garments: dict) -> str:
     from garment_gender import combo_gender
     g = combo_gender([garments[p].get("gender", "women") for p in piece_ids if p in garments])
@@ -103,6 +131,9 @@ def generate_combinations(
 
     rows: list[dict] = []
     combo_idx = 1
+    # Parça kullanım sayacı cinsiyet bazında global tutulur → aynı parça tüm
+    # kombinlerde tekrar etmesin (çeşitlilik). Mevsimler arası da paylaşılır.
+    usage_by_gender: dict[str, Counter] = {g: Counter() for g in GENDER_SHARE}
 
     for i, (scenario_id, scenario) in enumerate(scenarios.items(), 1):
         season = season_for_scenario(scenario_id)
@@ -142,8 +173,10 @@ def generate_combinations(
                 scored_list.append(result)
 
             scored_list.sort(key=lambda r: r["rank"], reverse=True)
-            print(f"    top {quota} [{gender}] seçildi")
-            for r in scored_list[:quota]:
+            selected = select_diverse(scored_list, quota, usage_by_gender[gender])
+            print(f"    {len(selected)}/{quota} [{gender}] çeşitlilikle seçildi "
+                  f"(aday havuzu {len(scored_list)})")
+            for r in selected:
                 cid = f"VC{combo_idx:04d}"
                 combo_idx += 1
                 rows.append({
@@ -238,7 +271,7 @@ def main() -> None:
     import argparse
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--per-scenario", type=int, default=40)
+    parser.add_argument("--per-scenario", type=int, default=80)
     parser.add_argument("--ab-pairs", type=int, default=200)
     parser.add_argument("--collages", type=int, default=5)
     parser.add_argument(
@@ -253,7 +286,7 @@ def main() -> None:
         help="Senaryo başına aday sayısı (varsayılan: fast=300, tam=800)",
     )
     args = parser.parse_args()
-    n_candidates = args.n_candidates or (200 if args.fast else 250)
+    n_candidates = args.n_candidates or (400 if args.fast else 600)
 
     from validate_production_wardrobe import main as validate_main
     if validate_main() != 0:

@@ -28,18 +28,38 @@ OUT_PATH = VISUAL / "garments_fnauman.json"
 DATASET = "fnauman/fashion-second-hand-front-only-rgb"
 N_SHARDS = 13
 
-# fnauman 'type' → (layer_role, subcategory, thermal_category, season_primary)
+# fnauman 'type' → (layer_role, subcategory, thermal_category, season_primary, bucket)
+# bucket: kota grubu (heavy outer otomatik HEAVY_TYPES'tan belirlenir)
 TYPE_MAP = {
-    "Winter Jacket": ("outer", "padded_coat", "kalin_mont", "kis"),
-    "Outerwear": ("outer", "coat", "kaban", "kis"),
-    "Coat": ("outer", "coat", "kaban", "kis"),
-    "Rain Jacket": ("outer", "raincoat", "yagmurluk", "sonbahar"),
-    "Jacket": ("outer", "jacket", "ince_ceket", "sonbahar"),
-    "Blazer": ("outer", "blazer", "ince_ceket", "sonbahar"),
-    "Vest": ("outer", "jacket", "ince_ceket", "sonbahar"),
-    "Sweater": ("mid", "sweater", "kalin_yun_kazak", "kis"),
-    "Cardigan": ("mid", "cardigan", "ince_triko", "sonbahar"),
-    "Hoodie": ("mid", "hoodie", "polar_sweatshirt", "sonbahar"),
+    # Dış giyim
+    "Winter Jacket": ("outer", "padded_coat", "kalin_mont", "kis", "outer"),
+    "Outerwear": ("outer", "coat", "kaban", "kis", "outer"),
+    "Coat": ("outer", "coat", "kaban", "kis", "outer"),
+    "Rain Jacket": ("outer", "raincoat", "yagmurluk", "sonbahar", "outer"),
+    "Jacket": ("outer", "jacket", "ince_ceket", "sonbahar", "outer"),
+    "Jacker": ("outer", "jacket", "ince_ceket", "sonbahar", "outer"),
+    "Denim Jacket": ("outer", "jacket", "ince_ceket", "sonbahar", "outer"),
+    "Blazer": ("outer", "blazer", "ince_ceket", "sonbahar", "outer"),
+    "Vest": ("outer", "jacket", "ince_ceket", "sonbahar", "outer"),
+    # Sıcak ara katman
+    "Sweater": ("mid", "sweater", "kalin_yun_kazak", "kis", "mid"),
+    "Cardigan": ("mid", "cardigan", "ince_triko", "sonbahar", "mid"),
+    "Hoodie": ("mid", "hoodie", "polar_sweatshirt", "sonbahar", "mid"),
+    # Üstler
+    "Top": ("base", "tshirt", "ince_pamuklu_tisort", "ilkbahar", "top"),
+    "T-shirt": ("base", "tshirt", "ince_pamuklu_tisort", "ilkbahar", "top"),
+    "Tank Top": ("base", "tank_top", "ince_pamuklu_tisort", "yaz", "top"),
+    "Training Top": ("base", "tshirt", "ince_pamuklu_tisort", "ilkbahar", "top"),
+    "Blouse": ("mid", "blouse", "pamuklu_gomlek", "ilkbahar", "top"),
+    "Shirt": ("mid", "shirt", "pamuklu_gomlek", "sonbahar", "top"),
+    "Tunic": ("mid", "blouse", "pamuklu_gomlek", "ilkbahar", "top"),
+    # Altlar (özellikle düzgün pantolon — iki cinsiyet)
+    "Trousers": ("bottom", "trousers", "chino_pantolon", "sonbahar", "bottom"),
+    "Jeans": ("bottom", "jeans", "jean_pantolon", "sonbahar", "bottom"),
+    "Winter Trousers": ("bottom", "trousers", "jean_pantolon", "kis", "bottom"),
+    "Rain Trousers": ("bottom", "trousers", "chino_pantolon", "sonbahar", "bottom"),
+    "Skirt": ("bottom", "skirt", "etek", "ilkbahar", "bottom"),
+    "Shorts": ("bottom", "shorts", "sort", "yaz", "bottom"),
 }
 
 SEASON_USABLE = {
@@ -47,6 +67,11 @@ SEASON_USABLE = {
     "yagmurluk": ["sonbahar", "ilkbahar"], "ince_ceket": ["sonbahar", "kis"],
     "kalin_yun_kazak": ["kis", "sonbahar"], "ince_triko": ["sonbahar", "ilkbahar"],
     "polar_sweatshirt": ["sonbahar", "kis"],
+    "ince_pamuklu_tisort": ["ilkbahar", "yaz", "sonbahar"],
+    "pamuklu_gomlek": ["ilkbahar", "sonbahar", "kis"],
+    "chino_pantolon": ["ilkbahar", "sonbahar", "kis"],
+    "jean_pantolon": ["sonbahar", "kis", "ilkbahar"],
+    "etek": ["ilkbahar", "yaz"], "sort": ["yaz"],
 }
 
 GENDER_MAP = {
@@ -151,16 +176,33 @@ def main() -> int:
     import pyarrow.parquet as pq
     from huggingface_hub import hf_hub_download
 
+    from collections import defaultdict
     ap = argparse.ArgumentParser()
     ap.add_argument("--max-outer", type=int, default=800)
     ap.add_argument("--max-mid", type=int, default=600)
+    ap.add_argument("--max-bottom-men", type=int, default=400)
+    ap.add_argument("--max-bottom-women", type=int, default=550)
+    ap.add_argument("--max-top-men", type=int, default=300)
+    ap.add_argument("--max-top-women", type=int, default=450)
     args = ap.parse_args()
 
     HEAVY_TYPES = {"Winter Jacket", "Outerwear", "Coat"}
     IMG_DIR.mkdir(parents=True, exist_ok=True)
     picked: list[dict] = []
-    n_heavy = n_light = n_mid = 0
+    counts: dict[str, int] = defaultdict(int)
     seq = 0
+
+    def cap_for(bucket: str, is_heavy: bool, gender: str) -> tuple[str, int]:
+        gkey = "men" if gender == "men" else "women"
+        if bucket == "outer":
+            return ("heavy", 10**9) if is_heavy else ("light", args.max_outer)
+        if bucket == "mid":
+            return ("mid", args.max_mid)
+        if bucket == "bottom":
+            return (f"bottom_{gkey}",
+                    args.max_bottom_men if gkey == "men" else args.max_bottom_women)
+        return (f"top_{gkey}",
+                args.max_top_men if gkey == "men" else args.max_top_women)
 
     cols = ["image", "brand", "usage", "condition", "type", "category",
             "trend", "colors", "cut", "pattern", "season", "material",
@@ -168,7 +210,7 @@ def main() -> int:
 
     for shard in range(N_SHARDS):
         fname = f"data/train-{shard:05d}-of-{N_SHARDS:05d}.parquet"
-        print(f"[shard {shard+1}/{N_SHARDS}] indiriliyor… (ağır {n_heavy} hafif {n_light} mid {n_mid})")
+        print(f"[shard {shard+1}/{N_SHARDS}] indiriliyor… {dict(counts)}")
         local = hf_hub_download(DATASET, fname, repo_type="dataset")
         table = pq.read_table(local, columns=cols)
         rows = table.to_pylist()
@@ -177,11 +219,11 @@ def main() -> int:
             if not passes_filter(row):
                 continue
             type_name = row["type"]
-            layer, subcat, tc, season_p = TYPE_MAP[type_name]
+            layer, subcat, tc, season_p, bucket = TYPE_MAP[type_name]
             is_heavy = type_name in HEAVY_TYPES
-            if layer == "outer" and not is_heavy and n_light >= args.max_outer:
-                continue
-            if layer == "mid" and n_mid >= args.max_mid:
+            gender = GENDER_MAP.get((row.get("category") or "").strip(), "women")
+            ckey, cap = cap_for(bucket, is_heavy, gender)
+            if counts[ckey] >= cap:
                 continue
 
             fseason = (row.get("season") or "").strip()
@@ -189,7 +231,7 @@ def main() -> int:
                 season_p = "kis"
             elif fseason == "Autumn":
                 season_p = "sonbahar"
-            elif fseason == "Summer" and layer == "mid":
+            elif fseason == "Summer" and bucket == "mid":
                 continue  # yazlık sweater istemiyoruz
 
             seq += 1
@@ -218,7 +260,7 @@ def main() -> int:
                 "id": gid,
                 "name": name[:80],
                 "description": f"{type_name}. Material: {material}. Colors: {', '.join(colors)}.",
-                "category": "outerwear" if layer == "outer" else "top",
+                "category": {"outer": "outerwear", "bottom": "bottom"}.get(layer, "top"),
                 "subcategory": subcat,
                 "layer_role": layer,
                 "fabric_composition": parse_material(material),
@@ -245,12 +287,7 @@ def main() -> int:
                 },
             }
             picked.append(g)
-            if layer == "mid":
-                n_mid += 1
-            elif is_heavy:
-                n_heavy += 1
-            else:
-                n_light += 1
+            counts[ckey] += 1
         del rows
         # her shard sonrası ara kayıt (kesinti olursa kaybolmasın)
         OUT_PATH.write_text(json.dumps({
@@ -266,7 +303,7 @@ def main() -> int:
         "garments": picked,
     }
     OUT_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"\nKaydedildi → {OUT_PATH} ({len(picked)} parça: ağır {n_heavy}, hafif-dış {n_light}, mid {n_mid})")
+    print(f"\nKaydedildi → {OUT_PATH} ({len(picked)} parça) · {dict(counts)}")
     return 0
 
 

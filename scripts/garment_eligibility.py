@@ -19,7 +19,7 @@ NON_STREET_WEAR_KEYWORDS = (
 BEACH_SWIM_KEYWORDS = (
     "bikini", "swim", "pareo", "paréo", "cover-up", "cover up", "beach cover",
     "swimsuit", "swim dress", "swim short", "halter neck bikini", "kimono beach",
-    "beach kimono", "one-piece swim", "swim set", "triki", "beach wear",
+    "beach kimono", "one-piece swim", "swim set", "triki", "beach wear", "tankini",
 )
 
 NON_WEARABLE_ACCESSORY_KEYWORDS = (
@@ -121,8 +121,16 @@ def non_garment_reason(garment: dict) -> str | None:
         return "ethnic_wear"
     name = (garment.get("name") or "").strip().lower()
     article = fp_article_type_core(garment)
-    # Kemer (kıyafet değil aksesuar) — "belted ..." gibi sıfatları yakalamaz
-    if re.search(r"\bbelts?$", name) or article in ("belts", "belt"):
+    # Kemer (kıyafet değil aksesuar): adında "belt" geçer ama gerçek bir giysi
+    # kelimesi yoktur. "belted ..." (sıfat) \bbelt\b ile eşleşmez, korunur.
+    if article in ("belts", "belt"):
+        return "accessory_belt"
+    if re.search(r"\bbelts?\b", name) and not re.search(
+        r"\b(dress|pant|trouser|jean|jumpsuit|romper|skirt|short|gown|tunic|"
+        r"top|shirt|blouse|jacket|coat|sweater|cardigan|hoodie|blazer|vest|"
+        r"legging|playsuit|overall|dungaree)\b",
+        name,
+    ):
         return "accessory_belt"
     # Ayakkabı bakım/aksesuar (fırça, bağcık, taban, çekecek)
     blob_lc = text_blob(garment)

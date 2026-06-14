@@ -258,6 +258,14 @@ def compatibility_head_score(piece_ids: list[str], garments: dict[str, dict]) ->
     return round(1.0 + 4.0 * prob, 3)
 
 
+# Üretim verisindeki (ürün-çekimi görseller, beyaz fon) gerçek parça-arası
+# kosinüs benzerliği dağılımına göre kalibre: tipik aralık ~0.28–0.52
+# (medyan ~0.40). Eski 0.58 eşiği tüm-vücut fotoğraflar içindi; üründe HER ZAMAN
+# 0'a kırpılıp skoru sabit 1.0 yapıyordu (sinyal ölüydü). Bu aralık 1–5'e yayar.
+_CLIP_SIM_LO = 0.30
+_CLIP_SIM_HI = 0.52
+
+
 def fashionclip_compatibility_score(piece_ids: list[str], garments: dict[str, dict]) -> float | None:
     embs = []
     for pid in piece_ids:
@@ -271,7 +279,8 @@ def fashionclip_compatibility_score(piece_ids: list[str], garments: dict[str, di
         return None
     sims = [float(np.dot(embs[i], embs[j])) for i in range(len(embs)) for j in range(i + 1, len(embs))]
     mean_sim = float(np.mean(sims))
-    score = 1.0 + 4.0 * max(0.0, min(1.0, (mean_sim - 0.58) / 0.22))
+    norm = (mean_sim - _CLIP_SIM_LO) / (_CLIP_SIM_HI - _CLIP_SIM_LO)
+    score = 1.0 + 4.0 * max(0.0, min(1.0, norm))
     return round(score, 3)
 
 

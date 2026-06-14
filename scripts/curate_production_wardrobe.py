@@ -24,6 +24,7 @@ OUT_PATH = VISUAL / "garments_production.json"
 
 sys.path.insert(0, str(ROOT / "scripts"))
 from garment_eligibility import exclusion_reason, is_catalog_eligible
+from garment_name_classifier import classify as classify_name, layer_group
 
 SEASONS = ("kis", "sonbahar", "ilkbahar", "yaz")
 
@@ -71,16 +72,164 @@ _FOOTWEAR_ARTICLE_MAP = {
 }
 
 
+# fnauman orijinal tipi (açıklamanın ilk kelimesi) → (layer, subcategory, thermal)
+# fnauman adı "{marka} {tip}" biçiminde; tip SON kelime, bu yüzden ad-sınıflandırıcı
+# "Flat Top Outerwear"da yanlışlıkla 'Top'a takılır. Tip en güvenilir sinyaldir.
+_FN_TYPE_MAP = {
+    "Winter Jacket": ("outer", "padded_coat", "kalin_mont"),
+    "Coat": ("outer", "coat", "kaban"),
+    "Rain Jacket": ("outer", "raincoat", "yagmurluk"),
+    "Rain Trousers": ("bottom", "trousers", "chino_pantolon"),
+    "Jacket": ("outer", "jacket", "ince_ceket"),
+    "Jacker": ("outer", "jacket", "ince_ceket"),
+    "Denim Jacket": ("outer", "jacket", "ince_ceket"),
+    "Blazer": ("outer", "blazer", "ince_ceket"),
+    "Vest": ("mid", "vest", "ince_triko"),
+    "Sweater": ("mid", "sweater", "kalin_yun_kazak"),
+    "Cardigan": ("mid", "cardigan", "ince_triko"),
+    "Hoodie": ("mid", "hoodie", "polar_sweatshirt"),
+    "Tank Top": ("base", "tank_top", "ince_pamuklu_tisort"),
+    "Training Top": ("base", "tshirt", "ince_pamuklu_tisort"),
+    "Top": ("base", "tshirt", "ince_pamuklu_tisort"),
+    "T-shirt": ("base", "tshirt", "ince_pamuklu_tisort"),
+    "Blouse": ("mid", "blouse", "pamuklu_gomlek"),
+    "Shirt": ("mid", "shirt", "pamuklu_gomlek"),
+    "Tunic": ("mid", "blouse", "pamuklu_gomlek"),
+    "Winter Trousers": ("bottom", "trousers", "jean_pantolon"),
+    "Trousers": ("bottom", "trousers", "chino_pantolon"),
+    "Jeans": ("bottom", "jeans", "jean_pantolon"),
+    "Skirt": ("bottom", "skirt", "etek"),
+    "Shorts": ("bottom", "shorts", "sort"),
+    "Dress": ("dress", "dress", "midi_elbise"),
+}
+_FN_TYPE_RE = _re.compile(r"^([A-Za-z][A-Za-z \-]*?)\.")
+
+
+def relabel_fnauman(item: dict, vc=None) -> None:
+    """fnauman parçasını ORİJİNAL tipinden (açıklama ilk kelimesi) etiketle.
+    'Outerwear' tipi belirsiz (ceket VEYA outdoor pantolon) → FashionCLIP görseli
+    ile karar ver. Diğer tipler tip-haritasından doğrudan."""
+    desc = item.get("description", "")
+    m = _FN_TYPE_RE.match(desc)
+    t = m.group(1).strip() if m else ""
+
+    if t == "Outerwear":
+        pred = vc.predict_id(item["id"]) if vc and vc.has(item["id"]) else None
+        if pred and pred["macro"] == "lower":
+            item.update(layer_role="bottom", category="bottom", subcategory="trousers",
+                        thermal_category="chino_pantolon", label_source="fnauman_type+vision")
+        else:
+            sub = (pred["subcategory"] if pred and pred["macro"] == "upper"
+                   else "coat")
+            if sub not in ("jacket", "coat", "padded_coat", "blazer", "raincoat"):
+                sub = "coat"
+            thermal = {"padded_coat": "kalin_mont", "coat": "kaban",
+                       "jacket": "ince_ceket", "blazer": "ince_ceket",
+                       "raincoat": "yagmurluk"}.get(sub, "kaban")
+            item.update(layer_role="outer", category="outerwear", subcategory=sub,
+                        thermal_category=thermal, label_source="fnauman_type+vision")
+        return
+
+    if t in _FN_TYPE_MAP:
+        lr, sub, thermal = _FN_TYPE_MAP[t]
+        item.update(layer_role=lr,
+                    category={"outer": "outerwear", "bottom": "bottom",
+                              "dress": "dress"}.get(lr, "top"),
+                    subcategory=sub, thermal_category=thermal,
+                    label_source="fnauman_type")
+        return
+
+    # tip tanınmadıysa ada düş
+    relabel_from_name(item)
+
+
+def relabel_from_name(item: dict) -> bool:
+    """fnauman/diğer kaynaklara da ürün ADINI uygula (LV ile aynı yüksek-isabet).
+    Ad net sinyal verirse layer/category/subcategory'yi düzeltir. Aksesuar
+    sinyalinde dokunmaz (eligibility ayrı ele alır). Döner: değişti mi."""
+    cls = classify_name(item.get("name", ""))
+    if not cls or cls["layer_role"] == "accessory":
+        return False
+    old = layer_group(item.get("layer_role"))
+    item["layer_role"] = cls["layer_role"]
+    item["category"] = cls["category"]
+    item["subcategory"] = cls["subcategory"]
+    item["label_source"] = "name_classifier"
+    if old != layer_group(cls["layer_role"]):
+        item["label_changed_from"] = old
+    return True
+
+
+def reconcile_with_vision(merged: list[dict]) -> Counter:
+    """TÜM gardırobu FashionCLIP görseliyle çapraz-kontrol et, kaba-eksen
+    (üst/alt/elbise/ayakkabı) hatalarını düzelt. Yüksek isabet için kural:
+      - İSİM sınıflandırıcı ve GÖRSEL aynı kaba eksende birleşip mevcut etikete
+        karşı çıkıyorsa → isim sonucunu uygula (alt-kategori için en güvenilir).
+      - İsim sessizse ve görsel çok güvenliyse (margin≥0.03, skor≥0.22) → görseli uygula.
+    Vest→alt gibi hataları kesin düzeltir; gürültülü tekil görsel tahminlerine
+    (ör. üst→aksesuar) tek başına güvenmez."""
+    try:
+        from visual_classify import VisualClassifier, macro_of_layer
+    except Exception as exc:  # torch/cache yoksa sessiz geç
+        print(f"  görsel uzlaştırma atlandı: {exc}")
+        return Counter()
+    try:
+        vc = VisualClassifier.load()
+    except Exception as exc:
+        print(f"  görsel uzlaştırma atlandı (etiket/cache yok): {exc}")
+        return Counter()
+
+    THERMAL = {
+        "trousers": "chino_pantolon", "jeans": "jean_pantolon", "leggings": "tayt",
+        "shorts": "sort", "skirt": "etek", "vest": "ince_triko",
+        "jacket": "ince_ceket", "blazer": "ince_ceket", "coat": "kaban",
+        "padded_coat": "kalin_mont", "raincoat": "yagmurluk",
+    }
+    fixes = Counter()
+    for item in merged:
+        gid = item.get("id")
+        if not gid or not vc.has(gid):
+            continue
+        p = vc.predict_id(gid)
+        if not p:
+            continue
+        cur_macro = macro_of_layer(item.get("layer_role"))
+        if cur_macro == "?" or p["macro"] == cur_macro:
+            continue
+        cls = classify_name(item.get("name", ""))
+        nc_macro = macro_of_layer(cls["layer_role"]) if cls else None
+        new = None
+        if cls and nc_macro == p["macro"]:
+            # isim + görsel birleşti, etikete karşı → isim (alt-kat. daha doğru)
+            new = (cls["layer_role"], cls["category"], cls["subcategory"], "name+vision")
+        elif cls is None and p["macro_margin"] >= 0.03 and p["score"] >= 0.22:
+            new = (p["layer_role"], p["category"], p["subcategory"], "vision")
+        if not new:
+            continue
+        lr, cat, sub, src = new
+        item["layer_role"] = lr
+        item["category"] = cat
+        item["subcategory"] = sub
+        if sub in THERMAL:
+            item["thermal_category"] = THERMAL[sub]
+        item["label_source"] = src
+        item["label_changed_from"] = cur_macro
+        fixes[f"{cur_macro}->{p['macro']}"] += 1
+    return fixes
+
+
 def correct_labels(item: dict) -> dict:
     """Açıkça yanlış etiketlenmiş katmanları düzelt (ör. 'Dress Pants' → bottom)."""
     name = (item.get("name") or "")
     if item.get("layer_role") == "footwear":
         art = (item.get("fp_meta") or {}).get("articleType")
-        if art in _FOOTWEAR_ARTICLE_MAP:
+        blob = name.lower()
+        if ("boot" in blob or "bootie" in blob) and "bootcut" not in blob:
+            item["subcategory"] = "boots"
+        elif art in _FOOTWEAR_ARTICLE_MAP:
             item["subcategory"] = _FOOTWEAR_ARTICLE_MAP[art]
         else:
-            blob = name.lower()
-            if "boot" in blob:
+            if "boot" in blob and "bootcut" not in blob:
                 item["subcategory"] = "boots"
             elif "heel" in blob or "pump" in blob or "stiletto" in blob:
                 item["subcategory"] = "heels"
@@ -107,6 +256,34 @@ def correct_labels(item: dict) -> dict:
     return item
 
 
+def relabel_livostyle_from_name(item: dict) -> str | None:
+    """Livostyle kayıtlı etiketleri karışık; ürün ADI güvenilir.
+    Addan net sinyal varsa layer/category/subcategory'yi ona göre düzelt.
+    Aksesuar (kemer/çanta/şapka vb.) tespit edilirse elenme nedeni döndür."""
+    cls = classify_name(item.get("name", ""))  # yalnız ad (LV adları temiz)
+    if not cls:
+        return None
+    if cls["layer_role"] == "accessory":
+        # Giyilebilir/kombin-yanı aksesuarları (atkı, şapka, eldiven) aksesuar
+        # slotu için TUT; kemer/çanta/takı/gözlük/çorap gibileri ele.
+        if cls["subcategory"] in {"scarf", "hat", "gloves"}:
+            item["layer_role"] = "accessory"
+            item["category"] = "accessory"
+            item["subcategory"] = cls["subcategory"]
+            item["label_source"] = "name_classifier"
+            return None
+        return f"accessory_{cls['subcategory']}"
+    old = layer_group(item.get("layer_role"))
+    new = layer_group(cls["layer_role"])
+    item["layer_role"] = cls["layer_role"]
+    item["category"] = cls["category"]
+    item["subcategory"] = cls["subcategory"]
+    item["label_source"] = "name_classifier"
+    if old != new:
+        item["label_changed_from"] = old
+    return None
+
+
 def clean_livostyle(garments: list[dict]) -> tuple[list[dict], Counter]:
     from garment_gender import infer_gender
 
@@ -121,7 +298,14 @@ def clean_livostyle(garments: list[dict]) -> tuple[list[dict], Counter]:
             continue
         item = dict(g)
         item["gender"] = infer_gender(item)
+        drop = relabel_livostyle_from_name(item)
+        if drop:
+            reasons[drop.split(":")[0]] += 1
+            continue
         correct_labels(item)
+        if item.get("layer_role") not in {"base", "mid", "outer", "bottom", "dress", "footwear", "accessory"}:
+            reasons["non_garment_layer"] += 1
+            continue
         kept.append(item)
     return kept, reasons
 
@@ -190,8 +374,10 @@ def fp_production_score(g: dict) -> int:
         score += 3
     if season in ("ilkbahar", "yaz") and any(k in blob for k in SUMMER_KEYWORDS):
         score += 2
-    if sub in ("boots", "coat", "padded_coat", "raincoat", "jeans", "chinos", "trousers"):
+    if sub in ("coat", "padded_coat", "raincoat", "jeans", "chinos", "trousers"):
         score += 3
+    if sub == "boots":
+        score += 7
     if any(k in blob for k in ("shacket", "fleece shacket")):
         score -= 2
     return score
@@ -305,6 +491,27 @@ def pick_fp_supplements(
                 if not progressed:
                     break
 
+    # Kış kombinleri için ek bot takviyesi
+    def _is_adult_boot(g: dict) -> bool:
+        if supplement_layer_role(g) != "footwear":
+            return False
+        blob = f"{g.get('name', '')} {g.get('description', '')}".lower()
+        if any(k in blob for k in ("infant", "kids", "madagascar", "dora", "crocs")):
+            return False
+        return any(
+            k in blob
+            for k in (" boot", "bootie", "booties", "chelsea boot", "ankle boot", "combat boot", "desert boot", "leather boots")
+        )
+
+    boot_candidates = sorted(
+        [(sc, g) for sc, g in by_layer.get("footwear", [])
+         if _is_adult_boot(g) and g["id"] not in used_ids],
+        key=lambda x: (-x[0], x[1]["id"]),
+    )
+    for _sc, g in boot_candidates[:45]:
+        used_ids.add(g["id"])
+        picked.append(g)
+
     if len(picked) < n:
         rest = []
         for layer_items in by_layer.values():
@@ -321,10 +528,23 @@ def pick_fp_supplements(
             picked.append(g)
 
     rng.shuffle(picked)
+    base = picked[:n]
+    boot_pool = [g for _sc, g in boot_candidates]
+    extra_boots = [g for g in boot_pool if g["id"] not in {x["id"] for x in base}][:35]
+    if extra_boots:
+        fw_idx = [
+            i for i, g in enumerate(base)
+            if supplement_layer_role(g) == "footwear"
+        ]
+        merged = list(base)
+        for i, boot_g in zip(fw_idx, extra_boots):
+            merged[i] = boot_g
+        base = merged[:n]
+
     from garment_gender import infer_gender
 
     out = []
-    for i, g in enumerate(picked[:n], 1):
+    for i, g in enumerate(base, 1):
         item = dict(g)
         item["id"] = f"SP{i:04d}"
         item["layer_role"] = supplement_layer_role(g)
@@ -372,10 +592,17 @@ def main() -> None:
     fn_raw = load_garments_list(FNAUMAN_PATH)
     if fn_raw:
         from garment_eligibility import non_garment_reason
+        try:
+            from visual_classify import VisualClassifier
+            fn_vc = VisualClassifier.load()
+        except Exception as exc:
+            print(f"  fnauman görsel sınıflayıcı yok: {exc}")
+            fn_vc = None
         for g in fn_raw:
             if non_garment_reason(g):
                 continue
             item = dict(g)
+            relabel_fnauman(item, fn_vc)  # orijinal tip + 'Outerwear' için görsel
             correct_labels(item)
             fnauman_kept.append(item)
         print(f"fnauman takviye: {len(fnauman_kept)} parça (kaynak {len(fn_raw)})")
@@ -383,6 +610,13 @@ def main() -> None:
         print("  katman:", dict(fn_layer))
 
     merged = cleaned + supplements + fnauman_kept
+
+    # TÜM gardırobu FashionCLIP görseliyle tara, kaba-eksen yanlış-etiketleri düzelt
+    vision_fixes = reconcile_with_vision(merged)
+    if vision_fixes:
+        print("görsel uzlaştırma düzeltmeleri:", dict(vision_fixes),
+              f"(toplam {sum(vision_fixes.values())})")
+
     snapshot = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     payload = {
         "version": "1.0",

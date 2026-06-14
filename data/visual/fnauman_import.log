@@ -1,16 +1,16 @@
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-[shard 1/13] indiriliyor… (ağır 0 hafif 0 mid 0)
-[shard 2/13] indiriliyor… (ağır 0 hafif 21 mid 345)
-[shard 3/13] indiriliyor… (ağır 17 hafif 83 mid 490)
-[shard 4/13] indiriliyor… (ağır 38 hafif 187 mid 600)
-[shard 5/13] indiriliyor… (ağır 45 hafif 328 mid 600)
-[shard 6/13] indiriliyor… (ağır 74 hafif 431 mid 600)
-[shard 7/13] indiriliyor… (ağır 92 hafif 475 mid 600)
-[shard 8/13] indiriliyor… (ağır 107 hafif 577 mid 600)
-[shard 9/13] indiriliyor… (ağır 132 hafif 742 mid 600)
-[shard 10/13] indiriliyor… (ağır 150 hafif 800 mid 600)
-[shard 11/13] indiriliyor… (ağır 160 hafif 800 mid 600)
-[shard 12/13] indiriliyor… (ağır 171 hafif 800 mid 600)
-[shard 13/13] indiriliyor… (ağır 188 hafif 800 mid 600)
+[shard 1/13] indiriliyor… {}
+[shard 2/13] indiriliyor… {'top_women': 450, 'mid': 345, 'light': 70, 'top_men': 3, 'bottom_men': 1, 'bottom_women': 6}
+[shard 3/13] indiriliyor… {'top_women': 450, 'mid': 490, 'light': 134, 'top_men': 92, 'bottom_men': 43, 'bottom_women': 194, 'heavy': 17}
+[shard 4/13] indiriliyor… {'top_women': 450, 'mid': 600, 'light': 239, 'top_men': 152, 'bottom_men': 83, 'bottom_women': 489, 'heavy': 38}
+[shard 5/13] indiriliyor… {'top_women': 450, 'mid': 600, 'light': 380, 'top_men': 227, 'bottom_men': 138, 'bottom_women': 550, 'heavy': 45}
+[shard 6/13] indiriliyor… {'top_women': 450, 'mid': 600, 'light': 483, 'top_men': 293, 'bottom_men': 189, 'bottom_women': 550, 'heavy': 74}
+[shard 7/13] indiriliyor… {'top_women': 450, 'mid': 600, 'light': 528, 'top_men': 300, 'bottom_men': 214, 'bottom_women': 550, 'heavy': 92}
+[shard 8/13] indiriliyor… {'top_women': 450, 'mid': 600, 'light': 630, 'top_men': 300, 'bottom_men': 237, 'bottom_women': 550, 'heavy': 107}
+[shard 9/13] indiriliyor… {'top_women': 450, 'mid': 600, 'light': 796, 'top_men': 300, 'bottom_men': 281, 'bottom_women': 550, 'heavy': 132}
+[shard 10/13] indiriliyor… {'top_women': 450, 'mid': 600, 'light': 800, 'top_men': 300, 'bottom_men': 355, 'bottom_women': 550, 'heavy': 150}
+[shard 11/13] indiriliyor… {'top_women': 450, 'mid': 600, 'light': 800, 'top_men': 300, 'bottom_men': 400, 'bottom_women': 550, 'heavy': 160}
+[shard 12/13] indiriliyor… {'top_women': 450, 'mid': 600, 'light': 800, 'top_men': 300, 'bottom_men': 400, 'bottom_women': 550, 'heavy': 171}
+[shard 13/13] indiriliyor… {'top_women': 450, 'mid': 600, 'light': 800, 'top_men': 300, 'bottom_men': 400, 'bottom_women': 550, 'heavy': 188}
 
-Kaydedildi → /Users/o_7/StylePops_Modules/data/visual/garments_fnauman.json (1609 parça: ağır 209, hafif-dış 800, mid 600)
+Kaydedildi → /Users/o_7/StylePops_Modules/data/visual/garments_fnauman.json (3309 parça) · {'top_women': 450, 'mid': 600, 'light': 800, 'top_men': 300, 'bottom_men': 400, 'bottom_women': 550, 'heavy': 209}

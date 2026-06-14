@@ -1,0 +1,2319 @@
+{
+  "schema_version": "1.0",
+  "source": "demo_personal_internet",
+  "license": "demo-only (fnauman CC-BY + FP MIT)",
+  "count": 57,
+  "snapshot_date": "2026-06-14",
+  "note": "Tek kişilik kadın demo gardırop — yalnızca Canlı Öneri denemesi",
+  "garments": [
+    {
+      "id": "DP0001",
+      "name": "H&m Dress",
+      "description": "Dress. Material: 100% Viscose. Colors: [, ', O, r, a, n, g, e, ', ].",
+      "category": "dress",
+      "subcategory": "dress_midi",
+      "layer_role": "dress",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 52,
+        "a": 37,
+        "b": 46
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "yaz",
+        "sonbahar"
+      ],
+      "thermal_category": "midi_elbise",
+      "image_path": "data/assets/demo_personal/DP0001.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0002",
+      "name": "Jorli Shirt",
+      "description": "Shirt. Material: 52% Viscose 48% Cotton. Colors: [, ', O, r, a, n, g, e, ', ].",
+      "category": "top",
+      "subcategory": "shirt",
+      "layer_role": "mid",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 52
+        },
+        {
+          "material": "cotton",
+          "pct": 48
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 86,
+        "a": -1,
+        "b": 1
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "pamuklu_gomlek",
+      "image_path": "data/assets/demo_personal/DP0002.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0003",
+      "name": "Kappahl T-shirt",
+      "description": "T-shirt. Material: 100% viscose. Colors: [, ', P, i, n, k, ', ].",
+      "category": "top",
+      "subcategory": "tshirt",
+      "layer_role": "base",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 80,
+        "a": 17,
+        "b": 6
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "yaz",
+        "sonbahar"
+      ],
+      "thermal_category": "ince_pamuklu_tisort",
+      "image_path": "data/assets/demo_personal/DP0003.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0004",
+      "name": "Marimekko Top",
+      "description": "Top. Material: 64% cotton 36% acrylic. Colors: [, ', R, e, d, ', ].",
+      "category": "top",
+      "subcategory": "tshirt",
+      "layer_role": "base",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 64
+        },
+        {
+          "material": "acrylic",
+          "pct": 36
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 52,
+        "a": 68,
+        "b": 55
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "yaz",
+        "sonbahar"
+      ],
+      "thermal_category": "ince_pamuklu_tisort",
+      "image_path": "data/assets/demo_personal/DP0004.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0005",
+      "name": "Only Top",
+      "description": "Top. Material: 100% Polyester. Colors: [, ', P, i, n, k, ', ,,  , ', Y, e, l, l, o, w, ', ,,  , ', B, l, u, e, ', ,,  , ', M, u, l, t, i, c, o, l, o, r, ', ].",
+      "category": "top",
+      "subcategory": "tshirt",
+      "layer_role": "base",
+      "fabric_composition": [
+        {
+          "material": "polyester",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 58,
+        "a": 6,
+        "b": -4
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "yaz",
+        "sonbahar"
+      ],
+      "thermal_category": "ince_pamuklu_tisort",
+      "image_path": "data/assets/demo_personal/DP0005.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0006",
+      "name": "Tiger Of Sweden Trousers",
+      "description": "Trousers. Material: 54% polyester, 44% wool, 2% elastane. Colors: [, ', B, l, a, c, k, ', ].",
+      "category": "bottom",
+      "subcategory": "trousers",
+      "layer_role": "bottom",
+      "fabric_composition": [
+        {
+          "material": "polyester",
+          "pct": 54
+        },
+        {
+          "material": "wool",
+          "pct": 44
+        },
+        {
+          "material": "elastane",
+          "pct": 2
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 19,
+        "a": -3,
+        "b": -1
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "chino_pantolon",
+      "image_path": "data/assets/demo_personal/DP0006.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0007",
+      "name": "Donnway Shorts",
+      "description": "Shorts. Material: 70% polyester 30% cotton. Colors: [, ', G, r, e, y, ', ,,  , ', B, l, u, e, ', ,,  , ', W, h, i, t, e, ', ].",
+      "category": "bottom",
+      "subcategory": "shorts",
+      "layer_role": "bottom",
+      "fabric_composition": [
+        {
+          "material": "polyester",
+          "pct": 70
+        },
+        {
+          "material": "cotton",
+          "pct": 30
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 72,
+        "a": -1,
+        "b": -6
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz"
+      ],
+      "thermal_category": "sort",
+      "image_path": "data/assets/demo_personal/DP0007.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0008",
+      "name": "Topshop Top",
+      "description": "Top. Material: 96%Polyester, 4%Elastane. Colors: [, ', P, i, n, k, ', ,,  , ', W, h, i, t, e, ', ,,  , ', M, u, l, t, i, c, o, l, o, r, ', ].",
+      "category": "top",
+      "subcategory": "tshirt",
+      "layer_role": "base",
+      "fabric_composition": [
+        {
+          "material": "polyester",
+          "pct": 96
+        },
+        {
+          "material": "elastane",
+          "pct": 4
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 73,
+        "a": 14,
+        "b": 6
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "yaz",
+        "sonbahar"
+      ],
+      "thermal_category": "ince_pamuklu_tisort",
+      "image_path": "data/assets/demo_personal/DP0008.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0009",
+      "name": "Missing Top",
+      "description": "Top. Material: 51% Cotton 49% Viscose. Colors: [, ', B, l, a, c, k, ', ,,  , ', B, l, u, e, ', ,,  , ', G, r, e, e, n, ', ,,  , ', M, u, l, t, i, c, o, l, o, r, ', ].",
+      "category": "top",
+      "subcategory": "tshirt",
+      "layer_role": "base",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 51
+        },
+        {
+          "material": "viscose",
+          "pct": 49
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 25,
+        "a": -5,
+        "b": -4
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "yaz",
+        "sonbahar"
+      ],
+      "thermal_category": "ince_pamuklu_tisort",
+      "image_path": "data/assets/demo_personal/DP0009.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0010",
+      "name": "Gina Tricot Top",
+      "description": "Top. Material: 100% Polyester. Colors: [, ', P, i, n, k, ', ].",
+      "category": "top",
+      "subcategory": "tshirt",
+      "layer_role": "base",
+      "fabric_composition": [
+        {
+          "material": "polyester",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 85,
+        "a": 9,
+        "b": 1
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "yaz",
+        "sonbahar"
+      ],
+      "thermal_category": "ince_pamuklu_tisort",
+      "image_path": "data/assets/demo_personal/DP0010.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0011",
+      "name": "Cos Sweater",
+      "description": "Sweater. Material: 71% Cotton 29% Viscose. Colors: [, ', B, l, u, e, ', ].",
+      "category": "top",
+      "subcategory": "sweater",
+      "layer_role": "mid",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 71
+        },
+        {
+          "material": "viscose",
+          "pct": 29
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 43,
+        "a": -2,
+        "b": -7
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kalin_yun_kazak",
+      "image_path": "data/assets/demo_personal/DP0011.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0012",
+      "name": "H&m Shorts",
+      "description": "Shorts. Material: 100% Cotton. Colors: [, ', B, l, u, e, ', ].",
+      "category": "bottom",
+      "subcategory": "shorts",
+      "layer_role": "bottom",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 45,
+        "a": 0,
+        "b": -22
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz"
+      ],
+      "thermal_category": "sort",
+      "image_path": "data/assets/demo_personal/DP0012.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0013",
+      "name": "Dazy Skirt",
+      "description": "Skirt. Material: 100% Polyester. Colors: [, ', B, e, i, g, e, ', ,,  , ', B, l, a, c, k, ', ].",
+      "category": "bottom",
+      "subcategory": "skirt",
+      "layer_role": "bottom",
+      "fabric_composition": [
+        {
+          "material": "polyester",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 75,
+        "a": -2,
+        "b": -1
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "yaz"
+      ],
+      "thermal_category": "etek",
+      "image_path": "data/assets/demo_personal/DP0013.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0014",
+      "name": "Fbsisters (new Yorker) Dress",
+      "description": "Dress. Material: 100% viscose. Colors: [, ', M, u, l, t, i, c, o, l, o, r, ', ].",
+      "category": "dress",
+      "subcategory": "dress_midi",
+      "layer_role": "dress",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 55,
+        "a": 7,
+        "b": 3
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "yaz",
+        "sonbahar"
+      ],
+      "thermal_category": "midi_elbise",
+      "image_path": "data/assets/demo_personal/DP0014.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0015",
+      "name": "Missing Dress",
+      "description": "Dress. Material: 80% visc 20% poly. Colors: [, ', B, e, i, g, e, ', ,,  , ', B, l, a, c, k, ', ].",
+      "category": "dress",
+      "subcategory": "dress_midi",
+      "layer_role": "dress",
+      "fabric_composition": [
+        {
+          "material": "visc",
+          "pct": 80
+        },
+        {
+          "material": "poly",
+          "pct": 20
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 50,
+        "a": -1,
+        "b": 9
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "yaz",
+        "sonbahar"
+      ],
+      "thermal_category": "midi_elbise",
+      "image_path": "data/assets/demo_personal/DP0015.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0016",
+      "name": "Jewelly Jeans",
+      "description": "Jeans. Material: 100% viscose. Colors: [, ', B, l, u, e, ', ].",
+      "category": "bottom",
+      "subcategory": "jeans",
+      "layer_role": "bottom",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 43,
+        "a": -2,
+        "b": -19
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis",
+        "ilkbahar"
+      ],
+      "thermal_category": "jean_pantolon",
+      "image_path": "data/assets/demo_personal/DP0016.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0017",
+      "name": "H&m Dress",
+      "description": "Dress. Material: 100% polyester. Colors: [, ', B, l, a, c, k, ', ].",
+      "category": "dress",
+      "subcategory": "dress_midi",
+      "layer_role": "dress",
+      "fabric_composition": [
+        {
+          "material": "polyester",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 17,
+        "a": -3,
+        "b": 0
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "yaz",
+        "sonbahar"
+      ],
+      "thermal_category": "midi_elbise",
+      "image_path": "data/assets/demo_personal/DP0017.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0018",
+      "name": "Happy Holly Trousers",
+      "description": "Trousers. Material: 63% viscose 37% nylone. Colors: [, ', B, l, a, c, k, ', ].",
+      "category": "bottom",
+      "subcategory": "trousers",
+      "layer_role": "bottom",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 63
+        },
+        {
+          "material": "nylone",
+          "pct": 37
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 14,
+        "a": -3,
+        "b": 0
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "chino_pantolon",
+      "image_path": "data/assets/demo_personal/DP0018.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0019",
+      "name": "Isolde Trousers",
+      "description": "Trousers. Material: 100% Viscose. Colors: [, ', B, l, a, c, k, ', ].",
+      "category": "bottom",
+      "subcategory": "trousers",
+      "layer_role": "bottom",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 15,
+        "a": -4,
+        "b": 0
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "chino_pantolon",
+      "image_path": "data/assets/demo_personal/DP0019.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0020",
+      "name": "Kaileigh Sweater",
+      "description": "Sweater. Material: Body: 100% viscose; chest: 100% polyester. Colors: [, ', B, l, a, c, k, ', ,,  , ', W, h, i, t, e, ', ,,  , ', G, r, e, y, ', ].",
+      "category": "top",
+      "subcategory": "sweater",
+      "layer_role": "mid",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 100
+        },
+        {
+          "material": "polyester",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 32,
+        "a": -4,
+        "b": -2
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kalin_yun_kazak",
+      "image_path": "data/assets/demo_personal/DP0020.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0021",
+      "name": "Lindex Skirt",
+      "description": "Skirt. Material: 52% polyester, 14% viscose, 5% elastane. Colors: [, ', B, l, a, c, k, ', ].",
+      "category": "bottom",
+      "subcategory": "skirt",
+      "layer_role": "bottom",
+      "fabric_composition": [
+        {
+          "material": "polyester",
+          "pct": 52
+        },
+        {
+          "material": "viscose",
+          "pct": 14
+        },
+        {
+          "material": "elastane",
+          "pct": 5
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 13,
+        "a": -4,
+        "b": 0
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "yaz"
+      ],
+      "thermal_category": "etek",
+      "image_path": "data/assets/demo_personal/DP0021.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0022",
+      "name": "Missing Blouse",
+      "description": "Blouse. Material: 100% polyester. Colors: [, ', B, l, a, c, k, ', ,,  , ', W, h, i, t, e, ', ].",
+      "category": "top",
+      "subcategory": "blouse",
+      "layer_role": "mid",
+      "fabric_composition": [
+        {
+          "material": "polyester",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 33,
+        "a": -4,
+        "b": -5
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "pamuklu_gomlek",
+      "image_path": "data/assets/demo_personal/DP0022.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0023",
+      "name": "Soul River Blouse",
+      "description": "Blouse. Material: 100% polyester. Colors: [, ', B, l, u, e, ', ,,  , ', W, h, i, t, e, ', ].",
+      "category": "top",
+      "subcategory": "blouse",
+      "layer_role": "mid",
+      "fabric_composition": [
+        {
+          "material": "polyester",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 47,
+        "a": -2,
+        "b": -11
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "pamuklu_gomlek",
+      "image_path": "data/assets/demo_personal/DP0023.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0024",
+      "name": "Mos Mosh Sweater",
+      "description": "Sweater. Material: 66% cotton, 34% viscose. Colors: [, ', B, e, i, g, e, ', ].",
+      "category": "top",
+      "subcategory": "sweater",
+      "layer_role": "mid",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 66
+        },
+        {
+          "material": "viscose",
+          "pct": 34
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 56,
+        "a": 5,
+        "b": 23
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kalin_yun_kazak",
+      "image_path": "data/assets/demo_personal/DP0024.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0025",
+      "name": "H&m Cardigan",
+      "description": "Cardigan. Material: 63% acrylic, 37% wool. Colors: [, ', B, l, u, e, ', ,,  , ', R, e, d, ', ,,  , ', G, r, e, e, n, ', ].",
+      "category": "top",
+      "subcategory": "cardigan",
+      "layer_role": "mid",
+      "fabric_composition": [
+        {
+          "material": "acrylic",
+          "pct": 63
+        },
+        {
+          "material": "wool",
+          "pct": 37
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 11,
+        "a": -1,
+        "b": -7
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_triko",
+      "image_path": "data/assets/demo_personal/DP0025.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0026",
+      "name": "Dresses Unlimited Blazer",
+      "description": "Blazer. Material: 75% Polyester, 25% Viscose. Colors: [, ', T, u, r, q, u, o, i, s, e, ', ].",
+      "category": "outer",
+      "subcategory": "blazer",
+      "layer_role": "outer",
+      "fabric_composition": [
+        {
+          "material": "polyester",
+          "pct": 75
+        },
+        {
+          "material": "viscose",
+          "pct": 25
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.85,
+      "color_lab": {
+        "L": 92,
+        "a": -4,
+        "b": -4
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "ince_ceket",
+      "image_path": "data/assets/demo_personal/DP0026.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0027",
+      "name": "Lindex Trousers",
+      "description": "Trousers. Material: 100% poly. Colors: [, ', B, l, a, c, k, ', ].",
+      "category": "bottom",
+      "subcategory": "trousers",
+      "layer_role": "bottom",
+      "fabric_composition": [
+        {
+          "material": "poly",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 15,
+        "a": -5,
+        "b": -1
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "chino_pantolon",
+      "image_path": "data/assets/demo_personal/DP0027.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0028",
+      "name": "Jh Collection Blazer",
+      "description": "Blazer. Material: 50% viscose, 50% polyester. Colors: [, ', R, e, d, ', ].",
+      "category": "outer",
+      "subcategory": "blazer",
+      "layer_role": "outer",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 50
+        },
+        {
+          "material": "polyester",
+          "pct": 50
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.85,
+      "color_lab": {
+        "L": 54,
+        "a": 63,
+        "b": 52
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "ince_ceket",
+      "image_path": "data/assets/demo_personal/DP0028.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0029",
+      "name": "Kappahl Trousers",
+      "description": "Trousers. Material: 98% cotton 2% elastane. Colors: [, ', G, r, e, e, n, ', ].",
+      "category": "bottom",
+      "subcategory": "trousers",
+      "layer_role": "bottom",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 98
+        },
+        {
+          "material": "elastane",
+          "pct": 2
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 37,
+        "a": -3,
+        "b": 7
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "chino_pantolon",
+      "image_path": "data/assets/demo_personal/DP0029.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0030",
+      "name": "Indiska Trousers",
+      "description": "Trousers. Material: 67%Viscos,29Polyamid,5%Elastan. Colors: [, ', B, e, i, g, e, ', ].",
+      "category": "bottom",
+      "subcategory": "trousers",
+      "layer_role": "bottom",
+      "fabric_composition": [
+        {
+          "material": "viscos",
+          "pct": 67
+        },
+        {
+          "material": "elastane",
+          "pct": 5
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 76,
+        "a": -1,
+        "b": 8
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "chino_pantolon",
+      "image_path": "data/assets/demo_personal/DP0030.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0031",
+      "name": "Kappahl Blouse",
+      "description": "Blouse. Material: 100% polyester. Colors: [, ', B, l, u, e, ', ,,  , ', W, h, i, t, e, ', ].",
+      "category": "top",
+      "subcategory": "blouse",
+      "layer_role": "mid",
+      "fabric_composition": [
+        {
+          "material": "polyester",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 45,
+        "a": 0,
+        "b": -21
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "pamuklu_gomlek",
+      "image_path": "data/assets/demo_personal/DP0031.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0032",
+      "name": "Melka (gammalt Svenskt)? Shorts",
+      "description": "Shorts. Material: 75% cotton, 25% polyester. Colors: [, ', B, e, i, g, e, ', ,,  , ', G, r, e, e, n, ', ,,  , ', B, l, u, e, ', ,,  , ', M, u, l, t, i, c, o, l, o, r, ', ].",
+      "category": "bottom",
+      "subcategory": "shorts",
+      "layer_role": "bottom",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 75
+        },
+        {
+          "material": "polyester",
+          "pct": 25
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 51,
+        "a": -2,
+        "b": 2
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "yaz"
+      ],
+      "thermal_category": "sort",
+      "image_path": "data/assets/demo_personal/DP0032.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0033",
+      "name": "Ellos Shirt",
+      "description": "Shirt. Material: 100% cotton. Colors: [, ', W, h, i, t, e, ', ].",
+      "category": "top",
+      "subcategory": "shirt",
+      "layer_role": "mid",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 89,
+        "a": 0,
+        "b": -4
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "pamuklu_gomlek",
+      "image_path": "data/assets/demo_personal/DP0033.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0034",
+      "name": "Na-kd Dress",
+      "description": "Dress. Material: 95% viscose, 5 % elastan. Colors: [, ', Y, e, l, l, o, w, ', ].",
+      "category": "dress",
+      "subcategory": "dress_midi",
+      "layer_role": "dress",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 95
+        },
+        {
+          "material": "elastane",
+          "pct": 5
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 65,
+        "a": -4,
+        "b": 34
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "yaz",
+        "sonbahar"
+      ],
+      "thermal_category": "midi_elbise",
+      "image_path": "data/assets/demo_personal/DP0034.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0035",
+      "name": "Logg (h&m) Hoodie",
+      "description": "Hoodie. Material: 100% cotton. Colors: [, ', B, l, a, c, k, ', ].",
+      "category": "top",
+      "subcategory": "hoodie",
+      "layer_role": "mid",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 13,
+        "a": -4,
+        "b": -1
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "polar_sweatshirt",
+      "image_path": "data/assets/demo_personal/DP0035.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0036",
+      "name": "H&m Cardigan",
+      "description": "Cardigan. Material: 100% Cotton. Colors: [, ', B, l, a, c, k, ', ].",
+      "category": "top",
+      "subcategory": "cardigan",
+      "layer_role": "mid",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 16,
+        "a": -5,
+        "b": 0
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "ilkbahar"
+      ],
+      "thermal_category": "ince_triko",
+      "image_path": "data/assets/demo_personal/DP0036.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0037",
+      "name": "Lindex Sweater",
+      "description": "Sweater. Material: 75% Polyester, 20% Viscose, 5% Elastane. Colors: [, ', G, r, e, e, n, ', ].",
+      "category": "top",
+      "subcategory": "sweater",
+      "layer_role": "mid",
+      "fabric_composition": [
+        {
+          "material": "polyester",
+          "pct": 75
+        },
+        {
+          "material": "viscose",
+          "pct": 20
+        },
+        {
+          "material": "elastane",
+          "pct": 5
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 74,
+        "a": -6,
+        "b": 0
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "kalin_yun_kazak",
+      "image_path": "data/assets/demo_personal/DP0037.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0038",
+      "name": "H&m Shirt",
+      "description": "Shirt. Material: 66% cotton 34% nylone . Colors: [, ', B, l, a, c, k, ', ].",
+      "category": "top",
+      "subcategory": "shirt",
+      "layer_role": "mid",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 66
+        },
+        {
+          "material": "nylone",
+          "pct": 34
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 17,
+        "a": -4,
+        "b": -2
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "pamuklu_gomlek",
+      "image_path": "data/assets/demo_personal/DP0038.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0039",
+      "name": "Bondelid Blouse",
+      "description": "Blouse. Material: 54% Cotton, 46% Polyester. Colors: [, ', P, i, n, k, ', ].",
+      "category": "top",
+      "subcategory": "blouse",
+      "layer_role": "mid",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 54
+        },
+        {
+          "material": "polyester",
+          "pct": 46
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.7,
+      "color_lab": {
+        "L": 85,
+        "a": 0,
+        "b": 7
+      },
+      "season_primary": "ilkbahar",
+      "season_usable": [
+        "ilkbahar",
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "pamuklu_gomlek",
+      "image_path": "data/assets/demo_personal/DP0039.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0040",
+      "name": "Danwear Jacket",
+      "description": "Jacket. Material: 51% poly, 49% cott. Colors: [, ', B, e, i, g, e, ', ].",
+      "category": "outer",
+      "subcategory": "jacket",
+      "layer_role": "outer",
+      "fabric_composition": [
+        {
+          "material": "poly",
+          "pct": 51
+        },
+        {
+          "material": "cott",
+          "pct": 49
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.85,
+      "color_lab": {
+        "L": 76,
+        "a": 0,
+        "b": 0
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "ince_ceket",
+      "image_path": "data/assets/demo_personal/DP0040.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0041",
+      "name": "Only Winter Jacket",
+      "description": "Winter Jacket. Material: 85%Polyester, 15%Cotton. Colors: [, ', B, e, i, g, e, ', ].",
+      "category": "outer",
+      "subcategory": "padded_coat",
+      "layer_role": "outer",
+      "fabric_composition": [
+        {
+          "material": "polyester",
+          "pct": 85
+        },
+        {
+          "material": "cotton",
+          "pct": 15
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.85,
+      "color_lab": {
+        "L": 64,
+        "a": -1,
+        "b": 4
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis"
+      ],
+      "thermal_category": "kalin_mont",
+      "image_path": "data/assets/demo_personal/DP0041.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0042",
+      "name": "Melka (gammalt Svenskt)? Jacket",
+      "description": "Jacket. Material: Exterior: 52% cotton, 48% polyester; Lining: 66% viscose, 34% nylon. Colors: [, ', B, l, u, e, ', ,,  , ', B, e, i, g, e, ', ].",
+      "category": "outer",
+      "subcategory": "jacket",
+      "layer_role": "outer",
+      "fabric_composition": [
+        {
+          "material": "cotton",
+          "pct": 52
+        },
+        {
+          "material": "polyester",
+          "pct": 48
+        },
+        {
+          "material": "viscose",
+          "pct": 66
+        },
+        {
+          "material": "nylon",
+          "pct": 34
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.85,
+      "color_lab": {
+        "L": 18,
+        "a": -2,
+        "b": -7
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "ince_ceket",
+      "image_path": "data/assets/demo_personal/DP0042.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0043",
+      "name": "Kappahl Jacket",
+      "description": "Jacket. Material: 100% polyester. Colors: [, ', B, e, i, g, e, ', ].",
+      "category": "outer",
+      "subcategory": "jacket",
+      "layer_role": "outer",
+      "fabric_composition": [
+        {
+          "material": "polyester",
+          "pct": 100
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.85,
+      "color_lab": {
+        "L": 74,
+        "a": -2,
+        "b": 4
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "ince_ceket",
+      "image_path": "data/assets/demo_personal/DP0043.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0044",
+      "name": "Colours Woman Jacket",
+      "description": "Jacket. Material: 55% viscose, 45% nylon. Colors: [, ', W, h, i, t, e, ', ].",
+      "category": "outer",
+      "subcategory": "jacket",
+      "layer_role": "outer",
+      "fabric_composition": [
+        {
+          "material": "viscose",
+          "pct": 55
+        },
+        {
+          "material": "nylon",
+          "pct": 45
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.85,
+      "color_lab": {
+        "L": 87,
+        "a": -1,
+        "b": 0
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "ince_ceket",
+      "image_path": "data/assets/demo_personal/DP0044.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0045",
+      "name": "Holly And Whyte (lindex) Blazer",
+      "description": "Blazer. Material: 55% Lin, 45% Viskos. Colors: [, ', B, l, u, e, ', ,,  , ', W, h, i, t, e, ', ].",
+      "category": "outer",
+      "subcategory": "blazer",
+      "layer_role": "outer",
+      "fabric_composition": [
+        {
+          "material": "linen",
+          "pct": 55
+        },
+        {
+          "material": "viscose",
+          "pct": 45
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.85,
+      "color_lab": {
+        "L": 76,
+        "a": 1,
+        "b": -7
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "sonbahar",
+        "kis"
+      ],
+      "thermal_category": "ince_ceket",
+      "image_path": "data/assets/demo_personal/DP0045.jpg",
+      "image_source_url": "hf://fnauman/fashion-second-hand-front-only-rgb",
+      "source": "demo_fnauman",
+      "license": "CC-BY-4.0 (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0046",
+      "name": "iPanema Women Red Flip Flops",
+      "description": "iPanema Women Red Flip Flops: Heels Casual Women, Red colour, demo footwear.",
+      "category": "footwear",
+      "subcategory": "sandals",
+      "layer_role": "footwear",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 60
+        },
+        {
+          "material": "polyester",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.15,
+      "color_lab": {
+        "L": 42,
+        "a": 48,
+        "b": 28
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "bot",
+      "image_path": "data/assets/demo_personal/DP0046.jpg",
+      "image_source_url": "hf://benitomartin/fashion-product-images-small-384x512/49839",
+      "source": "demo_fashion_product",
+      "license": "MIT (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0047",
+      "name": "ADIDAS Women Lavender Hagkok Sports Shoes",
+      "description": "ADIDAS Women Lavender Hagkok Sports Shoes: Heels Sports Women, Lavender colour, demo footwear.",
+      "category": "footwear",
+      "subcategory": "sneakers",
+      "layer_role": "footwear",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 60
+        },
+        {
+          "material": "polyester",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.15,
+      "color_lab": {
+        "L": 55,
+        "a": 0,
+        "b": 0
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "kis",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "bot",
+      "image_path": "data/assets/demo_personal/DP0047.jpg",
+      "image_source_url": "hf://benitomartin/fashion-product-images-small-384x512/46086",
+      "source": "demo_fashion_product",
+      "license": "MIT (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0048",
+      "name": "Carlton London Women Black & Gold Toned Flats",
+      "description": "Carlton London Women Black & Gold Toned Flats: Heels Casual Women, Black colour, demo footwear.",
+      "category": "footwear",
+      "subcategory": "flats",
+      "layer_role": "footwear",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 60
+        },
+        {
+          "material": "polyester",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.15,
+      "color_lab": {
+        "L": 12,
+        "a": 0,
+        "b": 0
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "bot",
+      "image_path": "data/assets/demo_personal/DP0048.jpg",
+      "image_source_url": "hf://benitomartin/fashion-product-images-small-384x512/59051",
+      "source": "demo_fashion_product",
+      "license": "MIT (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0049",
+      "name": "Nike Women Free Run Pink Sports Shoes",
+      "description": "Nike Women Free Run Pink Sports Shoes: Heels Sports Women, Pink colour, demo footwear.",
+      "category": "footwear",
+      "subcategory": "sneakers",
+      "layer_role": "footwear",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 60
+        },
+        {
+          "material": "polyester",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.15,
+      "color_lab": {
+        "L": 72,
+        "a": 28,
+        "b": 8
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "kis",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "bot",
+      "image_path": "data/assets/demo_personal/DP0049.jpg",
+      "image_source_url": "hf://benitomartin/fashion-product-images-small-384x512/36137",
+      "source": "demo_fashion_product",
+      "license": "MIT (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0050",
+      "name": "Catwalk Women Leather Brown Flats",
+      "description": "Catwalk Women Leather Brown Flats: Heels Casual Women, Brown colour, demo footwear.",
+      "category": "footwear",
+      "subcategory": "flats",
+      "layer_role": "footwear",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 60
+        },
+        {
+          "material": "polyester",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.15,
+      "color_lab": {
+        "L": 38,
+        "a": 12,
+        "b": 22
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "bot",
+      "image_path": "data/assets/demo_personal/DP0050.jpg",
+      "image_source_url": "hf://benitomartin/fashion-product-images-small-384x512/2886",
+      "source": "demo_fashion_product",
+      "license": "MIT (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0051",
+      "name": "Catwalk Women Leather Flats",
+      "description": "Catwalk Women Leather Flats: Heels Casual Women, Brown colour, demo footwear.",
+      "category": "footwear",
+      "subcategory": "heels",
+      "layer_role": "footwear",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 60
+        },
+        {
+          "material": "polyester",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.15,
+      "color_lab": {
+        "L": 38,
+        "a": 12,
+        "b": 22
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "bot",
+      "image_path": "data/assets/demo_personal/DP0051.jpg",
+      "image_source_url": "hf://benitomartin/fashion-product-images-small-384x512/2872",
+      "source": "demo_fashion_product",
+      "license": "MIT (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0052",
+      "name": "Rocia Women Black Flats",
+      "description": "Rocia Women Black Flats: Heels Casual Women, Black colour, demo footwear.",
+      "category": "footwear",
+      "subcategory": "heels",
+      "layer_role": "footwear",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 60
+        },
+        {
+          "material": "polyester",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.15,
+      "color_lab": {
+        "L": 12,
+        "a": 0,
+        "b": 0
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "bot",
+      "image_path": "data/assets/demo_personal/DP0052.jpg",
+      "image_source_url": "hf://benitomartin/fashion-product-images-small-384x512/54118",
+      "source": "demo_fashion_product",
+      "license": "MIT (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0053",
+      "name": "Skechers Women Green Shoe",
+      "description": "Skechers Women Green Shoe: Heels Casual Women, Green colour, demo footwear.",
+      "category": "footwear",
+      "subcategory": "loafers",
+      "layer_role": "footwear",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 60
+        },
+        {
+          "material": "polyester",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.15,
+      "color_lab": {
+        "L": 48,
+        "a": -22,
+        "b": 12
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "bot",
+      "image_path": "data/assets/demo_personal/DP0053.jpg",
+      "image_source_url": "hf://benitomartin/fashion-product-images-small-384x512/4140",
+      "source": "demo_fashion_product",
+      "license": "MIT (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0054",
+      "name": "Reebok Women Charcoal Grey Fuel Techno Sports Shoes",
+      "description": "Reebok Women Charcoal Grey Fuel Techno Sports Shoes: Heels Sports Women, Charcoal colour, demo footwear.",
+      "category": "footwear",
+      "subcategory": "sneakers",
+      "layer_role": "footwear",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 60
+        },
+        {
+          "material": "polyester",
+          "pct": 40
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.15,
+      "color_lab": {
+        "L": 55,
+        "a": 0,
+        "b": 0
+      },
+      "season_primary": "yaz",
+      "season_usable": [
+        "kis",
+        "sonbahar",
+        "yaz"
+      ],
+      "thermal_category": "bot",
+      "image_path": "data/assets/demo_personal/DP0054.jpg",
+      "image_source_url": "hf://benitomartin/fashion-product-images-small-384x512/43356",
+      "source": "demo_fashion_product",
+      "license": "MIT (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0055",
+      "name": "Crocs Dora Boots Pink Sandals",
+      "description": "Crocs Dora Boots Pink Sandals: Boots Women demo",
+      "category": "footwear",
+      "subcategory": "boots",
+      "layer_role": "footwear",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 70
+        },
+        {
+          "material": "rubber",
+          "pct": 30
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.18,
+      "color_lab": {
+        "L": 72,
+        "a": 28,
+        "b": 8
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "bot",
+      "image_path": "data/assets/demo_personal/DP0055.jpg",
+      "image_source_url": "hf://benitomartin/fashion-product-images-small-384x512/8574",
+      "source": "demo_fashion_product",
+      "license": "MIT (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0056",
+      "name": "Timberland Women Femmes Brown Boot",
+      "description": "Timberland Women Femmes Brown Boot: Boots Women demo",
+      "category": "footwear",
+      "subcategory": "boots",
+      "layer_role": "footwear",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 70
+        },
+        {
+          "material": "rubber",
+          "pct": 30
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.18,
+      "color_lab": {
+        "L": 38,
+        "a": 12,
+        "b": 22
+      },
+      "season_primary": "sonbahar",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "bot",
+      "image_path": "data/assets/demo_personal/DP0056.jpg",
+      "image_source_url": "hf://benitomartin/fashion-product-images-small-384x512/13360",
+      "source": "demo_fashion_product",
+      "license": "MIT (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    },
+    {
+      "id": "DP0057",
+      "name": "Catwalk Women Leather Cut Boot Beige Flats",
+      "description": "Catwalk Women Leather Cut Boot Beige Flats: Boots Women demo",
+      "category": "footwear",
+      "subcategory": "boots",
+      "layer_role": "footwear",
+      "fabric_composition": [
+        {
+          "material": "leather",
+          "pct": 70
+        },
+        {
+          "material": "rubber",
+          "pct": 30
+        }
+      ],
+      "layers": null,
+      "sleeve": null,
+      "coverage_ratio": 0.18,
+      "color_lab": {
+        "L": 78,
+        "a": 4,
+        "b": 18
+      },
+      "season_primary": "kis",
+      "season_usable": [
+        "kis",
+        "sonbahar"
+      ],
+      "thermal_category": "bot",
+      "image_path": "data/assets/demo_personal/DP0057.jpg",
+      "image_source_url": "hf://benitomartin/fashion-product-images-small-384x512/2885",
+      "source": "demo_fashion_product",
+      "license": "MIT (demo only)",
+      "snapshot_date": "2026-06-14",
+      "active": true,
+      "training_only": false,
+      "gender": "women",
+      "demo_only": true
+    }
+  ]
+}

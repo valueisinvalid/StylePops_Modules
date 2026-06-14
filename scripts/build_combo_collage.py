@@ -58,21 +58,47 @@ def _load_font(size: int = 13) -> tuple[ImageFont.FreeTypeFont | ImageFont.Image
     return _FONT, _FONT_TR
 
 
-def _slot_label(garment: dict) -> str:
+_ACC_LABEL_TR = {"scarf": "ATKI", "hat": "ŞAPKA", "gloves": "ELDİVEN", "tights": "ÇORAP"}
+
+
+def _slot_label(garment: dict, combo_pieces: list[dict] | None = None) -> str:
+    from stylepops_core import is_cardigan, cardigan_display_label, is_warm_mid, is_thin_base_inner
     slot = garment_slot(garment)
     if slot in ("base", "mid") and (is_dress_piece(garment) or is_everyday_dress(garment)):
         slot = "dress"
-    label = SLOT_LABEL_TR.get(slot, slot.upper()[:4])
+    if is_cardigan(garment):
+        label = cardigan_display_label(garment, combo_pieces)
+    elif combo_pieces and any(is_warm_mid(p) or is_cardigan(p) for p in combo_pieces):
+        from stylepops_core import is_warm_mid, is_thin_base_inner
+        if is_thin_base_inner(garment):
+            sub = garment.get("subcategory", "")
+            label = "GÖMLEK" if sub in ("shirt", "blouse") else "İÇ"
+        elif is_warm_mid(garment):
+            label = "KAZAK"
+        else:
+            label = SLOT_LABEL_TR.get(slot, slot.upper()[:4])
+    elif slot == "accessory":
+        label = _ACC_LABEL_TR.get(garment.get("subcategory"), "AKS")
+    else:
+        label = SLOT_LABEL_TR.get(slot, slot.upper()[:4])
     _, tr_ok = _load_font()
     if not tr_ok:
         ascii_map = {
             "İÇ": "IC",
             "ÜST": "UST",
             "DIŞ": "DIS",
+            "HIRKA": "HIRKA",
+            "KAZAK": "KAZAK",
+            "GÖMLEK": "GOMLEK",
+            "İÇ": "IC",
             "ALT": "ALT",
             "ELBİSE": "ELBISE",
             "AYAKKABI": "AYAK",
             "AKS": "AKS",
+            "ATKI": "ATKI",
+            "ŞAPKA": "SAPKA",
+            "ELDİVEN": "ELDIVEN",
+            "ÇORAP": "CORAP",
         }
         label = ascii_map.get(label, label)
     return label
@@ -117,6 +143,7 @@ def build_combo_collage(
     out_path: Path,
     title: str = "",
 ) -> bool:
+    combo_pieces = [garments[pid] for pid in piece_ids if pid in garments]
     items: list[tuple[Image.Image, str]] = []
     for pid in piece_ids:
         g = garments.get(pid)
@@ -124,7 +151,7 @@ def build_combo_collage(
             continue
         t = _load_thumb(g, CELL, CELL)
         if t:
-            items.append((t, _slot_label(g)))
+            items.append((t, _slot_label(g, combo_pieces)))
     if not items:
         return False
 
@@ -175,6 +202,7 @@ def build_ab_collage(
     for side, piece_ids, side_label in ((0, combo_a, label_a), (1, combo_b, label_b)):
         x_off = side * (half_w + PADDING)
         draw.text((x_off + PADDING, 4), side_label, fill=(30, 30, 35), font=font)
+        side_pieces = [garments[pid] for pid in piece_ids if pid in garments]
         for i, pid in enumerate(piece_ids[:4]):
             g = garments.get(pid)
             if not g:
@@ -186,7 +214,7 @@ def build_ab_collage(
             x = x_off + PADDING + col * (slot_w + PADDING)
             y = 24 + row * (slot_h + PADDING)
             canvas.paste(t, (x, y))
-            _draw_label(draw, x, y + ch + 2, _slot_label(g))
+            _draw_label(draw, x, y + ch + 2, _slot_label(g, side_pieces))
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     canvas.save(out_path, format="JPEG", quality=92)

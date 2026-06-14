@@ -1,0 +1,11 @@
+LV parça: 1544 — orijinaller indiriliyor + FashionCLIP doğrulama
+  … 200/1544 (96s) uyum 193 fark 7
+  … 400/1544 (200s) uyum 386 fark 14
+  … 600/1544 (297s) uyum 571 fark 29
+  … 800/1544 (401s) uyum 741 fark 59
+  … 1000/1544 (498s) uyum 930 fark 70
+  … 1200/1544 (594s) uyum 1091 fark 109
+  … 1400/1544 (684s) uyum 1242 fark 158
+
+Tamam (767s). Uyum 1366/1544 (88%), orijinali yok 0
+Rapor → /Users/o_7/StylePops_Modules/data/visual/lv_visual_verify.json · Cache güncellendi → /Users/o_7/StylePops_Modules/data/visual/clip_embeddings.npz

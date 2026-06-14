@@ -8,7 +8,7 @@
     "compatibility_head": "outputs/compatibility_head_v1.joblib"
   },
   "notes": {
-    "production_wardrobe": "Temizlenmiş Livostyle + 44K filtreli takviye (2400 SP*)",
+    "production_wardrobe": "Temizlenmiş Livostyle + 44K filtreli takviye (1500 SP*)",
     "training_corpus": "Fashion Product Images Small 44K MIT — estetik eğitim, uygulamada gösterilmez"
   }
 }

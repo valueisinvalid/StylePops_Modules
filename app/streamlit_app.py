@@ -22,9 +22,15 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from aesthetic_compatibility import aesthetic_compatibility_score, load_garments, make_aesthetic_fn
 from stylepops_core import (
     apparent_temperature,
+    cardigan_display_label,
+    garment_slot,
     generate_layered_candidates,
     interpolate_hedef_clo,
+    is_cardigan,
+    is_dress_piece,
+    is_thin_base_inner,
     is_valid_outfit_combo,
+    is_warm_mid,
     score_combination,
 )
 
@@ -34,8 +40,24 @@ PREFS_LOG = VISUAL / "preferences_log.csv"
 COMBO_SEL_LOG = VISUAL / "combo_selections.csv"
 
 
+@st.cache_data(show_spinner=False)
+def _image_bytes(path_str: str, mtime_ns: int) -> bytes | None:
+    """Diskten oku; mtime önbellek anahtarı — dosya değişince yenilenir."""
+    try:
+        return Path(path_str).read_bytes()
+    except OSError:
+        return None
+
+
+def _data_mtime(path: Path) -> float:
+    try:
+        return path.stat().st_mtime
+    except OSError:
+        return 0.0
+
+
 @st.cache_data
-def load_garments_cached() -> dict:
+def load_garments_cached(_epoch_mtime: float) -> dict:
     sys.path.insert(0, str(ROOT / "scripts"))
     from inventory_loader import load_production_garments, catalog_meta
 
@@ -46,7 +68,7 @@ def load_garments_cached() -> dict:
 
 
 @st.cache_data
-def load_combos() -> list[dict]:
+def load_combos(_csv_mtime: float) -> list[dict]:
     path = VISUAL / "combinations_visual.csv"
     if not path.exists():
         return []
@@ -55,12 +77,27 @@ def load_combos() -> list[dict]:
 
 
 @st.cache_data
-def load_ab_pairs() -> list[dict]:
+def load_ab_pairs(_csv_mtime: float) -> list[dict]:
     path = VISUAL / "ab_pairs.csv"
     if not path.exists():
         return []
     with path.open(encoding="utf-8") as f:
         return list(csv.DictReader(f))
+
+
+def _garments_mtime() -> float:
+    return max(
+        _data_mtime(VISUAL / "garments_production.json"),
+        _data_mtime(VISUAL / "data_epoch.json"),
+    )
+
+
+def _combos_mtime() -> float:
+    return _data_mtime(VISUAL / "combinations_visual.csv")
+
+
+def _ab_mtime() -> float:
+    return _data_mtime(VISUAL / "ab_pairs.csv")
 
 
 def load_lookups():
@@ -107,18 +144,27 @@ def _image_width() -> str:
 
 
 def st_image(path: str, width: int | None = None) -> None:
-    if width is not None:
-        try:
-            st.image(path, width=width)
-            return
-        except TypeError:
-            st.image(path)
-            return
-    w = _image_width()
+    """Görseli byte olarak yükle — dosya yolu ile önbellek ID çakışması olmasın."""
+    p = Path(path)
+    if not p.is_file():
+        st.caption("—")
+        return
     try:
-        st.image(path, width=w)
+        data = _image_bytes(str(p.resolve()), int(p.stat().st_mtime_ns))
+    except OSError:
+        st.caption("—")
+        return
+    if not data:
+        st.caption("—")
+        return
+    w = width if width is not None else _image_width()
+    try:
+        st.image(data, width=w)
     except TypeError:
-        st.image(path, use_container_width=True)
+        if width is not None:
+            st.image(data)
+        else:
+            st.image(data, use_container_width=True)
 
 
 def season_map(scenario_id: str) -> str:
@@ -310,7 +356,7 @@ def _refresh_ab_queue(pairs: list[dict], combos: list[dict], garments: dict) -> 
 
 
 def render_ab_test(pairs: list[dict], garments: dict) -> None:
-    combos = load_combos()
+    combos = load_combos(_combos_mtime())
     pairs = _filter_valid_ab_pairs(pairs, combos, garments)
 
     gkey = "women"
@@ -370,7 +416,7 @@ def render_ab_test(pairs: list[dict], garments: dict) -> None:
         st_image(str(collage), width=760)
     else:
         col1, col2 = st.columns(2)
-        combos_by_id = {c["combo_id"]: c for c in load_combos()}
+        combos_by_id = {c["combo_id"]: c for c in load_combos(_combos_mtime())}
         for col, cid, label in ((col1, pair["combo_a_id"], "A"), (col2, pair["combo_b_id"], "B")):
             with col:
                 st.markdown(f"**{label}** — {cid}")
@@ -434,11 +480,26 @@ _SLOT_TR = {
 }
 
 
-def _piece_slot_label(g: dict) -> str:
-    from stylepops_core import garment_slot, is_dress_piece
+_ACC_TR = {"scarf": "ATKI", "hat": "ŞAPKA", "gloves": "ELDİVEN", "tights": "ÇORAP"}
+
+
+def _piece_slot_label(g: dict, combo_pieces: list[dict] | None = None) -> str:
     if is_dress_piece(g):
         return "ELBİSE"
-    return _SLOT_TR.get(garment_slot(g), "")
+    if is_cardigan(g):
+        return cardigan_display_label(g, combo_pieces)
+    has_warm = combo_pieces and any(is_warm_mid(p) or is_cardigan(p) for p in combo_pieces)
+    if has_warm and is_thin_base_inner(g):
+        sub = g.get("subcategory", "")
+        if sub in ("shirt", "blouse"):
+            return "GÖMLEK"
+        return "İÇ"
+    if is_warm_mid(g):
+        return "KAZAK"
+    slot = garment_slot(g)
+    if slot == "accessory":
+        return _ACC_TR.get(g.get("subcategory"), "AKSESUAR")
+    return _SLOT_TR.get(slot, "")
 
 
 def render_combo_select(combos: list[dict], garments: dict) -> None:
@@ -490,6 +551,7 @@ def render_combo_select(combos: list[dict], garments: dict) -> None:
     combo = queue[0]
     cid = combo["combo_id"]
     piece_ids = [p for p in combo["piece_ids"].split("|") if p in garments]
+    combo_pieces = [garments[pid] for pid in piece_ids]
 
     st.markdown(f"### {cid}")
     cols = st.columns(len(piece_ids))
@@ -499,7 +561,7 @@ def render_combo_select(combos: list[dict], garments: dict) -> None:
             p = ROOT / g.get("image_path", "")
             if p.exists():
                 st_image(str(p))
-            st.caption(f"**{_piece_slot_label(g)}**")
+            st.caption(f"**{_piece_slot_label(g, combo_pieces)}**")
             st.caption(g["name"][:32])
 
     st.caption(
@@ -573,9 +635,9 @@ def main() -> None:
     st.title("StylePops — Görsel Envanter")
     st.caption("Livostyle MIT · FashionCLIP estetik · Katmanlı termal öneri")
 
-    garments = load_garments_cached()
-    combos = load_combos()
-    pairs = load_ab_pairs()
+    garments = load_garments_cached(_garments_mtime())
+    combos = load_combos(_combos_mtime())
+    pairs = load_ab_pairs(_ab_mtime())
 
     if not garments:
         st.error(

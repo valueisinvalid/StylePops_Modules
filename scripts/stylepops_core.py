@@ -35,7 +35,10 @@ def effective_clo(garment: dict, thermal_cats: dict, coverage_defaults: dict) ->
     thermal_category değerleri parça bazlı tipik Clo'yu temsil eder (ASHRAE ölçeği).
     Kısa etek vs uzun etek / pantolon farkı coverage_ratio ile ölçeklenir.
     """
-    base = thermal_cats[garment["thermal_category"]]["clo"]
+    tc = thermal_cats.get(garment.get("thermal_category"))
+    if tc is None:
+        tc = thermal_cats.get("ince_triko", {"clo": 0.25})
+    base = tc["clo"]
     default_cov = coverage_defaults.get(garment["subcategory"], 0.70)
     actual_cov = garment["coverage_ratio"]
     if default_cov <= 0:
@@ -44,7 +47,10 @@ def effective_clo(garment: dict, thermal_cats: dict, coverage_defaults: dict) ->
 
 
 def effective_ret(garment: dict, thermal_cats: dict, coverage_defaults: dict) -> float:
-    base = thermal_cats[garment["thermal_category"]]["ret"]
+    tc = thermal_cats.get(garment.get("thermal_category")) or thermal_cats.get(
+        "ince_triko", {"ret": 8.0}
+    )
+    base = tc["ret"]
     default_cov = coverage_defaults.get(garment["subcategory"], 0.70)
     actual_cov = garment["coverage_ratio"]
     breathability_scale = 1.0 + 0.25 * max(0.0, (default_cov - actual_cov) / default_cov)
@@ -100,18 +106,55 @@ def interpolate_hedef_clo(T: float, clo_points: list[dict]) -> float:
     return pts[-1]["clo"]
 
 
+def is_too_light_for_cold(garment: dict, season: str | None, hedef_clo: float) -> bool:
+    """Şeffaf/mesh/elbise-tek parça gibi soğuk havaya uygun olmayan parçalar."""
+    if not is_cold_context(season, hedef_clo):
+        return False
+    slot = garment_slot(garment)
+    if slot == "footwear":
+        return False
+    blob = _text_blob(garment)
+    if any(k in blob for k in COLD_LIGHT_KEYWORDS):
+        return True
+    if garment.get("subcategory") in ("tank_top", "dress_short", "shorts", "sandals"):
+        return True
+    # Soğukta ALT, bacağı tam kaplamalı: kapri/şort/diz-üstü/crop pantolon olmaz.
+    # Etek serbest (içine kilotlu/termal çorap giyilebilir) — ama mini etek değil.
+    if slot == "bottom":
+        sub = garment.get("subcategory")
+        if sub == "skirt":
+            if any(k in blob for k in ("mini skirt", "micro skirt", "mini-skirt")):
+                return True
+            return False
+        if any(k in blob for k in COLD_SHORT_BOTTOM_KEYWORDS):
+            return True
+    # Soğukta üst tam kaplamalı: crop/kısa boy üst olmaz.
+    if slot in ("base", "mid") and any(k in blob for k in ("crop top", "cropped top", "cropped tee", "bralette")):
+        return True
+    if garment.get("sleeve") == "sleeveless" and slot in ("base", "mid", "dress"):
+        return True
+    if is_dress_piece(garment) and hedef_clo >= 1.0:
+        return True
+    return False
+
+
 def garment_fits_season(g: dict, season: str | None, hedef_clo: float) -> bool:
     if not season:
         return True
+    slot = garment_slot(g)
+    # Soğukta kapsama/incelik kuralı season_usable'dan ÖNCE gelir: kapri/şort/
+    # mesh gibi parçalar veride yanlışlıkla "kis" işaretli olsa bile elenir.
+    if is_cold_context(season, hedef_clo) and slot not in ("footwear", "accessory"):
+        if g.get("subcategory") in ("shorts", "dress_short", "tank_top"):
+            return False
+        if is_too_light_for_cold(g, season, hedef_clo):
+            return False
     if season in g.get("season_usable", [season]):
         return True
-    slot = garment_slot(g)
     if slot in ("footwear", "accessory"):
         return False
     if is_cold_context(season, hedef_clo):
-        if g.get("subcategory") in ("shorts", "dress_short", "tank_top"):
-            return False
-        return slot in ("base", "mid", "outer", "bottom", "dress")
+        return slot in ("base", "mid", "outer", "bottom")
     if is_warm_context(season, hedef_clo):
         if g.get("subcategory") in ("padded_coat", "coat"):
             return False
@@ -134,7 +177,7 @@ def inventory_by_slot(
     return slots
 
 
-WEARABLE_ACCESSORY_SUBS = frozenset({"scarf", "hat", "tights"})
+WEARABLE_ACCESSORY_SUBS = frozenset({"scarf", "hat", "tights", "gloves"})
 JEWELRY_KEYWORDS = (
     "ring", "earring", "necklace", "bracelet", "moissanite", "jewelry",
     "pendant", "brooch", "anklet", "choker",
@@ -155,7 +198,19 @@ WINTER_ACCESSORY_KEYWORDS = ("beanie", "pompom", "winter hat", "knit hat", "scar
 BEACH_SWIM_KEYWORDS = (
     "bikini", "swim", "pareo", "paréo", "cover-up", "cover up", "beach cover",
     "swimsuit", "swim dress", "swim short", "halter neck bikini", "kimono beach",
-    "beach kimono", "one-piece swim", "swim set", "triki",
+    "beach kimono", "one-piece swim", "swim set", "triki", "tankini",
+)
+# Soğuk havada uygun olmayan ince/şeffaf parçalar (ayakkabıdaki "mesh" hariç)
+COLD_LIGHT_KEYWORDS = (
+    "mesh", "sheer", "see-through", "see through", "lace trim", "crochet",
+    "sleeveless mesh", "strappy", "backless", "cutout", "cut-out", "tankini",
+    "halter neck", "bandeau",
+)
+# Soğukta bacağı kapatmayan ALT parçalar (etek hariç): kapri, şort, diz-üstü
+COLD_SHORT_BOTTOM_KEYWORDS = (
+    "capri", "capris", "bermuda", "knee length", "knee-length",
+    "above knee", "above-knee", "shorts", "3/4", "three quarter",
+    "three-quarter", "hot pant", "cycling short", "knicker",
 )
 NON_OUTFIT_KEYWORDS = (
     "keychain", "coin purse", "sunglass", "eyewear", "glasses", "phone case",
@@ -211,10 +266,12 @@ def outer_warmth_tier(garment: dict) -> str:
         return "heavy"
     if "trench" in blob and "coat" in blob:
         return "heavy"
-    if sub == "padded_coat" or tc in ("kalin_mont", "kaban", "trench_coat"):
-        return "heavy"
+    # Hafif dış-giyim anahtarları (denim/bomber/blazer/shacket) yanlış olabilen
+    # thermal_category'den ÖNCE gelir: "denim jacket" asla 'heavy' sayılmasın.
     if any(k in blob for k in LIGHT_OUTER_KEYWORDS):
         return "light"
+    if sub == "padded_coat" or tc in ("kalin_mont", "kaban", "trench_coat"):
+        return "heavy"
     if any(k in blob for k in MID_OUTER_KEYWORDS):
         return "mid"
     if sub == "raincoat" or tc == "yagmurluk":
@@ -260,6 +317,8 @@ def is_outfit_eligible(garment: dict, season: str | None, hedef_clo: float) -> b
         return False
     if any(k in _text_blob(garment) for k in NON_OUTFIT_KEYWORDS):
         return False
+    if is_too_light_for_cold(garment, season, hedef_clo):
+        return False
     return is_season_appropriate_garment(garment, garment_slot(garment), season, hedef_clo)
 
 
@@ -273,6 +332,110 @@ def is_warm_context(season: str | None, hedef_clo: float) -> bool:
     if hedef_clo < 0.45:
         return True
     return season == "yaz"
+
+
+def is_mild_context(season: str | None, hedef_clo: float) -> bool:
+    """Bahar/ılık — hırka tek başına dış katman olabilir; mont gerekmez."""
+    if is_cold_context(season, hedef_clo) or is_warm_context(season, hedef_clo):
+        return False
+    return 0.45 <= hedef_clo < 1.0
+
+
+def is_cardigan(garment: dict) -> bool:
+    return (
+        garment.get("subcategory") == "cardigan"
+        or "cardigan" in _text_blob(garment)
+    )
+
+
+WARM_MID_SUBS = frozenset({"sweater", "cardigan", "hoodie", "sweatshirt", "vest"})
+
+
+def is_warm_mid(garment: dict) -> bool:
+    """Kazak, hırka, hoodie — altına ince iç katman gerekir."""
+    sub = garment.get("subcategory", "")
+    if sub in WARM_MID_SUBS:
+        return True
+    blob = _text_blob(garment)
+    return any(
+        k in blob
+        for k in ("sweater", "cardigan", "hoodie", "sweatshirt", "pullover", "fleece", "knit jumper")
+    )
+
+
+def is_thin_base_inner(garment: dict, hedef_clo: float = 0.6) -> bool:
+    """Penye tişört, termal, gömlek — kazak/hırka altına giyilen ince katman."""
+    if is_warm_mid(garment) or is_dress_piece(garment):
+        return False
+    blob = _text_blob(garment)
+    if any(k in blob for k in ("sweater", "cardigan", "hoodie", "sweatshirt", "pullover")):
+        return False
+    sub = garment.get("subcategory", "")
+    tc = garment.get("thermal_category", "")
+    if sub == "thermal_base" or "termal" in tc or "thermal" in tc:
+        return True
+    if sub in ("tshirt", "top", "polo", "bodysuit"):
+        return True
+    if sub == "tank_top" and not is_cold_context(None, hedef_clo):
+        return True
+    if sub in ("shirt", "blouse"):
+        return True
+    return False
+
+
+def _base_inner_pool(
+    mid_gid: str | None,
+    mid_pool: list[str],
+    base_pool: list[str],
+    garments: dict[str, dict],
+    hedef_clo: float,
+) -> list[str]:
+    """Kazak/hırka altına uygun ince iç parçalar."""
+    out: list[str] = []
+    for gid in base_pool:
+        if is_thin_base_inner(garments[gid], hedef_clo):
+            out.append(gid)
+    for gid in mid_pool:
+        if gid == mid_gid:
+            continue
+        g = garments[gid]
+        if is_warm_mid(g):
+            continue
+        if g.get("subcategory") in ("shirt", "blouse") and is_thin_base_inner(g, hedef_clo):
+            out.append(gid)
+    return out
+
+
+def _pick_base_inner(
+    pool: list[str], garments: dict[str, dict], rng: random.Random, hedef_clo: float,
+) -> str | None:
+    if not pool:
+        return None
+    if hedef_clo >= 1.0:
+        thermal = [
+            g for g in pool
+            if "termal" in garments[g].get("thermal_category", "")
+            or garments[g].get("subcategory") == "thermal_base"
+            or "thermal" in _text_blob(garments[g])
+        ]
+        if thermal and rng.random() < 0.45:
+            return rng.choice(thermal)
+    shirts = [g for g in pool if garments[g].get("subcategory") in ("shirt", "blouse")]
+    if shirts and rng.random() < 0.35:
+        return rng.choice(shirts)
+    tees = [g for g in pool if garments[g].get("subcategory") in ("tshirt", "top", "polo")]
+    if tees:
+        return rng.choice(tees)
+    return rng.choice(pool)
+
+
+def cardigan_display_label(garment: dict, combo_pieces: list[dict] | None = None) -> str:
+    """Hırka: mont varsa ara katman (HIRKA), yoksa dış katman (DIŞ)."""
+    if combo_pieces and any(
+        garment_slot(p) == "outer" and not is_cardigan(p) for p in combo_pieces
+    ):
+        return "HIRKA"
+    return "DIŞ"
 
 
 def footwear_season_tier(garment: dict) -> str:
@@ -313,6 +476,8 @@ def is_season_appropriate_accessory(
                 return False
         return True
     if is_warm_context(season, hedef_clo):
+        if garment.get("subcategory") == "gloves":
+            return False
         if garment.get("subcategory") == "scarf" and hedef_clo < 0.5:
             return False
     return True
@@ -419,6 +584,8 @@ def is_thermal_accessory(garment: dict) -> bool:
         return any(k in blob for k in ("hat", "cap", "beanie", "beret", "visor", "knit", "pompom"))
     if sub == "tights":
         return "tight" in blob or "hosiery" in blob or "stocking" in blob
+    if sub == "gloves":
+        return any(k in blob for k in ("glove", "mitten"))
     return False
 
 
@@ -448,6 +615,11 @@ def outfit_coherence_penalty(pieces: list[dict]) -> float:
         penalty += 2.0
     if len(pieces) > 5:
         penalty += 0.8 * (len(pieces) - 5)
+    warm_count = sum(1 for p in pieces if is_warm_mid(p))
+    if warm_count > 1:
+        penalty += 4.0
+    if warm_count == 1 and not any(is_thin_base_inner(p) for p in pieces):
+        penalty += 2.5
     if any(is_jewelry_or_bag(p) for p in pieces):
         penalty += 4.0
 
@@ -514,6 +686,10 @@ def season_coherence_penalty(
             blob = _text_blob(p)
             if any(k in blob for k in SUMMER_ACCESSORY_KEYWORDS):
                 penalty += 2.0
+            if is_dress_piece(p):
+                penalty += 3.0
+            if garment_slot(p) == "footwear" and p.get("subcategory") in ("sandals", "flats", "heels"):
+                penalty += 2.5
     return penalty
 
 
@@ -536,8 +712,15 @@ def is_valid_outfit_combo(
     slots = [garment_slot(p) for p in pieces]
     if slots.count("footwear") > 1:
         return False
+    warm_mids = [p for p in pieces if is_warm_mid(p)]
+    if len(warm_mids) > 1:
+        return False
+    if warm_mids and not any(is_thin_base_inner(p, hedef_clo) for p in pieces):
+        return False
     dress_items = [p for p in pieces if is_dress_piece(p)]
     if dress_items and ("base" in slots or "bottom" in slots):
+        return False
+    if is_cold_context(season, hedef_clo) and dress_items:
         return False
     if not min_outfit_requirements_met(pieces, season, hedef_clo):
         return False
@@ -632,6 +815,9 @@ def _pick_footwear(
     if not pool:
         return None
     if is_cold_context(season, hedef_clo):
+        boots = [g for g in pool if garments[g].get("subcategory") == "boots"]
+        if boots and rng.random() < 0.7:
+            return rng.choice(boots)
         # Bot az olduğundan bot + kapalı ayakkabıları birlikte seç (çeşitlilik)
         cold_ok = [
             g for g in pool
@@ -733,13 +919,14 @@ def build_layered_combo(
     mid_pool = pools["mid"]
     bottom_pool = pools["bottom"]
     footwear_pool = pools["footwear"]
-    # Aksesuarlar (atkı/şapka) kombin parçası olarak gösterilmiyor — kafa karıştırıyordu
-    acc_pool: list[str] = []
+    # Aksesuarlar (atkı/şapka/eldiven) ayrı bir "aksesuar" slotunda, kombin yanında
+    # opsiyonel olarak sunulur — üst/alt yerine geçmez, sezona göre seçilir.
+    acc_pool = pools["accessory"]
 
     if is_warm_context(season, hedef_clo):
         route_choices = (["separates"] * 7) + (["set"] * 2) + (["dress"] * 1)
     elif is_cold_context(season, hedef_clo):
-        route_choices = (["separates"] * 8) + (["dress"] * 1) + (["set"] * 1)
+        route_choices = (["separates"] * 9) + (["set"] * 1)
     else:
         route_choices = (["separates"] * 5) + (["dress"] * 2) + (["set"] * 2)
     route_weights = [r for r in route_choices if r != "dress" or dress_pool]
@@ -768,7 +955,7 @@ def build_layered_combo(
             add(pick_from(acc_pool), "accessory")
         return combo
 
-    # Ayrı parçalar
+    # Ayrı parçalar — sıcak
     if is_warm_context(season, hedef_clo):
         if base_pool:
             add(pick_from(base_pool), "base")
@@ -778,19 +965,49 @@ def build_layered_combo(
         add(_pick_footwear(footwear_pool, garments, rng, season, hedef_clo), "footwear")
         return combo
 
+    # Ayrı parçalar — ılık/ilkbahar: hırka dış katman olabilir ama altına bluz/tişört gerekir
+    if is_mild_context(season, hedef_clo):
+        mid_gid: str | None = None
+        cardigan_pool = [gid for gid in mid_pool if is_cardigan(garments[gid])]
+        if cardigan_pool and rng.random() < 0.45:
+            mid_gid = pick_from(cardigan_pool)
+            add(mid_gid, "mid")
+        elif mid_pool:
+            mid_gid = pick_from(mid_pool)
+            add(mid_gid, "mid")
+        elif base_pool:
+            add(pick_from(base_pool), "base")
+        if mid_gid and (is_warm_mid(garments[mid_gid]) or is_cardigan(garments[mid_gid])):
+            inner_pool = _base_inner_pool(mid_gid, mid_pool, base_pool, garments, hedef_clo)
+            inner_gid = _pick_base_inner(inner_pool, garments, rng, hedef_clo)
+            if inner_gid:
+                add(inner_gid)
+        add(pick_from(bottom_pool), "bottom")
+        add(_pick_footwear(footwear_pool, garments, rng, season, hedef_clo), "footwear")
+        return combo
+
     if is_cold_context(season, hedef_clo) and outer_pool:
         add(_pick_outer(outer_pool, garments, rng, season, hedef_clo), "outer")
 
-    # Soğukta kazak/hırka üstüne, içine tişört katmanlama (örn. tişört + kazak + mont)
+    # Soğukta: kazak/hırka (mid) + altına penye/termal/gömlek (base) — asla iki kazak üst üste değil
     if mid_pool:
-        add(pick_from(mid_pool), "mid")
-        if is_cold_context(season, hedef_clo) and base_pool and rng.random() < 0.55:
-            add(pick_from(base_pool), "base")
+        warm_pool = [g for g in mid_pool if is_warm_mid(garments[g])]
+        mid_gid = pick_from(warm_pool if warm_pool else mid_pool)
+        add(mid_gid, "mid")
+        if is_warm_mid(garments[mid_gid]) or is_cardigan(garments[mid_gid]):
+            inner_pool = _base_inner_pool(mid_gid, mid_pool, base_pool, garments, hedef_clo)
+            inner_gid = _pick_base_inner(inner_pool, garments, rng, hedef_clo)
+            if inner_gid:
+                add(inner_gid)
     elif base_pool:
         add(pick_from(base_pool), "base")
 
     add(pick_from(bottom_pool), "bottom")
     add(_pick_footwear(footwear_pool, garments, rng, season, hedef_clo), "footwear")
+
+    # Soğuk/serin havada atkı-eldiven gibi bir aksesuar (opsiyonel)
+    if acc_pool and is_cold_context(season, hedef_clo) and rng.random() < 0.5:
+        add(pick_from(acc_pool), "accessory")
 
     return combo
 
@@ -859,6 +1076,10 @@ def thermal_bonuses_penalties(
             bonus += 0.8
         if subs & {"tank_top", "shorts"}:
             penalty += 2.0
+        if subs & {"boots"}:
+            bonus += 0.5
+        if any(is_dress_piece(p) for p in pieces):
+            penalty += 2.5
         if "scarf" in subs or "hat" in subs:
             bonus += 0.3
 
